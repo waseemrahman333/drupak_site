@@ -1,0 +1,19 @@
+{% stories postinnerwrapper with { title: 'Components/Post Inner Wrapper' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      columns: 'Columns',
+      content: 'Content'
+    }
+  } %}
+{% embed 'components:postinnerwrapper' with { 
+  columns: columns
+} %}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

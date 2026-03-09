@@ -1,0 +1,60 @@
+{#
+/**
+ * Card Style One Component
+ * 
+ * Overlay card with image background, gradient, and text overlays.
+ * Perfect for featured content, posts, or categories.
+ *
+ * Available variables:
+ * - title: (string) Card title. Required.
+ * - subtitle: (string) Category or label badge. Required.
+ * - imageurl: (string) Background image URL. Use high-quality images (800px+ width).
+ * - link_url: (string) Card destination URL. Optional.
+ * - heading_level: (number) HTML heading level (1-6). Default: 2
+ *
+ * Accessibility:
+ * - Uses semantic HTML structure
+ * - Proper heading hierarchy
+ * - Text has sufficient contrast with overlay
+ * - Can be wrapped in <a> for clickable cards
+ * - Focus indicators for interactive elements
+ *
+ * Theme Variables Used:
+ * - bg-primary: Badge background color
+ * - text-body-bg: Text color on colored backgrounds
+ * - bg-body: Gradient overlay base color
+ *
+ * Examples:
+ * {% include 'tailpine:cardonestyle' with {
+ *   title: 'Featured Article',
+ *   subtitle: 'Technology',
+ *   imageurl: 'https://cdn.pixabay.com/photo/...jpg',
+ * } %}
+ */
+#}
+
+{% set card_heading = heading_level|default(2) %}
+{% set card_bg = imageurl|default('') %}
+
+<article 
+  class="relative min-h-100 bg-cover bg-center overflow-hidden flex flex-col justify-end gap-4 text-body-bg shadow-md group"
+  {% if card_bg %}
+  style="background-image: url('{{ card_bg }}');"
+  {% endif %}
+  {{ attributes }}
+>
+  <!-- Gradient Overlay for Text Readability -->
+  <div class="absolute inset-0 bg-gradient-to-t from-body via-body/15 to-transparent z-0" aria-hidden="true"></div>
+  
+  <!-- Badge/Subtitle -->
+  {% if subtitle %}
+  <span class="z-10 ml-[clamp(20px,1.5vw,25px)] w-fit px-3 py-2 bg-primary text-body-bg text-sm font-semibold">
+    {{ subtitle }}
+  </span>
+  {% endif %}
+  
+  <!-- Card Title -->
+  <h{{ card_heading }} class="z-10 ml-[clamp(20px,1.5vw,25px)] mb-[clamp(20px,1.5vw,25px)] text-xl font-bold h-fit">
+    {{ title }}
+  </h{{ card_heading }}>
+</article>

@@ -1,0 +1,35 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Cards Header
+status: stable
+description: "Wrappers are used to group and display content in a way that is easily readable."
+group: Cards & Posts
+props:
+  type: object
+  properties:
+    columns:
+      type: string
+      description: "The type of the wrapper."
+      title: "Columns"
+      enum:
+        - grid-cols-1
+        - grid-cols-2
+        - grid-cols-3
+        - grid-cols-4
+        - grid-cols-5
+    bg_color:
+      type: string
+      title: Background Color
+      description: "Background color of the Wrapper. Plain text."
+slots:
+  title:
+    type: string
+    title: Title
+    description: "Title of the card. Plain text."
+  description:
+    type: string
+    title: Description
+    description: "Description of the wrapper. Plain text."
+  content:
+    type: string
+    title: Content
+    description: "Content of the wrapper. Plain text."

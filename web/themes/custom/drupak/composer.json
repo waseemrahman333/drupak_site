@@ -1,0 +1,19 @@
+{
+    "name": "drupal/tailpine",
+    "description": "TailwindCSS, AlpineJS based Drupal theme for Drupal with SDC and Storybook support",
+    "type": "drupal-custom-theme",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://www.drupal.org/project/tailpine",
+    "authors": [
+        {
+            "name": "S M Azmat Shah",
+            "email": "azmatnvm@gmail.com"
+        }
+    ],
+    "require": {
+        "drupal/storybook": "^1.0",
+        "drupal/paragraphs": "^1.19",
+        "drupal/nomarkup": "^1.0",
+        "drupal/ui_suite_daisyui": "^5.0@alpha"
+    }
+}

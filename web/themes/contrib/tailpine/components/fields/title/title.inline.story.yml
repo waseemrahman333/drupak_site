@@ -1,0 +1,13 @@
+name: Title - Inline
+description: Inline title for compact display
+
+props:
+  field_name: title
+  field_type: string
+  label_display: hidden
+  is_inline: true
+  items:
+    - content: "Product Name"
+  title_utility_classes:
+    - "text-lg"
+

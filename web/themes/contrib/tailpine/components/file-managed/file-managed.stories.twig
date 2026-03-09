@@ -1,0 +1,14 @@
+{% stories file_managed with { title: 'Components/file managed file' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      element: []
+    }
+  } %}
+{% embed 'tailpine:file-managed' with { 
+  element: element
+} %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

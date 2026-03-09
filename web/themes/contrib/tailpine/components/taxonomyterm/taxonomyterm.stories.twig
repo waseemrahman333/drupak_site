@@ -1,0 +1,14 @@
+{% stories taxonomyterm with { title: 'Components/Taxonomy term' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      title: 'title'
+    }
+  } %}
+{% embed 'tailpine:taxonomyterm' with { 
+  title: title
+} %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

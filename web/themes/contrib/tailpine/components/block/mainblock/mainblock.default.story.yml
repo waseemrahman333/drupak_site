@@ -1,0 +1,21 @@
+name: Default
+props:
+  id: ID
+  bundle: Bundle
+  layout: default
+  plugin_id: 'Plugin ID'
+  label: Label
+  title_prefix: {  }
+  title_suffix: {  }
+  configuration:
+    label_display: 'Label Display'
+    provider: Provider
+  block_html_tag: 'HTML Tag'
+  block_classes: {  }
+  block_content_classes: {  }
+  block_utility_classes: {  }
+  block_content_utility_classes: {  }
+slots:
+  block_label: 'Label Slot'
+  block_content: 'Content Slot'
+  content: 'Default Content'

@@ -1,0 +1,25 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Media and Text
+description: Media and Text
+status: stable
+props:
+  type: object
+  properties:
+    image:
+      title: Image
+      description: Image URL
+      type: string
+    position:
+      title: Position
+      description: Position of Image and Text (Row & Row-Reverse )
+      type: string
+slots:
+  title:
+    title: Title
+    description: Title
+  description:
+    title: Description
+    description: Description
+  cta:
+    title: Add  CTA
+    description: Add CTA

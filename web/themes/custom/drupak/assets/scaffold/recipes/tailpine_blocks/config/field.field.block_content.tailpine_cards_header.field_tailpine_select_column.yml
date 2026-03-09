@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.tailpine_cards_header
+    - field.storage.block_content.field_tailpine_select_column
+  module:
+    - options
+id: block_content.tailpine_cards_header.field_tailpine_select_column
+field_name: field_tailpine_select_column
+entity_type: block_content
+bundle: tailpine_cards_header
+label: 'Select Column'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,35 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 51f31bb2-c169-4bc4-83e3-617e70fdcb54
+  bundle: tailpine_banner
+  default_langcode: en
+  depends:
+    67284003-a6ce-4370-ab07-531e2a646111: block_content
+    b2a0c519-3606-44cc-9813-96e241ef43dd: media
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Redefining Learning for a New Era'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  field_block:
+    -
+      entity: 67284003-a6ce-4370-ab07-531e2a646111
+  field_tailpine_description:
+    -
+      value: '<p>Graduates secure roles aligned with their field of study or career goals.</p>'
+      format: basic_html
+  field_tailpine_media_image:
+    -
+      entity: b2a0c519-3606-44cc-9813-96e241ef43dd
+  field_tailpine_title:
+    -
+      value: 'Redefining Learning for a New Era'

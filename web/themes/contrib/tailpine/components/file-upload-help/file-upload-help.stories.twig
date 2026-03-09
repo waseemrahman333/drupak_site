@@ -1,0 +1,14 @@
+{% stories file_upload_help with { title: 'Components/file upload help' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      description: 'description'
+    }
+  } %}
+{% embed 'tailpine:file-upload-help' with { 
+  description: description
+} %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

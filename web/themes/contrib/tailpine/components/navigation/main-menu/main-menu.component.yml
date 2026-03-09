@@ -1,0 +1,37 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Main Menu
+description: Main Menu Component
+status: stable
+group: Navigation
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: Title
+    url:
+      type: string
+      title: URL
+    target:
+      type: string
+      title: Target
+    children:
+      type: array
+      title: Sub-menu items
+      items:
+        type: object
+        properties:
+          title:
+            type: string
+            title: Sub-menu Title
+          url:
+            type: string
+            title: Sub-menu URL
+          target:
+            type: string
+            title: Sub-menu Target
+          children: # Add this to support nested sub-menus
+            type: array
+            title: Sub-menu Items
+            items:
+              $ref: "#/props" # Recursively refer to the same schema

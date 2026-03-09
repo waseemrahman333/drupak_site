@@ -1,0 +1,33 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Tailpine Tabs
+description: Single tab item with dual render mode
+status: stable
+props:
+  type: object
+  properties:
+    tabButtons:
+      type: string
+      description: Tab display title (e.g., "Home")
+    tabid:
+      type: string
+      description: Unique identifier for the tab (used for Alpine.js state management)
+    tabStyle:
+      type: string
+      description: Visual style treatment for the tab
+      default: underline
+      enum:
+        - underline
+        - default_fill
+        - outline
+        - primary_fill
+        - secondary_fill
+        - icon_tabs
+    render_mode:
+      type: string
+      enum: ["tabsHeader", "content"]
+      description: Defines if this component renders header or content
+      default: tabsHeader
+slots:
+  tabContent:
+    title: tab Content
+    description: "content of the tab"

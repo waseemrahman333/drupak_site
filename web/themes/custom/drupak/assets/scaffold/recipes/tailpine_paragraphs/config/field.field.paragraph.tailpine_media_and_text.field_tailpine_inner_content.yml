@@ -1,0 +1,42 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tailpine_inner_content
+    - paragraphs.paragraphs_type.tailpine_cta
+    - paragraphs.paragraphs_type.tailpine_media_and_text
+  module:
+    - entity_reference_revisions
+id: paragraph.tailpine_media_and_text.field_tailpine_inner_content
+field_name: field_tailpine_inner_content
+entity_type: paragraph
+bundle: tailpine_media_and_text
+label: 'Inner content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      tailpine_cta: tailpine_cta
+    negate: 0
+    target_bundles_drag_drop:
+      hero:
+        weight: 6
+        enabled: false
+      tailpine_accordion:
+        weight: 7
+        enabled: false
+      tailpine_accordion_header:
+        weight: 8
+        enabled: false
+      tailpine_cta:
+        weight: 9
+        enabled: true
+      tailpine_post_wrapper:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

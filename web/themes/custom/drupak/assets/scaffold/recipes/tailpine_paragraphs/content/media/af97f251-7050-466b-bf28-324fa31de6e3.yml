@@ -1,0 +1,35 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: af97f251-7050-466b-bf28-324fa31de6e3
+  bundle: image
+  default_langcode: en
+  depends:
+    dc4ce58a-54ac-4ad7-94c1-fd56d9ae32ee: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: card_image4.jpeg
+  created:
+    -
+      value: 1756752778
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+  field_media_image:
+    -
+      entity: dc4ce58a-54ac-4ad7-94c1-fd56d9ae32ee
+      alt: card4
+      title: ''
+      width: 571
+      height: 799

@@ -1,0 +1,51 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.tailpine_cta
+    - field.field.block_content.tailpine_cta.field_tailpine_btn_border_radius
+    - field.field.block_content.tailpine_cta.field_tailpine_btn_type
+    - field.field.block_content.tailpine_cta.field_tailpine_button_style
+    - field.field.block_content.tailpine_cta.field_tailpine_link
+  module:
+    - link
+id: block_content.tailpine_cta.default
+targetEntityType: block_content
+bundle: tailpine_cta
+mode: default
+content:
+  field_tailpine_btn_border_radius:
+    type: options_select
+    weight: 27
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_tailpine_btn_type:
+    type: options_select
+    weight: 29
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_tailpine_button_style:
+    type: options_select
+    weight: 28
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_tailpine_link:
+    type: link_default
+    weight: 26
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

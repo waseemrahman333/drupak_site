@@ -1,0 +1,3862 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: b08b0724-6962-42c5-87a8-7036447e4999
+  bundle: page
+  default_langcode: en
+  depends:
+    b2a0c519-3606-44cc-9813-96e241ef43dd: media
+    4a8f3229-ca22-44c8-95a2-774677168148: media
+    67298fca-6a34-4701-a66d-479f5d36fa92: media
+    4409bce3-e95e-4229-af28-d8126b60b991: media
+    af97f251-7050-466b-bf28-324fa31de6e3: media
+    13851b19-bf59-4d63-806f-ee69031827b7: media
+    354d8f3b-6ed8-4638-88cd-cf30489bb67c: media
+    83d6cc2c-21a6-468b-8b2f-02626805f268: media
+    fc863915-b5b9-45bc-a8a0-4486f6261036: media
+    14bc22db-c0cb-41aa-ab50-e36f13ac21ac: media
+    1dfcfae9-1ab0-4020-ad38-5e52d9661e0b: media
+    7c9520fc-a13a-4511-896b-d8a63f40aa47: media
+    ae7b14aa-ee88-4dc9-9abf-c06a1143ece6: media
+    aebae2c6-a886-4dda-bb6d-45ed8a9a932a: media
+    89e252e2-bb0f-4056-af42-3e60695af279: media
+    3a6ce356-55b2-44b0-ad1a-65f1dc195903: media
+    2fcb4248-15bd-4d5c-bea7-e185f179c5ac: media
+    35591bbf-38dd-4b6e-aac0-c5593c934545: media
+    c5e8dd7c-0205-40e4-826f-663749ff934a: media
+    05a0fd0a-d92f-42dd-9244-46216c5dc124: media
+    18c5ef7c-610e-41c4-88b4-b07f2e3f0e85: media
+    62e69249-a3cd-4092-9356-036b03a37422: media
+    8db4913a-052d-4c03-8e7d-0e7d8c178ca3: media
+    05dc3045-c4a7-4aff-a2f9-a686f1c61b14: media
+    1166d764-4b18-4777-8f5d-6a97ed689cbe: media
+    cd8a2152-e288-4065-bf9b-6bc82ce5d6b4: media
+    579a3099-dff1-4f88-9176-406c8f792e78: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Showcase Page'
+  created:
+    -
+      value: 1757915099
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  path:
+    -
+      alias: /showcase
+      langcode: en
+  field_tailpine_content:
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: e816a6ee-f747-4150-9c84-e9924b96e254
+          bundle: tailpine_banner_style_two
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1759948228
+          behavior_settings:
+            -
+              value: {  }
+          field_tailpine_description:
+            -
+              value: '<p>Graduates secure roles aligned with their field of study or career goals.</p>'
+              format: basic_html
+          field_tailpine_inner_content:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: fd90a4d2-e9ac-4d67-9f39-d2b6c73a1412
+                  bundle: tailpine_cta
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1759948265
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_btn_type:
+                    -
+                      value: hover_arrow_move
+                  field_tailpine_button_style:
+                    -
+                      value: primary
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: "Let's Talk"
+                      options: {  }
+                  field_tailpine_title:
+                    -
+                      value: "Let's Talk"
+          field_tailpine_media_image:
+            -
+              entity: b2a0c519-3606-44cc-9813-96e241ef43dd
+          field_tailpine_title:
+            -
+              value: 'Redefining Learning for a New Era'
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: dbdc40bc-65a4-4bd1-ba97-29da3882da35
+          bundle: tailpine_banner
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1759909326
+          behavior_settings:
+            -
+              value: {  }
+          field_tailpine_description:
+            -
+              value: '<p>Techesolve provides custom software, cloud services, and IT support to streamline operations and drive business success.</p>'
+              format: basic_html
+          field_tailpine_inner_content:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: c66a383a-f102-49d4-82e1-14f72a339a68
+                  bundle: tailpine_cta
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1759909370
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_btn_type:
+                    -
+                      value: hover_arrow_move
+                  field_tailpine_button_style:
+                    -
+                      value: primary
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: 'Read More'
+                      options: {  }
+                  field_tailpine_title:
+                    -
+                      value: "Let's Talk"
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: f5e06374-bffd-4729-bf48-9220eae81ece
+                  bundle: tailpine_cta
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1759909402
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_btn_type:
+                    -
+                      value: gradient
+                  field_tailpine_button_style:
+                    -
+                      value: primary
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: 'Learn More'
+                      options: {  }
+                  field_tailpine_title:
+                    -
+                      value: 'Explore More'
+          field_tailpine_media_image:
+            -
+              entity: 4a8f3229-ca22-44c8-95a2-774677168148
+          field_tailpine_title:
+            -
+              value: 'Empowering Business Growth with Technology'
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 8bfbcde1-1011-4825-a228-d6de6caf374a
+          bundle: hero
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1757915116
+          behavior_settings:
+            -
+              value: {  }
+          field_tailpine_content:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 9a9a6940-6d5f-40b1-8946-31639b25dcb5
+                  bundle: tailpine_cta
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757915116
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_btn_type:
+                    -
+                      value: with_arrow
+                  field_tailpine_button_style:
+                    -
+                      value: primary
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: 'Read More'
+                      options: {  }
+                  field_tailpine_title:
+                    -
+                      value: 'Read More'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: c000a7f2-438b-4abe-bd99-5c53a08d9363
+                  bundle: tailpine_cta
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757915205
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_btn_type:
+                    -
+                      value: outline
+                  field_tailpine_button_style:
+                    -
+                      value: primary
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: Register
+                      options: {  }
+                  field_tailpine_title:
+                    -
+                      value: 'Learn More'
+          field_tailpine_description:
+            -
+              value: '<p>Briefly And Concisely Explain What You Do For Your Audience Briefly And Concisely Explain What You Do For Your Audience Briefly And Concisely Explain What You Do For Your Audience</p>'
+              format: basic_html
+          field_tailpine_media_image:
+            -
+              entity: 67298fca-6a34-4701-a66d-479f5d36fa92
+          field_tailpine_title:
+            -
+              value: 'Briefly And Concisely Explain What You Do For Your Audience'
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 321aa551-aafc-4328-9b15-1422b507c11e
+          bundle: tailpine_hero_style_two
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1757915219
+          behavior_settings:
+            -
+              value: {  }
+          field_tailpine_description:
+            -
+              value: '<p>Briefly And Concisely Explain What You Do For Your Audience Briefly And Concisely Explain What You Do For Your Audience Briefly And Concisely Explain What You Do For Your Audience</p>'
+              format: basic_html
+          field_tailpine_inner_content:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: f4be560d-d6cc-49bb-9790-2b3b20cdcdb1
+                  bundle: tailpine_cta
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757915357
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_btn_type:
+                    -
+                      value: with_arrow
+                  field_tailpine_button_style:
+                    -
+                      value: secondary
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: 'Read More'
+                      options: {  }
+                  field_tailpine_title:
+                    -
+                      value: 'Read More'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: cd282d30-3a34-4056-b916-42fe19927637
+                  bundle: tailpine_cta
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757915368
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_btn_type:
+                    -
+                      value: outline_with_arrow
+                  field_tailpine_button_style:
+                    -
+                      value: primary
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: 'Read More'
+                      options: {  }
+                  field_tailpine_title:
+                    -
+                      value: 'Learn More'
+          field_tailpine_media_image:
+            -
+              entity: 67298fca-6a34-4701-a66d-479f5d36fa92
+          field_tailpine_title:
+            -
+              value: 'Briefly And Concisely Explain What You Do For Your Audience'
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 55e2ffad-d576-4d37-b5d5-deb465d28546
+          bundle: tailpine_media_and_text
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1757915924
+          behavior_settings:
+            -
+              value: {  }
+          field_tailpine_description:
+            -
+              value: '<p>Ignorare commodius exquirere solida reprehensione sunt navigandi ita ignoratione. Linguam dediti error campum sequatur ullam concertationesque administrari fugit.Ignorare commodius exquirere solida reprehensione sunt navigandi ita ignoratione. Linguam dediti error campum sequatur ullam concertationesque administrari fugit.Ignorare commodius exquirere solida reprehensione sunt navigandi ita ignoratione. Linguam dediti error campum sequatur ullam concertationesque administrari fugit.Ignorare commodius exquirere solida reprehensione sunt navigandi ita ignoratione. Linguam dediti error campum sequatur ullam concertationesque administrari fugit.</p>'
+              format: basic_html
+          field_tailpine_inner_content:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: ba6292f0-0d25-4887-bb37-510dfc4e270f
+                  bundle: tailpine_cta
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757916159
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_btn_type:
+                    -
+                      value: hover_arrow_move
+                  field_tailpine_button_style:
+                    -
+                      value: primary
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: 'Read More'
+                      options: {  }
+                  field_tailpine_title:
+                    -
+                      value: 'Read More'
+          field_tailpine_media_image:
+            -
+              entity: 4409bce3-e95e-4229-af28-d8126b60b991
+          field_tailpine_media_position:
+            -
+              value: row
+          field_tailpine_title:
+            -
+              value: 'Ignorare commodius exquirere solida reprehensione sunt navigandi ita ignoratione. Linguam dediti error'
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 6f409be2-6147-4f2b-be2c-41dce5f30976
+          bundle: tailpine_media_and_text
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1757916192
+          behavior_settings:
+            -
+              value: {  }
+          field_tailpine_description:
+            -
+              value: '<p>Ignorare commodius exquirere solida reprehensione sunt navigandi ita ignoratione. Linguam dediti error campum sequatur ullam concertationesque administrari fugit.Ignorare commodius exquirere solida reprehensione sunt navigandi ita ignoratione. Linguam dediti error campum sequatur ullam concertationesque administrari fugit.Ignorare commodius exquirere solida reprehensione sunt navigandi ita ignoratione. Linguam dediti error campum sequatur ullam concertationesque administrari fugit.</p>'
+              format: basic_html
+          field_tailpine_inner_content:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 6147d686-a72c-49c8-8a34-0d6ed4ed950a
+                  bundle: tailpine_cta
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757916200
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_btn_type:
+                    -
+                      value: hover_arrow_move
+                  field_tailpine_button_style:
+                    -
+                      value: primary
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: 'Read More'
+                      options: {  }
+                  field_tailpine_title:
+                    -
+                      value: 'Read More'
+          field_tailpine_media_image:
+            -
+              entity: 4409bce3-e95e-4229-af28-d8126b60b991
+          field_tailpine_media_position:
+            -
+              value: row-reverse
+          field_tailpine_title:
+            -
+              value: 'Fere totum democriti desiderare contumeliae accusamus prosperum.'
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: ac82c044-713f-4621-ae29-d1c8d26bded5
+          bundle: tailpine_cards_header
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1757918485
+          behavior_settings:
+            -
+              value: {  }
+          field_tailpine_content:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: c03161eb-f8d6-49a9-8d2e-e9a0d96d9351
+                  bundle: tailpine_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757918503
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: af97f251-7050-466b-bf28-324fa31de6e3
+                  field_tailpine_subtitle:
+                    -
+                      value: 'Title One'
+                  field_tailpine_title:
+                    -
+                      value: 'Card Style One'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: df165179-9a3a-4ede-bdfa-87eb5f3e4a91
+                  bundle: tailpine_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757918535
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: 13851b19-bf59-4d63-806f-ee69031827b7
+                  field_tailpine_subtitle:
+                    -
+                      value: 'TItle Two'
+                  field_tailpine_title:
+                    -
+                      value: 'Card Style One'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 48ce6e77-6cf3-4094-9d4f-b355e596df41
+                  bundle: tailpine_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757918574
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: 354d8f3b-6ed8-4638-88cd-cf30489bb67c
+                  field_tailpine_subtitle:
+                    -
+                      value: 'Title Three'
+                  field_tailpine_title:
+                    -
+                      value: 'Card Style One'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 47f796c8-21f4-4ff6-88dd-7c8b0734f5b3
+                  bundle: tailpine_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757918598
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: 83d6cc2c-21a6-468b-8b2f-02626805f268
+                  field_tailpine_subtitle:
+                    -
+                      value: 'Title Four'
+                  field_tailpine_title:
+                    -
+                      value: 'Card Style One'
+          field_tailpine_description:
+            -
+              value: '<p>Ponatur siculis torquatos corporisque litterae consuetudine altera. Possumus triarius infinitum liber dixit sapiente quiddam.</p>'
+              format: basic_html
+          field_tailpine_select_column:
+            -
+              value: grid-cols-4
+          field_tailpine_title:
+            -
+              value: 'Briefly And Concisely Explain What You Do For Your Audience'
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: bc94099c-4cee-4aff-be72-e90fea91df88
+          bundle: tailpine_cards_header
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1757919026
+          behavior_settings:
+            -
+              value: {  }
+          field_tailpine_content:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 839364c3-a8ba-4a04-bd56-bb9a92dd0466
+                  bundle: tailpine_card_two
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757919034
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_description:
+                    -
+                      value: '<p>Ponatur siculis torquatos corporisque litterae consuetudine altera. Possumus triarius infinitum liber dixit sapiente quiddam.Ponatur siculis torquatos corporisque litterae consuetudine altera. Possumus triarius infinitum liber dixit sapiente quiddam.Ponatur siculis torquatos corporisque litterae consuetudine altera. Possumus triarius infinitum liber dixit sapiente quiddam.</p>'
+                      format: basic_html
+                  field_tailpine_inner_content:
+                    -
+                      entity:
+                        _meta:
+                          version: '1.0'
+                          entity_type: paragraph
+                          uuid: 24338c6a-1ec1-48b1-9c5a-9dfd95334594
+                          bundle: tailpine_cta
+                          default_langcode: en
+                        default:
+                          status:
+                            -
+                              value: true
+                          created:
+                            -
+                              value: 1757919497
+                          behavior_settings:
+                            -
+                              value: {  }
+                          field_tailpine_btn_type:
+                            -
+                              value: with_arrow
+                          field_tailpine_button_style:
+                            -
+                              value: primary
+                          field_tailpine_link:
+                            -
+                              uri: 'internal:/'
+                              title: 'Read More'
+                              options: {  }
+                          field_tailpine_title:
+                            -
+                              value: 'Read More'
+                  field_tailpine_media_image:
+                    -
+                      entity: fc863915-b5b9-45bc-a8a0-4486f6261036
+                  field_tailpine_title:
+                    -
+                      value: 'Card Style Two'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 74f7e904-80bc-4f2b-a338-ad90b2833ec0
+                  bundle: tailpine_card_two
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757919516
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_description:
+                    -
+                      value: '<p>Ponatur siculis torquatos corporisque litterae consuetudine altera. Possumus triarius infinitum liber dixit sapiente quiddam.Ponatur siculis torquatos corporisque litterae consuetudine altera. Possumus triarius infinitum liber dixit sapiente quiddam.Ponatur siculis torquatos corporisque litterae consuetudine altera. Possumus triarius infinitum liber dixit sapiente quiddam.</p>'
+                      format: basic_html
+                  field_tailpine_inner_content:
+                    -
+                      entity:
+                        _meta:
+                          version: '1.0'
+                          entity_type: paragraph
+                          uuid: b9761e9a-b274-467f-abb4-5027808a34f9
+                          bundle: tailpine_cta
+                          default_langcode: en
+                        default:
+                          status:
+                            -
+                              value: true
+                          created:
+                            -
+                              value: 1757919550
+                          behavior_settings:
+                            -
+                              value: {  }
+                          field_tailpine_btn_type:
+                            -
+                              value: with_arrow
+                          field_tailpine_button_style:
+                            -
+                              value: primary
+                          field_tailpine_link:
+                            -
+                              uri: 'internal:/'
+                              title: 'Read More'
+                              options: {  }
+                          field_tailpine_title:
+                            -
+                              value: 'Read More'
+                  field_tailpine_media_image:
+                    -
+                      entity: 14bc22db-c0cb-41aa-ab50-e36f13ac21ac
+                  field_tailpine_title:
+                    -
+                      value: 'Card Style Two'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 320078bb-ffff-49bc-8f07-a0494cba8315
+                  bundle: tailpine_card_two
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757919569
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_description:
+                    -
+                      value: '<p>Ponatur siculis torquatos corporisque litterae consuetudine altera. Possumus triarius infinitum liber dixit sapiente quiddam. Ponatur siculis torquatos corporisque litterae consuetudine altera. Possumus triarius infinitum liber dixit sapiente quiddam.Ponatur siculis torquatos corporisque litterae consuetudine altera. Possumus triarius infinitum liber dixit sapiente quiddam.</p>'
+                      format: basic_html
+                  field_tailpine_inner_content:
+                    -
+                      entity:
+                        _meta:
+                          version: '1.0'
+                          entity_type: paragraph
+                          uuid: fa64f079-4021-4c9a-ab90-57006c2f7986
+                          bundle: tailpine_cta
+                          default_langcode: en
+                        default:
+                          status:
+                            -
+                              value: true
+                          created:
+                            -
+                              value: 1757919611
+                          behavior_settings:
+                            -
+                              value: {  }
+                          field_tailpine_btn_type:
+                            -
+                              value: with_arrow
+                          field_tailpine_button_style:
+                            -
+                              value: primary
+                          field_tailpine_link:
+                            -
+                              uri: 'internal:/'
+                              title: 'Read More'
+                              options: {  }
+                          field_tailpine_title:
+                            -
+                              value: 'Read More'
+                  field_tailpine_media_image:
+                    -
+                      entity: 1dfcfae9-1ab0-4020-ad38-5e52d9661e0b
+                  field_tailpine_title:
+                    -
+                      value: 'Card Style Two'
+          field_tailpine_description:
+            -
+              value: '<p>Ponatur siculis torquatos corporisque litterae consuetudine altera. Possumus triarius infinitum liber dixit sapiente quiddam.Ponatur siculis torquatos corporisque litterae consuetudine altera.&nbsp;</p>'
+              format: basic_html
+          field_tailpine_select_column:
+            -
+              value: grid-cols-3
+          field_tailpine_title:
+            -
+              value: 'Briefly And Concisely Explain What'
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 93f07ab4-5a27-46e8-807c-a7484c102a71
+          bundle: tailpine_teams_header
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1757920979
+          behavior_settings:
+            -
+              value: {  }
+          field_tailpine_content:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: b26b4b76-147f-4688-af88-8f88f0560495
+                  bundle: tailpine_team
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757921067
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: 7c9520fc-a13a-4511-896b-d8a63f40aa47
+                  field_tailpine_subtitle:
+                    -
+                      value: 'Developer One'
+                  field_tailpine_title:
+                    -
+                      value: 'Person One'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: e43c5f17-2de0-4eb0-ba9f-c9e10c34d876
+                  bundle: tailpine_team
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757921097
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: ae7b14aa-ee88-4dc9-9abf-c06a1143ece6
+                  field_tailpine_subtitle:
+                    -
+                      value: 'Developer Two'
+                  field_tailpine_title:
+                    -
+                      value: 'Person Two'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 434b3a97-d004-4763-9aca-91c987d72056
+                  bundle: tailpine_team
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757921224
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: aebae2c6-a886-4dda-bb6d-45ed8a9a932a
+                  field_tailpine_subtitle:
+                    -
+                      value: 'Developer Three'
+                  field_tailpine_title:
+                    -
+                      value: 'Person Three'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 0d08bf05-4753-48eb-a758-dc74972cc855
+                  bundle: tailpine_team
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757921251
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: 89e252e2-bb0f-4056-af42-3e60695af279
+                  field_tailpine_subtitle:
+                    -
+                      value: 'Developer Four'
+                  field_tailpine_title:
+                    -
+                      value: 'Person Four'
+          field_tailpine_inner_content:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: ccddd9cc-543b-4cd1-b44b-b289272766d6
+                  bundle: tailpine_cta
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757920993
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_btn_type:
+                    -
+                      value: with_arrow
+                  field_tailpine_button_style:
+                    -
+                      value: secondary
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: 'View All Team'
+                      options: {  }
+                  field_tailpine_title:
+                    -
+                      value: 'View All Team'
+          field_tailpine_title:
+            -
+              value: 'All Teams Memberss'
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 131520f4-ab14-48e0-8a5d-7d5b5d6aaa62
+          bundle: tailpine_team_style_two_header
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1757930741
+          behavior_settings:
+            -
+              value: {  }
+          field_tailpine_content:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 984f4954-3472-441f-9808-2930812bcd1b
+                  bundle: tailpine_team_style_two
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757930763
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_description:
+                    -
+                      value: '<p>Mortem quibusdam modi iudicio familias praetermittenda meminit efficiatur manu. Assentiar oblivione mererer depravate videatur maxime foedus.</p>'
+                      format: basic_html
+                  field_tailpine_inner_content:
+                    -
+                      entity:
+                        _meta:
+                          version: '1.0'
+                          entity_type: paragraph
+                          uuid: ad65d9c4-b4c9-452e-9ba5-a521ada0f37f
+                          bundle: tailpine_social_icons
+                          default_langcode: en
+                        default:
+                          status:
+                            -
+                              value: true
+                          created:
+                            -
+                              value: 1757930789
+                          behavior_settings:
+                            -
+                              value: {  }
+                          field_icon_title:
+                            -
+                              value: icon_facebook
+                          field_tailpine_button_style:
+                            -
+                              value: primary
+                          field_tailpine_icon_size:
+                            -
+                              value: lg
+                          field_tailpine_icon_stroke_color:
+                            -
+                              value: body-bg
+                          field_tailpine_icon_style:
+                            -
+                              value: fill
+                          field_tailpine_link:
+                            -
+                              uri: 'internal:/'
+                              title: ''
+                              options: {  }
+                          field_tailpine_show_link_text:
+                            -
+                              value: false
+                    -
+                      entity:
+                        _meta:
+                          version: '1.0'
+                          entity_type: paragraph
+                          uuid: f5c865ca-12db-4f8a-a67c-85c62c4c53cf
+                          bundle: tailpine_social_icons
+                          default_langcode: en
+                        default:
+                          status:
+                            -
+                              value: true
+                          created:
+                            -
+                              value: 1757930851
+                          behavior_settings:
+                            -
+                              value: {  }
+                          field_icon_title:
+                            -
+                              value: icon_youtube
+                          field_tailpine_button_style:
+                            -
+                              value: primary
+                          field_tailpine_icon_size:
+                            -
+                              value: lg
+                          field_tailpine_icon_stroke_color:
+                            -
+                              value: body-bg
+                          field_tailpine_icon_style:
+                            -
+                              value: fill
+                          field_tailpine_link:
+                            -
+                              uri: 'internal:/'
+                              title: ''
+                              options: {  }
+                          field_tailpine_show_link_text:
+                            -
+                              value: false
+                    -
+                      entity:
+                        _meta:
+                          version: '1.0'
+                          entity_type: paragraph
+                          uuid: 283880b4-362d-4aac-a1d0-3b43fec1ebcd
+                          bundle: tailpine_social_icons
+                          default_langcode: en
+                        default:
+                          status:
+                            -
+                              value: true
+                          created:
+                            -
+                              value: 1757930876
+                          behavior_settings:
+                            -
+                              value: {  }
+                          field_icon_title:
+                            -
+                              value: icon_instagram
+                          field_tailpine_button_style:
+                            -
+                              value: primary
+                          field_tailpine_icon_size:
+                            -
+                              value: lg
+                          field_tailpine_icon_stroke_color:
+                            -
+                              value: body-bg
+                          field_tailpine_icon_style:
+                            -
+                              value: fill
+                          field_tailpine_link:
+                            -
+                              uri: 'internal:/'
+                              title: ''
+                              options: {  }
+                          field_tailpine_show_link_text:
+                            -
+                              value: false
+                  field_tailpine_media_image:
+                    -
+                      entity: aebae2c6-a886-4dda-bb6d-45ed8a9a932a
+                  field_tailpine_subtitle:
+                    -
+                      value: 'Developer One'
+                  field_tailpine_title:
+                    -
+                      value: 'Person One'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: f8ee15ed-c47b-4e99-bdb9-5393d71b790e
+                  bundle: tailpine_team_style_two
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757932136
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_description:
+                    -
+                      value: '<p>Mortem quibusdam modi iudicio familias praetermittenda meminit efficiatur manu. Assentiar oblivione mererer depravate videatur maxime foedus.</p>'
+                      format: basic_html
+                  field_tailpine_inner_content:
+                    -
+                      entity:
+                        _meta:
+                          version: '1.0'
+                          entity_type: paragraph
+                          uuid: feb5c3dc-bcc5-4d06-a049-64859211ffa3
+                          bundle: tailpine_social_icons
+                          default_langcode: en
+                        default:
+                          status:
+                            -
+                              value: true
+                          created:
+                            -
+                              value: 1757932187
+                          behavior_settings:
+                            -
+                              value: {  }
+                          field_icon_title:
+                            -
+                              value: icon_facebook
+                          field_tailpine_button_style:
+                            -
+                              value: primary
+                          field_tailpine_icon_size:
+                            -
+                              value: lg
+                          field_tailpine_icon_stroke_color:
+                            -
+                              value: body-bg
+                          field_tailpine_icon_style:
+                            -
+                              value: fill
+                          field_tailpine_link:
+                            -
+                              uri: 'internal:/'
+                              title: ''
+                              options: {  }
+                          field_tailpine_show_link_text:
+                            -
+                              value: false
+                    -
+                      entity:
+                        _meta:
+                          version: '1.0'
+                          entity_type: paragraph
+                          uuid: 8f2b34df-2dd6-4156-a766-210bdc44c943
+                          bundle: tailpine_social_icons
+                          default_langcode: en
+                        default:
+                          status:
+                            -
+                              value: true
+                          created:
+                            -
+                              value: 1757932209
+                          behavior_settings:
+                            -
+                              value: {  }
+                          field_icon_title:
+                            -
+                              value: icon_youtube
+                          field_tailpine_button_style:
+                            -
+                              value: primary
+                          field_tailpine_icon_size:
+                            -
+                              value: lg
+                          field_tailpine_icon_stroke_color:
+                            -
+                              value: body-bg
+                          field_tailpine_icon_style:
+                            -
+                              value: fill
+                          field_tailpine_link:
+                            -
+                              uri: 'internal:/'
+                              title: ''
+                              options: {  }
+                          field_tailpine_show_link_text:
+                            -
+                              value: false
+                    -
+                      entity:
+                        _meta:
+                          version: '1.0'
+                          entity_type: paragraph
+                          uuid: 515a8dd5-ae45-4ab3-94c2-11306d60f6a4
+                          bundle: tailpine_social_icons
+                          default_langcode: en
+                        default:
+                          status:
+                            -
+                              value: true
+                          created:
+                            -
+                              value: 1757932227
+                          behavior_settings:
+                            -
+                              value: {  }
+                          field_icon_title:
+                            -
+                              value: icon_instagram
+                          field_tailpine_button_style:
+                            -
+                              value: primary
+                          field_tailpine_icon_size:
+                            -
+                              value: lg
+                          field_tailpine_icon_stroke_color:
+                            -
+                              value: body-bg
+                          field_tailpine_icon_style:
+                            -
+                              value: fill
+                          field_tailpine_link:
+                            -
+                              uri: 'internal:/'
+                              title: ''
+                              options: {  }
+                          field_tailpine_show_link_text:
+                            -
+                              value: false
+                  field_tailpine_media_image:
+                    -
+                      entity: 7c9520fc-a13a-4511-896b-d8a63f40aa47
+                  field_tailpine_subtitle:
+                    -
+                      value: 'Developer Two'
+                  field_tailpine_title:
+                    -
+                      value: 'Person Two'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 842e416f-e7ce-4eb5-9744-44bc3a06359e
+                  bundle: tailpine_team_style_two
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757932248
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_description:
+                    -
+                      value: '<p>Mortem quibusdam modi iudicio familias praetermittenda meminit efficiatur manu. Assentiar oblivione mererer depravate videatur maxime foedus.</p>'
+                      format: basic_html
+                  field_tailpine_inner_content:
+                    -
+                      entity:
+                        _meta:
+                          version: '1.0'
+                          entity_type: paragraph
+                          uuid: f52d6f9c-42b1-4887-9e87-b4cf9e01ed41
+                          bundle: tailpine_social_icons
+                          default_langcode: en
+                        default:
+                          status:
+                            -
+                              value: true
+                          created:
+                            -
+                              value: 1757932293
+                          behavior_settings:
+                            -
+                              value: {  }
+                          field_icon_title:
+                            -
+                              value: icon_facebook
+                          field_tailpine_button_style:
+                            -
+                              value: primary
+                          field_tailpine_icon_size:
+                            -
+                              value: lg
+                          field_tailpine_icon_stroke_color:
+                            -
+                              value: body-bg
+                          field_tailpine_icon_style:
+                            -
+                              value: fill
+                          field_tailpine_link:
+                            -
+                              uri: 'internal:/'
+                              title: ''
+                              options: {  }
+                          field_tailpine_show_link_text:
+                            -
+                              value: false
+                    -
+                      entity:
+                        _meta:
+                          version: '1.0'
+                          entity_type: paragraph
+                          uuid: 8c6beed1-729f-4ef0-b5f5-3c932a188489
+                          bundle: tailpine_social_icons
+                          default_langcode: en
+                        default:
+                          status:
+                            -
+                              value: true
+                          created:
+                            -
+                              value: 1757932312
+                          behavior_settings:
+                            -
+                              value: {  }
+                          field_icon_title:
+                            -
+                              value: icon_youtube
+                          field_tailpine_button_style:
+                            -
+                              value: primary
+                          field_tailpine_icon_size:
+                            -
+                              value: lg
+                          field_tailpine_icon_stroke_color:
+                            -
+                              value: body-bg
+                          field_tailpine_icon_style:
+                            -
+                              value: fill
+                          field_tailpine_link:
+                            -
+                              uri: 'internal:/'
+                              title: ''
+                              options: {  }
+                          field_tailpine_show_link_text:
+                            -
+                              value: false
+                    -
+                      entity:
+                        _meta:
+                          version: '1.0'
+                          entity_type: paragraph
+                          uuid: 1d009701-4909-484c-9160-76eecf82e133
+                          bundle: tailpine_social_icons
+                          default_langcode: en
+                        default:
+                          status:
+                            -
+                              value: true
+                          created:
+                            -
+                              value: 1757932332
+                          behavior_settings:
+                            -
+                              value: {  }
+                          field_icon_title:
+                            -
+                              value: icon_instagram
+                          field_tailpine_button_style:
+                            -
+                              value: primary
+                          field_tailpine_icon_size:
+                            -
+                              value: lg
+                          field_tailpine_icon_stroke_color:
+                            -
+                              value: body-bg
+                          field_tailpine_icon_style:
+                            -
+                              value: fill
+                          field_tailpine_link:
+                            -
+                              uri: 'internal:/'
+                              title: ''
+                              options: {  }
+                          field_tailpine_show_link_text:
+                            -
+                              value: false
+                  field_tailpine_media_image:
+                    -
+                      entity: ae7b14aa-ee88-4dc9-9abf-c06a1143ece6
+                  field_tailpine_subtitle:
+                    -
+                      value: 'Developer Three'
+                  field_tailpine_title:
+                    -
+                      value: 'Person Three'
+          field_tailpine_select_column:
+            -
+              value: grid-cols-2
+          field_tailpine_title:
+            -
+              value: "Our's Team"
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 9c3225d3-de17-4063-8fa0-a99464fe942e
+          bundle: tailpine_testimonial_header
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1757926217
+          behavior_settings:
+            -
+              value: {  }
+          field_tailpine_comp_bg_color:
+            -
+              value: secondary
+          field_tailpine_content:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: fce17aa8-f5ef-4393-a924-82740682965b
+                  bundle: tailpine_testimonial
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757926286
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_description:
+                    -
+                      value: '<p>Aequitatem arguerent nimium nostrum suppetet morati voluptas poenis. Dare bonae praeteritas inflammati utroque incidant suavitate.</p>'
+                      format: basic_html
+                  field_tailpine_media_image:
+                    -
+                      entity: aebae2c6-a886-4dda-bb6d-45ed8a9a932a
+                  field_tailpine_subtitle:
+                    -
+                      value: 'Developer One'
+                  field_tailpine_title:
+                    -
+                      value: 'Person one'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: f01aa4fa-f9d2-451a-9e2b-89923fdba95c
+                  bundle: tailpine_testimonial
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757926329
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_description:
+                    -
+                      value: '<p>Aequitatem arguerent nimium nostrum suppetet morati voluptas poenis. Dare bonae praeteritas inflammati utroque incidant suavitate.</p>'
+                      format: basic_html
+                  field_tailpine_media_image:
+                    -
+                      entity: 89e252e2-bb0f-4056-af42-3e60695af279
+                  field_tailpine_subtitle:
+                    -
+                      value: 'Developer Two'
+                  field_tailpine_title:
+                    -
+                      value: 'Person two'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 6a7e5072-901b-48bd-af26-a7ae35d45bda
+                  bundle: tailpine_testimonial
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757926361
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_description:
+                    -
+                      value: '<p>Aequitatem arguerent nimium nostrum suppetet morati voluptas poenis. Dare bonae praeteritas inflammati utroque incidant suavitate</p>'
+                      format: basic_html
+                  field_tailpine_media_image:
+                    -
+                      entity: 7c9520fc-a13a-4511-896b-d8a63f40aa47
+                  field_tailpine_subtitle:
+                    -
+                      value: 'Developer Three'
+                  field_tailpine_title:
+                    -
+                      value: 'Person Three'
+          field_tailpine_title:
+            -
+              value: 'Clients Review'
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 65c92731-36ae-4813-b6a8-252e4120607f
+          bundle: tailpine_testimonial_header
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1757926410
+          behavior_settings:
+            -
+              value: {  }
+          field_tailpine_content:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: feacc141-ea11-4933-bcc4-0aad22a7433b
+                  bundle: tailpine_testimonial_style_two
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757926420
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_description:
+                    -
+                      value: '<p>Aequitatem arguerent nimium nostrum suppetet morati voluptas poenis. Dare bonae praeteritas inflammati utroque incidant suavitate.Aequitatem arguerent nimium nostrum suppetet morati voluptas poenis. Dare bonae praeteritas inflammati utroque incidant suavitate.</p>'
+                      format: basic_html
+                  field_tailpine_media_image:
+                    -
+                      entity: aebae2c6-a886-4dda-bb6d-45ed8a9a932a
+                  field_tailpine_subtitle:
+                    -
+                      value: 'Developer One'
+                  field_tailpine_title:
+                    -
+                      value: 'Person One'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 038f8980-375a-486d-a6a6-aa0530e3ba76
+                  bundle: tailpine_testimonial_style_two
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757926463
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_description:
+                    -
+                      value: '<p>Aequitatem arguerent nimium nostrum suppetet morati voluptas poenis. Dare bonae praeteritas inflammati utroque incidant suavitate.Aequitatem arguerent nimium nostrum suppetet morati voluptas poenis. Dare bonae praeteritas inflammati utroque incidant suavitate.</p>'
+                      format: basic_html
+                  field_tailpine_media_image:
+                    -
+                      entity: 7c9520fc-a13a-4511-896b-d8a63f40aa47
+                  field_tailpine_subtitle:
+                    -
+                      value: 'Developer Two'
+                  field_tailpine_title:
+                    -
+                      value: 'Person Two'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 07d8b385-e352-432c-9c9c-b6c9b8ca6321
+                  bundle: tailpine_testimonial_style_two
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757926492
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_description:
+                    -
+                      value: '<p>Aequitatem arguerent nimium nostrum suppetet morati voluptas poenis. Dare bonae praeteritas inflammati utroque incidant suavitate.Aequitatem arguerent nimium nostrum suppetet morati voluptas poenis. Dare bonae praeteritas inflammati utroque incidant suavitate.</p>'
+                      format: basic_html
+                  field_tailpine_media_image:
+                    -
+                      entity: ae7b14aa-ee88-4dc9-9abf-c06a1143ece6
+                  field_tailpine_subtitle:
+                    -
+                      value: 'Developer Three'
+                  field_tailpine_title:
+                    -
+                      value: 'Person Three'
+          field_tailpine_title:
+            -
+              value: 'Client Review'
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: a5e62599-fb3c-4d43-bf11-f19f3f32611e
+          bundle: tailpine_carousel
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1759999643
+          behavior_settings:
+            -
+              value: {  }
+          field_tailpine_content:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: a57ed216-215b-469a-aa90-7671aaf4dc97
+                  bundle: tailpine_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1759999699
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: b2a0c519-3606-44cc-9813-96e241ef43dd
+                  field_tailpine_subtitle:
+                    -
+                      value: 'First '
+                  field_tailpine_title:
+                    -
+                      value: 'Redefining Learning for a New Era'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: f952fb14-5de9-4416-86c3-3af764fe08dd
+                  bundle: tailpine_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1759999725
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: 4a8f3229-ca22-44c8-95a2-774677168148
+                  field_tailpine_subtitle:
+                    -
+                      value: Second
+                  field_tailpine_title:
+                    -
+                      value: 'Redefining Learning for a New Era'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: cb691f9b-2961-4f70-b072-f5fe4045e4a0
+                  bundle: tailpine_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1760001360
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: 1dfcfae9-1ab0-4020-ad38-5e52d9661e0b
+                  field_tailpine_subtitle:
+                    -
+                      value: Third
+                  field_tailpine_title:
+                    -
+                      value: 'Redefining Learning for a New Era'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 2f8519e0-18b7-4735-bac3-7a1094c73ca9
+                  bundle: tailpine_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1760001405
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: 14bc22db-c0cb-41aa-ab50-e36f13ac21ac
+                  field_tailpine_subtitle:
+                    -
+                      value: Fourth
+                  field_tailpine_title:
+                    -
+                      value: 'Redefining Learning for a New Era'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 384c2a1a-8b4b-4c91-841e-23c7327a3fce
+                  bundle: tailpine_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1760001431
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: fc863915-b5b9-45bc-a8a0-4486f6261036
+                  field_tailpine_subtitle:
+                    -
+                      value: Fifth
+                  field_tailpine_title:
+                    -
+                      value: 'Redefining Learning for a New Era'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 0d90a835-fed5-447c-9073-7e2af02a9918
+                  bundle: tailpine_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1760001447
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: 3a6ce356-55b2-44b0-ad1a-65f1dc195903
+                  field_tailpine_subtitle:
+                    -
+                      value: Sixth
+                  field_tailpine_title:
+                    -
+                      value: 'Redefining Learning for a New Era'
+          field_tailpine_description:
+            -
+              value: '<p>Assiduitas legendam placatae nosmet delectamur praetermissum homo sententia quae. Deterruisset mel postulant cruciantur inscientia vel magnopere late et. Oderit proposita neglegentur assentior cyrenaicisque statim terminari concursionibus.</p>'
+              format: basic_html
+          field_tailpine_title:
+            -
+              value: 'Redefining Learning for a New Era'
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 2cae4420-f67f-4771-ad9d-32636d386cfc
+          bundle: tailpine_post_wrapper
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1757935473
+          behavior_settings:
+            -
+              value: {  }
+          field_tailpine_content:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: b4d3f859-cfdc-42b1-9694-102e7441f5c1
+                  bundle: tailpine_post_cards
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757935499
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_date:
+                    -
+                      value: '2025-09-18'
+                  field_tailpine_description:
+                    -
+                      value: '<p>Significet oderit nostras distrahi movere atqui distrahi expressas.Significet oderit nostras distrahi movere atqui distrahi expressas.Significet oderit nostras distrahi movere atqui distrahi expressas.</p>'
+                      format: basic_html
+                  field_tailpine_media_image:
+                    -
+                      entity: 2fcb4248-15bd-4d5c-bea7-e185f179c5ac
+                  field_tailpine_subtitle:
+                    -
+                      value: Categories
+                  field_tailpine_title:
+                    -
+                      value: 'Significet oderit nostras distrahi movere atqui distrahi expressas.'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 156c2813-6010-4f9b-829c-b91c4df8118f
+                  bundle: tailpine_post_cards
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757935541
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_date:
+                    -
+                      value: '2025-09-19'
+                  field_tailpine_description:
+                    -
+                      value: '<p>Significet oderit nostras distrahi movere atqui distrahi expressas.Significet oderit nostras distrahi movere atqui distrahi expressas.Significet oderit nostras distrahi movere atqui distrahi expressas.</p>'
+                      format: basic_html
+                  field_tailpine_media_image:
+                    -
+                      entity: 35591bbf-38dd-4b6e-aac0-c5593c934545
+                  field_tailpine_subtitle:
+                    -
+                      value: Categories
+                  field_tailpine_title:
+                    -
+                      value: 'Significet oderit nostras distrahi movere'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: a6622daf-b120-4d7e-9c98-2a33f3625343
+                  bundle: tailpine_post_cards
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757935564
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_date:
+                    -
+                      value: '2025-09-19'
+                  field_tailpine_description:
+                    -
+                      value: '<p>Significet oderit nostras distrahi movere atqui distrahi expressas.Significet oderit nostras distrahi movere atqui distrahi expressas.Significet oderit nostras distrahi movere atqui distrahi expressas.</p>'
+                      format: basic_html
+                  field_tailpine_media_image:
+                    -
+                      entity: c5e8dd7c-0205-40e4-826f-663749ff934a
+                  field_tailpine_subtitle:
+                    -
+                      value: Categories
+                  field_tailpine_title:
+                    -
+                      value: 'Significet oderit nostras distrahi movere'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 2b6ef82f-13e1-495b-bb11-ed3434092e9e
+                  bundle: tailpine_post_cards
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757935920
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_date:
+                    -
+                      value: '2025-09-18'
+                  field_tailpine_description:
+                    -
+                      value: '<p>Significet oderit nostras distrahi movere atqui distrahi expressas. Significet oderit nostras distrahi movere atqui distrahi expressas. Significet oderit nostras distrahi movere atqui distrahi expressas.</p>'
+                      format: basic_html
+                  field_tailpine_media_image:
+                    -
+                      entity: 3a6ce356-55b2-44b0-ad1a-65f1dc195903
+                  field_tailpine_subtitle:
+                    -
+                      value: Categories
+                  field_tailpine_title:
+                    -
+                      value: 'Significet oderit nostras distrahi'
+          field_tailpine_inner_content:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 97764a1a-d277-4de0-bc08-ffd97ed698df
+                  bundle: tailpine_cta
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757935481
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_btn_type:
+                    -
+                      value: hover_arrow_move
+                  field_tailpine_button_style:
+                    -
+                      value: secondary
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: 'View All Posts'
+                      options: {  }
+                  field_tailpine_title:
+                    -
+                      value: 'View All'
+          field_tailpine_title:
+            -
+              value: 'All Posts'
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: dc145cdc-40cc-48d6-bbd7-06f306baa453
+          bundle: tailpine_post_style_one_wrapper
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1757942365
+          behavior_settings:
+            -
+              value: {  }
+          field_tailpine_content:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: eeb4ec64-2c9b-4a00-a6e4-d8eb410cba04
+                  bundle: tailpine_post_inner_wrapper
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757942365
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_content:
+                    -
+                      entity:
+                        _meta:
+                          version: '1.0'
+                          entity_type: paragraph
+                          uuid: 9848a659-5f36-4373-a784-2581372da126
+                          bundle: tailpine_blog_post_with_cta
+                          default_langcode: en
+                        default:
+                          status:
+                            -
+                              value: true
+                          created:
+                            -
+                              value: 1757942365
+                          behavior_settings:
+                            -
+                              value: {  }
+                          field_tailpine_date:
+                            -
+                              value: '2025-09-18'
+                          field_tailpine_description:
+                            -
+                              value: '<p>Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur&nbsp;</p>'
+                              format: basic_html
+                          field_tailpine_inner_content:
+                            -
+                              entity:
+                                _meta:
+                                  version: '1.0'
+                                  entity_type: paragraph
+                                  uuid: 9b1add08-f5a9-44f0-8fd8-8a5b92ce37ee
+                                  bundle: tailpine_cta
+                                  default_langcode: en
+                                default:
+                                  status:
+                                    -
+                                      value: true
+                                  created:
+                                    -
+                                      value: 1757942484
+                                  behavior_settings:
+                                    -
+                                      value: {  }
+                                  field_tailpine_button_style:
+                                    -
+                                      value: primary
+                                  field_tailpine_link:
+                                    -
+                                      uri: 'internal:/'
+                                      title: 'Read More'
+                                      options: {  }
+                                  field_tailpine_title:
+                                    -
+                                      value: 'Read More'
+                          field_tailpine_media_image:
+                            -
+                              entity: 1dfcfae9-1ab0-4020-ad38-5e52d9661e0b
+                          field_tailpine_subtitle:
+                            -
+                              value: 'By Carlos'
+                          field_tailpine_title:
+                            -
+                              value: 'Lorem ipsum dolor sit amet consectetur '
+                    -
+                      entity:
+                        _meta:
+                          version: '1.0'
+                          entity_type: paragraph
+                          uuid: fe5a1321-5f7a-4b74-b61b-65d3e7af460a
+                          bundle: tailpine_blog_post_with_cta
+                          default_langcode: en
+                        default:
+                          status:
+                            -
+                              value: true
+                          created:
+                            -
+                              value: 1757942504
+                          behavior_settings:
+                            -
+                              value: {  }
+                          field_tailpine_date:
+                            -
+                              value: '2025-09-19'
+                          field_tailpine_description:
+                            -
+                              value: '<p>Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur&nbsp;</p>'
+                              format: basic_html
+                          field_tailpine_inner_content:
+                            -
+                              entity:
+                                _meta:
+                                  version: '1.0'
+                                  entity_type: paragraph
+                                  uuid: d9197a24-63b6-4d95-b128-6b7c4394e382
+                                  bundle: tailpine_cta
+                                  default_langcode: en
+                                default:
+                                  status:
+                                    -
+                                      value: true
+                                  created:
+                                    -
+                                      value: 1757942533
+                                  behavior_settings:
+                                    -
+                                      value: {  }
+                                  field_tailpine_button_style:
+                                    -
+                                      value: primary
+                                  field_tailpine_link:
+                                    -
+                                      uri: 'internal:/'
+                                      title: 'Read More'
+                                      options: {  }
+                                  field_tailpine_title:
+                                    -
+                                      value: 'Read More'
+                          field_tailpine_media_image:
+                            -
+                              entity: fc863915-b5b9-45bc-a8a0-4486f6261036
+                          field_tailpine_subtitle:
+                            -
+                              value: 'By Carlos'
+                          field_tailpine_title:
+                            -
+                              value: 'Lorem ipsum dolor sit amet consectetur '
+                    -
+                      entity:
+                        _meta:
+                          version: '1.0'
+                          entity_type: paragraph
+                          uuid: daf4fbc8-79fe-480b-95b4-774b267670ad
+                          bundle: tailpine_blog_post_with_cta
+                          default_langcode: en
+                        default:
+                          status:
+                            -
+                              value: true
+                          created:
+                            -
+                              value: 1757942556
+                          behavior_settings:
+                            -
+                              value: {  }
+                          field_tailpine_date:
+                            -
+                              value: '2025-09-19'
+                          field_tailpine_description:
+                            -
+                              value: '<p>Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur&nbsp;</p>'
+                              format: basic_html
+                          field_tailpine_inner_content:
+                            -
+                              entity:
+                                _meta:
+                                  version: '1.0'
+                                  entity_type: paragraph
+                                  uuid: 5ed186ea-2527-445e-bf55-d516caefa50e
+                                  bundle: tailpine_cta
+                                  default_langcode: en
+                                default:
+                                  status:
+                                    -
+                                      value: true
+                                  created:
+                                    -
+                                      value: 1757942639
+                                  behavior_settings:
+                                    -
+                                      value: {  }
+                                  field_tailpine_button_style:
+                                    -
+                                      value: primary
+                                  field_tailpine_link:
+                                    -
+                                      uri: 'internal:/'
+                                      title: 'Read More'
+                                      options: {  }
+                                  field_tailpine_title:
+                                    -
+                                      value: 'Read More'
+                          field_tailpine_media_image:
+                            -
+                              entity: 14bc22db-c0cb-41aa-ab50-e36f13ac21ac
+                          field_tailpine_subtitle:
+                            -
+                              value: 'By Carlos'
+                          field_tailpine_title:
+                            -
+                              value: 'Lorem ipsum dolor sit amet consectetur '
+                  field_tailpine_select_column:
+                    -
+                      value: grid-cols-3
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: a6b1efa2-0400-4942-aa21-cd44e2b801e4
+                  bundle: tailpine_post_inner_wrapper
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757942700
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_content:
+                    -
+                      entity:
+                        _meta:
+                          version: '1.0'
+                          entity_type: paragraph
+                          uuid: 4b9b870c-09a7-481a-b5cb-ecd698110956
+                          bundle: tailpine_blog_post_with_cta
+                          default_langcode: en
+                        default:
+                          status:
+                            -
+                              value: true
+                          created:
+                            -
+                              value: 1757942700
+                          behavior_settings:
+                            -
+                              value: {  }
+                          field_tailpine_date:
+                            -
+                              value: '2025-09-18'
+                          field_tailpine_description:
+                            -
+                              value: '<p>Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur&nbsp;</p>'
+                              format: basic_html
+                          field_tailpine_inner_content:
+                            -
+                              entity:
+                                _meta:
+                                  version: '1.0'
+                                  entity_type: paragraph
+                                  uuid: 47973c4f-20aa-41df-a927-b1d1752f0d94
+                                  bundle: tailpine_cta
+                                  default_langcode: en
+                                default:
+                                  status:
+                                    -
+                                      value: true
+                                  created:
+                                    -
+                                      value: 1757942719
+                                  behavior_settings:
+                                    -
+                                      value: {  }
+                                  field_tailpine_button_style:
+                                    -
+                                      value: secondary
+                                  field_tailpine_link:
+                                    -
+                                      uri: 'internal:/'
+                                      title: 'Read More'
+                                      options: {  }
+                                  field_tailpine_title:
+                                    -
+                                      value: 'Read More'
+                          field_tailpine_media_image:
+                            -
+                              entity: 1dfcfae9-1ab0-4020-ad38-5e52d9661e0b
+                          field_tailpine_subtitle:
+                            -
+                              value: 'By Carlos'
+                          field_tailpine_title:
+                            -
+                              value: 'Lorem ipsum dolor sit amet consectetur '
+                    -
+                      entity:
+                        _meta:
+                          version: '1.0'
+                          entity_type: paragraph
+                          uuid: b53ea040-8e2b-4e81-a332-a9c99a62022c
+                          bundle: tailpine_blog_post_with_cta
+                          default_langcode: en
+                        default:
+                          status:
+                            -
+                              value: true
+                          created:
+                            -
+                              value: 1757942734
+                          behavior_settings:
+                            -
+                              value: {  }
+                          field_tailpine_date:
+                            -
+                              value: '2025-09-30'
+                          field_tailpine_description:
+                            -
+                              value: '<p>Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur&nbsp;</p>'
+                              format: basic_html
+                          field_tailpine_inner_content:
+                            -
+                              entity:
+                                _meta:
+                                  version: '1.0'
+                                  entity_type: paragraph
+                                  uuid: 4c02bdb5-afb5-493a-b4cb-4c95dc7319c0
+                                  bundle: tailpine_cta
+                                  default_langcode: en
+                                default:
+                                  status:
+                                    -
+                                      value: true
+                                  created:
+                                    -
+                                      value: 1757942754
+                                  behavior_settings:
+                                    -
+                                      value: {  }
+                                  field_tailpine_button_style:
+                                    -
+                                      value: secondary
+                                  field_tailpine_link:
+                                    -
+                                      uri: 'internal:/'
+                                      title: 'Read More'
+                                      options: {  }
+                                  field_tailpine_title:
+                                    -
+                                      value: 'Read More'
+                          field_tailpine_media_image:
+                            -
+                              entity: fc863915-b5b9-45bc-a8a0-4486f6261036
+                          field_tailpine_subtitle:
+                            -
+                              value: 'By Carlos'
+                          field_tailpine_title:
+                            -
+                              value: 'Lorem ipsum dolor sit amet consectetur '
+                  field_tailpine_select_column:
+                    -
+                      value: grid-cols-2
+          field_tailpine_inner_content:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 1e996975-c70a-49eb-ba49-2bcbdd71dd5c
+                  bundle: tailpine_cta
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757942406
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_btn_type:
+                    -
+                      value: hover_arrow_move
+                  field_tailpine_button_style:
+                    -
+                      value: secondary
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: 'View All Blogs'
+                      options: {  }
+                  field_tailpine_title:
+                    -
+                      value: 'View More'
+          field_tailpine_title:
+            -
+              value: 'Blogs Title '
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: f47ea4c5-f4b9-42a4-9b5f-de664ae2d2cb
+          bundle: tailpine_accordion_header
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1758000610
+          behavior_settings:
+            -
+              value: {  }
+          field_tailpine_content:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: ad23e1aa-8fde-4aa1-8c7d-a68a6ca88227
+                  bundle: tailpine_accordion
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1758000626
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_description:
+                    -
+                      value: '<p>Molestiae e romano conscientia augendas laboriosam isti. Molestiae e romano conscientia augendas laboriosam isti.</p>'
+                      format: basic_html
+                  field_tailpine_title:
+                    -
+                      value: 'Molestiae e romano conscientia augendas laboriosam isti.'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: bd35875e-3f4d-4a01-96fb-c5563a74ac61
+                  bundle: tailpine_accordion
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1758000635
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_description:
+                    -
+                      value: '<p>Molestiae e romano conscientia augendas laboriosam isti. Molestiae e romano conscientia augendas laboriosam isti.</p>'
+                      format: basic_html
+                  field_tailpine_title:
+                    -
+                      value: 'Molestiae e romano conscientia augendas laboriosam isti.'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: afbe0233-09c7-4985-a8cc-eaaa787524f3
+                  bundle: tailpine_accordion
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1758000642
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_description:
+                    -
+                      value: '<p>Molestiae e romano conscientia augendas laboriosam isti. Molestiae e romano conscientia augendas laboriosam isti.</p>'
+                      format: basic_html
+                  field_tailpine_title:
+                    -
+                      value: 'Molestiae e romano conscientia augendas laboriosam isti.'
+          field_tailpine_description:
+            -
+              value: '<p>Molestiae e romano conscientia augendas laboriosam isti.Molestiae e romano conscientia augendas laboriosam isti.Molestiae e romano conscientia augendas laboriosam isti.</p>'
+              format: basic_html
+          field_tailpine_title:
+            -
+              value: 'Molestiae e romano conscientia augendas laboriosam isti.'
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 67bb2486-99e3-49c3-a040-49cf0e04db0b
+          bundle: tailpine_accordion_one_header
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1758000790
+          behavior_settings:
+            -
+              value: {  }
+          field_tailpine_content:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 1f8ec675-f39b-422a-a020-f4e539ec70c3
+                  bundle: tailpine_accordion_sytle_one
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1758000790
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_description:
+                    -
+                      value: '<p>Molestiae e romano conscientia augendas laboriosam isti. Molestiae e romano conscientia augendas laboriosam isti. Molestiae e romano conscientia augendas laboriosam isti.</p>'
+                      format: basic_html
+                  field_tailpine_title:
+                    -
+                      value: 'Molestiae e romano conscientia augendas laboriosam isti.'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 975d52e1-05fb-44c9-b2a7-a04575a82432
+                  bundle: tailpine_accordion_sytle_one
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1758000886
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_description:
+                    -
+                      value: '<p>Molestiae e romano conscientia augendas laboriosam isti. Molestiae e romano conscientia augendas laboriosam isti. Molestiae e romano conscientia augendas laboriosam isti.</p>'
+                      format: basic_html
+                  field_tailpine_title:
+                    -
+                      value: 'Molestiae e romano conscientia augendas laboriosam isti.'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 674b7168-595d-4364-b090-2dcd36756f55
+                  bundle: tailpine_accordion_sytle_one
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1758000894
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_description:
+                    -
+                      value: '<p>Molestiae e romano conscientia augendas laboriosam isti. Molestiae e romano conscientia augendas laboriosam isti. Molestiae e romano conscientia augendas laboriosam isti.</p>'
+                      format: basic_html
+                  field_tailpine_title:
+                    -
+                      value: 'Molestiae e romano conscientia augendas laboriosam isti.'
+          field_tailpine_title:
+            -
+              value: 'Molestiae e romano conscientia augendas laboriosam isti.'
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 8d3ff6a8-33dd-49de-b8b3-8b316bfab1e2
+          bundle: tailpine_sponser_header
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1757958073
+          behavior_settings:
+            -
+              value: {  }
+          field_tailpine_content:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: cb95df1f-586c-444b-9868-d97434b78b81
+                  bundle: tailpine_sponser_company
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757958092
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: ''
+                      options: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: 05a0fd0a-d92f-42dd-9244-46216c5dc124
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: e8104d54-9473-47b2-8051-4ae044c66943
+                  bundle: tailpine_sponser_company
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757958106
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: ''
+                      options: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: 18c5ef7c-610e-41c4-88b4-b07f2e3f0e85
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 859e1472-fbc4-4be4-ae5e-8db8cddcdc01
+                  bundle: tailpine_sponser_company
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757958117
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: ''
+                      options: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: 62e69249-a3cd-4092-9356-036b03a37422
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 8030c122-aa0d-4a78-8951-9c7fde8c857f
+                  bundle: tailpine_sponser_company
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757958131
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: ''
+                      options: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: 8db4913a-052d-4c03-8e7d-0e7d8c178ca3
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 79dfd5ff-6f0f-409f-8866-7663e1b5fc99
+                  bundle: tailpine_sponser_company
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757958142
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: ''
+                      options: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: 05dc3045-c4a7-4aff-a2f9-a686f1c61b14
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 49789135-59b1-4eaa-803f-c63dd0d5cb4c
+                  bundle: tailpine_sponser_company
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757958163
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: ''
+                      options: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: 1166d764-4b18-4777-8f5d-6a97ed689cbe
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 6e60592c-7752-4643-9f16-3cae1945bff0
+                  bundle: tailpine_sponser_company
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757958176
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpin_column_start:
+                    -
+                      value: 'lg:col-start-2'
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: ''
+                      options: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: cd8a2152-e288-4065-bf9b-6bc82ce5d6b4
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: e66b415c-1631-4103-8445-ad9a99fe0ff6
+                  bundle: tailpine_sponser_company
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757958194
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: ''
+                      options: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: 05a0fd0a-d92f-42dd-9244-46216c5dc124
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 0703fddc-cbe6-4e48-9021-f9bcb312bb23
+                  bundle: tailpine_sponser_company
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757958208
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: ''
+                      options: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: 18c5ef7c-610e-41c4-88b4-b07f2e3f0e85
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 14dda047-f5bf-4482-ae72-006c2583b56b
+                  bundle: tailpine_sponser_company
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757958221
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: ''
+                      options: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: 62e69249-a3cd-4092-9356-036b03a37422
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 41d89e6e-132b-4447-9408-d94cf4fa828f
+                  bundle: tailpine_sponser_company
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757958268
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpin_column_start:
+                    -
+                      value: 'lg:col-start-3'
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: ''
+                      options: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: 05dc3045-c4a7-4aff-a2f9-a686f1c61b14
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 1edcbe3d-d817-41bc-9655-a8318dd14b1d
+                  bundle: tailpine_sponser_company
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757958288
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: ''
+                      options: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: 1166d764-4b18-4777-8f5d-6a97ed689cbe
+          field_tailpine_title:
+            -
+              value: 'Sponsors & Partners'
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 753e2bfc-d097-457b-aeff-ddc809fd5782
+          bundle: tailpine_sponser_two_header
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1758031875
+          behavior_settings:
+            -
+              value: {  }
+          field_tailpine_content:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: ea1af31b-fa74-4754-894f-eff8332b3eae
+                  bundle: tailpine_sponser_logo_style_one
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1758031875
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: ''
+                      options: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: 8db4913a-052d-4c03-8e7d-0e7d8c178ca3
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: caf7d9df-d988-4f12-bfc6-eaa9fe106189
+                  bundle: tailpine_sponser_logo_style_one
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1758031931
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: ''
+                      options: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: 1166d764-4b18-4777-8f5d-6a97ed689cbe
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 56516e53-d163-4bdb-bf7a-ea47172d9632
+                  bundle: tailpine_sponser_logo_style_one
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1758031940
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: ''
+                      options: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: 05dc3045-c4a7-4aff-a2f9-a686f1c61b14
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: a5988d01-7aec-443c-9943-471e0bb35346
+                  bundle: tailpine_sponser_logo_style_one
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1758031950
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: ''
+                      options: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: 05a0fd0a-d92f-42dd-9244-46216c5dc124
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: efdd2b86-8280-4104-aa6b-512992ece4a4
+                  bundle: tailpine_sponser_logo_style_one
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1758031959
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: ''
+                      options: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: 18c5ef7c-610e-41c4-88b4-b07f2e3f0e85
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 56e715f7-98fb-4dc2-a15c-f13ebcdb591b
+                  bundle: tailpine_sponser_logo_style_one
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1758031967
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: ''
+                      options: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: 62e69249-a3cd-4092-9356-036b03a37422
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 8465a580-4331-49b4-b412-206103eb235c
+                  bundle: tailpine_sponser_logo_style_one
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1758032274
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: ''
+                      options: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: 05a0fd0a-d92f-42dd-9244-46216c5dc124
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 35cdf6a6-170a-40c5-bee6-d52beec16771
+                  bundle: tailpine_sponser_logo_style_one
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1758032284
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: ''
+                      options: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: 8db4913a-052d-4c03-8e7d-0e7d8c178ca3
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 3a3dfbb8-4511-4d41-8dc3-dba98aa300e8
+                  bundle: tailpine_sponser_logo_style_one
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1758032329
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: ''
+                      options: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: 8db4913a-052d-4c03-8e7d-0e7d8c178ca3
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: ef7716db-ab6e-438d-af65-6fa3c3cb243b
+                  bundle: tailpine_sponser_logo_style_one
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1758032337
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: ''
+                      options: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: 05a0fd0a-d92f-42dd-9244-46216c5dc124
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 5e38da77-7417-4ace-8a6f-22fa39bb1c91
+                  bundle: tailpine_sponser_logo_style_one
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1758032348
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: ''
+                      options: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: 05dc3045-c4a7-4aff-a2f9-a686f1c61b14
+          field_tailpine_title:
+            -
+              value: 'Our Sponsor Logo'
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: e5049b22-c17a-4e89-823c-2a5f1a978f34
+          bundle: tailpine_sub_page_hero
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1758004058
+          behavior_settings:
+            -
+              value: {  }
+          field_tailpine_description:
+            -
+              value: '<p>Infimum effectrices permulta graviter praesenti degendae firmam pondere. Is iracundia adversa aliena susceperant theophrastus quosdam caritatem.</p>'
+              format: basic_html
+          field_tailpine_media_image:
+            -
+              entity: 579a3099-dff1-4f88-9176-406c8f792e78
+          field_tailpine_title:
+            -
+              value: 'About Us'
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 0b7d5031-e7f4-4b0b-a981-1f4d687e3c9f
+          bundle: tailpine_contact_us_form
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1758004219
+          behavior_settings:
+            -
+              value: {  }
+          field_tailpine_add_form:
+            -
+              target_id: contact
+              default_data: ''
+              status: open
+              open: ''
+              close: ''
+          field_tailpine_title:
+            -
+              value: 'Get In Touch'
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 7155486f-d6e4-434a-a323-b2eaacbc4326
+          bundle: tailpine_get_in_touch
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1758004107
+          behavior_settings:
+            -
+              value: {  }
+          field_tailpine_inner_content:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: b9b5c281-724d-4f1e-92c3-977f01305576
+                  bundle: tailpine_cta
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1758004178
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_button_style:
+                    -
+                      value: primary
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: 'Read More'
+                      options: {  }
+                  field_tailpine_title:
+                    -
+                      value: 'Contact Us'
+          field_tailpine_subtitle:
+            -
+              value: 'Let’s build something amazing together.'
+          field_tailpine_title:
+            -
+              value: 'Get In Touch'
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: ae874338-d556-492c-8f76-e7db8d5028f3
+          bundle: tailpine_modal
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1758029681
+          behavior_settings:
+            -
+              value: {  }
+          field_tailpine_description:
+            -
+              value: '<p>Assentior acutum superstitione inflammati solum insequitur iniucundus animal.Assentior acutum superstitione inflammati solum insequitur iniucundus animal.Assentior acutum superstitione inflammati solum insequitur iniucundus animal.Assentior acutum superstitione inflammati solum insequitur iniucundus animal.Assentior acutum superstitione inflammati solum insequitur iniucundus animal.Assentior acutum superstitione inflammati solum insequitur iniucundus animal.Assentior acutum superstitione inflammati solum insequitur iniucundus animal.Assentior acutum superstitione inflammati solum insequitur iniucundus animal.</p>'
+              format: basic_html
+          field_tailpine_modal_btn_text:
+            -
+              value: 'Open Modal '
+          field_tailpine_title:
+            -
+              value: 'Assentior acutum superstitione inflammati'
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 18371f92-df61-4956-a089-4fa2f75a7e14
+          bundle: tailpine_tabs_wrapper
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1758091829
+          behavior_settings:
+            -
+              value: {  }
+          field_tailpine_content:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 53555988-0d7e-49f3-b021-8737257bbebc
+                  bundle: tailpine_tabs_content
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1758091829
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_description:
+                    -
+                      value: '<p>Phaedrum oratoribus confidam philosophiae quoquo falsarum excelsus dictas. Terrore appellat iustitiam morte eius maioribus linguam. Ludicra regione locupletiorem queo maestitiam naturalem peccant causas timeret.</p>'
+                      format: basic_html
+                  field_tailpine_title:
+                    -
+                      value: Home
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: d138d791-656b-4262-be36-ed8f97a81616
+                  bundle: tailpine_tabs_content
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1758091852
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_description:
+                    -
+                      value: '<p>Phaedrum oratoribus confidam philosophiae quoquo falsarum excelsus dictas. Terrore appellat iustitiam morte eius maioribus linguam. Ludicra regione locupletiorem queo maestitiam naturalem peccant causas timeret. Profile&nbsp;</p>'
+                      format: basic_html
+                  field_tailpine_title:
+                    -
+                      value: 'Profile '
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 1de2a034-12e5-445a-a7b1-e29603d1e870
+                  bundle: tailpine_tabs_content
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1758091867
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_description:
+                    -
+                      value: '<p>Contact Phaedrum oratoribus confidam philosophiae quoquo falsarum excelsus dictas. Terrore appellat iustitiam morte eius maioribus linguam. Ludicra regione locupletiorem queo maestitiam naturalem peccant causas timeret.</p>'
+                      format: basic_html
+                  field_tailpine_title:
+                    -
+                      value: Contact
+          field_tailpine_tab_style:
+            -
+              value: primary_fill
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: ddb4688b-d528-44da-8cac-be35a7e469d3
+          bundle: tailpine_tabs_wrapper
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1758092395
+          behavior_settings:
+            -
+              value: {  }
+          field_tailpine_content:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: e982cddd-c63d-4d13-afeb-365fcd84b07c
+                  bundle: tailpine_tabs_content
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1758092395
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_description:
+                    -
+                      value: '<p>Profile Existimare iustius vivamus ait gaudere servire inpendente aptissimum.</p>'
+                      format: basic_html
+                  field_tailpine_title:
+                    -
+                      value: 'Profile '
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 3b3a1a81-e1bf-40cd-ac0e-ca18ee1bf69a
+                  bundle: tailpine_tabs_content
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1758092419
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_description:
+                    -
+                      value: '<p>Category Existimare iustius vivamus ait gaudere servire inpendente aptissimum.</p>'
+                      format: basic_html
+                  field_tailpine_title:
+                    -
+                      value: Category
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 6fb37488-bc69-41d7-b12c-5bdd0d8dc07d
+                  bundle: tailpine_tabs_content
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1758092433
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_description:
+                    -
+                      value: '<p>Existimare iustius vivamus ait gaudere servire inpendente aptissimum. Dashboard</p>'
+                      format: basic_html
+                  field_tailpine_title:
+                    -
+                      value: Dashboard
+          field_tailpine_tab_style:
+            -
+              value: icon_tabs
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 8555c359-4251-4707-a9c0-fff718271c65
+          bundle: tailpine_tabs_wrapper
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1758094913
+          behavior_settings:
+            -
+              value: {  }
+          field_tailpine_content:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: c050c7a0-df81-4761-aea8-f1d04b5a964a
+                  bundle: tailpine_tabs_content
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1758094913
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_description:
+                    -
+                      value: '<p>Home Oops! We couldn’t find the page you were looking forOops! We couldn’t find the page you were looking forOops! We couldn’t find the page you were looking for</p>'
+                      format: basic_html
+                  field_tailpine_title:
+                    -
+                      value: 'Home '
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: e7fda12b-dd2c-420c-8ff6-b2e6cd80526a
+                  bundle: tailpine_tabs_content
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1758094927
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_description:
+                    -
+                      value: '<p>About Oops! We couldn’t find the page you were looking forOops! We couldn’t find the page you were looking forOops! We couldn’t find the page you were looking for</p>'
+                      format: basic_html
+                  field_tailpine_title:
+                    -
+                      value: About
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 6d7365e4-f222-4506-93dc-cdc5f4eda811
+                  bundle: tailpine_tabs_content
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1758094937
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_description:
+                    -
+                      value: '<p>Breadcrumb Oops! We couldn’t find the page you were looking for</p>'
+                      format: basic_html
+                  field_tailpine_title:
+                    -
+                      value: BreadCrumb
+          field_tailpine_tab_style:
+            -
+              value: underline
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 42b5a92b-572a-462d-aac8-70d7d02c0802
+          bundle: tailpine_404_page
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1758094855
+          behavior_settings:
+            -
+              value: {  }
+          field_tailpine_description:
+            -
+              value: '<p>Oops! We couldn’t find the page you were looking for</p>'
+              format: basic_html
+          field_tailpine_title:
+            -
+              value: 404!

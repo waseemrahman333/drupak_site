@@ -1,0 +1,34 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: b6488b0a-0d7d-42ec-9f4c-cf209a0716a4
+  bundle: media_and_text
+  default_langcode: en
+  depends:
+    4409bce3-e95e-4229-af28-d8126b60b991: media
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Media and Text'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  field_select_the_media_postion:
+    -
+      value: row
+  field_tailpine_description:
+    -
+      value: '<p>At our university, you’ll become part of a vibrant community that encourages you to discover your passions and develop valuable skills. With exceptional academics, meaningful opportunities, and guidance from peers and mentors, you’ll graduate ready to achieve your ambitions and make an impact. Find the path that’s right for you.</p>'
+      format: basic_html
+  field_tailpine_media_image:
+    -
+      entity: 4409bce3-e95e-4229-af28-d8126b60b991
+  field_tailpine_title:
+    -
+      value: 'Inspire learning, growth, and lifelong success.'

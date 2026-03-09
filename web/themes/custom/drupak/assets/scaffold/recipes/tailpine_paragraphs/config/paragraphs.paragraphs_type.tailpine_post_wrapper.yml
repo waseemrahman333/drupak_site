@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: tailpine_post_wrapper
+label: 'Post Wrapper'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

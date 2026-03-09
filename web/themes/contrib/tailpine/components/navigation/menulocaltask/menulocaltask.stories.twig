@@ -1,0 +1,16 @@
+{% stories menulocaltask with { title: 'Components/Menu Local Task' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      is_active: false,
+      link: 'Value'
+    }
+  } %}
+{% embed 'components:menulocaltask' with { 
+  is_active: is_active,
+  link: link
+} %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

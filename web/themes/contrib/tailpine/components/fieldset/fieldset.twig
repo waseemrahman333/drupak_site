@@ -1,0 +1,33 @@
+{#
+/**
+ * Fieldset Component
+ * 
+ * Form fieldset for grouping related form controls.
+ *
+ * Accessibility:
+ * - Semantic fieldset/legend
+ * - Groups related controls
+ * - Accessible descriptions
+ */
+#}
+
+<fieldset class="border border-gray-300 p-4">
+  {% if legend %}
+  <legend class="text-lg font-semibold text-body px-2">
+    {{ legend }}
+  </legend>
+  {% endif %}
+  
+  {% if description %}
+  <div class="text-sm text-gray-600 mb-4">
+    {{ description }}
+  </div>
+  {% endif %}
+  
+  <div class="space-y-4">
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+  </div>
+</fieldset>
+

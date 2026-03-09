@@ -1,0 +1,46 @@
+{% stories time with { title: 'Components/Time' } %}
+
+{% story default with {
+    name: '1. Time - Default',
+    args: { 
+      text: 'November 5, 2025',
+      datetime: '2025-11-05T10:30:00Z'
+    }
+  } %}
+{% embed 'components:time' with { 
+  text: text,
+  datetime: datetime
+} %}{% endembed %}
+{% endstory %}
+
+{% story relative with {
+    name: '2. Time - Relative Format',
+    args: { 
+      text: '2 hours ago',
+      datetime: '2025-11-05T08:30:00Z',
+      time_utility_classes: ["italic"]
+    }
+  } %}
+{% embed 'components:time' with { 
+  text: text,
+  datetime: datetime,
+  time_utility_classes: time_utility_classes
+} %}{% endembed %}
+{% endstory %}
+
+{% story with_icon with {
+    name: '3. Time - With Icon',
+    args: { 
+      children: '<div class="flex items-center gap-2">
+  <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+  </svg>
+  <time datetime="2025-11-05T10:30:00Z" class="datetime text-sm text-gray-600 dark:text-gray-400">November 5, 2025</time>
+</div>
+'
+    }
+  } %}
+{% embed 'components:time' %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

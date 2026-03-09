@@ -1,0 +1,58 @@
+<div class="modal mx-auto max-w-[1920px] px-10 lg:px-24">
+{% set setVariant  = {
+  "Start" : 'justify-start',
+  "Center" : 'justify-center',
+  "End" : 'justify-end',
+ } %}
+{% set variants = setVariant[variant] ?? 'justify-center' %}
+<div x-data="{ modalIsOpen: false }">
+  <button
+    x-on:click="modalIsOpen = true"
+    type="button"
+    class="rounded-sm bg-secondary mb-2 px-6 py-3 text-md font-bold text-body-bg dark:bg-primary dark:text-body-bg   dark:hover:bg-body-bg dark:hover:text-primary transition"
+  >
+{{button_text}}
+</button>
+  <!-- Backdrop + Modal -->
+  <div
+    x-cloak
+    x-show="modalIsOpen"
+    x-transition.opacity.duration.200ms
+    x-trap.inert.noscroll="modalIsOpen"
+    x-on:keydown.esc.window="modalIsOpen = false"
+    x-on:click.self="modalIsOpen = false"
+    class="fixed inset-0 z-30 flex items-center {{ variants }} bg-body/40 backdrop-blur-md [&[x-cloak]]:!hidden"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="defaultModalTitle"
+  >
+    <!-- Modal -->
+    <div
+      x-transition
+      class="max-w-lg rounded-sm border-[1px] border-primary bg-body-bg dark:bg-body dark:text-body-bg"
+    >
+      <!-- Header -->
+      <div class="flex justify-between border-b border-body p-4">
+        <h3 id="defaultModalTitle" class="font-semibold">{{top_title}}</h3>
+        <button x-on:click="modalIsOpen = false" aria-label="close modal">✕</button>
+      </div>
+
+      <!-- Body -->
+      <div class="p-6">{{content}}</div>
+
+        <div class="flex justify-end gap-2 border-t border-body p-4">
+          {% include 'tailpine:cta' with {
+            title: 'Close The Modal',
+            link: '#',
+            size: 'rounded-sm',
+            variant: 'secondary',
+            color_schema: 'secondary'
+
+          } %}
+        </div>
+
+  </div>
+</div>
+
+
+</div>

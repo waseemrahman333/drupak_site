@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.tailpine_sponser_company
+    - field.storage.block_content.field_tailpine_column_start
+  module:
+    - options
+id: block_content.tailpine_sponser_company.field_tailpine_column_start
+field_name: field_tailpine_column_start
+entity_type: block_content
+bundle: tailpine_sponser_company
+label: 'Select The Column Start'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

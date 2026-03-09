@@ -1,0 +1,12 @@
+name: Default
+props:
+  plugin_id: search_form_block
+  label: Search
+  configuration:
+    label: Search
+    label_display: visible
+    provider: search
+  in_preview: false
+  content: ''
+  title_prefix: ''
+  title_suffix: ''

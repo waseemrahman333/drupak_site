@@ -1,0 +1,90 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+status: stable
+name: Table
+title: 'Table'
+group: "Data display"
+description: "Display data in a table format with responsive design and customizable styling."
+defaults:
+  attributes: {}
+  caption: ''
+  colgroups: []
+  header: []
+  sticky: false
+  rows: []
+  footer: []
+  empty: ''
+  no_striping: false
+  header_columns: 0
+  responsive: true
+  bordered: true
+  hoverable: true
+  size: 'default'
+props:
+  type: object
+  properties:
+    caption:
+      type: [string, 'null']
+      title: Caption
+      description: Caption for the table.
+    colgroups:
+      type: array
+      title: Column groups
+      description: 'Array of column group objects. Each object can have: attributes, cols (array of col objects with attributes).'
+      examples:
+        - [{ attributes: {}, cols: [{ attributes: {} }] }]
+    header:
+      type: array
+      title: Header
+      description: 'Array of header cell objects. Each object can have: content, tag, attributes, active_table_sort.'
+      examples:
+        - [{ content: 'Name', tag: 'th', attributes: {}, active_table_sort: false }]
+    sticky:
+      type: boolean
+      title: Sticky header
+      description: Whether to use a sticky table header.
+    rows:
+      type: array
+      title: Rows
+      description: 'Array of row objects. Each row has: attributes, classes, cells (array of cell objects with content, tag, attributes, classes).'
+      examples:
+        - [{ attributes: {}, classes: [], cells: [{ content: 'Value', tag: 'td', attributes: {} }] }]
+    footer:
+      type: [array, 'null']
+      title: Footer
+      description: 'Array of footer row objects, similar to rows. Each has: attributes, cells (array).'
+      examples:
+        - [{ attributes: {}, cells: [{ content: 'Total', tag: 'td', attributes: {} }] }]
+    empty:
+      type: [string, 'null']
+      title: Empty message
+      description: Message to display if there are no rows.
+    no_striping:
+      type: boolean
+      title: No striping
+      description: Whether rows should have alternating striping.
+    header_columns:
+      type: integer
+      title: Header columns
+      description: Number of columns in the table header.
+    responsive:
+      type: boolean
+      title: Responsive
+      description: Enable responsive wrapper for table.
+    bordered:
+      type: boolean
+      title: Bordered
+      description: Add borders to table cells.
+    hoverable:
+      type: boolean
+      title: Hoverable
+      description: Enable hover effect on table rows.
+    size:
+      type: string
+      title: Size
+      description: Table size variant (xs, sm, default, lg, xl).
+      enum:
+        - xs
+        - sm
+        - default
+        - lg
+        - xl

@@ -1,0 +1,46 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+label: "Menu Local Action"
+name: "Menu Local Action"
+category: "Navigation"
+description: "A single local action link in a menu."
+status: stable
+group: Navigation
+
+props:
+  type: object
+  properties:
+    link:
+      type: object
+      label: "Menu Link"
+      description: "A single menu link with attributes."
+      properties:
+        type:
+          type: string
+          label: "Type"
+          default: "link"
+        title:
+          type: string
+          label: "Link Title"
+          default: "Add content"
+        url:
+          type: string
+          label: "Link URL"
+          default: "/node/add"
+        options:
+          type: object
+          label: "Options"
+          properties:
+            set_active_class:
+              type: boolean
+              label: "Set Active Class"
+              default: true
+            attributes:
+              type: object
+              label: "HTML Attributes"
+              properties:
+                class:
+                  type: array
+                  label: "CSS Classes"
+                  items:
+                    type: string
+                  default: ["button", "button-action"]

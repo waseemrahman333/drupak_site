@@ -1,0 +1,16 @@
+{% stories filter_guidelines with { title: 'Components/filter tips' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      format: [],
+      tips: []
+    }
+  } %}
+{% embed 'tailpine:filter-guidelines' with { 
+  format: format,
+  tips: tips
+} %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

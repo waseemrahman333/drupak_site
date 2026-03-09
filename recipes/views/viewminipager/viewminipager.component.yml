@@ -1,0 +1,27 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: View Mini Pager
+description: Component for displaying a Drupal View's mini pager.
+status: stable
+group: "View"
+
+props:
+  type: object
+  properties:
+    items:
+      type: object
+      title: Items
+      description: List of pager items.
+    heading_id:
+      type: string
+      title: Heading ID
+    size:
+      type: string
+      title: Size
+      description: Controls the padding and font size of the pager.
+      default: md
+      enum:
+        - xs
+        - sm
+        - md
+        - lg
+        - xl

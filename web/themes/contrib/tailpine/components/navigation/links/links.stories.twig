@@ -1,0 +1,16 @@
+{% stories links with { title: 'Components/links' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      links: [],
+      heading: '(optional) A heading to precede the links.'
+    }
+  } %}
+{% embed 'components:links' with { 
+  links: links,
+  heading: heading
+} %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

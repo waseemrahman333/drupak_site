@@ -1,0 +1,33 @@
+{% stories poststylethree with { title: 'Components/Post Style Three' } %}
+
+{% story default with {
+    name: '1. Post Style Three - Blog Card',
+    args: { 
+      imageurl: 'https://cdn.pixabay.com/photo/2024/04/02/10/28/bangladesh-8670559_1280.jpg',
+      heading_level: 2,
+      title: 'Mastering Web Development in 2025',
+      description: 'Discover the latest trends and best practices in modern web development. From responsive design to performance optimization, learn what it takes to build exceptional websites.',
+      subtitle: 'Web Development',
+      date: '2025-01-15'
+    }
+  } %}
+{% embed 'components:poststylethree' with { 
+  imageurl: imageurl,
+  heading_level: heading_level
+} %}
+  {% block title %}
+    {{ title }}
+  {% endblock %}
+  {% block description %}
+    {{ description }}
+  {% endblock %}
+  {% block subtitle %}
+    {{ subtitle }}
+  {% endblock %}
+  {% block date %}
+    {{ date }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

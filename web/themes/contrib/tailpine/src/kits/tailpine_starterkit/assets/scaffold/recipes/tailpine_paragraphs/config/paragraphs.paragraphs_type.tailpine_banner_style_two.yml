@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: tailpine_banner_style_two
+label: 'Tailpine Banner Style Two'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

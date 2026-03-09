@@ -1,0 +1,13 @@
+name: Secondary Breadcrumb
+
+props:
+  breadcrumb_style: secondary
+  breadcrumb:
+    - text: "Home"
+      url: "/page/1"
+    - text: "Profile"
+      url: "/page/2"
+    - text: "Contact"
+      url: "/page/3"
+    - text: "Settings"
+      url: "/settings"

@@ -1,0 +1,35 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 8db4913a-052d-4c03-8e7d-0e7d8c178ca3
+  bundle: image
+  default_langcode: en
+  depends:
+    b8ecb9f8-65a4-4f81-ae36-8fe63aa6869b: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: logo4.png
+  created:
+    -
+      value: 1756754808
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+  field_media_image:
+    -
+      entity: b8ecb9f8-65a4-4f81-ae36-8fe63aa6869b
+      alt: 'logo four'
+      title: ''
+      width: 99
+      height: 32

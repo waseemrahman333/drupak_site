@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: J8F-qd3poBaLX4Ae07tG8D6VU37NinWgRkQlQ6_NJAk
+id: tailpine_testimonial_header
+label: 'Testimonial Header'
+revision: false
+description: null

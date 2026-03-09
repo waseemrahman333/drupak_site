@@ -1,0 +1,35 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 14bc22db-c0cb-41aa-ab50-e36f13ac21ac
+  bundle: image
+  default_langcode: en
+  depends:
+    8f71e6b7-665f-4758-8513-9e15136d872e: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: post-2.png
+  created:
+    -
+      value: 1757919533
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+  field_media_image:
+    -
+      entity: 8f71e6b7-665f-4758-8513-9e15136d872e
+      alt: 'post image 2'
+      title: ''
+      width: 1280
+      height: 853

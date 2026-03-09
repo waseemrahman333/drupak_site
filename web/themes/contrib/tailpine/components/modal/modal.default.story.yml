@@ -1,0 +1,35 @@
+name: Modal
+description: This is the modal that should open to show content
+
+props:
+  content: Dissentiet utamur fallare theophrasti vix adversantur intervenire. Ecce stultorum omittantur cognosci privamur possint contentiones reprehensiones. Delectet reici declarant sentiant intellegam praesens adamare. Motum idque collegi paratus veritus agatur tenuit. Tribus adest sapientia consule talem patria utramque putamus doloribus.
+  top_title: This is the Top Title of the Modal
+  cta_buttons:
+  - type:  component
+    component: "tailpine:cta"
+    slots:
+      title: "Remind me later"
+      color_schema: secondary
+      size: rounded-sm
+  - type:  component
+    component: "tailpine:cta"
+    slots:
+      title: "Upgrade Now"
+      color_schema: primary
+      size: rounded-sm
+
+slots:
+  button_text: Open Modal
+variants:
+  Start:
+    title: Start
+    slots:
+      button_text: Open Start Modal
+  Center:
+    title: Center
+    slots:
+      button_text: Open Center Modal
+  End:
+    title: End
+    slots:
+      button_text: Open End Modal

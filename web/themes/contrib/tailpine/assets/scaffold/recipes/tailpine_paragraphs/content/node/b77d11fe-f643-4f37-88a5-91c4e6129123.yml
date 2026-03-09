@@ -1,0 +1,157 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: b77d11fe-f643-4f37-88a5-91c4e6129123
+  bundle: page
+  default_langcode: en
+  depends:
+    67298fca-6a34-4701-a66d-479f5d36fa92: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Contact Us'
+  created:
+    -
+      value: 1756965884
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /contact
+      langcode: en
+  field_tailpine_content:
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: f968c331-132a-47bb-93f1-fe36d1cccf27
+          bundle: tailpine_sub_page_hero
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1756965895
+          behavior_settings:
+            -
+              value: {  }
+          field_tailpine_description:
+            -
+              value: '<p>want to work with us Let’s build something amazing together.</p>'
+              format: basic_html
+          field_tailpine_media_image:
+            -
+              entity: 67298fca-6a34-4701-a66d-479f5d36fa92
+          field_tailpine_title:
+            -
+              value: 'Contact Us'
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 57f538c6-961c-4074-a19e-f3120a3adbc4
+          bundle: tailpine_contact_us_form
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1757011686
+          behavior_settings:
+            -
+              value: {  }
+          field_tailpine_add_form:
+            -
+              target_id: contact
+              default_data: ''
+              status: open
+              open: ''
+              close: ''
+          field_tailpine_title:
+            -
+              value: 'Get In Touch'
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 01f9fe8a-3b98-4129-abe0-e32373c3b478
+          bundle: tailpine_get_in_touch
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1757090416
+          behavior_settings:
+            -
+              value: {  }
+          revision_translation_affected:
+            -
+              value: true
+          field_tailpine_inner_content:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 27def33b-7212-4bb8-a744-ea8a789cc434
+                  bundle: tailpine_cta
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757090469
+                  behavior_settings:
+                    -
+                      value: {  }
+                  revision_translation_affected:
+                    -
+                      value: true
+                  field_tailpine_btn_type:
+                    -
+                      value: hover_arrow_move
+                  field_tailpine_button_style:
+                    -
+                      value: primary
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: 'Contact Us'
+                      options: {  }
+                  field_tailpine_title:
+                    -
+                      value: 'Contact Us'
+          field_tailpine_subtitle:
+            -
+              value: "Let's build Something"
+          field_tailpine_title:
+            -
+              value: 'Get In Touch'

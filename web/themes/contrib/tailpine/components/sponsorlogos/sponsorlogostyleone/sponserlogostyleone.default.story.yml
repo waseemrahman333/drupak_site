@@ -1,0 +1,4 @@
+name: Default
+props:
+  website_url: 'https://example.com'
+  sponser_logo: 'https://cdn.pixabay.com/photo/2024/04/02/10/28/bangladesh-8670559_1280.jpg'

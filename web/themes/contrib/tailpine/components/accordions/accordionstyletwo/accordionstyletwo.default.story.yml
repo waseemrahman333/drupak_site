@@ -1,0 +1,6 @@
+name: Accordion Style Two
+description: "Accordion Style Two component for Tailpine theme."
+slots:
+  title: "Title Of the Accordion Component"
+  description: "This is the description of the accordion component. You can put any content here."
+

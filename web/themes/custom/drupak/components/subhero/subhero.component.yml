@@ -1,0 +1,27 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Sub Hero drupak component
+description: "A hero section with a background image, title, description, and call-to-action buttons."
+status: stable
+group: Drupak
+props:
+  type: object
+  properties:
+    imageurl:
+      type: string
+      description: "The URL of the background image for the hero section."
+      title: Hero Background Image
+
+    title:
+      type: string
+      description: "The main title text for the hero section."
+      title: Hero Title
+
+    description:
+      type: string
+      description: "A brief description or subtitle for the hero section."
+      title: Hero Description
+
+slots:
+  hero_cta:
+    title: Hero CTA Slot
+    description: "The call-to-action buttons to be displayed within the hero section."

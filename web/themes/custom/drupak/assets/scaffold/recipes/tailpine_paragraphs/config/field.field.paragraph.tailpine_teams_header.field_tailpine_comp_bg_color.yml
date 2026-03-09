@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tailpine_comp_bg_color
+    - paragraphs.paragraphs_type.tailpine_teams_header
+  module:
+    - options
+id: paragraph.tailpine_teams_header.field_tailpine_comp_bg_color
+field_name: field_tailpine_comp_bg_color
+entity_type: paragraph
+bundle: tailpine_teams_header
+label: 'Select Bg Color'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

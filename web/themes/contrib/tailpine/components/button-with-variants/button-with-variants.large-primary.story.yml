@@ -1,0 +1,7 @@
+name: 'Large Primary Button'
+props:
+  text: 'Large Primary Button'
+  url: ''
+  size: lg
+  disabled: false
+  variant: primary

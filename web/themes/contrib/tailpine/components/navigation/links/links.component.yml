@@ -1,0 +1,28 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: links
+description: Component for displaying a list of links with an optional heading.
+status: stable
+group: Navigation
+props:
+  type: object
+  properties:
+    links:
+      type: array
+      title: Links
+      description: An array of link items to display.
+      link:
+        type: ["array","null"]
+        title: link
+        description: (optional) A render array that returns a link. See template_preprocess_links() for details how it is generated.
+      text:
+        type: string
+        title: The link text.
+    heading:
+      type: ["string","object","array","null"]
+      title: (optional) A heading to precede the links.
+      text:
+        type: string
+        title: The heading text.
+      level:
+        type: string
+        title: The heading level (e.g. 'h2', 'h3').

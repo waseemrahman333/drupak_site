@@ -1,0 +1,23 @@
+          <!-- tutorial-1 -->
+            <article
+                class="blog-item col-span-1 mt-10 xl:flex xl:flex-col after:content-[] after:absolute relative after:bottom-0 after:left-0 after:w-full after:h-7/10 after:bg-body-bg after:-z-10 z-0 pb-5 md:pb-[clamp(20px,0.78vw+14px,24px)] xl:pb-6">
+                <div class="rounded-xl overflow-hidden"><img src="{{image}}" alt=" image 1"
+                        class="w-full object-cover rounded-xl hover:scale-105 hover:brightness-75 [clip-path:polygon(10%_0,_100%_0,_100%_80%,_90%_100%,_0_100%,_0_15%)] hover:[clip-path:polygon(0_0,_100%_0,_100%_100%,_100%_100%,_0_100%,_0_0)] transition transition-all duration-300">
+                </div>
+                <div class="px-5 md:px-[clamp(20px,0.78vw+14px,24px)] xl:px-6">
+                    <div
+                        class="flex font-normal text-sm gap-3 items-center pt-6 md:pt-[clamp(24px,1.56vw+12px,32px)] xl:pt-8">
+                        <p class="bg-primary flex justify-center items-center px-1.5 py-0.5 rounded-sm">{{subtitle}}</p>
+                        <p class="">{{date}}</p>
+                    </div>
+                    <h5 class="pt-5 text-h5 font-montserrat md:pt-[clamp(20px,0.78vw+14px,24px)] xl:pt-6">{{title}}</h5>
+                </div>
+                <div 
+                    class="px-5 md:px-[clamp(20px,0.78vw+14px,24px)] xl:px-6 pt-6 md:pt-[clamp(24px,1.56vw+12px,32px)] xl:pt-8 w-fit  group bg-transparent border-tertiary duration-300 flex gap-2.5 items-center rounded-lg text-sm uppercase text-black">
+                    {{link}}
+                    <svg class="group-hover:transform group-hover:translate-x-1 transition-all duration-300"
+                        xmlns="http://www.w3.org/2000/svg" width="17" height="8" viewBox="0 0 17 8" fill="none">
+                        <path d="M12.7393 8V4.8H0.0255641L0 3.192H12.7393V0L17 4L12.7393 8Z" fill="currentColor" />
+                    </svg>
+                </div>
+            </article>

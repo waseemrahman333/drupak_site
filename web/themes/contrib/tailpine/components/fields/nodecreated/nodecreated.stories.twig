@@ -1,0 +1,36 @@
+{% stories nodecreated with { title: 'Components/Node Title' } %}
+
+{% story default with {
+    name: '1. Node Created - Default',
+    args: { 
+      children: '<span class="text-sm text-gray-600 dark:text-gray-400 inline-flex items-center gap-1">
+  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+  </svg>
+  November 5, 2025
+</span>
+'
+    }
+  } %}
+{% embed 'components:nodecreated' %}{% endembed %}
+{% endstory %}
+
+{% story with_label with {
+    name: '2. Node Created - With Label',
+    args: { 
+      children: '<div class="text-sm text-gray-700 dark:text-gray-300">
+  <span class="font-semibold">Published:</span>
+  <span class="inline-flex items-center gap-1 ml-2 text-gray-600 dark:text-gray-400">
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+    </svg>
+    November 5, 2025 at 10:30 AM
+  </span>
+</div>
+'
+    }
+  } %}
+{% embed 'components:nodecreated' %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

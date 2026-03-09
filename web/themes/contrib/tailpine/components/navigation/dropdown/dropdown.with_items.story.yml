@@ -1,0 +1,10 @@
+name: Dropdown - With Multiple Items
+description: Dropdown with various menu items
+
+slots:
+  items: '<a href="/dashboard" class="block px-4 py-2 text-sm text-body hover:bg-gray-100" role="menuitem">Dashboard</a><a href="/profile" class="block px-4 py-2 text-sm text-body hover:bg-gray-100" role="menuitem">Profile</a><a href="/settings" class="block px-4 py-2 text-sm text-body hover:bg-gray-100" role="menuitem">Settings</a><div class="border-t border-gray-200 my-1" role="separator"></div><a href="/help" class="block px-4 py-2 text-sm text-body hover:bg-gray-100" role="menuitem">Help Center</a><a href="/logout" class="block px-4 py-2 text-sm text-error hover:bg-gray-100" role="menuitem">Logout</a>'
+
+props:
+  button_text: 'Account Menu'
+  button_color: secondary
+

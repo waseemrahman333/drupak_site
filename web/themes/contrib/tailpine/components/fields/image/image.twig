@@ -1,0 +1,57 @@
+{#
+/**
+ * Image Component
+ * 
+ * Displays responsive images with various styling options.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the image.
+ * - style_name: Image style name for CSS class generation.
+ * - src: Image source URL.
+ * - alt: Alt text for accessibility.
+ * - title: Image title attribute.
+ * - width: Image width.
+ * - height: Image height.
+ * - loading: Loading attribute ('lazy', 'eager', 'auto').
+ * - responsive: Make image responsive (default: true).
+ * - align: Image alignment ('start', 'center', 'end').
+ * - image_utility_classes: Additional Tailwind classes.
+ */
+#}
+
+{% set image_attributes = attributes ?: create_attribute() %}
+
+{% if src %}
+  {% set image_attributes = image_attributes
+    .setAttribute('src', src)
+    .setAttribute('alt', alt ?: '')
+    .setAttribute('title', title ?: '')
+    .setAttribute('loading', loading ?: 'lazy')
+  %}
+  {% if width %}
+    {% set image_attributes = image_attributes.setAttribute('width', width) %}
+  {% endif %}
+  {% if height %}
+    {% set image_attributes = image_attributes.setAttribute('height', height) %}
+  {% endif %}
+{% endif %}
+
+{%
+  set align_classes = {
+    start: 'mr-auto',
+    center: 'mx-auto',
+    end: 'ml-auto',
+  }
+%}
+
+{%
+  set image_classes = [
+    style_name ? 'image-style-' ~ style_name|clean_class : '',
+    responsive|default(true) ? 'max-w-full h-auto' : 'h-auto',
+    'object-cover',
+    'shadow-sm',
+    align ? align_classes[align] : '',
+  ]|merge(image_utility_classes ?: [])
+%}
+
+<img{{ image_attributes.addClass(image_classes) }}>

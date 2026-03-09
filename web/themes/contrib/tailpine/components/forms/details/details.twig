@@ -1,0 +1,75 @@
+{#
+/**
+ * @file
+ * Theme override for a details element.
+ *
+ * Available variables
+ * - attributes: A list of HTML attributes for the details element.
+ * - errors: (optional) Any errors for this details element, may not be set.
+ * - title: (optional) The title of the element, may not be set.
+ * - summary_attributes: A list of HTML attributes for the summary element.
+ * - description: (optional) The description of the element, may not be set.
+ * - children: (optional) The children of the element, may not be set.
+ * - value: (optional) The value of the element, may not be set.
+ *
+ * @see template_preprocess_details()
+ */
+#}
+{% set details_classes = [
+  'border',
+  'border-solid',
+  'border-gray-300',
+  'dark:border-gray-700',
+  'p-4',
+  'mb-4',
+  '[&_svg]:open:-rotate-180',
+  '!bg-gray-50',
+  'dark:!bg-gray-900',
+] %}
+
+<details{{ attributes.addClass(details_classes) }}>
+  {%- if title -%}
+    {%
+      set summary_classes = [
+        '!flex',
+        'cursor-pointer',
+        'list-none',
+        'items-center',
+        'gap-4',
+        'font-semibold',
+        'text-base',
+        'text-gray-900',
+        'dark:text-gray-100',
+        required ? 'js-form-required',
+        required ? 'form-required',
+      ]
+    %}
+    <summary{{ summary_attributes.addClass(summary_classes) }}>
+    <div>
+      <!-- notice here, we added our own triangle/arrow svg -->
+      <svg class="rotate-0 transform text-primary transition-all duration-300" fill="none" height="20" width="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </div>
+    <div>{{ title }}</div>
+    </summary>
+  {%- endif -%}
+  <div class="details-wrapper">
+    {% if errors %}
+      <div class="form-item--error-message text-sm text-error dark:text-red-400 mt-2 font-medium">
+        {{ errors }}
+      </div>
+    {% endif %}
+    {%- if description -%}
+      <div class="details-description">{{ description }}</div>
+    {%- endif -%}
+    {%- if children -%}
+      {% block children %}
+        {{ children }}
+      {% endblock %}
+    {%- endif -%}
+    {%- if value -%}
+      {{ value }}
+    {%- endif -%}
+  </div>
+</details>

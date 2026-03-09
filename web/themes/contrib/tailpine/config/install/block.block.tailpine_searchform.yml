@@ -1,0 +1,19 @@
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - tailpine
+id: tailpine_searchform
+theme: tailpine
+region: search
+weight: 0
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: "Search form"
+  label_display: ""
+  provider: search
+  page_id: null
+visibility: {}

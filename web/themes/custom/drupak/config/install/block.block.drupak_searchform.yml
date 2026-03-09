@@ -1,0 +1,19 @@
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - drupak
+id: drupak_searchform
+theme: drupak
+region: search
+weight: 0
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: "Search form"
+  label_display: ""
+  provider: search
+  page_id: null
+visibility: {}

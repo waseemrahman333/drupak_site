@@ -1,0 +1,16 @@
+{% stories close_button with { title: 'Components/Close Button' } %}
+
+{% story default with {
+    name: '1. Close Button',
+    args: { 
+      label: 'Close',
+      size: 'md'
+    }
+  } %}
+{% embed 'tailpine:close-button' with { 
+  label: label,
+  size: size
+} %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

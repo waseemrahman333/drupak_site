@@ -1,0 +1,35 @@
+{% stories herostyletwo with { title: 'Components/Hero Style Two' } %}
+
+{% story default with {
+    name: '1. Hero Style Two',
+    args: { 
+      heading_level: 1,
+      centered: true,
+      link: 'www.example.com',
+      imageurl: 'https://cdn.pixabay.com/photo/2024/12/18/01/27/lightning-9274136_1280.jpg',
+      title: 'Hero Syle Two Title',
+      imageurl: 'https://cdn.pixabay.com/photo/2024/12/18/01/27/lightning-9274136_1280.jpg'
+    }
+  } %}
+{% embed 'components:herostyletwo' with { 
+  heading_level: heading_level,
+  centered: centered,
+  link: link,
+  imageurl: imageurl
+} %}
+  {% block title %}
+    {{ title }}
+  {% endblock %}
+  {% block imageurl %}
+    {{ imageurl }}
+  {% endblock %}
+  {% block description %}
+    {{ description }}
+  {% endblock %}
+  {% block cta %}
+    {{ cta }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

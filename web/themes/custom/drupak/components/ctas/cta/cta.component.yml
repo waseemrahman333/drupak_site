@@ -1,0 +1,25 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: CTA Button drupak component
+status: stable
+description: "Primary and Outline CTA button with hover swap effect."
+group: Drupak
+variants:
+  primary:
+    title: Primary
+  outline:
+    title: Outline
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: Button Text
+    link:
+      type: string
+      title: Button URL
+    variant:
+      type: string
+      title: Button Style
+      enum:
+        - primary
+        - outline

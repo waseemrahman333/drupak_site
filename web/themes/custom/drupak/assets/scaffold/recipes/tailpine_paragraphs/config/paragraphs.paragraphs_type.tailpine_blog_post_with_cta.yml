@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: tailpine_blog_post_with_cta
+label: 'Post Style One '
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

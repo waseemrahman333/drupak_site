@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: ba24965b-d06d-4440-b757-97c924218f3d
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: card_image3.jpeg
+  uri:
+    -
+      value: 'public://2025-09/card_image3.jpeg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 47705
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1756752740

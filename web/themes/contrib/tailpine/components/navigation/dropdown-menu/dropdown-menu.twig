@@ -1,0 +1,22 @@
+{#
+/**
+ * Dropdown Menu Item Component
+ * 
+ * Individual menu item for dropdown component.
+ */
+#}
+
+{% set is_divider = divider|default(false) %}
+
+{% if is_divider %}
+  <div class="border-t border-gray-200 my-1" role="separator"></div>
+{% else %}
+  <a
+    href="{{ url|default('#') }}"
+    class="block px-4 py-2 text-sm text-body hover:bg-gray-100 hover:text-primary transition-colors"
+    role="menuitem"
+  >
+    {{ text }}
+  </a>
+{% endif %}
+

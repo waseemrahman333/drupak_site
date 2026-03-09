@@ -1,0 +1,173 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.tailpine_teams_header
+    - field.field.block_content.tailpine_teams_header.field_block
+    - field.field.block_content.tailpine_teams_header.field_tailpine_add_post_card
+    - field.field.block_content.tailpine_teams_header.field_tailpine_title
+  content:
+    - 'block_content:tailpine_cta:54b12890-5671-476e-9ddb-73e1f0f15e80'
+    - 'block_content:tailpine_team:1328a592-f91a-4b5e-96f1-2573e8af5950'
+    - 'block_content:tailpine_team:a78c9ae2-3d84-4e89-aa68-fccb712299b3'
+    - 'block_content:tailpine_team:b6460b73-4135-47ae-a2c1-ac10e8f3d803'
+    - 'block_content:tailpine_team:db946c45-9aa6-4cae-a916-cbfd62b953b4'
+  module:
+    - block_content
+    - layout_builder
+    - nomarkup
+    - ui_patterns
+    - ui_patterns_layouts
+  theme:
+    - tailpine
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: 'ui_patterns:tailpine:teamheader'
+        layout_settings:
+          label: ''
+          context_mapping:
+            entity: layout_builder.entity
+          ui_patterns:
+            component_id: 'tailpine:teamheader'
+            variant_id: null
+            props:
+              attributes:
+                source_id: attributes
+                source:
+                  value: ''
+            slots: {  }
+        components:
+          b5f785e9-a26c-48a6-90b8-86ae5dc2c5a1:
+            uuid: b5f785e9-a26c-48a6-90b8-86ae5dc2c5a1
+            region: title
+            configuration:
+              id: 'field_block:block_content:tailpine_teams_header:field_tailpine_title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings:
+                  nomarkup:
+                    enabled: true
+                    separator: '|'
+                    referenced_entity: ''
+            weight: 0
+            additional: {  }
+          1da090b5-e18d-4296-9710-6d5e207f4755:
+            uuid: 1da090b5-e18d-4296-9710-6d5e207f4755
+            region: cta
+            configuration:
+              id: 'block_content:54b12890-5671-476e-9ddb-73e1f0f15e80'
+              label: 'Team Cta'
+              label_display: '0'
+              provider: block_content
+              context_mapping: {  }
+              status: true
+              info: ''
+              view_mode: full
+            weight: 0
+            additional: {  }
+          2f5ff518-5461-4afe-93d5-d462b560880a:
+            uuid: 2f5ff518-5461-4afe-93d5-d462b560880a
+            region: content
+            configuration:
+              id: 'block_content:a78c9ae2-3d84-4e89-aa68-fccb712299b3'
+              label: 'Team Member One '
+              label_display: '0'
+              provider: block_content
+              context_mapping: {  }
+              status: true
+              info: ''
+              view_mode: full
+            weight: 0
+            additional: {  }
+          1cd91716-7d4a-4989-97f3-ace1655566dd:
+            uuid: 1cd91716-7d4a-4989-97f3-ace1655566dd
+            region: content
+            configuration:
+              id: 'block_content:b6460b73-4135-47ae-a2c1-ac10e8f3d803'
+              label: 'Team Member Two'
+              label_display: '0'
+              provider: block_content
+              context_mapping: {  }
+              status: true
+              info: ''
+              view_mode: full
+            weight: 1
+            additional: {  }
+          b053f795-d5d3-4b3e-a725-d65fbf7af7e0:
+            uuid: b053f795-d5d3-4b3e-a725-d65fbf7af7e0
+            region: content
+            configuration:
+              id: 'block_content:db946c45-9aa6-4cae-a916-cbfd62b953b4'
+              label: 'Team Member Three'
+              label_display: '0'
+              provider: block_content
+              context_mapping: {  }
+              status: true
+              info: ''
+              view_mode: full
+            weight: 2
+            additional: {  }
+          6b516702-ba8d-4d48-8c32-8cd31ba44efd:
+            uuid: 6b516702-ba8d-4d48-8c32-8cd31ba44efd
+            region: content
+            configuration:
+              id: 'block_content:1328a592-f91a-4b5e-96f1-2573e8af5950'
+              label: 'Team Member Four'
+              label_display: '0'
+              provider: block_content
+              context_mapping: {  }
+              status: true
+              info: ''
+              view_mode: full
+            weight: 3
+            additional: {  }
+        third_party_settings: {  }
+_core:
+  default_config_hash: ELrGu9mOABfc2RByFBcHo6gj6stNAFbJbhlz0VxbMBA
+id: block_content.tailpine_teams_header.default
+targetEntityType: block_content
+bundle: tailpine_teams_header
+mode: default
+content:
+  field_block:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: title
+  field_tailpine_add_post_card:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: title
+  field_tailpine_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 0
+    region: content
+hidden: {  }

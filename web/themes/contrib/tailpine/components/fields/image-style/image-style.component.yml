@@ -1,0 +1,14 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+status: stable
+name: ImageStyle
+props:
+  type: object
+  properties:
+    image:
+      title: Image
+      description: 'The image to style.'
+      type: [string, 'null']
+    style_name:
+      title: Style name
+      description: 'The name of the image style to apply.'
+      type: [string, 'null']

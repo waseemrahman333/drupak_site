@@ -1,0 +1,15 @@
+name: List Group - With Links
+description: List group where items are links
+
+props:
+  items:
+    - content: 'Dashboard'
+      link: '/dashboard'
+    - content: 'Profile Settings'
+      link: '/profile'
+    - content: 'Messages'
+      link: '/messages'
+    - content: 'Notifications'
+      link: '/notifications'
+  flush: false
+

@@ -1,0 +1,8 @@
+name: Heading - With Link
+description: Heading with clickable link
+
+props:
+  content: 'Linked Heading'
+  heading_html_tag: h2
+  title_link: '/article'
+

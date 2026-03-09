@@ -1,0 +1,14 @@
+{% stories mark with { title: 'Components/Mark' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      status: 'mark'
+    }
+  } %}
+{% embed 'tailpine:mark' with { 
+  status: status
+} %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

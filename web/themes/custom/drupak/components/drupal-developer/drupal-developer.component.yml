@@ -1,0 +1,25 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Drupal developer drupak component
+status: stable
+description: "Drupal developer component with title, description and image."
+group: Tailpine
+props:
+  type: object
+  properties:
+    image:
+      type: string
+      title: Drupak Image 
+      description: "URL of the drupak logo image."
+slots:
+  title:
+    type: string
+    title: Title 
+    description: "Title of the drupak section. Plain text."
+  description:
+    type: string
+    title: Description
+    description: "Description of the drupak section. Plain text."
+  cta:
+    type: string
+    title: Call to Action
+    description: "Call to action content for the drupal developer section. Plain text."

@@ -1,0 +1,111 @@
+{#
+/**
+ * @file
+ * Template for views to display rows in a responsive grid with TailwindCSS.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the wrapping element.
+ * - title: The title of this group of rows.
+ * - view: The view object.
+ * - rows: The rendered view results.
+ * - options: The view plugin style options.
+ *   - row_class_default: A flag indicating whether default classes should be used on rows.
+ *   - col_class_default: A flag indicating whether default classes should be used on columns.
+ *   - alignment: vertical or horizontal ordering of cells.
+ *   - columns: Number of columns in the grid.
+ * - items: A list of grid items. Each item contains a list of rows or columns.
+ *   The order in what comes first (row or column) depends on which alignment
+ *   type is chosen (horizontal or vertical).
+ *   - attributes: HTML attributes for each row or column.
+ *   - content: A list of columns or rows. Each row or column contains:
+ *     - attributes: HTML attributes for each row or column.
+ *     - content: The row or column contents.
+ *
+ * @see template_preprocess_views_view_grid()
+ */
+#}
+{%
+  set grid_col_classes = {
+    '1': 'grid-cols-1',
+    '2': 'grid-cols-1 sm:grid-cols-2',
+    '3': 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3',
+    '4': 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4',
+    '5': 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5',
+    '6': 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6',
+  }
+%}
+
+{%
+  set classes = [
+    'views-view-grid',
+    options.alignment == 'horizontal' ? 'grid' : 'flex flex-col',
+    options.alignment == 'horizontal' ? (grid_col_classes[options.columns] ?: 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3') : '',
+    'gap-4',
+    'cols-' ~ options.columns,
+  ]
+%}
+
+{% set row_classes = options.row_class_default ? ['views-row'] : [] %}
+{% set col_classes = options.col_class_default ? ['views-col'] : [] %}
+
+{% if title %}
+  <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+    {{ title }}
+  </h3>
+{% endif %}
+
+<div{{ attributes.addClass(classes) }}>
+  {% if options.alignment == 'horizontal' %}
+    {% for row in items %}
+      {% for column in row.content %}
+        {%
+          set column_item_classes = [
+            col_classes|join(' '),
+            options.col_class_default ? 'col-' ~ loop.index : '',
+            'p-4',
+            'bg-white dark:bg-gray-900',
+            'border border-gray-200 dark:border-gray-700',
+            'shadow-sm',
+            'hover:shadow-md',
+            'transition-shadow duration-150',
+          ]
+        %}
+        <div{{ column.attributes.addClass(column_item_classes) }}>
+          {{- column.content -}}
+        </div>
+      {% endfor %}
+    {% endfor %}
+  {% else %}
+    {# Vertical alignment: columns first, then rows #}
+    <div class="{{ grid_col_classes[options.columns] ?: 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3' }} grid gap-4">
+      {% for column in items %}
+        {%
+          set column_wrapper_classes = [
+            col_classes|join(' '),
+            options.col_class_default ? 'col-' ~ loop.index : '',
+            'space-y-4',
+          ]
+        %}
+        <div{{ column.attributes.addClass(column_wrapper_classes) }}>
+          {% for row in column.content %}
+            {%
+              set row_item_classes = [
+                row_classes|join(' '),
+                options.row_class_default ? 'row-' ~ loop.index : '',
+                'p-4',
+                'bg-white dark:bg-gray-900',
+                'border border-gray-200 dark:border-gray-700',
+                'shadow-sm',
+                'hover:shadow-md',
+                'transition-shadow duration-150',
+              ]
+            %}
+            <div{{ row.attributes.addClass(row_item_classes) }}>
+              {{- row.content -}}
+            </div>
+          {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>

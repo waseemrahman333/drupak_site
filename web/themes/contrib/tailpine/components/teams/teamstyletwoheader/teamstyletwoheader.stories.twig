@@ -1,0 +1,23 @@
+{% stories teamstyletwoheader with { title: 'Components/Team Style Two Header' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      columns: 'Columns',
+      title: 'Title',
+      content: 'Content'
+    }
+  } %}
+{% embed 'components:teamstyletwoheader' with { 
+  columns: columns
+} %}
+  {% block title %}
+    {{ title }}
+  {% endblock %}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

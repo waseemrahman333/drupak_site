@@ -1,0 +1,89 @@
+{% stories image with { title: 'Components/Image' } %}
+
+{% story centered with {
+    name: '1. Image - Centered',
+    args: { 
+      src: 'https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?w=600&q=80',
+      alt: 'Modern architecture',
+      align: 'center',
+      width: 600,
+      height: 400,
+      responsive: true
+    }
+  } %}
+{% embed 'components:image' with { 
+  src: src,
+  alt: alt,
+  align: align,
+  width: width,
+  height: height,
+  responsive: responsive
+} %}{% endembed %}
+{% endstory %}
+
+{% story default with {
+    name: '2. Image - Default',
+    args: { 
+      src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+      alt: 'Beautiful mountain landscape at sunset',
+      title: 'Mountain Landscape',
+      responsive: true,
+      loading: 'lazy'
+    }
+  } %}
+{% embed 'components:image' with { 
+  src: src,
+  alt: alt,
+  title: title,
+  responsive: responsive,
+  loading: loading
+} %}{% endembed %}
+{% endstory %}
+
+{% story large with {
+    name: '3. Image - Large Hero',
+    args: { 
+      src: 'https://images.unsplash.com/photo-1682687220063-4742bd7fd538?w=1200&q=80',
+      alt: 'Hero banner image',
+      title: 'Large Hero Image',
+      width: 1200,
+      height: 600,
+      responsive: true,
+      loading: 'eager',
+      image_utility_classes: ["w-full","object-cover"]
+    }
+  } %}
+{% embed 'components:image' with { 
+  src: src,
+  alt: alt,
+  title: title,
+  width: width,
+  height: height,
+  responsive: responsive,
+  loading: loading,
+  image_utility_classes: image_utility_classes
+} %}{% endembed %}
+{% endstory %}
+
+{% story thumbnail with {
+    name: '4. Image - Thumbnail',
+    args: { 
+      src: 'https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?w=600&q=80',
+      alt: 'Thumbnail image',
+      width: 200,
+      height: 200,
+      style_name: 'thumbnail',
+      responsive: false
+    }
+  } %}
+{% embed 'components:image' with { 
+  src: src,
+  alt: alt,
+  width: width,
+  height: height,
+  style_name: style_name,
+  responsive: responsive
+} %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

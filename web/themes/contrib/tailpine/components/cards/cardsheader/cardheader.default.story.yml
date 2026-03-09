@@ -1,0 +1,30 @@
+name: Cards Header 3 Cols
+description: "Preview of Cards Header with 3 columns using CardOneStyle components."
+props:
+  columns: grid-cols-3
+
+slots:
+  title: "Card Header Title"
+  description: "John is a passionate web developer building scalable and user-friendly applications."
+  content:
+    - type: component
+      component: "tailpine:cardonestyle"
+      props:
+        imageurl: "https://cdn.pixabay.com/photo/2017/10/04/18/11/trees-2817102_1280.jpg"
+      slots:
+        title: "Full Name"
+        subtitle: "Designations"
+    - type: component
+      component: "tailpine:cardonestyle"
+      props:
+        imageurl: "https://cdn.pixabay.com/photo/2015/06/19/21/24/avenue-815297_1280.jpg"
+      slots:
+        title: "Jane Doe"
+        subtitle: "Designer"
+    - type: component
+      component: "tailpine:cardonestyle"
+      props:
+        imageurl: "https://cdn.pixabay.com/photo/2017/10/04/18/11/trees-2817102_1280.jpg"
+      slots:
+        title: "Mike Lee"
+        subtitle: "Engineer"

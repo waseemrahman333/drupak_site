@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tailpine_description
+    - paragraphs.paragraphs_type.tailpine_banner_style_two
+  module:
+    - text
+id: paragraph.tailpine_banner_style_two.field_tailpine_description
+field_name: field_tailpine_description
+entity_type: paragraph
+bundle: tailpine_banner_style_two
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

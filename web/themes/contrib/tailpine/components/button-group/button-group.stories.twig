@@ -1,0 +1,93 @@
+{% stories button_group with { title: 'Components/Button Group' } %}
+
+{% story colors with {
+    name: '1. Button Group - Color Variants'
+  } %}
+{% embed 'tailpine:button-group' %}
+  {% block buttons %}
+    {% include 'tailpine:button' with { content: 'Primary', color: 'primary', size: 'md' } %}
+    {% include 'tailpine:button' with { content: 'Secondary', color: 'secondary', size: 'md' } %}
+    {% include 'tailpine:button' with { content: 'Success', color: 'success', size: 'md' } %}
+    {% include 'tailpine:button' with { content: 'Warning', color: 'warning', size: 'md' } %}
+    {% include 'tailpine:button' with { content: 'Error', color: 'error', size: 'md' } %}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% story default with {
+    name: '2. Button Group - Default'
+  } %}
+{% embed 'tailpine:button-group' %}
+  {% block buttons %}
+    {% include 'tailpine:button' with { content: 'Save', color: 'primary', size: 'md', outline: false } %}
+    {% include 'tailpine:button' with { content: 'Cancel', color: 'secondary', size: 'md', outline: false } %}
+    {% include 'tailpine:button' with { content: 'Delete', color: 'error', size: 'md', outline: false } %}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% story links with {
+    name: '3. Button Group - Link Buttons'
+  } %}
+{% embed 'tailpine:button-group' %}
+  {% block buttons %}
+    {% include 'tailpine:button' with { content: 'Home', button_html_tag: 'a', url: '#home', color: 'primary', size: 'md', outline: true } %}
+    {% include 'tailpine:button' with { content: 'About', button_html_tag: 'a', url: '#about', color: 'primary', size: 'md', outline: true } %}
+    {% include 'tailpine:button' with { content: 'Services', button_html_tag: 'a', url: '#services', color: 'primary', size: 'md', outline: true } %}
+    {% include 'tailpine:button' with { content: 'Contact', button_html_tag: 'a', url: '#contact', color: 'primary', size: 'md', outline: false } %}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% story navigation with {
+    name: '4. Button Group - Navigation'
+  } %}
+{% embed 'tailpine:button-group' %}
+  {% block buttons %}
+    {% include 'tailpine:button' with { content: '← Previous', color: 'primary', size: 'md', outline: true } %}
+    {% include 'tailpine:button' with { content: '1', color: 'primary', size: 'md', outline: false } %}
+    {% include 'tailpine:button' with { content: '2', color: 'primary', size: 'md', outline: true } %}
+    {% include 'tailpine:button' with { content: '3', color: 'primary', size: 'md', outline: true } %}
+    {% include 'tailpine:button' with { content: 'Next →', color: 'primary', size: 'md', outline: true } %}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% story outline with {
+    name: '5. Button Group - Outline Style'
+  } %}
+{% embed 'tailpine:button-group' %}
+  {% block buttons %}
+    {% include 'tailpine:button' with { content: 'Edit', color: 'primary', size: 'md', outline: true } %}
+    {% include 'tailpine:button' with { content: 'Preview', color: 'secondary', size: 'md', outline: true } %}
+    {% include 'tailpine:button' with { content: 'Publish', color: 'success', size: 'md', outline: true } %}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% story sizes with {
+    name: '6. Button Group - Different Sizes'
+  } %}
+{% embed 'tailpine:button-group' %}
+  {% block buttons %}
+    {% include 'tailpine:button' with { content: 'Small', color: 'primary', size: 'sm', outline: false } %}
+    {% include 'tailpine:button' with { content: 'Medium', color: 'primary', size: 'md', outline: false } %}
+    {% include 'tailpine:button' with { content: 'Large', color: 'primary', size: 'lg', outline: false } %}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% story toolbar with {
+    name: '7. Button Group - Toolbar Actions'
+  } %}
+{% embed 'tailpine:button-group' %}
+  {% block buttons %}
+    {% include 'tailpine:button' with { content: 'Bold', color: 'body', size: 'sm', outline: true } %}
+    {% include 'tailpine:button' with { content: 'Italic', color: 'body', size: 'sm', outline: true } %}
+    {% include 'tailpine:button' with { content: 'Underline', color: 'body', size: 'sm', outline: true } %}
+    {% include 'tailpine:button' with { content: 'Link', color: 'body', size: 'sm', outline: true } %}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

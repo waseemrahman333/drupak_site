@@ -1,0 +1,93 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: pager
+description: Component for displaying a pagination navigation.
+status: stable
+group: Navigation
+
+props:
+  type: object
+  properties:
+
+    size:
+      title: Size
+      description: "Set the size of pagination links."
+      type: string
+      enum: [xs, sm, md, lg, xl]
+      default: md
+      "meta:enum":
+        xs: Extra Small
+        sm: Small
+        md: Medium
+        lg: Large
+        xl: Xlarge
+
+    heading_id:
+      type: string
+      title: Pagination Heading ID
+      description: Unique identifier for the pagination heading (used for aria-labelledby).
+      default: "pagination-heading"
+
+    pagination_heading_level:
+      type: string
+      title: Heading Level
+      description: HTML heading level for the pagination heading.
+      default: "h2"
+
+    current:
+      type: integer
+      title: Current Page
+      description: The currently active page number.
+      default: 1
+
+    items:
+      type: object
+      title: Pagination Items
+      description: Links for pagination.
+      properties:
+        first:
+          type: object
+          title: First Page
+          properties:
+            href: { type: string, title: URL, default: "#" }
+            text: { type: string, title: Label, default: "« First" }
+        previous:
+          type: object
+          title: Previous Page
+          properties:
+            href: { type: string, title: URL, default: "#" }
+            text: { type: string, title: Label, default: "‹ Previous" }
+        pages:
+          type: object
+          title: Page Links
+          description: Numbered page links.
+          items:
+            type: object
+            properties:
+              href: { type: string, title: URL, default: "#" }
+              text: { type: string, title: Page Number, default: "" }
+        next:
+          type: object
+          title: Next Page
+          properties:
+            href: { type: string, title: URL, default: "#" }
+            text: { type: string, title: Label, default: "Next ›" }
+        last:
+          type: object
+          title: Last Page
+          properties:
+            href: { type: string, title: URL, default: "#" }
+            text: { type: string, title: Label, default: "Last »" }
+
+    ellipses:
+      type: object
+      title: Ellipses
+      description: Show ellipses for skipped pages.
+      properties:
+        previous:
+          type: boolean
+          title: Previous Ellipsis
+          default: false
+        next:
+          type: boolean
+          title: Next Ellipsis
+          default: false

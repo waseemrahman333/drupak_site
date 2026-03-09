@@ -1,0 +1,35 @@
+{% set bg_color = bg_color|striptags %}
+
+{% set bg_variant = {
+  'primary': 'bg-primary text-gray-50',
+  'secondary': 'bg-secondary text-gray-100',
+  'gradient': 'bg-gradient-to-r from-primary to-secondary text-body-bg',
+  'tertiary': 'bg-tertiary text-body-bg'
+} %}
+{% set bg_color_variant = bg_variant[bg_color] %}
+
+<div {{ attributes.addClass([
+  'flex',
+  'max-w-[1920px]',
+  'w-full',
+  bg_color_variant,
+  'mx-auto',
+  'mb-5',
+  'flex-col',
+  'gap-6',
+  'py-10',
+  'xl:py-24',
+  'xl:gap-5',
+  'px-5',
+  'md:px-12.5',
+  'lg:px-24'
+]) }}>
+  <div class="flex items-center flex-col gap-6 justify-center text-center mx-auto">
+    <h1 class="text-3xl md:text-4xl lg:text-5xl font-medium tracking-wide leading-11">
+      {{ title }}
+    </h1>       <div class="div w-12.5 h-1 bg-gray-200 justify-self-center "></div>
+  </div>
+  <div class="grid items-stretch grid-cols-1 lg:grid-cols-3 gap-5">
+    {{ content }}
+  </div>
+</div>

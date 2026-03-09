@@ -1,0 +1,12 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Select
+status: stable
+group: Forms & Inputs
+description: 'The select #type form element component.'
+props:
+  description: 'The properties accepted by the select component.'
+  type: object
+  properties:
+    options:
+      type: array
+      description: 'The <option> element children.'

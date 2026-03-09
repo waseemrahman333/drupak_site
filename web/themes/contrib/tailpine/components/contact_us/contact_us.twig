@@ -1,0 +1,60 @@
+{#
+/**
+ * Contact Us Section Component
+ * 
+ * Call-to-action section encouraging users to get in touch.
+ * Typically used on landing pages or at the end of content pages.
+ *
+ * Available variables:
+ * - title: (string) Section heading. Required.
+ * - subtitle: (string|markup) Supporting text or description. Required.
+ * - cta: (markup) Call-to-action button component. Required.
+ * - heading_level: (number) HTML heading level (1-6). Default: 2
+ *
+ * Accessibility:
+ * - Uses <section> semantic HTML with aria-label
+ * - Proper heading hierarchy
+ * - Sufficient text contrast on colored background
+ * - Focus indicators on interactive elements
+ *
+ * Theme Variables Used:
+ * - bg-secondary: Section background color
+ * - text-body-bg: Text color on colored backgrounds
+ * - border-gray-700: Bottom border color
+ *
+ * Examples:
+ * {% include 'tailpine:contact_us' with {
+ *   title: 'Ready to Get Started?',
+ *   subtitle: 'Contact us today to learn more.',
+ *   cta: cta_button,
+ * } %}
+ */
+#}
+
+{% set section_heading = heading_level|default(2) %}
+
+<!-- Contact CTA Section -->
+<section 
+  class="bg-secondary mx-auto max-w-[1920px] text-body-bg py-20 border-b-2 border-gray-700 text-center"
+  aria-label="Contact call to action"
+>
+  <div class="container mx-auto px-4">
+    {% if title %}
+      <h{{ section_heading }} class="text-3xl md:text-4xl font-bold mb-4">
+        {{ title }}
+      </h{{ section_heading }}>
+    {% endif %}
+    
+    {% if subtitle %}
+      <div class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
+        {{ subtitle }}
+      </div>
+    {% endif %}
+    
+    {% if cta %}
+      <div class="mx-auto mt-2 w-fit">
+        {{ cta }}
+      </div>
+    {% endif %}
+  </div>
+</section>

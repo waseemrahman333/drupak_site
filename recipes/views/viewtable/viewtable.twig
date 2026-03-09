@@ -1,0 +1,164 @@
+{#
+/**
+ * @file
+ * Template for rendering a responsive table in a Drupal view.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the table element.
+ * - title: The title for this group of rows.
+ * - caption: The caption for the table.
+ * - caption_needed: A flag indicating whether the caption tag is required.
+ * - accessibility_description: Extended description of the table details.
+ * - accessibility_summary: Summary of the table details.
+ * - header: An array of table header columns, each containing:
+ *   - attributes: HTML attributes for header elements.
+ *   - content: Header cell content.
+ *   - default_classes: A flag indicating whether to use default classes.
+ *   - url: Optional sort URL for the column.
+ *   - title: Optional sort title.
+ *   - sort_indicator: Optional sort indicator markup.
+ *   - wrapper_element: Optional wrapper element for content.
+ * - rows: An array of table rows, each row contains:
+ *   - attributes: HTML attributes for row elements.
+ *   - columns: An array of row columns with content and attributes.
+ * - responsive: A flag indicating whether the table should be responsive.
+ * - sticky: A flag indicating whether the table header is sticky.
+ * - bordered: A flag whether the table should be styled with borders.
+ * - fields: Field names for generating proper CSS classes.
+ *
+ * @see template_preprocess_views_view_table()
+ */
+#}
+{%
+  set table_classes = [
+    'w-full',
+    'border-collapse',
+    'text-sm',
+    'text-left',
+    'cols-' ~ header|length,
+    sticky ? 'sticky-header',
+  ]
+%}
+
+{%
+  set wrapper_classes = [
+    responsive ? 'overflow-x-auto' : '',
+    bordered ? 'border border-gray-200 dark:border-gray-700' : '',
+    'shadow-sm',
+    'bg-white dark:bg-gray-900',
+  ]
+%}
+
+{% if not sticky %}
+  <div class="{{ wrapper_classes|join(' ')|trim }}">
+{% endif %}
+
+<table{{ attributes.addClass(table_classes) }}>
+  {% if caption_needed %}
+    <caption class="text-lg font-semibold text-gray-900 dark:text-white py-3 text-left px-4">
+      {{ caption ? caption : title }}
+
+      {% if (accessibility_summary is not empty) or (accessibility_description is not empty) %}
+        <details class="mt-2 text-sm font-normal text-gray-600 dark:text-gray-400">
+          {% if accessibility_summary is not empty %}
+            <summary class="cursor-pointer hover:text-gray-900 dark:hover:text-white">
+              {{ accessibility_summary }}
+            </summary>
+          {% endif %}
+          {% if accessibility_description is not empty %}
+            <div class="mt-2 pl-4">
+              {{ accessibility_description }}
+            </div>
+          {% endif %}
+        </details>
+      {% endif %}
+    </caption>
+  {% endif %}
+
+  {% if header %}
+    <thead class="bg-gray-50 dark:bg-gray-800 {{ sticky ? 'sticky top-0 z-10' : '' }}">
+      <tr class="border-b border-gray-200 dark:border-gray-700">
+        {% for key, column in header %}
+          {%
+            set column_classes = [
+              column.default_classes ? 'views-field' : '',
+              column.default_classes and fields ? 'views-field-' ~ fields[key] : '',
+              'px-4 py-3',
+              'text-xs font-medium',
+              'text-gray-700 dark:text-gray-300',
+              'uppercase tracking-wider',
+              bordered ? 'border-r border-gray-200 dark:border-gray-700 last:border-r-0' : '',
+            ]
+          %}
+
+          <th{{ column.attributes.addClass(column_classes).setAttribute('scope', 'col') }}>
+            {% if column.wrapper_element %}
+              <{{ column.wrapper_element }}>
+                {% if column.url %}
+                  <a href="{{ column.url }}" title="{{ column.title }}" class="hover:text-gray-900 dark:hover:text-white transition-colors">
+                    {{ column.content }}{{ column.sort_indicator }}
+                  </a>
+                {% else %}
+                  {{ column.content }}{{ column.sort_indicator }}
+                {% endif %}
+              </{{ column.wrapper_element }}>
+            {% else %}
+              {% if column.url %}
+                <a href="{{ column.url }}" title="{{ column.title }}" class="hover:text-gray-900 dark:hover:text-white transition-colors">
+                  {{ column.content }}{{ column.sort_indicator }}
+                </a>
+              {% else %}
+                {{ column.content }}{{ column.sort_indicator }}
+              {% endif %}
+            {% endif %}
+          </th>
+        {% endfor %}
+      </tr>
+    </thead>
+  {% endif %}
+
+  <tbody class="bg-white dark:bg-gray-900 divide-y divide-gray-200 dark:divide-gray-700">
+    {% for row in rows %}
+      {%
+        set row_classes = [
+          loop.index0 % 2 == 1 ? 'bg-gray-50 dark:bg-gray-800/50' : '',
+          'hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-150',
+        ]
+      %}
+      <tr{{ row.attributes.addClass(row_classes) }}>
+        {% for key, column in row.columns %}
+          {%
+            set column_classes = [
+              column.default_classes ? 'views-field' : '',
+              'px-4 py-3',
+              'text-gray-900 dark:text-gray-100',
+              bordered ? 'border-r border-gray-200 dark:border-gray-700 last:border-r-0' : '',
+            ]
+          %}
+
+          {% for field in column.fields %}
+            {% set column_classes = column_classes|merge(['views-field-' ~ field]) %}
+          {% endfor %}
+
+          <td{{ column.attributes.addClass(column_classes) }}>
+            {% if column.wrapper_element %}
+              <{{ column.wrapper_element }}>
+                {% for content in column.content %}
+                  {{ content.separator }}{{ content.field_output }}
+                {% endfor %}
+              </{{ column.wrapper_element }}>
+            {% else %}
+              {% for content in column.content %}
+                {{- content.separator }}{{ content.field_output -}}
+              {% endfor %}
+            {% endif %}
+          </td>
+        {% endfor %}
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% if not sticky %}
+  </div>
+{% endif %}

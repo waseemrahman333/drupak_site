@@ -1,0 +1,92 @@
+# $schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+# name: View Grid
+# description: A component to render views in a grid layout.
+# group: Molecules
+# status: stable
+# props:
+#   type: object
+#   properties:
+#     attributes:
+#       type: object
+#       description: HTML attributes for the wrapping element.
+#       format: attribute
+
+#     title:
+#       type: string
+#       description: The title of this group of rows.
+
+#     # view:
+#     #   title: View
+#     #   type: object
+#     #   description: The view to render.
+
+#     rows:
+#       type: array
+#       label: Rows
+#       description: The number of rows to display.
+#       items:
+#         type: object
+#         properties:
+#           attributes:
+#             type: object
+#             label: Attributes
+#             default: {}
+#             format: attribute
+#           content:
+#             type: string
+#             label: Content
+#             default: ''
+#             description: The content of the row.
+
+#     # items:
+#     #   type: string
+#     #   description: A list of grid items. Each item contains a list of rows or columns.
+#     #   items:
+#     #     type: object
+#     #     properties:
+#     #       attributes:
+#     #         type: object
+#     #         description: HTML attributes for each row or column.
+#     #         format: attribute
+#     #       content:
+#     #         type: string
+#     #         description: The row or column contents.
+
+#     options:
+#       type: object
+#       description: The view plugin style options.
+#       properties:
+#         alignment:
+#           type: string
+#           description: The alignment of the grid ('horizontal' or 'vertical').
+#         columns:
+#           type: integer
+#           description: Number of columns in the grid.
+#         row_class_default:
+#           type: boolean
+#           description: Flag indicating whether default classes should be used on rows.
+#         col_class_default:
+#           type: boolean
+#           description: Flag indicating whether default classes should be used on columns.
+
+#   required:
+#     # - items
+#     - options
+
+# slots:
+#   items:
+#     title: Items
+#     description: A list of grid items. Each item contains a list of rows or columns.
+
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: View  grid
+status: stable
+group: "View"
+description: Component implementation for views to display rows in a grid.
+props:
+  type: object
+  properties:
+    content:
+      type: string
+      title: Content
+      description: The row or column contents.

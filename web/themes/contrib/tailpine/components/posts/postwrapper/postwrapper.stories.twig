@@ -1,0 +1,24 @@
+{% stories postwrapper with { title: 'Components/Post Syle One Wrapper' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      title: 'Title',
+      content: 'Content',
+      cta: 'CTA'
+    }
+  } %}
+{% embed 'components:postwrapper' %}
+  {% block title %}
+    {{ title }}
+  {% endblock %}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+  {% block cta %}
+    {{ cta }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

@@ -1,0 +1,37 @@
+{% stories details with { title: 'Components/Details' } %}
+
+{% story default with {
+    name: '1. Details (Collapsible)',
+    args: { 
+      title: 'Shipping Address',
+      required: false,
+      children: '<div class="mt-4 space-y-4 p-4 bg-white">
+  <div class="form-item">
+    <label class="block text-sm font-semibold text-gray-900 mb-2">Street Address</label>
+    <input type="text" name="street" placeholder="123 Main Street" class="bg-white border-2 border-gray-300 text-gray-900 text-base focus:ring-2 focus:ring-primary focus:border-primary block w-full px-4 py-3 transition-all hover:border-gray-400" />
+  </div>
+  <div class="grid grid-cols-2 gap-4">
+    <div class="form-item">
+      <label class="block text-sm font-semibold text-gray-900 mb-2">City</label>
+      <input type="text" name="city" placeholder="New York" class="bg-white border-2 border-gray-300 text-gray-900 text-base focus:ring-2 focus:ring-primary focus:border-primary block w-full px-4 py-3 transition-all hover:border-gray-400" />
+    </div>
+    <div class="form-item">
+      <label class="block text-sm font-semibold text-gray-900 mb-2">ZIP Code</label>
+      <input type="text" name="zip" placeholder="10001" class="bg-white border-2 border-gray-300 text-gray-900 text-base focus:ring-2 focus:ring-primary focus:border-primary block w-full px-4 py-3 transition-all hover:border-gray-400" />
+    </div>
+  </div>
+</div>
+'
+    }
+  } %}
+{% embed 'components:details' with { 
+  title: title,
+  required: required
+} %}
+  {% block children %}
+    {{ children }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

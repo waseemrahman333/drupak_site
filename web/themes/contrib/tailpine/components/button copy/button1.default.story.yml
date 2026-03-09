@@ -1,0 +1,14 @@
+name: Button - Primary
+description: Standard button with primary color
+
+slots:
+  content: 'Submit'
+
+props:
+  button_html_tag: button
+  color: primary
+  size: md
+  outline: false
+  disabled: false
+  rounded: md
+

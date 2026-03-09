@@ -1,0 +1,23 @@
+<section class="container-px py-[clamp(60px,10dvh,100px)] text-tertiary bg-body-bg">
+            <div class="relative mx-auto max-w-480 bg-grey-bg rounded-[clamp(10px,1dvw,20px)] overflow-hidden flex flex-col">
+                <!-- Text -->
+                <div class="relative z-10 w-full grid grid-cols-1 gap-[clamp(20px,3dvw,40px)] p-[clamp(20px,3dvw,80px)] text-left md:w-1/2">
+                    <h2
+                        class="uppercase text-h2 relative z-10 pb-5 font-montserrat text-tertiary basis-1/3 after:h-1 after:w-15 after:content-[] after:bg-tertiary after:absolute after:bottom-0 after:left-0">
+                        {{title}}
+                    </h2>
+
+                    <div class="relative z-10 leading-7 xl:text-lg xl:leading-7.5 max-w-145 font-secondary">
+                        {{description}}
+                    </div>
+
+                  <div class="flex self-start">{{cta}}</div>
+                </div>
+
+                <!-- Image -->
+                <div class="md:absolute md:top-0 md:right-0 z-0 overflow-hidden flex justify-end">
+                    <img src="{{image}}" alt="consultation image"
+                        class="block md:w-full h-full object-contain w-87.5 opacity-90" />
+                </div>
+            </div>
+        </section>  

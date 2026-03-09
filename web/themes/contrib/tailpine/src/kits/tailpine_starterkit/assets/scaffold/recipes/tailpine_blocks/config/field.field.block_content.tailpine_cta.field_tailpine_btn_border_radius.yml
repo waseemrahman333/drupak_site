@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.tailpine_cta
+    - field.storage.block_content.field_tailpine_btn_border_radius
+  module:
+    - options
+id: block_content.tailpine_cta.field_tailpine_btn_border_radius
+field_name: field_tailpine_btn_border_radius
+entity_type: block_content
+bundle: tailpine_cta
+label: 'Select  Border Radius'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,25 @@
+{#
+/**
+ * Figure Component
+ * 
+ * Semantic figure element with image and caption.
+ */
+#}
+
+<figure class="{{figure_utility_classes|default([])|join(' ')}}">
+  {% if image_url %}
+  <img 
+    src="{{ image_url }}" 
+    alt="{{ image_alt|default('') }}"
+    class="w-full h-auto"
+    loading="lazy"
+  >
+  {% endif %}
+  
+  {% if caption %}
+  <figcaption class="mt-2 text-sm text-gray-600 text-center">
+    {{ caption }}
+  </figcaption>
+  {% endif %}
+</figure>
+

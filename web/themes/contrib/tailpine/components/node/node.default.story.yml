@@ -1,0 +1,23 @@
+name: Default
+props:
+  title_prefix: {  }
+  title_suffix: {  }
+  display_submitted: false
+  author_picture: 'https://cdn.pixabay.com/photo/2024/04/02/10/28/bangladesh-8670559_1280.jpg'
+  author_name: 'John Doe'
+  date: '2024-01-15'
+  metadata: 'Published'
+  label: 'Sample Article'
+  url: '/node/1'
+  node_classes: {  }
+  node_content_classes: {  }
+  node_utility_classes: {  }
+  author_utility_classes: {  }
+  node_content_utility_classes: {  }
+slots:
+  node_title: Title
+  node_metadata: Metadata
+  node_title_prefix: 'Title Prefix'
+  node_title_suffix: 'Title Suffix'
+  node_content: Content
+  content: Content

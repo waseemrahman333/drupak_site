@@ -1,0 +1,48 @@
+name: Tailpine Grid 3 Regions
+description: "A 3-column Tailpine card grid showcasing unique products with playful design variations."
+
+slots:
+  col_first:
+    type: component
+    component: "tailpine:poststylethree"
+    slots:
+      subtitle: "Subtitle"
+      date: "2025/08/29"
+      title:  Engineered for the streets
+      description:
+        type: html_tag
+        tag: p
+        value: Engineered for the streets — rugged, bold, and always stylish
+    props:
+      imageurl: https://cdn.pixabay.com/photo/2019/12/30/20/34/road-4730553_960_720.jpg
+
+
+  col_second:
+    type: component
+    component: "tailpine:poststylethree"
+    slots:
+      subtitle: "Subtitle"
+      date: "2025/08/29"
+      title:  Engineered for the streets
+      description:
+        type: html_tag
+        tag: p
+        value: Engineered for the streets — rugged, bold, and always stylish
+    props:
+      imageurl: https://cdn.pixabay.com/photo/2019/12/30/20/34/road-4730553_960_720.jpg
+
+  col_third:
+    type: component
+    component: "tailpine:poststylethree"
+    slots:
+      subtitle: "Subtitle"
+      date: "2025/08/29"
+      title:  Engineered for the streets
+      description:
+        type: html_tag
+        tag: p
+        value: Engineered for the streets — rugged, bold, and always stylish
+    props:
+      imageurl: https://cdn.pixabay.com/photo/2019/12/30/20/34/road-4730553_960_720.jpg
+
+

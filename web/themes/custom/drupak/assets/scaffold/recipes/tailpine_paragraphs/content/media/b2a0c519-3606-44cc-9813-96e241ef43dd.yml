@@ -1,0 +1,35 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: b2a0c519-3606-44cc-9813-96e241ef43dd
+  bundle: image
+  default_langcode: en
+  depends:
+    b112def1-c6f4-4a24-b9f1-d49286473b25: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: hero-main-img.png
+  created:
+    -
+      value: 1759926406
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+  field_media_image:
+    -
+      entity: b112def1-c6f4-4a24-b9f1-d49286473b25
+      alt: hero
+      title: ''
+      width: 1536
+      height: 1024

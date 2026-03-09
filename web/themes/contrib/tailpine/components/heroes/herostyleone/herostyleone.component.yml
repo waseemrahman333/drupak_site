@@ -1,0 +1,24 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Hero Style One
+status: stable
+description: "Hero   are used to group and display content in a way that is easily readable."
+group: Heros
+category: Hero
+props:
+  type: object
+  properties:
+    imageurl:
+      type: string
+      description: "The URL of the image to be used in the hero."
+      title: Hero Image
+slots:
+  title:
+    title: Title
+    description: "Title of the card. Plain text."
+  description:
+    title: Description
+    description: "Description of the Hero. Long text."
+  cta:
+    title: Cta
+    description: "Link of the Hero. Links."
+

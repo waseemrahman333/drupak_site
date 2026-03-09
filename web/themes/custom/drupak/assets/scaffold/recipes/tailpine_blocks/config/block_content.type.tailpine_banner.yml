@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 50TXCFaJgi0-1JxNZarNHG_APVH8mu3pP6siKl35FC0
+id: tailpine_banner
+label: Tailpine_Banner
+revision: false
+description: null

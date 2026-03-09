@@ -1,0 +1,36 @@
+<div class="container max-w-[1920px] w-full mx-auto  {{ header_fixed_class }}">
+  <header
+    class="flex items-center justify-between px-6 lg:px-10 py-4 bg-body-bg text-body shadow-md"
+    x-data="{ open: false, mobOpen: false, searchOpen: false }"
+    @click.away="searchOpen = false"
+    @keydown.escape="searchOpen = false"
+  >
+    <!-- Left side: Branding + menu (desktop only) -->
+    <div class="flex items-center gap-6">
+      <!-- Branding -->
+      <div class="header_branding flex-shrink-0">
+        {{ page.branding }}
+      </div>
+
+      <!-- Menu (desktop only) -->
+      <div class="hidden lg:!block">
+        {{ page.primary_menu }}
+      </div>
+    </div>
+
+    <!-- Right-side content -->
+    <div class="flex items-center gap-6">
+      <!-- Top right actions / search -->
+      <div class="right-actions hidden md:!block">
+        {{ page.top_right_actions }}
+      </div>
+
+      <!-- Menu (mobile only) -->
+      <div class="lg:hidden">
+        {{ page.primary_menu }}
+      </div>
+    </div>
+  </header>
+</div>
+
+

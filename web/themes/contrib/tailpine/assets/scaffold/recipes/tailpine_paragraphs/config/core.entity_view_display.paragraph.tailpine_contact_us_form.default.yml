@@ -1,0 +1,114 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tailpine_contact_us_form.field_tailpine_add_form
+    - field.field.paragraph.tailpine_contact_us_form.field_tailpine_title
+    - paragraphs.paragraphs_type.tailpine_contact_us_form
+  module:
+    - layout_builder
+    - nomarkup
+    - ui_patterns
+    - ui_patterns_layouts
+    - webform
+  theme:
+    - tailpine
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: 'ui_patterns:tailpine:contact_form'
+        layout_settings:
+          label: ''
+          context_mapping:
+            entity: layout_builder.entity
+          ui_patterns:
+            component_id: 'tailpine:contact_form'
+            variant_id: null
+            props:
+              attributes:
+                source_id: attributes
+                source:
+                  value: ''
+            slots:
+              title:
+                add_more_button: ''
+              content:
+                add_more_button: ''
+        components:
+          71a1a5d0-af7b-4401-bc08-720ed19910e4:
+            uuid: 71a1a5d0-af7b-4401-bc08-720ed19910e4
+            region: title
+            configuration:
+              id: 'field_block:paragraph:tailpine_contact_us_form:field_tailpine_title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings: {  }
+                third_party_settings:
+                  nomarkup:
+                    enabled: true
+                    separator: '|'
+                    referenced_entity: ''
+            weight: 0
+            additional: {  }
+          9d8f9c97-bd9b-45e7-a336-b56e3f4fb359:
+            uuid: 9d8f9c97-bd9b-45e7-a336-b56e3f4fb359
+            region: content
+            configuration:
+              id: 'field_block:paragraph:tailpine_contact_us_form:field_tailpine_add_form'
+              label: 'Add Form'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: webform_entity_reference_entity_view
+                label: hidden
+                settings:
+                  source_entity: true
+                  lazy: false
+                third_party_settings:
+                  nomarkup:
+                    enabled: true
+                    separator: '|'
+                    referenced_entity: ''
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+id: paragraph.tailpine_contact_us_form.default
+targetEntityType: paragraph
+bundle: tailpine_contact_us_form
+mode: default
+content:
+  field_tailpine_add_form:
+    type: webform_entity_reference_entity_view
+    label: above
+    settings:
+      source_entity: true
+      lazy: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_tailpine_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 0
+    region: content
+hidden: {  }

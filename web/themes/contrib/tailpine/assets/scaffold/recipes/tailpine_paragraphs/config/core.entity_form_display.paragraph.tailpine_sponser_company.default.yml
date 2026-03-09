@@ -1,0 +1,40 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tailpine_sponser_company.field_tailpin_column_start
+    - field.field.paragraph.tailpine_sponser_company.field_tailpine_link
+    - field.field.paragraph.tailpine_sponser_company.field_tailpine_media_image
+    - paragraphs.paragraphs_type.tailpine_sponser_company
+  module:
+    - link
+    - media_library
+id: paragraph.tailpine_sponser_company.default
+targetEntityType: paragraph
+bundle: tailpine_sponser_company
+mode: default
+content:
+  field_tailpin_column_start:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_tailpine_link:
+    type: link_default
+    weight: 1
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_tailpine_media_image:
+    type: media_library_widget
+    weight: 2
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

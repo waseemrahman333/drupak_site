@@ -1,0 +1,33 @@
+{% stories video with { title: 'Components/Video' } %}
+
+{% story autoplay with {
+    name: '1. Video - Autoplay Muted',
+    args: { 
+      children: '<div class="video-wrapper max-w-3xl">
+  <video class="w-full max-w-full h-auto bg-black shadow-md" autoplay muted loop playsinline>
+    <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
+    <p class="text-gray-700 dark:text-gray-300 p-4">Your browser does not support the video tag.</p>
+  </video>
+</div>
+'
+    }
+  } %}
+{% embed 'components:video' %}{% endembed %}
+{% endstory %}
+
+{% story default with {
+    name: '2. Video - Default',
+    args: { 
+      children: '<div class="video-wrapper max-w-3xl">
+  <video class="w-full max-w-full h-auto bg-black shadow-md" controls>
+    <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+    <p class="text-gray-700 dark:text-gray-300 p-4">Your browser does not support the video tag.</p>
+  </video>
+</div>
+'
+    }
+  } %}
+{% embed 'components:video' %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: accordion_sytle_one
+label: 'Accordion Sytle One'
+revision: false
+description: null

@@ -1,0 +1,16 @@
+{#
+/**
+ * Region Component
+ * 
+ * Drupal region wrapper for blocks.
+ */
+#}
+
+{% set region = region_name|default('content') %}
+
+<div class="region region-{{ region }}">
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+</div>
+

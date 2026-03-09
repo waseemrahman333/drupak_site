@@ -1,0 +1,36 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 2f70b30f-aba1-4813-9971-906b8d8d9547
+  bundle: tailpine_testimonial_header
+  default_langcode: en
+  depends:
+    82e1caf8-5ae8-4634-818a-aef661c21142: block_content
+    e897eba9-261b-4096-902a-a27af4f068b2: block_content
+    45b007c9-787c-44d3-a0f0-b0980a2ae7ee: block_content
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Testimonial Header'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  field_block:
+    -
+      entity: 82e1caf8-5ae8-4634-818a-aef661c21142
+    -
+      entity: e897eba9-261b-4096-902a-a27af4f068b2
+    -
+      entity: 45b007c9-787c-44d3-a0f0-b0980a2ae7ee
+  field_tailpine_comp_bg_color:
+    -
+      value: secondary
+  field_tailpine_title:
+    -
+      value: "Client Review's"

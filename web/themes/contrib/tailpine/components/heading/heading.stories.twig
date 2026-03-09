@@ -1,0 +1,49 @@
+{% stories heading with { title: 'Components/Heading' } %}
+
+{% story default with {
+    name: '1. Heading - H2 Default',
+    args: { 
+      content: 'This is a heading',
+      heading_html_tag: 'h2'
+    }
+  } %}
+{% embed 'tailpine:heading' with { 
+  content: content,
+  heading_html_tag: heading_html_tag
+} %}
+{% endembed %}
+{% endstory %}
+
+{% story display with {
+    name: '2. Heading - Large Display',
+    args: { 
+      content: 'Large Display Heading',
+      heading_html_tag: 'h1',
+      display_size: '3xl'
+    }
+  } %}
+{% embed 'tailpine:heading' with { 
+  content: content,
+  heading_html_tag: heading_html_tag,
+  display_size: display_size
+} %}
+{% endembed %}
+{% endstory %}
+
+{% story link with {
+    name: '3. Heading - With Link',
+    args: { 
+      content: 'Linked Heading',
+      heading_html_tag: 'h2',
+      title_link: '/article'
+    }
+  } %}
+{% embed 'tailpine:heading' with { 
+  content: content,
+  heading_html_tag: heading_html_tag,
+  title_link: title_link
+} %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

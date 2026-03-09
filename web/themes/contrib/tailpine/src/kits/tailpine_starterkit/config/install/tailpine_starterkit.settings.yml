@@ -1,0 +1,20 @@
+# # Colors
+# # ----------------------------
+tailpine_starterkit_enable_color: true
+tailpine_starterkit_color_scheme: default
+tailpine_starterkit_base_primary_color: '#10B981'
+tailpine_starterkit_base_secondary_color: '#064E3B'
+tailpine_starterkit_base_tertiary_color: '#06B6D4'
+tailpine_starterkit_body_color: '#1F2937'
+tailpine_starterkit_body_bg_color: '#FFFFFF'
+tailpine_starterkit_h1_color: '#1F2937'
+tailpine_starterkit_h2_color: '#1F2937'
+tailpine_starterkit_h3_color: '#1F2937'
+tailpine_starterkit_h4_color: '#1F2937'
+tailpine_starterkit_success_color: '#14A44D'
+tailpine_starterkit_warning_color: '#E4A11B'
+tailpine_starterkit_error_color: '#DC4C64'
+header_class: style4
+footer_class: style2
+header_fixed: '0'
+daisyui_enable: false

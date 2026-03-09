@@ -1,0 +1,17 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Sponsor Logo Style One
+status: stable
+group: Sponsors / Logos
+description: 'A Sponsor style with a header.'
+props:
+  type: object
+  properties:
+    website_url:
+      type: string
+      title: 'Website URL'
+      description: 'The URL of the website.'
+    sponser_logo:
+      type: string
+      title: 'Sponser Logo'
+      description: 'The logo of the Sponser.'
+

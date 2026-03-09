@@ -1,0 +1,61 @@
+{% set tab_style = tabStyle|striptags %}
+{% set style_classes = {
+  'underline': 'border-b-2  border-body-bg',
+  'default_fill': '',
+  'outline': '',
+  'primary_fill': '',
+   'secondary_fill': '',
+  'icon_tabs': ' flex gap-2 justify-center items-center cursor-pointer'
+} %}
+{% set  active_classes = {
+  'underline': 'border-b-2 border-primary text-primary',
+  'default_fill': 'bg-primary text-body-bg',
+  'outline': 'border-1 border-gray-400',
+  'primary_fill':  'bg-primary text-body-bg',
+  'secondary_fill': 'bg-secondary text-body-bg',
+  'icon_tabs': 'bg-primary fill-body-bg text-body-bg' ,
+} %}
+
+{% set tabStyle_classes = style_classes[tab_style|default('underline')] %}
+{% set activClasses = active_classes[tab_style|default('underline')] %}
+
+
+ 
+ 
+  {% set id = tabid %}
+  
+{% set tab_buttons = tabButtons|striptags|capitalize %}
+
+
+{% if render_mode == 'tabsHeader' %}
+  <button
+    type="button"
+    x-on:click="activeTab = '{{ id }}'"
+    x-bind:class="activeTab === '{{ id }}' ? '{{ activClasses }}' : ''"
+    class="{{ tabStyle_classes }} w-1/3 py-3 text-body font-bold transition-all duration-200"
+    role="tab"
+    x-bind:aria-selected="activeTab === '{{ id }}'"
+    x-bind:tabindex="activeTab === '{{ id }}' ? 0 : -1"
+  >
+    {{ tab_buttons }}
+  </button>
+{% elseif render_mode == 'content' %}
+  <div 
+    x-show="activeTab === '{{ id }}'"
+    x-transition:enter="transition ease-out duration-200"
+    x-transition:enter-start="opacity-0"
+    x-transition:enter-end="opacity-100"
+    x-transition:leave="transition ease-in duration-150"
+    x-transition:leave-start="opacity-100"
+    x-transition:leave-end="opacity-0"
+    role="tabpanel"
+    x-bind:aria-hidden="activeTab !== '{{ id }}'"
+    class="tab-panel"
+  >
+    {{ tabContent }}
+  </div>
+{% endif %}
+
+
+
+ 

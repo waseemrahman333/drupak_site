@@ -1,0 +1,8 @@
+name: Input - Text
+description: Text input field
+
+props:
+  type: text
+  value: ''
+  placeholder: 'Enter text here...'
+

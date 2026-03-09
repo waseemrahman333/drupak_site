@@ -1,0 +1,14 @@
+name: Button - Outline
+description: Button with outline style
+
+slots:
+  content: 'Cancel'
+
+props:
+  button_html_tag: button
+  color: secondary
+  size: md
+  outline: true
+  disabled: false
+  rounded: md
+

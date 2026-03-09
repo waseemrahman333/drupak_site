@@ -1,0 +1,147 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.tailpine_teams_header
+    - field.storage.block_content.field_content
+    - paragraphs.paragraphs_type.tailpine_cta
+  module:
+    - entity_reference_revisions
+id: block_content.tailpine_teams_header.field_content
+field_name: field_content
+entity_type: block_content
+bundle: tailpine_teams_header
+label: 'Add CTA'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      tailpine_cta: tailpine_cta
+    negate: 0
+    target_bundles_drag_drop:
+      hero:
+        weight: 41
+        enabled: false
+      tailpine_404_page:
+        weight: 42
+        enabled: false
+      tailpine_accordion:
+        weight: 43
+        enabled: false
+      tailpine_accordion_header:
+        weight: 44
+        enabled: false
+      tailpine_accordion_one_header:
+        weight: 45
+        enabled: false
+      tailpine_accordion_sytle_one:
+        weight: 46
+        enabled: false
+      tailpine_banner:
+        weight: 47
+        enabled: false
+      tailpine_banner_style_two:
+        weight: 48
+        enabled: false
+      tailpine_blog_post_with_cta:
+        weight: 49
+        enabled: false
+      tailpine_card:
+        weight: 50
+        enabled: false
+      tailpine_card_two:
+        weight: 51
+        enabled: false
+      tailpine_cards_header:
+        weight: 52
+        enabled: false
+      tailpine_carousel:
+        weight: 53
+        enabled: false
+      tailpine_contact_us_form:
+        weight: 54
+        enabled: false
+      tailpine_cta:
+        weight: 55
+        enabled: true
+      tailpine_get_in_touch:
+        weight: 56
+        enabled: false
+      tailpine_hero_style_two:
+        weight: 57
+        enabled: false
+      tailpine_media_and_text:
+        weight: 58
+        enabled: false
+      tailpine_modal:
+        weight: 59
+        enabled: false
+      tailpine_post_cards:
+        weight: 60
+        enabled: false
+      tailpine_post_inner_wrapper:
+        weight: 61
+        enabled: false
+      tailpine_post_style_one_wrapper:
+        weight: 62
+        enabled: false
+      tailpine_post_wrapper:
+        weight: 63
+        enabled: false
+      tailpine_sidebar:
+        weight: 64
+        enabled: false
+      tailpine_sidebar_links:
+        weight: 65
+        enabled: false
+      tailpine_social_icons:
+        weight: 66
+        enabled: false
+      tailpine_sponser_company:
+        weight: 67
+        enabled: false
+      tailpine_sponser_header:
+        weight: 68
+        enabled: false
+      tailpine_sponser_logo_style_one:
+        weight: 69
+        enabled: false
+      tailpine_sponser_two_header:
+        weight: 70
+        enabled: false
+      tailpine_sub_page_hero:
+        weight: 71
+        enabled: false
+      tailpine_tabs_content:
+        weight: 72
+        enabled: false
+      tailpine_tabs_wrapper:
+        weight: 73
+        enabled: false
+      tailpine_team:
+        weight: 74
+        enabled: false
+      tailpine_team_style_two:
+        weight: 75
+        enabled: false
+      tailpine_team_style_two_header:
+        weight: 76
+        enabled: false
+      tailpine_teams_header:
+        weight: 77
+        enabled: false
+      tailpine_testimonial:
+        weight: 78
+        enabled: false
+      tailpine_testimonial_header:
+        weight: 79
+        enabled: false
+      tailpine_testimonial_style_two:
+        weight: 80
+        enabled: false
+field_type: entity_reference_revisions

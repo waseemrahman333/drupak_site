@@ -1,0 +1,23 @@
+{% stories accordionstyleone with { title: 'Components/Accordion Style One' } %}
+
+{% story default with {
+    name: '1. Accordion Style One',
+    args: { 
+      default_open: true,
+      title: 'What features are included?',
+      description: 'Our platform includes advanced analytics, real-time collaboration tools, customizable dashboards, and 24/7 customer support. All features are available across all plans with no hidden costs.'
+    }
+  } %}
+{% embed 'components:accordionstyleone' with { 
+  default_open: default_open
+} %}
+  {% block title %}
+    {{ title }}
+  {% endblock %}
+  {% block description %}
+    {{ description }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

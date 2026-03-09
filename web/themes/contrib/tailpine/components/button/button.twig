@@ -1,0 +1,131 @@
+{#
+/**
+ * Button Component
+ * 
+ * Versatile button component for forms, actions, and navigation.
+ * Supports both <button> and <a> tags with multiple style variants.
+ *
+ * Available variables:
+ * - content: (string|markup) Button text or content. Required.
+ * - button_html_tag: (string) HTML tag ('button' or 'a'). Default: 'button'
+ * - url: (string) Destination URL when using <a> tag. Required for links.
+ * - id: (string) Button ID attribute. Optional.
+ * - color: (string) Color scheme. Options: 'primary', 'secondary', 'tertiary', 'success', 'warning', 'error', 'info', 'body', 'light'. Default: 'primary'
+ * - outline: (boolean) Use outline style. Default: false
+ * - size: (string) Size variant. Options: 'sm', 'md', 'lg', 'xl'. Default: 'md'
+ * - disabled: (boolean) Disabled state. Default: false
+ * - rounded: (string) Border radius. Options: 'none', 'sm', 'md', 'lg', 'xl', 'full'. Default: 'md'
+ * - button_utility_classes: (array) Additional Tailwind classes.
+ * - button_attributes: (Attribute) HTML attributes object.
+ *
+ * Accessibility:
+ * - Proper button/link semantics
+ * - aria-disabled for disabled links
+ * - Keyboard accessible
+ * - Focus ring indicators
+ * - Sufficient color contrast
+ *
+ * Theme Variables Used:
+ * - bg-{color}: Button background colors
+ * - text-{color}: Button text colors
+ * - border-{color}: Border colors for outline variants
+ * - focus:ring-{color}: Focus indicator colors
+ *
+ * Examples:
+ * {% include 'tailpine:button' with {
+ *   content: 'Submit',
+ *   color: 'primary',
+ *   size: 'md',
+ * } %}
+ */
+#}
+
+{% set button_attributes = button_attributes|default(create_attribute()) %}
+{% set button_html_tag = button_html_tag|default('button') %}
+{% set button_id = id|default('') %}
+{% set button_color = color|default('primary') %}
+{% set is_outline = outline|default(false) %}
+{% set button_size = size|default('md') %}
+{% set is_disabled = disabled|default(false) %}
+{% set border_radius = rounded|default('none') %}
+
+{# Size classes #}
+{% set size_classes = {
+  'sm': 'px-3 py-1.5 text-sm',
+  'md': 'px-4 py-2 text-base',
+  'lg': 'px-6 py-3 text-lg',
+  'xl': 'px-8 py-4 text-xl',
+} %}
+
+{# Border radius classes - All set to none for sharp edges #}
+{% set rounded_classes = {
+  'none': '',
+  'sm': '',
+  'md': '',
+  'lg': '',
+  'xl': '',
+  'full': '',
+} %}
+
+{# Color classes #}
+{% if is_outline %}
+  {% set color_classes = {
+    'primary': 'border-2 border-primary text-primary hover:bg-primary hover:text-body-bg focus:ring-primary',
+    'secondary': 'border-2 border-secondary text-secondary hover:bg-secondary hover:text-body-bg focus:ring-secondary',
+    'tertiary': 'border-2 border-tertiary text-tertiary hover:bg-tertiary hover:text-body focus:ring-tertiary',
+    'success': 'border-2 border-success text-success hover:bg-success hover:text-body-bg focus:ring-success',
+    'warning': 'border-2 border-warning text-warning hover:bg-warning hover:text-body focus:ring-warning',
+    'error': 'border-2 border-error text-error hover:bg-error hover:text-body-bg focus:ring-error',
+    'info': 'border-2 border-primary text-primary hover:bg-primary hover:text-body-bg focus:ring-primary',
+    'body': 'border-2 border-body text-body hover:bg-body hover:text-body-bg focus:ring-body',
+    'light': 'border-2 border-gray-300 text-gray-700 hover:bg-gray-100 focus:ring-gray-300',
+  } %}
+{% else %}
+  {% set color_classes = {
+    'primary': 'bg-primary text-body-bg hover:opacity-90 focus:ring-primary',
+    'secondary': 'bg-secondary text-body-bg hover:opacity-90 focus:ring-secondary',
+    'tertiary': 'bg-tertiary text-body hover:opacity-90 focus:ring-tertiary',
+    'success': 'bg-success text-body-bg hover:opacity-90 focus:ring-success',
+    'warning': 'bg-warning text-body hover:opacity-90 focus:ring-warning',
+    'error': 'bg-error text-body-bg hover:opacity-90 focus:ring-error',
+    'info': 'bg-primary text-body-bg hover:opacity-90 focus:ring-primary',
+    'body': 'bg-body text-body-bg hover:opacity-90 focus:ring-body',
+    'light': 'bg-gray-200 text-body hover:bg-gray-300 focus:ring-gray-300',
+  } %}
+{% endif %}
+
+{# Build button classes #}
+{% set button_classes = [
+  'inline-flex items-center justify-center',
+  'font-semibold',
+  'transition-all duration-200',
+  'focus:outline-none focus:ring-2 focus:ring-offset-2',
+  size_classes[button_size],
+  rounded_classes[border_radius],
+  color_classes[button_color],
+  is_disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer',
+]|merge(button_utility_classes|default([])) %}
+
+{# Set attributes based on tag type #}
+{% if button_html_tag == 'a' %}
+  {% set button_attributes = button_attributes.setAttribute('href', url|default('#')) %}
+  {% if is_disabled %}
+    {% set button_attributes = button_attributes.setAttribute('aria-disabled', 'true') %}
+    {% set button_attributes = button_attributes.setAttribute('tabindex', '-1') %}
+  {% endif %}
+{% else %}
+  {% if is_disabled %}
+    {% set button_attributes = button_attributes.setAttribute('disabled', 'disabled') %}
+  {% endif %}
+{% endif %}
+
+{% if button_id %}
+  {% set button_attributes = button_attributes.setAttribute('id', button_id) %}
+{% endif %}
+
+<{{ button_html_tag }} {{ button_attributes.addClass(button_classes) }}>
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+</{{ button_html_tag }}>
+

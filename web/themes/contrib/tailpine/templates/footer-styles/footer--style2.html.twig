@@ -1,0 +1,73 @@
+<footer
+	class="max-w-[1920px] mx-auto w-full bg-secondary text-body-bg font-roboto px-[clamp(20px,5vw,100px)] pt-[clamp(37px,5vw,76px)] pb-[clamp(52px,5vw,80px)] grid grid-cols-4 col-start-1 col-span-4 md:grid md:grid-cols-8 md:col-start-1 md:col-span-8 xl:grid xl:grid-cols-12 xl:col-start-1 xl:col-span-12  style-two" x-data x-init="
+									if ($el.classList.contains('style-two')) {
+										$el.querySelectorAll('nav h2').forEach(el => {
+											el.classList.add(
+												'font-bold',
+												'text-xl',
+												'tracking-[3%]',
+												'leading-5.5',
+												'font-bold',
+												'mb-[10px]',
+												'border-body-bg',
+												'border-b',
+												'md:pb-[15px]',
+				                'pb-[15px]'
+
+											);
+										});
+									}
+										if ($el.classList.contains('style-two')) {
+										$el.querySelectorAll('nav ul li a').forEach(el => {
+											el.classList.add(
+												'font-normal',
+												'opacity-70'
+											);
+										});
+									}
+									if ($el.classList.contains('style-two')) {
+									$el.querySelectorAll('.copyright p').forEach(el => {
+									el.style.setProperty('text-align', 'end', 'important');
+								});
+							}
+				      		const updateAlignmentTwo = () => {
+								const shouldApply = $el.classList.contains('style-two') && window.innerWidth < 768;
+								$el.querySelectorAll('.copyright p').forEach(el => {
+								  if (shouldApply) {
+								    el.style.setProperty('text-align', 'center', 'important');
+								  } else {
+								    el.classList.remove('font-normal');
+								      el.style.setProperty('text-align', 'end', 'important');
+								    }
+								  });
+								};
+
+								// Initial run
+								updateAlignmentTwo();
+
+								// Update on resize
+								window.addEventListener('resize', updateAlignmentTwo);
+
+
+								const updateAlignment = () => {
+								const shouldApply = $el.classList.contains('style-two') && window.innerWidth < 1280;
+								$el.querySelectorAll('.when p').forEach(el => {
+								  if (shouldApply) {
+								    el.classList.add('font-normal');
+								    el.style.setProperty('text-align', 'start', 'important');
+								  } else {
+								    el.classList.remove('font-normal');
+								      el.style.setProperty('text-align', 'end', 'important');
+								    }
+								  });
+								};
+
+								// Initial run
+								updateAlignment();
+
+								// Update on resize
+								window.addEventListener('resize', updateAlignment);">
+            {% include '@tailpine/includes/footer-menu-links-two.html.twig' %}
+
+
+</footer>

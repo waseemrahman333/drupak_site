@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 90b122d7-ed11-4deb-aac8-9b5758f07e95
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: team2.png
+  uri:
+    -
+      value: 'public://2025-09/team2.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 29083
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1756754185

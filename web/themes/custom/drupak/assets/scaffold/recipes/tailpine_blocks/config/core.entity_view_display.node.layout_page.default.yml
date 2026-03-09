@@ -1,0 +1,164 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.layout_page.layout_builder__layout
+    - node.type.layout_page
+  content:
+    - 'block_content:tailpine_banner:51f31bb2-c169-4bc4-83e3-617e70fdcb54'
+    - 'block_content:8ad8e67d-c506-4b74-8afc-c684f51b7f18'
+    - 'block_content:d96a72d6-2a53-454d-a5af-f3e05d508428'
+    - 'block_content:2f70b30f-aba1-4813-9971-906b8d8d9547'
+    - 'block_content:08edf462-2098-46b4-9a90-f3f6bd985157'
+    - 'block_content:4e7a99e3-f1d3-4992-9363-2027f2df580c'
+    - 'block_content:b6488b0a-0d7d-42ec-9f4c-cf209a0716a4'
+    - 'block_content:85b4c5e5-4edb-4b2a-8389-c0d2fd1edb5a'
+  module:
+    - block_content
+    - layout_builder
+    - layout_discovery
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Main Content Page'
+          context_mapping: { }
+        components:
+          0288f26a-7306-4cd0-88ab-ca176afe7bf6:
+            uuid: 0288f26a-7306-4cd0-88ab-ca176afe7bf6
+            region: content
+            configuration:
+              id: 'block_content:51f31bb2-c169-4bc4-83e3-617e70fdcb54'
+              label: 'Redefining Learning for a New Era'
+              label_display: '0'
+              provider: block_content
+              context_mapping: { }
+              status: true
+              info: ''
+              view_mode: full
+            weight: 0
+            additional: { }
+
+          4730bc64-6923-4db6-801e-59a1a0e1e536:
+            uuid: 4730bc64-6923-4db6-801e-59a1a0e1e536
+            region: content
+            configuration:
+              id: 'block_content:8ad8e67d-c506-4b74-8afc-c684f51b7f18'
+              label: 'Cards Header'
+              label_display: '0'
+              provider: block_content
+              context_mapping: { }
+              status: true
+              info: ''
+              view_mode: full
+            weight: 3
+            additional: { }
+
+          fc8d14be-d3ff-4dc7-b96e-c00fdaadefec:
+            uuid: fc8d14be-d3ff-4dc7-b96e-c00fdaadefec
+            region: content
+            configuration:
+              id: 'block_content:d96a72d6-2a53-454d-a5af-f3e05d508428'
+              label: 'Sponsor Header'
+              label_display: '0'
+              provider: block_content
+              context_mapping: { }
+              status: true
+              info: ''
+              view_mode: full
+            weight: 6
+            additional: { }
+
+          5c816229-3577-4d7f-aebe-2a127eb9dd74:
+            uuid: 5c816229-3577-4d7f-aebe-2a127eb9dd74
+            region: content
+            configuration:
+              id: 'block_content:2f70b30f-aba1-4813-9971-906b8d8d9547'
+              label: 'Testimonial Header'
+              label_display: '0'
+              provider: block_content
+              context_mapping: { }
+              status: true
+              info: ''
+              view_mode: full
+            weight: 8
+            additional: { }
+
+          7bd26a25-8b9f-4505-a5ca-1da839538dea:
+            uuid: 7bd26a25-8b9f-4505-a5ca-1da839538dea
+            region: content
+            configuration:
+              id: 'block_content:08edf462-2098-46b4-9a90-f3f6bd985157'
+              label: 'Teams Header'
+              label_display: '0'
+              provider: block_content
+              context_mapping: { }
+              status: true
+              info: ''
+              view_mode: full
+            weight: 7
+            additional: { }
+
+          eea3aaf2-505b-4218-9613-b7b2aff201ea:
+            uuid: eea3aaf2-505b-4218-9613-b7b2aff201ea
+            region: content
+            configuration:
+              id: 'block_content:4e7a99e3-f1d3-4992-9363-2027f2df580c'
+              label: 'Accordion Header'
+              label_display: '0'
+              provider: block_content
+              context_mapping: { }
+              status: true
+              info: ''
+              view_mode: full
+            weight: 9
+            additional: { }
+
+          7b5060e8-8fe0-43e5-babe-b43c979bb40f:
+            uuid: 7b5060e8-8fe0-43e5-babe-b43c979bb40f
+            region: content
+            configuration:
+              id: 'block_content:b6488b0a-0d7d-42ec-9f4c-cf209a0716a4'
+              label: 'Media and Text'
+              label_display: '0'
+              provider: block_content
+              context_mapping: { }
+              status: true
+              info: ''
+              view_mode: full
+            weight: 2
+            additional: { }
+
+          ae28a9b2-de03-445e-b89a-5e3e3adbd3dd:
+            uuid: ae28a9b2-de03-445e-b89a-5e3e3adbd3dd
+            region: content
+            configuration:
+              id: 'block_content:85b4c5e5-4edb-4b2a-8389-c0d2fd1edb5a'
+              label: 'Post Header'
+              label_display: '0'
+              provider: block_content
+              context_mapping: { }
+              status: true
+              info: ''
+              view_mode: full
+            weight: 5
+            additional: { }
+
+        third_party_settings: { }
+id: node.layout_page.default
+targetEntityType: node
+bundle: layout_page
+mode: default
+content:
+  links:
+    settings: { }
+    third_party_settings: { }
+    weight: 0
+    region: content
+hidden:
+  layout_builder__layout: true

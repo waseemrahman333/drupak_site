@@ -1,0 +1,158 @@
+{% stories button_with_variants with { title: 'Components/Button with Variants' } %}
+
+{% story danger with {
+    name: '1. Danger Button',
+    args: { 
+      text: 'Danger Button',
+      url: '',
+      size: 'md',
+      variant: 'danger',
+      disabled: false
+    }
+  } %}
+
+  <h2>Hellooooooooooo</h2>
+{% embed 'tailpine:button-with-variants' with { 
+  text: text,
+  url: url,
+  size: size,
+  variant: variant,
+  disabled: disabled
+} %}{% endembed %}
+<h2>end Hellooooooooooo</h2>
+{% endstory %}
+
+{% story ghost with {
+    name: '2. Ghost Button',
+    args: { 
+      text: 'Ghost Button',
+      url: '',
+      size: 'md',
+      variant: 'ghost',
+      disabled: false
+    }
+  } %}
+{% embed 'tailpine:button-with-variants' with { 
+  text: text,
+  url: url,
+  size: size,
+  variant: variant,
+  disabled: disabled
+} %}{% endembed %}
+{% endstory %}
+
+{% story large_primary with {
+    name: '3. Large Primary Button',
+    args: { 
+      text: 'Large Primary Button',
+      url: '',
+      size: 'lg',
+      variant: 'primary',
+      disabled: false
+    }
+  } %}
+{% embed 'tailpine:button-with-variants' with { 
+  text: text,
+  url: url,
+  size: size,
+  variant: variant,
+  disabled: disabled
+} %}{% endembed %}
+{% endstory %}
+
+{% story outline with {
+    name: '4. Outline Button',
+    args: { 
+      text: 'Outline Button',
+      url: '',
+      size: 'md',
+      variant: 'outline',
+      disabled: false
+    }
+  } %}
+{% embed 'tailpine:button-with-variants' with { 
+  text: text,
+  url: url,
+  size: size,
+  variant: variant,
+  disabled: disabled
+} %}{% endembed %}
+{% endstory %}
+
+{% story primary with {
+    name: '5. Primary Button',
+    args: { 
+      text: 'Primary Button',
+      url: '',
+      size: 'md',
+      variant: 'primary',
+      disabled: false
+    }
+  } %}
+{% embed 'tailpine:button-with-variants' with { 
+  text: text,
+  url: url,
+  size: size,
+  variant: variant,
+  disabled: disabled
+} %}{% endembed %}
+{% endstory %}
+
+{% story secondary with {
+    name: '6. Secondary Button',
+    args: { 
+      text: 'Secondary Button',
+      url: '',
+      size: 'md',
+      variant: 'secondary',
+      disabled: false
+    }
+  } %}
+{% embed 'tailpine:button-with-variants' with { 
+  text: text,
+  url: url,
+  size: size,
+  variant: variant,
+  disabled: disabled
+} %}{% endembed %}
+{% endstory %}
+
+{% story small_outline with {
+    name: '7. Small Outline Button',
+    args: { 
+      text: 'Small Outline Button',
+      url: '',
+      size: 'sm',
+      variant: 'outline',
+      disabled: false
+    }
+  } %}
+{% embed 'tailpine:button-with-variants' with { 
+  text: text,
+  url: url,
+  size: size,
+  variant: variant,
+  disabled: disabled
+} %}{% endembed %}
+{% endstory %}
+
+{% story success with {
+    name: '8. Success Button',
+    args: { 
+      text: 'Success Button',
+      url: '',
+      size: 'md',
+      variant: 'success',
+      disabled: false
+    }
+  } %}
+{% embed 'tailpine:button-with-variants' with { 
+  text: text,
+  url: url,
+  size: size,
+  variant: variant,
+  disabled: disabled
+} %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

@@ -1,0 +1,39 @@
+{% stories dropdown with { title: 'Components/Dropdown' } %}
+
+{% story default with {
+    name: '1. Dropdown Menu',
+    args: { 
+      button_text: 'Options',
+      button_color: 'primary',
+      items: '<a href="#" class="block px-4 py-2 text-sm text-body hover:bg-gray-100" role="menuitem">Account Settings</a><a href="#" class="block px-4 py-2 text-sm text-body hover:bg-gray-100" role="menuitem">Profile</a><div class="border-t border-gray-200 my-1" role="separator"></div><a href="#" class="block px-4 py-2 text-sm text-body hover:bg-gray-100" role="menuitem">Sign Out</a>'
+    }
+  } %}
+{% embed 'components:dropdown' with { 
+  button_text: button_text,
+  button_color: button_color
+} %}
+  {% block items %}
+    {{ items }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% story with_items with {
+    name: '2. Dropdown - With Multiple Items',
+    args: { 
+      button_text: 'Account Menu',
+      button_color: 'secondary',
+      items: '<a href="/dashboard" class="block px-4 py-2 text-sm text-body hover:bg-gray-100" role="menuitem">Dashboard</a><a href="/profile" class="block px-4 py-2 text-sm text-body hover:bg-gray-100" role="menuitem">Profile</a><a href="/settings" class="block px-4 py-2 text-sm text-body hover:bg-gray-100" role="menuitem">Settings</a><div class="border-t border-gray-200 my-1" role="separator"></div><a href="/help" class="block px-4 py-2 text-sm text-body hover:bg-gray-100" role="menuitem">Help Center</a><a href="/logout" class="block px-4 py-2 text-sm text-error hover:bg-gray-100" role="menuitem">Logout</a>'
+    }
+  } %}
+{% embed 'components:dropdown' with { 
+  button_text: button_text,
+  button_color: button_color
+} %}
+  {% block items %}
+    {{ items }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

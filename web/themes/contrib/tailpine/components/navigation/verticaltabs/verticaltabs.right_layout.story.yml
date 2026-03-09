@@ -1,0 +1,63 @@
+name: Right Navigation Layout
+description: Vertical tabs with navigation on the right side
+
+props:
+  layout: right
+
+slots:
+  children: |
+    <details class="vertical-tabs__pane" open>
+      <summary class="vertical-tabs__pane-title">
+        <span class="text-gray-900 dark:text-gray-100 font-semibold">General</span>
+      </summary>
+      <div class="vertical-tabs__pane-content space-y-4">
+        <p class="text-gray-700 dark:text-gray-300">
+          This example demonstrates vertical tabs with navigation positioned on the right side.
+          This layout can be useful for right-to-left languages or specific design preferences.
+        </p>
+        <div class="form-item">
+          <label class="block text-base font-semibold text-gray-900 dark:text-gray-100 mb-2">Site name</label>
+          <input type="text" value="My Drupal Site" class="!bg-white dark:!bg-gray-900 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-base focus:ring-2 focus:ring-primary focus:border-primary block w-full px-4 py-3 transition-all" />
+        </div>
+      </div>
+    </details>
+
+    <details class="vertical-tabs__pane">
+      <summary class="vertical-tabs__pane-title">
+        <span class="text-gray-900 dark:text-gray-100 font-semibold">Advanced</span>
+      </summary>
+      <div class="vertical-tabs__pane-content space-y-4">
+        <div class="form-item">
+          <label class="block text-base font-semibold text-gray-900 dark:text-gray-100 mb-2">Custom CSS</label>
+          <textarea rows="4" placeholder="body { font-size: 16px; }" class="!bg-white dark:!bg-gray-900 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-base focus:ring-2 focus:ring-primary focus:border-primary block w-full px-4 py-3 transition-all font-mono placeholder:text-gray-400 dark:placeholder:text-gray-600"></textarea>
+        </div>
+      </div>
+    </details>
+
+    <details class="vertical-tabs__pane">
+      <summary class="vertical-tabs__pane-title">
+        <span class="text-gray-900 dark:text-gray-100 font-semibold">Performance</span>
+      </summary>
+      <div class="vertical-tabs__pane-content space-y-4">
+        <div class="form-item">
+          <label class="flex items-center gap-2 cursor-pointer">
+            <input type="checkbox" checked class="w-4 h-4 text-primary border-gray-300 focus:ring-primary" />
+            <span class="text-sm font-semibold text-gray-900 dark:text-gray-100">Enable caching</span>
+          </label>
+          <p class="text-sm text-gray-600 dark:text-gray-400 mt-2 ml-6">Improves site performance by storing rendered pages.</p>
+        </div>
+        <div class="form-item">
+          <label class="flex items-center gap-2 cursor-pointer">
+            <input type="checkbox" checked class="w-4 h-4 text-primary border-gray-300 focus:ring-primary" />
+            <span class="text-sm font-semibold text-gray-900 dark:text-gray-100">Aggregate CSS files</span>
+          </label>
+        </div>
+        <div class="form-item">
+          <label class="flex items-center gap-2 cursor-pointer">
+            <input type="checkbox" checked class="w-4 h-4 text-primary border-gray-300 focus:ring-primary" />
+            <span class="text-sm font-semibold text-gray-900 dark:text-gray-100">Aggregate JavaScript files</span>
+          </label>
+        </div>
+      </div>
+    </details>
+

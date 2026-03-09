@@ -1,0 +1,9 @@
+name: Accordion Style One
+description: Collapsible accordion with plus/minus icon
+
+slots:
+  title: 'What features are included?'
+  description: 'Our platform includes advanced analytics, real-time collaboration tools, customizable dashboards, and 24/7 customer support. All features are available across all plans with no hidden costs.'
+
+props:
+  default_open: true

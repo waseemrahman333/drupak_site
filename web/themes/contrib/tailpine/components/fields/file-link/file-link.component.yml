@@ -1,0 +1,16 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+status: stable
+name: FileLink
+description: A component for displaying a link to a file with an icon and file size.
+props:
+  type: object
+  properties:
+    link:
+      type: [string, 'null']
+      description: A link to the file.
+    icon:
+      type: [string, 'null']
+      description: The icon image representing the file type.
+    file_size:
+      type: [string, 'null']
+      description: The size of the file.

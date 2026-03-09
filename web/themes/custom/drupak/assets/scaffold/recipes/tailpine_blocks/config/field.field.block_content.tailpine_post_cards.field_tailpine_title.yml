@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.tailpine_post_cards
+    - field.storage.block_content.field_tailpine_title
+id: block_content.tailpine_post_cards.field_tailpine_title
+field_name: field_tailpine_title
+entity_type: block_content
+bundle: tailpine_post_cards
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

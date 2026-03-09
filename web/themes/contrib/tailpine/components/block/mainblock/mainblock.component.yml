@@ -1,0 +1,87 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Main Block
+label: 'Main Block'
+description: 'Generic block component with optional title and content.'
+category: 'Blocks'
+status: stable
+group: Blocks
+
+props:
+  type: object
+  properties:
+    id:
+      type: string
+      title: ID
+    bundle:
+      type: string
+      title: Bundle
+    layout:
+      type: string
+      title: Layout
+      description: Determines the layout of the block.
+      default: "default"
+    plugin_id:
+      type: string
+      title: Plugin ID
+      description: The ID of the block implementation.
+    label:
+      type: ["string", "null", "boolean"]
+      title: Label
+      description: The configured label of the block if visible.
+    title_prefix:
+      type: ["array", "null", "string", "object"]
+      title: title prefix
+    title_suffix:
+      type: ["array", "null", "string", "object"]
+      title: title suffix
+    configuration:
+      type: object
+      title: Configuration
+      description: A list of the block's configuration values.
+      properties:
+        label_display:
+          type: ["string", "array", "integer", "boolean"]
+          title: Label Display
+          description: The display settings for the label.
+        provider:
+          type: ["string", "array", "integer"]
+          title: Provider
+          description: The module or other provider that provided this block plugin.
+    block_html_tag:
+      type: string
+      title: HTML Tag
+      description: The HTML tag for the block.
+    block_classes:
+      type: array
+      items:
+        type: string
+      title: Classes
+      description: "An array of classes to be added to the block."
+    block_content_classes:
+      type: array
+      items:
+        type: string
+      title: Content Classes
+      description: "An array of classes to be added to the block content area."
+    block_utility_classes:
+      type: array
+      items:
+        type: string
+      title: Utility Classes
+      description: "An array of utility classes to be added to the block."
+    block_content_utility_classes:
+      type: array
+      items:
+        type: string
+      title: Content Utility Classes
+      description: "An array of utility classes to be added to the block content area."
+slots:
+  block_label:
+    title: Label Slot
+    description: Slot for the block label.
+  block_content:
+    title: Content Slot
+    description: Slot for the block content.
+  content:
+    title: Default Content
+    description: Default content for Block.

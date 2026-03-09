@@ -1,0 +1,9 @@
+name: Default
+props:
+  link:
+    type: link
+    title: 'Add content'
+    url: /node/add
+    options:
+      set_active_class: true
+      attributes: { class: [button, button-action] }

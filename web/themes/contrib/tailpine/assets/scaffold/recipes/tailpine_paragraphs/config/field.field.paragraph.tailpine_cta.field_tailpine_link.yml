@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tailpine_link
+    - paragraphs.paragraphs_type.tailpine_cta
+  module:
+    - link
+_core:
+  default_config_hash: nJ-gNk1wnOGe4VqHQceAKcih8SvBiCRgWCZRc7sI4Dg
+id: paragraph.tailpine_cta.field_tailpine_link
+field_name: field_tailpine_link
+entity_type: paragraph
+bundle: tailpine_cta
+label: Link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

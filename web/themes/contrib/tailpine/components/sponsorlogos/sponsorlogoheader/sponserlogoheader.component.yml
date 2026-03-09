@@ -1,0 +1,13 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Sponsor Logo Header
+status: stable
+group: Sponsors / Logos
+description: 'A Sponsor style with a header.'
+slots:
+  title:
+    title: 'Title'
+    description: 'The title of the page.'
+  content:
+    title: 'Content'
+    description: 'The content of the page.'
+

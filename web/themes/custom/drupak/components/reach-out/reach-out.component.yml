@@ -1,0 +1,22 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Reach out component
+status: stable
+description: "Drupal  component with title, description and cta"
+group: Drupak
+slots:
+  title:
+    type: string
+    title: Title 
+    description: "Title of the reach out section. Plain text."
+  subtitle:
+    type: string
+    title: Subtitle
+    description: "Subtitle of the reach out section. Plain text."
+  description:
+    type: string
+    title: Description
+    description: "Description of the reach out section. Plain text."
+  cta:
+    type: string
+    title: Call to Action
+    description: "Call to action content for the reach out section. Plain text."

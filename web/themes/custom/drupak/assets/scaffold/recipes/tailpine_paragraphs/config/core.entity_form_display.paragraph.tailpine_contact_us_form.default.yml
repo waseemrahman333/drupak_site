@@ -1,0 +1,34 @@
+uuid: 342d0c98-e321-4655-ba80-96177a575a0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tailpine_contact_us_form.field_tailpine_add_form
+    - field.field.paragraph.tailpine_contact_us_form.field_tailpine_title
+    - paragraphs.paragraphs_type.tailpine_contact_us_form
+  module:
+    - webform
+id: paragraph.tailpine_contact_us_form.default
+targetEntityType: paragraph
+bundle: tailpine_contact_us_form
+mode: default
+content:
+  field_tailpine_add_form:
+    type: webform_entity_reference_select
+    weight: 1
+    region: content
+    settings:
+      default_data: true
+      webforms: {  }
+    third_party_settings: {  }
+  field_tailpine_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

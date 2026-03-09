@@ -1,0 +1,9 @@
+name: Region - Content
+description: Drupal region wrapper
+
+props:
+  region_name: content
+
+slots:
+  content: '<div class="p-4"><p>This is content inside a Drupal region wrapper.</p></div>'
+

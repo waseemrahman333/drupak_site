@@ -1,0 +1,20 @@
+{% stories filtercaption with { title: 'Components/filter_caption' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      tag: 'media',
+      classes: 'text-gray-600 italic',
+      src: 'https://cdn.pixabay.com/photo/2024/04/02/10/28/bangladesh-8670559_1280.jpg',
+      caption: 'This is a sample image with a caption.'
+    }
+  } %}
+{% embed 'tailpine:filtercaption' with { 
+  tag: tag,
+  classes: classes,
+  src: src,
+  caption: caption
+} %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

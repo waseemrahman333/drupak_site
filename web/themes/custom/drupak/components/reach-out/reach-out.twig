@@ -1,0 +1,29 @@
+  <!-- Reach Out -->
+        <section class="relative container-px w-full min-h-fit 
+           [clip-path:polygon(0_10%,_100%_0,_100%_100%,_0%_100%)]">
+            <!-- Main background - lime -->
+            <div class="absolute inset-0 bg-gray-100"></div>
+            <!-- Gray accent shape - your exact clip-path -->
+            <div class="absolute inset-0 bg-secondary
+             [clip-path:polygon(10%_0%,_100%_10%,_100%_100%,_0%_100%,_0%_0%)]">
+            </div>
+            <!-- content -->
+            <div
+                class="max-w-480 mx-auto relative z-10 pt-[clamp(90px,9vw,116px)] md:pt-[clamp(116px,10vw,164px)]  py-[clamp(50px,8vw,80px)] md:py-[clamp(80px,6vw,120px)] xl:py-30 xl:items-center xl:flex xl:justify-between gap-[clamp(24px,11vw,92px)]">
+                <div class="xl:basis-1/2">
+                    <h2 class="uppercase xl:max-w-150 text-h2 relative pb-5 font-montserrat text-tertiary  after:h-1 after:w-15 after:content-[] after:bg-tertiary after:absolute after:bottom-0 after:left-0">
+                        {{title}}</h2>
+                    <div class="leading-7 xl:max-w-150 xl:text-lg xl:leading-7.5 pt-[clamp(24px,5vw,32px)]">
+                        {{subtitle}}</div>
+                </div>
+                <div class="xl:basis-1/2 flex flex-col gap-10 pt-[clamp(40px,5.2vw+19px,50px)] md:pt-12.5">
+                    
+                      
+                        {{description}}
+                   
+                    <div class="flex self-start">
+                   {{cta}}
+                   </div>
+                </div>
+            </div>
+        </section>

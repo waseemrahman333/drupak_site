@@ -1,0 +1,22 @@
+{% stories postheader with { title: 'Components/Post Style  Header' } %}
+
+{% story default with {
+    name: '1. Post Header',
+    args: { 
+      title: 'Blog Posts'
+    }
+  } %}
+{% embed 'components:postheader' %}
+  {% block title %}
+    {{ title }}
+  {% endblock %}
+  {% block cta %}
+    {{ cta }}
+  {% endblock %}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

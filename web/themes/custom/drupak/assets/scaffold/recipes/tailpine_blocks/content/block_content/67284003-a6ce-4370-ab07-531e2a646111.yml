@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 67284003-a6ce-4370-ab07-531e2a646111
+  bundle: tailpine_cta
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Tailpine CTA'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  field_tailpine_btn_border_radius:
+    -
+      value: rounded-full
+  field_tailpine_btn_type:
+    -
+      value: hover_arrow_move
+  field_tailpine_button_style:
+    -
+      value: primary
+  field_tailpine_link:
+    -
+      uri: 'internal:/'
+      title: "Let's Talk"
+      options: {  }

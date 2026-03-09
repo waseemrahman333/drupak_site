@@ -1,0 +1,11 @@
+<div class="card grid bg-secondary hover:bg-secondary/90  justify-center items-center border border-secondary px-[clamp(6.25px,0.5vw+5.5px,7.5px)] w-full min:w-40 md:min-w-44 xl:min-w-50 rounded-xs">
+  {% if website_url %}
+    <a class="max-w-[clamp(140px,4.5vw + 100px,320px)] w-fit h-[clamp(60px,5vw+35px,80px)] flex items-center justify-center px-4" href="{{ website_url }}">
+      <img class="w-full object-cover" src="{{ sponser_logo }}" alt="{{website_url}}">
+    </a>
+  {% else %}
+    <div class="w-[clamp(140px,4.5vw + 100px,320px)] h-[clamp(60px,5vw+35px,80px)] flex items-center justify-center px-4">
+      <img class="w-full object-cover" src="{{ sponser_logo }}" alt="{{website_url}}">
+    </div>
+  {% endif %}
+</div>

@@ -1,0 +1,29 @@
+{% stories navbar with { title: 'Components/Navbar' } %}
+
+{% story default with {
+    name: '1. Navbar - Default',
+    args: { 
+      expand: 'md',
+      bg_color: 'primary',
+      brand: '<span class="text-2xl font-bold">Brand</span>',
+      navigation: '<a href="/" class="px-3 py-2 hover:bg-opacity-75 rounded">Home</a><a href="/about" class="px-3 py-2 hover:bg-opacity-75 rounded">About</a><a href="/services" class="px-3 py-2 hover:bg-opacity-75 rounded">Services</a>',
+      actions: '<button class="px-4 py-2 bg-white text-primary rounded">Login</button>'
+    }
+  } %}
+{% embed 'components:navbar' with { 
+  expand: expand,
+  bg_color: bg_color
+} %}
+  {% block brand %}
+    {{ brand }}
+  {% endblock %}
+  {% block navigation %}
+    {{ navigation }}
+  {% endblock %}
+  {% block actions %}
+    {{ actions }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

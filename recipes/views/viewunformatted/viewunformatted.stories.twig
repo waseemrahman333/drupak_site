@@ -1,0 +1,18 @@
+{% stories viewunformatted with { title: 'Components/View Unformatted' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      title: '',
+      rows: '',
+      default_row_class: true
+    }
+  } %}
+{% embed 'components:viewunformatted' with { 
+  title: title,
+  rows: rows,
+  default_row_class: default_row_class
+} %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

@@ -1,0 +1,12 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Accordion Style Two
+status: stable
+description: "Accordion are used to group and display content in a way that is easily readable."
+slots:
+  title:
+    title: Title
+    description: "Title  of the Accordion Style Two. Plain text."
+  description:
+    title: Description
+    description: "Description of the Accordion Style Two. Plain text."
+

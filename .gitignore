@@ -1,0 +1,13 @@
+# OS
+.DS_Store
+
+# Applications & Tools
+node_modules
+/.ddev
+/node_modules
+/.vscode
+/contrib
+/vendor
+/viewss
+# DaisyUI
+dist/daisyui.css

@@ -1,0 +1,55 @@
+<footer class="bg-grey-bg container-px">
+  <div class="py-[clamp(50px,4vw,60px)] flex flex-col gap-[clamp(40px,5vw,70px)] max-w-480 mx-auto">
+
+    {# Top section #}
+    <div class="flex items-center xl:items-start justify-between border-b border-tertiary/40 pb-[clamp(20px,2vw,30px)]">
+      <div>
+        {% if logo %}
+          <img src="{{ logo }}" alt="Site logo" class="w-full h-full object-cover">
+        {% endif %}
+      </div>
+
+      <ul class="flex gap-2">
+          {{ socialmedia }}
+          {# {{dump(socialmedia)}} #}
+
+      </ul>
+    </div>
+
+    {# Footer content grid #}
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-y-[clamp(24px,4vw,40px)] gap-x-25">
+
+      <div>
+        <h2 class="text-tertiary text-h6">{{ locationtitle }}</h2>
+        <div class="leading-7 text-base font-normal  text-tertiary/80 mt-[clamp(8px,4vw,24px)] 2xl:text-lg 2xl:leading-7.5 xl:min-w-97">
+          {{ location }}
+        </div>
+      </div>
+
+      <div class="w-fit xl:justify-self-end">
+        <h2 class="text-tertiary text-h6">{{ quicktitle }}</h2>
+        <div class="mt-[clamp(8px,4vw,24px)] flex flex-col gap-2">
+           {{quicklinks}}
+        </div>
+      </div>
+
+      <div class="w-fit xl:justify-self-end">
+        <h2 class="text-tertiary text-h6">{{ phonetitle }}</h2>
+        <div class="block mt-[clamp(8px,4vw,24px)]">
+          {{ phone }}
+        </div>
+      </div>
+
+      <div class="w-fit xl:justify-self-end">
+        <h2 class="text-tertiary text-h6">{{ emailtitle }}</h2>
+        <a href="mailto:{{ email }}" class="block mt-[clamp(8px,4vw,24px)]">
+          {{ email }}
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-px bg-primary w-full text-center py-4">
+    <div> {{ copyright }}</div>
+  </div>
+</footer>

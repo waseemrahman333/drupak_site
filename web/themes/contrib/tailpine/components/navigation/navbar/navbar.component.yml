@@ -1,0 +1,33 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/metadata.schema.json
+name: Navbar
+status: stable
+description: Responsive navigation bar container.
+group: Navigation
+props:
+  type: object
+  properties:
+    expand:
+      type: string
+      title: Expand Breakpoint
+      description: Breakpoint where navbar expands.
+      default: md
+      enum:
+        - sm
+        - md
+        - lg
+        - xl
+    bg_color:
+      type: string
+      title: Background Color
+      description: Navbar background color.
+      default: primary
+slots:
+  brand:
+    title: Brand
+    description: Navbar brand/logo.
+  navigation:
+    title: Navigation
+    description: Navigation links.
+  actions:
+    title: Actions
+    description: Action buttons/links.

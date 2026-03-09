@@ -1,0 +1,15 @@
+name: Image - Large Hero
+description: Large hero-style image
+
+props:
+  src: https://images.unsplash.com/photo-1682687220063-4742bd7fd538?w=1200&q=80
+  alt: Hero banner image
+  title: Large Hero Image
+  width: 1200
+  height: 600
+  responsive: true
+  loading: eager
+  image_utility_classes: 
+    - "w-full"
+    - "object-cover"
+

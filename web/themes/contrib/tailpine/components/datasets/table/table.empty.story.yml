@@ -1,0 +1,20 @@
+name: Empty State
+props:
+  caption: "Recent Transactions"
+  header:
+    - content: "Date"
+      tag: "th"
+    - content: "Transaction ID"
+      tag: "th"
+    - content: "Amount"
+      tag: "th"
+    - content: "Status"
+      tag: "th"
+  rows: []
+  empty: "No transactions found. Start by making your first transaction."
+  responsive: true
+  bordered: true
+  hoverable: true
+  size: "default"
+  header_columns: 4
+

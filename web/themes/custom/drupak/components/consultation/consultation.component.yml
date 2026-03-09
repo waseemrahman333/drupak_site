@@ -1,0 +1,24 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Consultation
+status: stable
+description: "Consultation section About Us page"
+group: Drupak
+props:
+  type: object
+  properties:
+    image:
+      type: string
+      title:  Image
+      description: "The consultation image ."
+    title:
+      type: string
+      title: Title
+      description: "Title of the Inspiration Item component" 
+    description:
+      type: string
+      title: Description
+      description: "description of consultation"  
+slots:
+  cta:
+    title: cta consultation
+    description: "Cta consultation. Plain text." 

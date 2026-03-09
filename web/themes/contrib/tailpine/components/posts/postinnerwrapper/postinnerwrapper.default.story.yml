@@ -1,0 +1,5 @@
+name: Default
+props:
+  columns: Columns
+slots:
+  content: Content

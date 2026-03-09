@@ -1,0 +1,27 @@
+{% stories herostyleone with { title: 'Components/Hero Style One' } %}
+
+{% story default with {
+    name: '1. Hero Style One - Full Width',
+    args: { 
+      imageurl: 'https://cdn.pixabay.com/photo/2024/12/18/01/27/lightning-9274136_1280.jpg',
+      heading_level: 1,
+      title: 'Build Amazing Experiences'
+    }
+  } %}
+{% embed 'components:herostyleone' with { 
+  imageurl: imageurl,
+  heading_level: heading_level
+} %}
+  {% block title %}
+    {{ title }}
+  {% endblock %}
+  {% block description %}
+    {{ description }}
+  {% endblock %}
+  {% block cta %}
+    {{ cta }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

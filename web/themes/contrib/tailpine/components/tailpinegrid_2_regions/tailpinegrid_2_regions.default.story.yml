@@ -1,0 +1,23 @@
+name: Tailpine Grid 2 Regions
+description: "A sample layout using the Tailpine Grid 2-column component with cards and themed button actions."
+
+slots:
+  col_first:
+    - type: component
+      component: "tailpine:cardonestyle"
+      slots:
+        subtitle: "Subtitle"
+        title: This is the Post Title Of the Post Component
+      props:
+        imageurl: https://cdn.pixabay.com/photo/2019/12/30/20/34/road-4730553_960_720.jpg
+
+
+  col_second:
+    - type: component
+      component: "tailpine:cardonestyle"
+      slots:
+        subtitle: "Subtitle"
+        title: This is the Post Title Of the Post Component
+      props:
+        imageurl: https://cdn.pixabay.com/photo/2019/12/30/20/34/road-4730553_960_720.jpg
+

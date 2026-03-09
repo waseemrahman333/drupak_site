@@ -1,0 +1,68 @@
+{#
+/**
+ * Team Style One Component
+ * 
+ * Team member card with large image and basic info.
+ * Features hover zoom effect on the image.
+ *
+ * Available variables:
+ * - name: (string) Team member's full name. Required.
+ * - subtitle: (string) Job title or role. Required.
+ * - imageurl: (string) Team member photo URL. Use high-quality square images (800x800px+).
+ * - heading_level: (number) HTML heading level for name (1-6). Default: 2
+ *
+ * Accessibility:
+ * - Uses semantic HTML structure
+ * - Proper heading hierarchy
+ * - Descriptive alt text on images
+ * - Sufficient color contrast
+ *
+ * Theme Variables Used:
+ * - text-body: Body text color for subtitle
+ *
+ * Examples:
+ * {% include 'tailpine:teamstyleone' with {
+ *   name: 'Jane Doe',
+ *   subtitle: 'Senior Developer',
+ *   imageurl: 'https://cdn.pixabay.com/photo/...jpg',
+ * } %}
+ */
+#}
+
+{% set member_heading = heading_level|default(2) %}
+{% set member_image = imageurl|default('') %}
+
+<article class="card h-full flex flex-col gap-5">
+  <!-- Team Member Image -->
+  <div class="image min-h-[430px] overflow-hidden h-full relative group">
+    <div class="img group overflow-hidden min-w-[370px] min-h-85 h-full">
+      {% if member_image %}
+        <img 
+          src="{{ member_image }}" 
+          class="w-full aspect-square overflow-hidden group-hover:scale-105 transition-transform duration-300 h-full object-cover"
+          alt="{{ name }}"
+          loading="lazy"
+        >
+      {% else %}
+        <div class="w-full aspect-square bg-gray-200 flex items-center justify-center">
+          <span class="text-gray-400 text-sm">No image</span>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- Team Member Info -->
+  <div class="info gap-2 flex justify-center items-start flex-col">
+    {% if name %}
+      <h{{ member_heading }} class="font-medium text-xl text-body">
+        {{ name }}
+      </h{{ member_heading }}>
+    {% endif %}
+    
+    {% if subtitle %}
+      <div class="font-normal text-body text-sm">
+        {{ subtitle }}
+      </div>
+    {% endif %}
+  </div>
+</article>

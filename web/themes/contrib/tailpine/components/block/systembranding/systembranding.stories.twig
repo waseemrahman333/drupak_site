@@ -1,0 +1,39 @@
+{% stories systembranding with { title: 'Components/System Branding' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      configuration: {"label":"Site Branding","provider":"system"},
+      site_logo: 'https://cdn.pixabay.com/photo/2024/04/02/10/28/bangladesh-8670559_1280.jpg',
+      site_name: 'My Website',
+      site_slogan: 'Just another Drupal site',
+      title_prefix: '',
+      title_suffix: '',
+      title_attributes: [],
+      block_label: 'Label Slot',
+      block_content: 'Content Slot',
+      content: 'Default Content'
+    }
+  } %}
+{% embed 'components:systembranding' with { 
+  configuration: configuration,
+  site_logo: site_logo,
+  site_name: site_name,
+  site_slogan: site_slogan,
+  title_prefix: title_prefix,
+  title_suffix: title_suffix,
+  title_attributes: title_attributes
+} %}
+  {% block block_label %}
+    {{ block_label }}
+  {% endblock %}
+  {% block block_content %}
+    {{ block_content }}
+  {% endblock %}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

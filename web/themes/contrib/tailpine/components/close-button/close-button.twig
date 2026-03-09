@@ -1,0 +1,27 @@
+{#
+/**
+ * Close Button Component
+ * 
+ * Accessible close/dismiss button with X icon.
+ */
+#}
+
+{% set button_size = size|default('md') %}
+{% set button_label = label|default('Close') %}
+
+{% set size_classes = {
+  'sm': 'w-6 h-6 text-sm',
+  'md': 'w-8 h-8 text-base',
+  'lg': 'w-10 h-10 text-lg',
+} %}
+
+<button 
+  type="button"
+  aria-label="{{ button_label }}"
+  class="{{size_classes[button_size]}} inline-flex items-center justify-center text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 transition-colors"
+>
+  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+  </svg>
+</button>
+

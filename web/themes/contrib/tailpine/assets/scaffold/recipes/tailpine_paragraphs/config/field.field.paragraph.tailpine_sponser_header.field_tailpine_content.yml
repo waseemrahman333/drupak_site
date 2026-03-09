@@ -1,0 +1,69 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tailpine_content
+    - paragraphs.paragraphs_type.tailpine_sponser_company
+    - paragraphs.paragraphs_type.tailpine_sponser_header
+  module:
+    - entity_reference_revisions
+id: paragraph.tailpine_sponser_header.field_tailpine_content
+field_name: field_tailpine_content
+entity_type: paragraph
+bundle: tailpine_sponser_header
+label: 'Add Sponser'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      tailpine_sponser_company: tailpine_sponser_company
+    negate: 0
+    target_bundles_drag_drop:
+      hero:
+        weight: 3
+        enabled: false
+      tailpine_accordion:
+        weight: 16
+        enabled: false
+      tailpine_accordion_header:
+        weight: 17
+        enabled: false
+      tailpine_card:
+        weight: 18
+        enabled: false
+      tailpine_cards_header:
+        weight: 19
+        enabled: false
+      tailpine_cta:
+        weight: 4
+        enabled: false
+      tailpine_post_cards:
+        weight: 21
+        enabled: false
+      tailpine_post_wrapper:
+        weight: 22
+        enabled: false
+      tailpine_sponser_company:
+        weight: 23
+        enabled: true
+      tailpine_sponser_header:
+        weight: 24
+        enabled: false
+      tailpine_team:
+        weight: 25
+        enabled: false
+      tailpine_teams_header:
+        weight: 26
+        enabled: false
+      tailpine_testimonial:
+        weight: 27
+        enabled: false
+      tailpine_testimonial_header:
+        weight: 28
+        enabled: false
+field_type: entity_reference_revisions

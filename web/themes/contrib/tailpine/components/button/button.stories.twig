@@ -1,0 +1,35 @@
+{% stories button with { title: 'Components/Button' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      button_html_tag: 'button',
+      url: 'URL Link',
+      id: 'ID',
+      color: 'primary',
+      outline: false,
+      size: 'md',
+      disabled: false,
+      rounded: 'none',
+      button_utility_classes: [],
+      content: 'Content'
+    }
+  } %}
+{% embed 'tailpine:button' with { 
+  button_html_tag: button_html_tag,
+  url: url,
+  id: id,
+  color: color,
+  outline: outline,
+  size: size,
+  disabled: disabled,
+  rounded: rounded,
+  button_utility_classes: button_utility_classes
+} %}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

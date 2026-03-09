@@ -1,0 +1,342 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: "Tailpine Grids"
+status: stable
+description: "The grid system of Tailwind CSS uses a series of utility classes for layouts and alignment of content. 'Grid cols' offers an off-the-shelf component to add a n-column configurable section. For more powerful needs, please refer to the Tailwind CSS documentation."
+group: "Grid"
+slots:
+  items:
+    title: items
+    description: "The items to be displayed in the grid."
+props:
+  type: object
+  properties:
+    container_type:
+      title: "Container type"
+      description: "Utilities for controlling if container class is injected in the markup."
+      type: string
+      enum:
+        - container mx-auto
+        - breakout
+        - bg-breakout
+      "meta:enum":
+        container mx-auto: "Container (default)"
+        breakout: "Breakout"
+        bg-breakout: "Bg breakout"
+
+    background_image:
+      title: Background image
+      description: "The background image URL. Optional."
+      type: string
+      $ref: "ui-patterns://url"
+
+    background_size:
+      title: "Background size"
+      description: "Utilities for controlling the background size of an element's background image."
+      type: string
+      enum:
+        - bg-auto
+        - bg-cover
+        - bg-contain
+      "meta:enum":
+        bg-auto: "Background auto"
+        bg-cover: "Background cover"
+        bg-contain: "Background contain"
+
+    background_color:
+      title: "Background color"
+      description: "Tailwind background color utility classes for setting section background."
+      type: string
+      enum:
+        - bg-white
+        - bg-gray-100
+        - bg-gray-500
+        - bg-blue-50
+        - bg-blue-100
+        - bg-primary
+        - bg-secondary
+        - bg-black
+      "meta:enum":
+        bg-white: "White"
+        bg-gray-100: "Gray 100"
+        bg-gray-200: "Gray 200"
+        bg-blue-50: "Blue 50"
+        bg-blue-100: "Blue 100"
+        bg-primary: "Primary"
+        bg-secondary: "Secondary"
+        bg-black: "Black"
+    gap:
+      title: "Gap (mobile first)"
+      description: "Utilities for controlling gutters between grid and flexbox items, for mobile first."
+      type: integer
+      enum:
+        - 0
+        - 2
+        - 4
+        - 8
+        - 12
+      "meta:enum":
+        0: "0rem"
+        2: "0.5rem"
+        4: "1rem"
+        8: "2rem"
+        12: "3rem"
+    gap_2xl:
+      title: "Gap (2xl)"
+      description: "Utilities for controlling gutters between grid and flexbox items, for '2xl' breakpoint."
+      type: integer
+      enum:
+        - 0
+        - 2
+        - 4
+        - 8
+        - 12
+      "meta:enum":
+        0: "0rem"
+        2: "0.5rem"
+        4: "1rem"
+        8: "2rem"
+        12: "3rem"
+    gap_xl:
+      title: "Gap (xl)"
+      description: "Utilities for controlling gutters between grid and flexbox items, for 'xl' breakpoint."
+      type: integer
+      enum:
+        - 0
+        - 2
+        - 4
+        - 8
+        - 12
+      "meta:enum":
+        0: "0rem"
+        2: "0.5rem"
+        4: "1rem"
+        8: "2rem"
+        12: "3rem"
+    gap_lg:
+      title: "Gap (lg)"
+      description: "Utilities for controlling gutters between grid and flexbox items, for 'lg' breakpoint."
+      type: integer
+      enum:
+        - 0
+        - 2
+        - 4
+        - 8
+        - 12
+      "meta:enum":
+        0: "0rem"
+        2: "0.5rem"
+        4: "1rem"
+        8: "2rem"
+        12: "3rem"
+    gap_md:
+      title: "Gap (md)"
+      description: "Utilities for controlling gutters between grid and flexbox items, for 'md' breakpoint."
+      type: integer
+      enum:
+        - 0
+        - 2
+        - 4
+        - 8
+        - 12
+      "meta:enum":
+        0: "0rem"
+        2: "0.5rem"
+        4: "1rem"
+        8: "2rem"
+        12: "3rem"
+    gap_sm:
+      title: "Gap (sm)"
+      description: "Utilities for controlling gutters between grid and flexbox items, for 'sm' breakpoint."
+      type: integer
+      enum:
+        - 0
+        - 2
+        - 4
+        - 8
+        - 12
+      "meta:enum":
+        0: "0rem"
+        2: "0.5rem"
+        4: "1rem"
+        8: "2rem"
+        12: "3rem"
+    grid_cols:
+      title: "Grid Template Columns (mobile first)"
+      description: "Utilities for specifying the columns in a grid layout, for mobile first."
+      type: integer
+      enum:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+        - 7
+        - 8
+        - 9
+        - 10
+        - 11
+        - 12
+      "meta:enum":
+        1: "1 column"
+        2: "2 columns"
+        3: "3 columns"
+        4: "4 columns"
+        5: "5 columns"
+        6: "6 columns"
+        7: "7 columns"
+        8: "8 columns"
+        9: "9 columns"
+        10: "10 columns"
+        11: "11 columns"
+        12: "12 columns"
+    grid_cols_2xl:
+      title: "Grid Template Columns (2xl)"
+      description: "Utilities for specifying the columns in a grid layout, for '2xl' breakpoint."
+      type: integer
+      enum:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+        - 7
+        - 8
+        - 9
+        - 10
+        - 11
+        - 12
+      "meta:enum":
+        1: "1 column"
+        2: "2 columns"
+        3: "3 columns"
+        4: "4 columns"
+        5: "5 columns"
+        6: "6 columns"
+        7: "7 columns"
+        8: "8 columns"
+        9: "9 columns"
+        10: "10 columns"
+        11: "11 columns"
+        12: "12 columns"
+    grid_cols_xl:
+      title: "Grid Template Columns (xl)"
+      description: "Utilities for specifying the columns in a grid layout, for 'xl' breakpoint."
+      type: integer
+      enum:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+        - 7
+        - 8
+        - 9
+        - 10
+        - 11
+        - 12
+      "meta:enum":
+        1: "1 column"
+        2: "2 columns"
+        3: "3 columns"
+        4: "4 columns"
+        5: "5 columns"
+        6: "6 columns"
+        7: "7 columns"
+        8: "8 columns"
+        9: "9 columns"
+        10: "10 columns"
+        11: "11 columns"
+        12: "12 columns"
+    grid_cols_lg:
+      title: "Grid Template Columns (lg)"
+      description: "Utilities for specifying the columns in a grid layout, for 'lg' breakpoint."
+      type: integer
+      enum:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+        - 7
+        - 8
+        - 9
+        - 10
+        - 11
+        - 12
+      "meta:enum":
+        1: "1 column"
+        2: "2 columns"
+        3: "3 columns"
+        4: "4 columns"
+        5: "5 columns"
+        6: "6 columns"
+        7: "7 columns"
+        8: "8 columns"
+        9: "9 columns"
+        10: "10 columns"
+        11: "11 columns"
+        12: "12 columns"
+    grid_cols_md:
+      title: "Grid Template Columns (md)"
+      description: "Utilities for specifying the columns in a grid layout, for 'md' breakpoint."
+      type: integer
+      enum:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+        - 7
+        - 8
+        - 9
+        - 10
+        - 11
+        - 12
+      "meta:enum":
+        1: "1 column"
+        2: "2 columns"
+        3: "3 columns"
+        4: "4 columns"
+        5: "5 columns"
+        6: "6 columns"
+        7: "7 columns"
+        8: "8 columns"
+        9: "9 columns"
+        10: "10 columns"
+        11: "11 columns"
+        12: "12 columns"
+    grid_cols_sm:
+      title: "Grid Template Columns (sm)"
+      description: "Utilities for specifying the columns in a grid layout, for 'sm' breakpoint."
+      type: integer
+      enum:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+        - 7
+        - 8
+        - 9
+        - 10
+        - 11
+        - 12
+      "meta:enum":
+        1: "1 column"
+        2: "2 columns"
+        3: "3 columns"
+        4: "4 columns"
+        5: "5 columns"
+        6: "6 columns"
+        7: "7 columns"
+        8: "8 columns"
+        9: "9 columns"
+        10: "10 columns"
+        11: "11 columns"
+        12: "12 columns"

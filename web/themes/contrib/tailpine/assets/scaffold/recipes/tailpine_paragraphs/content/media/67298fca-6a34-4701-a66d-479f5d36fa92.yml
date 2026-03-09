@@ -1,0 +1,35 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 67298fca-6a34-4701-a66d-479f5d36fa92
+  bundle: image
+  default_langcode: en
+  depends:
+    3aa8d347-dece-489d-944f-ce2688576287: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: hero_background.jpg
+  created:
+    -
+      value: 1756751739
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+  field_media_image:
+    -
+      entity: 3aa8d347-dece-489d-944f-ce2688576287
+      alt: bg_image
+      title: ''
+      width: 839
+      height: 559

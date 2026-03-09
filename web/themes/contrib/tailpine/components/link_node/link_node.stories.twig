@@ -1,0 +1,16 @@
+{% stories link_node with { title: 'Components/Link node' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      links: [],
+      heading: []
+    }
+  } %}
+{% embed 'tailpine:link_node' with { 
+  links: links,
+  heading: heading
+} %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

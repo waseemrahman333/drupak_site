@@ -1,0 +1,5 @@
+name: Default
+props:
+  title: ''
+  rows: Value
+  list_type: ul

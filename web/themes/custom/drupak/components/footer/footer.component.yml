@@ -1,0 +1,42 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Footer two
+description: Site footer with logo, social links, navigation, and contact info
+status: stable
+props:
+  type: object
+  properties:
+    logo:
+      type: string
+      title: logo
+    locationtitle:
+      type: string
+      title: locationtitle
+    location:
+      type: string
+      title: location
+    phonetitle:
+      type: string
+      phone: title
+    phone:
+      type: string
+      title: phone
+    emailtitle:
+      type: string
+      email: emailtitle
+    email:
+      type: string
+      title: email
+    copyright:
+      type: string
+      title: copyright
+    quicktitle:
+      type: string
+      title: quicklink title   
+    socialmedia:
+      title: content
+      type: string
+      description: "content for social Media"  
+slots:
+  quicklinks:
+    title: Quick Links
+    Description: "Quick Links of the Footer"

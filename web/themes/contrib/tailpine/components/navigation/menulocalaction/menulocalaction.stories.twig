@@ -1,0 +1,14 @@
+{% stories menulocalaction with { title: 'Components/Menu Local Action' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      link: {"type":"link","title":"Add content","url":"\/node\/add","options":{"set_active_class":true,"attributes":{"class":["button","button-action"]}}}
+    }
+  } %}
+{% embed 'components:menulocalaction' with { 
+  link: link
+} %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

@@ -1,0 +1,15 @@
+
+    <div class="wrapper max-w-[1920px] mx-auto   h-full w-full flex items-center justify-center  bg-cover bg-no-repeat bg-center relative after:absolute after:-z-1 z-10   after:inset-0 after:content-['']  lg:after:bg-gradient-to-r lg:after:from-black  lg:after:to-transparent " style="background-image: url('{{imageurl}}');">
+        <div class="bg-body/70 lg:hidden absolute inset-0 -z-5"></div>
+        <div class="info flex flex-col gap-[clamp(40px,50px,50px)] px-5  py-12.5 md:py-24 lg:py-28  lg:max-w-[826px] w-full">
+            <div class="flex flex-col gap-5 text-body-bg text-center ">
+                <h1 class="text-[clamp(2rem,4vw+1rem,3.5rem)] font-montserrat leading-11.5 md:leading-16 text-shadow-lg text-shadow-body font-black uppercase ">{{title}}</h1>
+                <div class="font-normal text-[clamp(0.875rem,2vw+0.5rem,1.125rem)] leading-[clamp(26px,28px,32px)] ">
+                    {{description}}
+                </div>
+            </div>
+            <div class="flex mx-auto flex-col md:flex-row w-full md:w-fit gap-[clamp(20px,20px,30px)]">
+                  {{cta}}
+            </div>
+        </div>
+    </div>

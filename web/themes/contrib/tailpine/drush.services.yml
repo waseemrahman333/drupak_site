@@ -1,0 +1,17 @@
+services:
+  tailpine.theme_setup_commands:
+    class: 'Drush\Commands\tailpine\ThemeSetupCommands'
+    tags:
+      - name: 'drush.command'
+  
+  tailpine.subtheme_commands:
+    class: 'Drush\Commands\tailpine\SubThemeCommands'
+    tags:
+      - name: 'drush.command'
+  
+  tailpine.generate_stories_commands:
+    class: 'Drush\Commands\tailpine\GenerateStoriesCommands'
+    tags:
+      - name: 'drush.command'
+  
+

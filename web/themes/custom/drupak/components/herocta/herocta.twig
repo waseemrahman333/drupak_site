@@ -1,0 +1,26 @@
+{% if link_text %}
+<a href="{{ link|default('#') }}" 
+   x-data="{ 
+      get currentSegment() { 
+          {# Grabs the text name like 'services' from '/services/4' #}
+          return window.location.pathname.split('/').filter(Boolean)[0] || ''; 
+      },
+      get isActive() {
+          {# Checks if the current page name exists in your 'link' prop #}
+          return this.currentSegment && '{{ link }}'.includes(this.currentSegment);
+      }
+   }"
+   {# Hides the hover effect and interaction if it is the active page #}
+   :class="isActive && 'pointer-events-none cursor-default opacity-80'"
+   class="group flex items-center gap-2 text-p hover:text-primary transition-all">
+    
+    <span>{{ link_text }}</span>
+
+    {# Requirement: The active one does not have the SVG #}
+    <span class="w-2.5 h-2.5" x-show="!isActive" x-cloak>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full transition-colors duration-300">
+            <path d="M6.46434 3.64203C6.27687 3.82956 6.17155 4.08387 6.17155 4.34903C6.17155 4.61419 6.27687 4.8685 6.46434 5.05603L11.4143 10.006L6.46434 14.956C6.28218 15.1446 6.18139 15.3972 6.18366 15.6594C6.18594 15.9216 6.29111 16.1724 6.47652 16.3578C6.66193 16.5433 6.91274 16.6484 7.17494 16.6507C7.43713 16.6507 7.68974 16.5522 7.87834 16.37L13.5353 10.713C13.7228 10.5255 13.8281 10.2712 13.8281 10.006C13.8281 9.74087 13.7228 9.48656 13.5353 9.29903L7.87834 3.64203C7.69081 3.45456 7.4365 3.34924 7.17134 3.34924C6.90617 3.34924 6.65187 3.45456 6.46434 3.64203Z" fill="currentColor"/>
+        </svg>
+    </span>
+</a>
+{% endif %}

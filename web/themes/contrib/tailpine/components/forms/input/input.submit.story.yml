@@ -1,0 +1,10 @@
+name: Submit Button
+description: Primary submit button using input type
+
+slots:
+  default: |
+    <div class="p-6 bg-white">
+      <div class="form-actions">
+        <input type="submit" value="Submit Form" class="bg-primary text-white hover:opacity-90 focus:ring-2 focus:ring-primary focus:ring-offset-2 font-semibold text-base px-8 py-3 transition-all cursor-pointer inline-flex items-center justify-center shadow-sm hover:shadow-md" />
+      </div>
+    </div>

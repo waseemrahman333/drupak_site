@@ -1,0 +1,46 @@
+name: Button Group - Link Buttons
+description: Button group using anchor tags instead of buttons
+
+slots:
+  buttons:
+    - type: component
+      component: "tailpine:button"
+      slots:
+        content: "Home"
+      props:
+        button_html_tag: a
+        url: "#home"
+        color: primary
+        size: md
+        outline: true
+    - type: component
+      component: "tailpine:button"
+      slots:
+        content: "About"
+      props:
+        button_html_tag: a
+        url: "#about"
+        color: primary
+        size: md
+        outline: true
+    - type: component
+      component: "tailpine:button"
+      slots:
+        content: "Services"
+      props:
+        button_html_tag: a
+        url: "#services"
+        color: primary
+        size: md
+        outline: true
+    - type: component
+      component: "tailpine:button"
+      slots:
+        content: "Contact"
+      props:
+        button_html_tag: a
+        url: "#contact"
+        color: primary
+        size: md
+        outline: false
+

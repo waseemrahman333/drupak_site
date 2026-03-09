@@ -1,0 +1,54 @@
+{#
+/**
+ * @file
+ * Template for a view to display a list of rows with TailwindCSS styling.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the container.
+ * - rows: A list of rows for this list.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's contents.
+ * - title: The title of this group of rows. May be empty.
+ * - list: List configuration.
+ *   - type: Starting tag will be either a ul or ol.
+ *   - attributes: HTML attributes for the list element.
+ *
+ * @see template_preprocess_views_view_list()
+ */
+#}
+{% if attributes -%}
+  <div{{ attributes.addClass('views-list-wrapper') }}>
+{% endif %}
+
+  {% if title %}
+    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+      {{ title }}
+    </h3>
+  {% endif %}
+
+  {%
+    set list_classes = [
+      'space-y-2',
+      list.type == 'ol' ? 'list-decimal list-inside' : 'list-disc list-inside',
+      'text-gray-900 dark:text-gray-100',
+    ]
+  %}
+
+  <{{ list.type }}{{ list.attributes.addClass(list_classes) }}>
+    {% for row in rows %}
+      {%
+        set row_classes = [
+          'p-3',
+          'hover:bg-gray-50 dark:hover:bg-gray-800',
+          'transition-colors duration-150',
+        ]
+      %}
+      <li{{ row.attributes.addClass(row_classes) }}>
+        {{- row.content -}}
+      </li>
+    {% endfor %}
+  </{{ list.type }}>
+
+{% if attributes -%}
+  </div>
+{% endif %}

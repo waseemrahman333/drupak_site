@@ -1,0 +1,51 @@
+{% stories mainblock with { title: 'Components/Main Block' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      id: 'ID',
+      bundle: 'Bundle',
+      layout: 'default',
+      plugin_id: 'Plugin ID',
+      label: 'Label',
+      title_prefix: [],
+      title_suffix: [],
+      configuration: {"label_display":"Label Display","provider":"Provider"},
+      block_html_tag: 'HTML Tag',
+      block_classes: [],
+      block_content_classes: [],
+      block_utility_classes: [],
+      block_content_utility_classes: [],
+      block_label: 'Label Slot',
+      block_content: 'Content Slot',
+      content: 'Default Content'
+    }
+  } %}
+{% embed 'components:mainblock' with { 
+  id: id,
+  bundle: bundle,
+  layout: layout,
+  plugin_id: plugin_id,
+  label: label,
+  title_prefix: title_prefix,
+  title_suffix: title_suffix,
+  configuration: configuration,
+  block_html_tag: block_html_tag,
+  block_classes: block_classes,
+  block_content_classes: block_content_classes,
+  block_utility_classes: block_utility_classes,
+  block_content_utility_classes: block_content_utility_classes
+} %}
+  {% block block_label %}
+    {{ block_label }}
+  {% endblock %}
+  {% block block_content %}
+    {{ block_content }}
+  {% endblock %}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

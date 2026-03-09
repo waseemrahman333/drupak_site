@@ -1,0 +1,20 @@
+{% stories sidebarlinks with { title: 'Components/Sidebar Links' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      icons: 'icons',
+      list: 'list'
+    }
+  } %}
+{% embed 'components:sidebarlinks' %}
+  {% block icons %}
+    {{ icons }}
+  {% endblock %}
+  {% block list %}
+    {{ list }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

@@ -1,0 +1,16 @@
+{% stories tailpine_grids with { title: 'Components/Tailpine Grids' } %}
+
+{% story default with {
+    name: '1. Tailpine Grid Default',
+    args: { 
+
+    }
+  } %}
+{% embed 'tailpine:tailpine_grids' %}
+  {% block items %}
+    {{ items }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

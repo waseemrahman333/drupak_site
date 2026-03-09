@@ -1,0 +1,29 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Feature card drupak component
+status: stable
+description: "Feature card component with title, description and image."
+group: Drupak
+props:
+  type: object
+  properties:
+    image:
+      type: string
+      title: Drupak Image 
+      description: "URL of the drupak logo image."
+slots:
+  title:
+    type: string
+    title: Title 
+    description: "Title of the drupak section. Plain text."
+  subtitle:
+    type: string
+    title: Subtitle
+    description: "Subtitle of the drupak section. Plain text."
+  date:
+    type: string
+    title: Date
+    description: "Date of the drupak section. Plain text."
+  link:
+    type: string
+    title: Link
+    description: "Link content for the drupal services section. Plain text."

@@ -1,0 +1,7 @@
+name: Alert - Error
+description: Error alert message for critical issues.
+
+props:
+  messages: "An error occurred while processing your request. Please try again."
+  type: "error"
+

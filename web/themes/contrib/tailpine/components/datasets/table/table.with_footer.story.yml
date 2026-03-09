@@ -1,0 +1,65 @@
+name: With Footer
+props:
+  caption: "Quarterly Sales Report"
+  header:
+    - content: "Quarter"
+      tag: "th"
+    - content: "Revenue"
+      tag: "th"
+    - content: "Expenses"
+      tag: "th"
+    - content: "Profit"
+      tag: "th"
+  rows:
+    - cells:
+        - content: "Q1 2024"
+          tag: "td"
+        - content: "$150,000"
+          tag: "td"
+        - content: "$90,000"
+          tag: "td"
+        - content: "$60,000"
+          tag: "td"
+    - cells:
+        - content: "Q2 2024"
+          tag: "td"
+        - content: "$175,000"
+          tag: "td"
+        - content: "$95,000"
+          tag: "td"
+        - content: "$80,000"
+          tag: "td"
+    - cells:
+        - content: "Q3 2024"
+          tag: "td"
+        - content: "$200,000"
+          tag: "td"
+        - content: "$100,000"
+          tag: "td"
+        - content: "$100,000"
+          tag: "td"
+    - cells:
+        - content: "Q4 2024"
+          tag: "td"
+        - content: "$225,000"
+          tag: "td"
+        - content: "$110,000"
+          tag: "td"
+        - content: "$115,000"
+          tag: "td"
+  footer:
+    - cells:
+        - content: "<strong>Total</strong>"
+          tag: "th"
+        - content: "<strong>$750,000</strong>"
+          tag: "td"
+        - content: "<strong>$395,000</strong>"
+          tag: "td"
+        - content: "<strong>$355,000</strong>"
+          tag: "td"
+  responsive: true
+  bordered: true
+  hoverable: true
+  size: "default"
+  no_striping: false
+

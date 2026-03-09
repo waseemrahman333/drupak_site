@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: a78c9ae2-3d84-4e89-aa68-fccb712299b3
+  bundle: tailpine_team
+  default_langcode: en
+  depends:
+    aebae2c6-a886-4dda-bb6d-45ed8a9a932a: media
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Team Member One '
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  field_tailpine_media_image:
+    -
+      entity: aebae2c6-a886-4dda-bb6d-45ed8a9a932a
+  field_tailpine_subtitle:
+    -
+      value: 'Developer One'
+  field_tailpine_title:
+    -
+      value: 'Team Member One '

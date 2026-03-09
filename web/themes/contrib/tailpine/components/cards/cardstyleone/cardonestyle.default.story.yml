@@ -1,0 +1,10 @@
+name: Card Style One - Overlay
+description: Card with image background and text overlay
+
+slots:
+  title: 'Exploring Modern Architecture'
+  subtitle: 'Design'
+
+props:
+  imageurl: 'https://cdn.pixabay.com/photo/2023/09/04/17/48/flamingos-8233303_1280.jpg'
+  heading_level: 2

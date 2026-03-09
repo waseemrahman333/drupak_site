@@ -1,0 +1,10 @@
+name: Dropdown Menu
+description: Dropdown with menu items
+
+slots:
+  items: '<a href="#" class="block px-4 py-2 text-sm text-body hover:bg-gray-100" role="menuitem">Account Settings</a><a href="#" class="block px-4 py-2 text-sm text-body hover:bg-gray-100" role="menuitem">Profile</a><div class="border-t border-gray-200 my-1" role="separator"></div><a href="#" class="block px-4 py-2 text-sm text-body hover:bg-gray-100" role="menuitem">Sign Out</a>'
+
+props:
+  button_text: 'Options'
+  button_color: primary
+

@@ -1,0 +1,136 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.tailpine_card
+    - field.field.block_content.tailpine_card.field_tailpine_media_image
+    - field.field.block_content.tailpine_card.field_tailpine_subtitle
+    - field.field.block_content.tailpine_card.field_tailpine_title
+    - field.field.media.image.field_media_image
+  module:
+    - layout_builder
+    - nomarkup
+    - ui_patterns
+    - ui_patterns_layouts
+  theme:
+    - tailpine
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: 'ui_patterns:tailpine:cardonestyle'
+        layout_settings:
+          label: ''
+          context_mapping:
+            entity: layout_builder.entity
+          ui_patterns:
+            component_id: 'tailpine:cardonestyle'
+            variant_id: null
+            props:
+              attributes:
+                source_id: attributes
+                source:
+                  value: ''
+              imageurl:
+                source_id: entity_reference
+                source:
+                  derivable_context: 'entity_reference:block_content:tailpine_card:field_tailpine_media_image:media:image'
+                  'entity_reference:block_content:tailpine_card:field_tailpine_media_image:media:image':
+                    value:
+                      source_id: entity_reference
+                      source:
+                        derivable_context: 'entity_reference:media:image:field_media_image:file:file'
+                        'entity_reference:media:image:field_media_image:file:file':
+                          value:
+                            source_id: entity_field
+                            source:
+                              derivable_context: 'field:file:file:uri'
+                              'field:file:file:uri':
+                                value:
+                                  source_id: 'field_property:file:uri:url'
+            slots: {  }
+        components:
+          f7375c1a-515a-40c7-bb1e-51d4490cbe79:
+            uuid: f7375c1a-515a-40c7-bb1e-51d4490cbe79
+            region: subtitle
+            configuration:
+              id: 'field_block:block_content:tailpine_card:field_tailpine_subtitle'
+              label: Subtitle
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings:
+                  nomarkup:
+                    enabled: true
+                    separator: '|'
+                    referenced_entity: ''
+            weight: 0
+            additional: {  }
+          2cd5ab6b-222a-42df-86b3-5729a9492099:
+            uuid: 2cd5ab6b-222a-42df-86b3-5729a9492099
+            region: title
+            configuration:
+              id: 'field_block:block_content:tailpine_card:field_tailpine_title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings:
+                  nomarkup:
+                    enabled: true
+                    separator: '|'
+                    referenced_entity: ''
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+id: block_content.tailpine_card.default
+targetEntityType: block_content
+bundle: tailpine_card
+mode: default
+content:
+  field_tailpine_media_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_tailpine_subtitle:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_tailpine_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 0
+    region: content
+hidden: {  }

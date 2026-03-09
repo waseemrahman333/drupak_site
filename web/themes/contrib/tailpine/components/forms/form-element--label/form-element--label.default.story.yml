@@ -1,0 +1,7 @@
+name: Form Label
+description: Standalone form label element
+
+props:
+  title: "Full Name"
+  title_display: before
+  required: false

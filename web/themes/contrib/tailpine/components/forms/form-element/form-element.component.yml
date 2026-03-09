@@ -1,0 +1,49 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Form Element
+status: stable
+group: Forms & Inputs
+description: The form element component.
+props:
+  type: object
+  properties:
+    errors:
+      type: ['array', 'string', 'null']
+      description: (optional) Any errors for this form element, may not be set.
+    prefix:
+      type: ['array', 'string', 'null']
+      description: (optional) The form element prefix, may not be set.
+    suffix:
+      type: ['array', 'string', 'null']
+      description: (optional) The form element suffix, may not be set.
+    required:
+      type: ['null', 'boolean']
+      description: The required marker, or empty if the associated form element is not required.
+    type:
+      type: ['array', 'string', 'null']
+      description: The type of the element.
+    name:
+      type: ['array', 'string', 'null']
+      description: The name of the element.
+    label:
+      type: ['array', 'string', 'null']
+      description: A rendered label element.
+    label_display:
+      type: ['array', 'string', 'null']
+      description: Label display setting.
+    description:
+      type: ['array', 'string', 'null']
+      description: (optional) A list of description properties.
+    description_display:
+      type: ['array', 'string', 'null']
+      description: Description display setting.
+    disabled:
+      type: ['null', 'boolean']
+      description: True if the element is disabled.
+    title_display:
+      type: ['array', 'string', 'null']
+      description: Title display setting.
+slots:
+  children:
+    type: string
+    description: The form element content.
+

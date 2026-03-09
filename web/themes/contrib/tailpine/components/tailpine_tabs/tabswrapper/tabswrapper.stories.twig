@@ -1,0 +1,393 @@
+{% stories tabswrapper with { title: 'Components/Tailpine Tabs Wrapper' } %}
+
+{% story default with {
+    name: '1. Tabswrapper - Underline Style',
+    args: { 
+      firstTabTitle: 'overview',
+      tabTitleContent: '<button
+  type="button"
+  x-on:click="activeTab = \'overview\'"
+  x-bind:class="activeTab === \'overview\' ? \'border-b-2 border-primary text-primary\' : \'\'"
+  class="border-b-2 border-body-bg w-1/3 py-3 text-body font-bold transition-all duration-200"
+  role="tab"
+>
+  Overview
+</button>
+<button
+  type="button"
+  x-on:click="activeTab = \'features\'"
+  x-bind:class="activeTab === \'features\' ? \'border-b-2 border-primary text-primary\' : \'\'"
+  class="border-b-2 border-body-bg w-1/3 py-3 text-body font-bold transition-all duration-200"
+  role="tab"
+>
+  Features
+</button>
+<button
+  type="button"
+  x-on:click="activeTab = \'pricing\'"
+  x-bind:class="activeTab === \'pricing\' ? \'border-b-2 border-primary text-primary\' : \'\'"
+  class="border-b-2 border-body-bg w-1/3 py-3 text-body font-bold transition-all duration-200"
+  role="tab"
+>
+  Pricing
+</button>
+',
+      tabContents: '<div 
+  x-show="activeTab === \'overview\'"
+  x-transition:enter="transition ease-out duration-200"
+  x-transition:enter-start="opacity-0"
+  x-transition:enter-end="opacity-100"
+  role="tabpanel"
+  class="tab-panel"
+>
+  <div class="space-y-4">
+    <h2 class="text-2xl font-bold text-gray-900 dark:text-gray-100">Welcome to Our Platform</h2>
+    <p class="text-gray-700 dark:text-gray-300 leading-relaxed">Discover a comprehensive solution designed to streamline your workflow and boost productivity. Our platform combines powerful features with an intuitive interface to help you achieve your goals faster.</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+      <div class="p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm">
+        <h3 class="font-semibold text-lg mb-2 text-gray-900 dark:text-gray-100">Easy Integration</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-400">Connect seamlessly with your existing tools and workflows in minutes.</p>
+      </div>
+      <div class="p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm">
+        <h3 class="font-semibold text-lg mb-2 text-gray-900 dark:text-gray-100">Real-time Analytics</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-400">Monitor your performance with live dashboards and detailed insights.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div 
+  x-show="activeTab === \'features\'"
+  x-transition:enter="transition ease-out duration-200"
+  x-transition:enter-start="opacity-0"
+  x-transition:enter-end="opacity-100"
+  role="tabpanel"
+  class="tab-panel"
+>
+  <div class="space-y-4">
+    <h2 class="text-2xl font-bold text-gray-900 dark:text-gray-100">Key Features</h2>
+    <ul class="space-y-3">
+      <li class="flex items-start gap-3">
+        <svg class="w-6 h-6 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+        </svg>
+        <div>
+          <h3 class="font-semibold text-gray-900 dark:text-gray-100">Advanced Automation</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400">Automate repetitive tasks and focus on what matters most.</p>
+        </div>
+      </li>
+      <li class="flex items-start gap-3">
+        <svg class="w-6 h-6 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+        </svg>
+        <div>
+          <h3 class="font-semibold text-gray-900 dark:text-gray-100">Collaborative Workspace</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400">Work together with your team in real-time from anywhere.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<div 
+  x-show="activeTab === \'pricing\'"
+  x-transition:enter="transition ease-out duration-200"
+  x-transition:enter-start="opacity-0"
+  x-transition:enter-end="opacity-100"
+  role="tabpanel"
+  class="tab-panel"
+>
+  <div class="space-y-4">
+    <h2 class="text-2xl font-bold text-gray-900 dark:text-gray-100">Simple, Transparent Pricing</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+      <div class="p-6 bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700">
+        <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-gray-100">Starter</h3>
+        <div class="text-3xl font-bold mb-4 text-gray-900 dark:text-gray-100">$29<span class="text-sm font-normal text-gray-600 dark:text-gray-400">/month</span></div>
+        <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+          <li>✓ Up to 5 team members</li>
+          <li>✓ 10 GB storage</li>
+          <li>✓ Basic analytics</li>
+        </ul>
+      </div>
+      <div class="p-6 bg-primary text-white border-2 border-primary">
+        <h3 class="text-xl font-bold mb-2">Professional</h3>
+        <div class="text-3xl font-bold mb-4">$79<span class="text-sm font-normal opacity-80">/month</span></div>
+        <ul class="space-y-2 text-sm opacity-90">
+          <li>✓ Up to 20 team members</li>
+          <li>✓ 100 GB storage</li>
+          <li>✓ Priority support</li>
+        </ul>
+      </div>
+      <div class="p-6 bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700">
+        <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-gray-100">Enterprise</h3>
+        <div class="text-3xl font-bold mb-4 text-gray-900 dark:text-gray-100">Custom</div>
+        <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+          <li>✓ Unlimited members</li>
+          <li>✓ Unlimited storage</li>
+          <li>✓ Dedicated support</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+'
+    }
+  } %}
+{% embed 'components:tabswrapper' with { 
+  firstTabTitle: firstTabTitle
+} %}
+  {% block tabTitleContent %}
+    {{ tabTitleContent }}
+  {% endblock %}
+  {% block tabContents %}
+    {{ tabContents }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% story primary_fill with {
+    name: '2. Tabswrapper - Primary Fill Style',
+    args: { 
+      firstTabTitle: 'dashboard',
+      tabTitleContent: '<button
+  type="button"
+  x-on:click="activeTab = \'dashboard\'"
+  x-bind:class="activeTab === \'dashboard\' ? \'bg-primary text-body-bg\' : \'\'"
+  class="w-1/3 py-3 text-body font-bold transition-all duration-200"
+  role="tab"
+>
+  Dashboard
+</button>
+<button
+  type="button"
+  x-on:click="activeTab = \'analytics\'"
+  x-bind:class="activeTab === \'analytics\' ? \'bg-primary text-body-bg\' : \'\'"
+  class="w-1/3 py-3 text-body font-bold transition-all duration-200"
+  role="tab"
+>
+  Analytics
+</button>
+<button
+  type="button"
+  x-on:click="activeTab = \'reports\'"
+  x-bind:class="activeTab === \'reports\' ? \'bg-primary text-body-bg\' : \'\'"
+  class="w-1/3 py-3 text-body font-bold transition-all duration-200"
+  role="tab"
+>
+  Reports
+</button>
+',
+      tabContents: '<div x-show="activeTab === \'dashboard\'" x-transition role="tabpanel">
+  <div class="space-y-4">
+    <h2 class="text-2xl font-bold text-gray-900 dark:text-gray-100">Dashboard Overview</h2>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+      <div class="p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm">
+        <div class="text-sm text-gray-600 dark:text-gray-400 mb-1">Total Users</div>
+        <div class="text-2xl font-bold text-gray-900 dark:text-gray-100">12,543</div>
+        <div class="text-xs text-green-600 dark:text-green-400 mt-1">↑ 12% this month</div>
+      </div>
+      <div class="p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm">
+        <div class="text-sm text-gray-600 dark:text-gray-400 mb-1">Revenue</div>
+        <div class="text-2xl font-bold text-gray-900 dark:text-gray-100">$45,231</div>
+        <div class="text-xs text-green-600 dark:text-green-400 mt-1">↑ 8% this month</div>
+      </div>
+      <div class="p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm">
+        <div class="text-sm text-gray-600 dark:text-gray-400 mb-1">Active Projects</div>
+        <div class="text-2xl font-bold text-gray-900 dark:text-gray-100">24</div>
+      </div>
+      <div class="p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm">
+        <div class="text-sm text-gray-600 dark:text-gray-400 mb-1">Completion Rate</div>
+        <div class="text-2xl font-bold text-gray-900 dark:text-gray-100">94.5%</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div x-show="activeTab === \'analytics\'" x-transition role="tabpanel">
+  <div class="space-y-4">
+    <h2 class="text-2xl font-bold text-gray-900 dark:text-gray-100">Analytics</h2>
+    <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6 shadow-sm">
+      <h3 class="font-semibold text-lg mb-4 text-gray-900 dark:text-gray-100">Traffic Sources</h3>
+      <div class="space-y-3">
+        <div>
+          <div class="flex justify-between text-sm mb-1">
+            <span class="text-gray-600 dark:text-gray-400">Direct</span>
+            <span class="text-gray-900 dark:text-gray-100 font-semibold">45%</span>
+          </div>
+          <div class="w-full bg-gray-200 h-2">
+            <div class="bg-primary h-2" style="width: 45%"></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-between text-sm mb-1">
+            <span class="text-gray-600 dark:text-gray-400">Organic Search</span>
+            <span class="text-gray-900 dark:text-gray-100 font-semibold">30%</span>
+          </div>
+          <div class="w-full bg-gray-200 h-2">
+            <div class="bg-secondary h-2" style="width: 30%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div x-show="activeTab === \'reports\'" x-transition role="tabpanel">
+  <div class="space-y-4">
+    <h2 class="text-2xl font-bold text-gray-900 dark:text-gray-100">Reports</h2>
+    <div class="overflow-x-auto">
+      <table class="w-full bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700">
+        <thead class="bg-gray-50 dark:bg-gray-800">
+          <tr>
+            <th class="px-4 py-3 text-left text-xs font-semibold text-gray-900 dark:text-gray-100 uppercase">Report Name</th>
+            <th class="px-4 py-3 text-left text-xs font-semibold text-gray-900 dark:text-gray-100 uppercase">Date</th>
+            <th class="px-4 py-3 text-left text-xs font-semibold text-gray-900 dark:text-gray-100 uppercase">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-t border-gray-200 dark:border-gray-700">
+            <td class="px-4 py-3 text-sm text-gray-900 dark:text-gray-100">Monthly Sales Report</td>
+            <td class="px-4 py-3 text-sm text-gray-600 dark:text-gray-400">Nov 1, 2025</td>
+            <td class="px-4 py-3 text-sm"><span class="px-2 py-1 text-xs bg-green-100 text-green-800">Complete</span></td>
+          </tr>
+          <tr class="border-t border-gray-200 dark:border-gray-700">
+            <td class="px-4 py-3 text-sm text-gray-900 dark:text-gray-100">Q3 Performance Review</td>
+            <td class="px-4 py-3 text-sm text-gray-600 dark:text-gray-400">Oct 28, 2025</td>
+            <td class="px-4 py-3 text-sm"><span class="px-2 py-1 text-xs bg-green-100 text-green-800">Complete</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+'
+    }
+  } %}
+{% embed 'components:tabswrapper' with { 
+  firstTabTitle: firstTabTitle
+} %}
+  {% block tabTitleContent %}
+    {{ tabTitleContent }}
+  {% endblock %}
+  {% block tabContents %}
+    {{ tabContents }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% story secondary_fill with {
+    name: '3. Tabswrapper - Secondary Fill Style',
+    args: { 
+      firstTabTitle: 'getting-started',
+      tabTitleContent: '<button
+  type="button"
+  x-on:click="activeTab = \'getting-started\'"
+  x-bind:class="activeTab === \'getting-started\' ? \'bg-secondary text-body-bg\' : \'\'"
+  class="w-1/3 py-3 text-body font-bold transition-all duration-200"
+  role="tab"
+>
+  Getting Started
+</button>
+<button
+  type="button"
+  x-on:click="activeTab = \'api-reference\'"
+  x-bind:class="activeTab === \'api-reference\' ? \'bg-secondary text-body-bg\' : \'\'"
+  class="w-1/3 py-3 text-body font-bold transition-all duration-200"
+  role="tab"
+>
+  API Reference
+</button>
+<button
+  type="button"
+  x-on:click="activeTab = \'examples\'"
+  x-bind:class="activeTab === \'examples\' ? \'bg-secondary text-body-bg\' : \'\'"
+  class="w-1/3 py-3 text-body font-bold transition-all duration-200"
+  role="tab"
+>
+  Examples
+</button>
+',
+      tabContents: '<div x-show="activeTab === \'getting-started\'" x-transition role="tabpanel">
+  <div class="space-y-4">
+    <h2 class="text-2xl font-bold text-gray-900 dark:text-gray-100">Getting Started Guide</h2>
+    <p class="text-gray-700 dark:text-gray-300 leading-relaxed">Follow these simple steps to get up and running with our platform in minutes.</p>
+    <div class="space-y-6 mt-6">
+      <div class="flex gap-4">
+        <div class="flex-shrink-0 w-8 h-8 bg-primary text-white flex items-center justify-center font-bold">1</div>
+        <div>
+          <h3 class="font-semibold text-lg mb-2 text-gray-900 dark:text-gray-100">Create Your Account</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400">Sign up for a free account using your email or social login.</p>
+        </div>
+      </div>
+      <div class="flex gap-4">
+        <div class="flex-shrink-0 w-8 h-8 bg-primary text-white flex items-center justify-center font-bold">2</div>
+        <div>
+          <h3 class="font-semibold text-lg mb-2 text-gray-900 dark:text-gray-100">Configure Your Workspace</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400">Set up your workspace preferences and invite team members.</p>
+        </div>
+      </div>
+      <div class="flex gap-4">
+        <div class="flex-shrink-0 w-8 h-8 bg-primary text-white flex items-center justify-center font-bold">3</div>
+        <div>
+          <h3 class="font-semibold text-lg mb-2 text-gray-900 dark:text-gray-100">Start Building</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400">Create your first project and begin working.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div x-show="activeTab === \'api-reference\'" x-transition role="tabpanel">
+  <div class="space-y-4">
+    <h2 class="text-2xl font-bold text-gray-900 dark:text-gray-100">API Reference</h2>
+    <p class="text-gray-700 dark:text-gray-300">Complete API documentation for developers.</p>
+    <div class="bg-gray-900 text-green-400 p-4 font-mono text-sm overflow-x-auto">
+      <div>POST /api/v1/auth/login</div>
+      <div class="mt-2">{</div>
+      <div class="ml-4">"email": "user@example.com",</div>
+      <div class="ml-4">"password": "your-password"</div>
+      <div>}</div>
+    </div>
+    <div class="mt-6">
+      <h3 class="font-semibold text-lg mb-3 text-gray-900 dark:text-gray-100">Common Endpoints</h3>
+      <ul class="space-y-2 text-sm">
+        <li class="p-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+          <span class="font-mono text-primary font-semibold">GET</span>
+          <span class="font-mono text-gray-900 dark:text-gray-100 ml-3">/api/v1/users</span>
+        </li>
+        <li class="p-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+          <span class="font-mono text-green-600 font-semibold">POST</span>
+          <span class="font-mono text-gray-900 dark:text-gray-100 ml-3">/api/v1/users</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div x-show="activeTab === \'examples\'" x-transition role="tabpanel">
+  <div class="space-y-4">
+    <h2 class="text-2xl font-bold text-gray-900 dark:text-gray-100">Code Examples</h2>
+    <div class="space-y-4">
+      <div>
+        <h3 class="font-semibold mb-2 text-gray-900 dark:text-gray-100">JavaScript Example</h3>
+        <div class="bg-gray-900 text-green-400 p-4 font-mono text-sm overflow-x-auto">
+          <div>const apiKey = "your-api-key";</div>
+          <div class="mt-2">fetch("https://api.example.com/v1/data", {</div>
+          <div class="ml-4">method: "GET",</div>
+          <div class="ml-4">headers: { "Authorization": `Bearer ${apiKey}` }</div>
+          <div>})</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+'
+    }
+  } %}
+{% embed 'components:tabswrapper' with { 
+  firstTabTitle: firstTabTitle
+} %}
+  {% block tabTitleContent %}
+    {{ tabTitleContent }}
+  {% endblock %}
+  {% block tabContents %}
+    {{ tabContents }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

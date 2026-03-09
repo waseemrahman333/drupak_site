@@ -1,0 +1,35 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 89e252e2-bb0f-4056-af42-3e60695af279
+  bundle: image
+  default_langcode: en
+  depends:
+    1e26905a-7590-4fca-ac26-9cceeef4eb4b: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: team1.png
+  created:
+    -
+      value: 1756754223
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+  field_media_image:
+    -
+      entity: 1e26905a-7590-4fca-ac26-9cceeef4eb4b
+      alt: 'team 4'
+      title: ''
+      width: 399
+      height: 599

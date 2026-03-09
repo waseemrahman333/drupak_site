@@ -1,0 +1,17 @@
+{#
+/**
+ * Navbar Brand Component
+ * 
+ * Logo and/or site name for navbar.
+ */
+#}
+
+<a href="{{ url|default('/') }}" class="flex items-center space-x-3 hover:opacity-80 transition-opacity">
+  {% if image_url %}
+    <img src="{{ image_url }}" alt="{{ text|default('') }}" class="h-8 w-auto">
+  {% endif %}
+  {% if text %}
+    <span class="text-xl font-bold">{{ text }}</span>
+  {% endif %}
+</a>
+

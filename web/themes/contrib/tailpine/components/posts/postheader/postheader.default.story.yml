@@ -1,0 +1,50 @@
+name: Post Header
+description: Default Post Header component
+slots:
+  title: Blog Posts
+  cta:
+  - type:  component
+    component: "tailpine:cta"
+    slots:
+      title: "CTA Component"
+      color_schema: secondary
+      link: "#"
+
+  content:
+  - type: component
+    component: "tailpine:poststylethree"
+    slots:
+      subtitle: "Subtitle"
+      title: This is the Post Title Of the Post Component
+      description: "This is the description of the post component. It can be a bit longer to show how it looks with more text."
+      date: "Jan 1, 2024"
+    props:
+      imageurl: https://cdn.pixabay.com/photo/2017/10/04/18/11/trees-2817102_1280.jpg
+  - type: component
+    component: "tailpine:poststylethree"
+    slots:
+      subtitle: "Subtitle"
+      title: This is the Post Title
+      description: "This is the description "
+      date: "Jan 1, 2024"
+    props:
+      imageurl: https://cdn.pixabay.com/photo/2019/12/30/20/34/road-4730553_960_720.jpg
+  - type: component
+    component: "tailpine:poststylethree"
+    slots:
+      subtitle: "Subtitle"
+      title: This is the Post Title
+      description: "This is the description of the post component."
+      date: "Jan 1, 2024"
+    props:
+      imageurl: https://cdn.pixabay.com/photo/2017/10/04/18/11/trees-2817102_1280.jpg
+  - type: component
+    component: "tailpine:poststylethree"
+    slots:
+      subtitle: "Subtitle"
+      title: This is the Post Title
+      description: "This is the description "
+      date: "Jan 1, 2024"
+    props:
+      imageurl: https://cdn.pixabay.com/photo/2019/12/30/20/34/road-4730553_960_720.jpg
+

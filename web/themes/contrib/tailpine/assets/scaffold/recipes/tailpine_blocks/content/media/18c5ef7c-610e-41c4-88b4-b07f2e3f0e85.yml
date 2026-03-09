@@ -1,0 +1,35 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 18c5ef7c-610e-41c4-88b4-b07f2e3f0e85
+  bundle: image
+  default_langcode: en
+  depends:
+    190d222d-ea26-4fc2-96fe-1c086a8f72ba: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: Logo2.png
+  created:
+    -
+      value: 1756754755
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+  field_media_image:
+    -
+      entity: 190d222d-ea26-4fc2-96fe-1c086a8f72ba
+      alt: 'logo two'
+      title: ''
+      width: 185
+      height: 28

@@ -1,0 +1,22 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Testimonial  Style Two
+status: stable
+description: "Testimonial  Wrapper are used to group and display content in a way that is easily readable."
+group: Teams & Testimonials
+props:
+  type: object
+  properties:
+    imageurl:
+      type: string
+      description: "The URL of the image to be used."
+      title: "Image URL"
+slots:
+  name:
+    title: Name
+    description: "Name of the User. Plain text."
+  description:
+    title: Description
+    description: "Description of the Testimonial. Plain text."
+  subtitle:
+    title: Subtitle
+    description: "Subtitle. of the Testimonial. Plain text."

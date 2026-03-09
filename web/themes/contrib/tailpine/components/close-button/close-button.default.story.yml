@@ -1,0 +1,7 @@
+name: Close Button
+description: Standard close button
+
+props:
+  label: 'Close'
+  size: md
+

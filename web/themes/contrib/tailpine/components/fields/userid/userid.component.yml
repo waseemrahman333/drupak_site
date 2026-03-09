@@ -1,0 +1,14 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+status: stable
+title: 'User Id'
+name: User Id
+description: 'A simple user id field to display user id.'
+defaults:
+  attributes: {}
+  items: []
+props:
+  type: object
+  properties:
+    items:
+      type: array
+      description: List of all field items.

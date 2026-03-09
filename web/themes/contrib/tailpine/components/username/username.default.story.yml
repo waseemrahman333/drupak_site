@@ -1,0 +1,4 @@
+name: Default
+props:
+  user_name: 'user name'
+  link_path: URL

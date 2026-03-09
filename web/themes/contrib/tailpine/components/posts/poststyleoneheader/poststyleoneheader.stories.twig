@@ -1,0 +1,24 @@
+{% stories poststyleoneheader with { title: 'Components/Post Style One Header' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      title: 'Title',
+      content: 'Content',
+      cta: 'CTA'
+    }
+  } %}
+{% embed 'components:poststyleoneheader' %}
+  {% block title %}
+    {{ title }}
+  {% endblock %}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+  {% block cta %}
+    {{ cta }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

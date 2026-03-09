@@ -1,0 +1,55 @@
+name: Compact
+props:
+  caption: "Compact Table - Small Size"
+  header:
+    - content: "Product"
+      tag: "th"
+    - content: "Price"
+      tag: "th"
+    - content: "Stock"
+      tag: "th"
+    - content: "Status"
+      tag: "th"
+  rows:
+    - cells:
+        - content: "Laptop Pro"
+          tag: "td"
+        - content: "$1,299"
+          tag: "td"
+        - content: "25"
+          tag: "td"
+        - content: '<span class="inline-flex px-2 py-1 text-xs font-semibold bg-green-100 text-green-800">In Stock</span>'
+          tag: "td"
+    - cells:
+        - content: "Wireless Mouse"
+          tag: "td"
+        - content: "$29"
+          tag: "td"
+        - content: "150"
+          tag: "td"
+        - content: '<span class="inline-flex px-2 py-1 text-xs font-semibold bg-green-100 text-green-800">In Stock</span>'
+          tag: "td"
+    - cells:
+        - content: "Mechanical Keyboard"
+          tag: "td"
+        - content: "$89"
+          tag: "td"
+        - content: "0"
+          tag: "td"
+        - content: '<span class="inline-flex px-2 py-1 text-xs font-semibold bg-red-100 text-red-800">Out of Stock</span>'
+          tag: "td"
+    - cells:
+        - content: "USB-C Hub"
+          tag: "td"
+        - content: "$49"
+          tag: "td"
+        - content: "8"
+          tag: "td"
+        - content: '<span class="inline-flex px-2 py-1 text-xs font-semibold bg-yellow-100 text-yellow-800">Low Stock</span>'
+          tag: "td"
+  responsive: true
+  bordered: true
+  hoverable: true
+  size: "sm"
+  no_striping: false
+

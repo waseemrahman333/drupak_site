@@ -1,0 +1,22 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/metadata.schema.json
+name: Page
+status: stable
+description: Main page wrapper component.
+group: Layout
+slots:
+  header:
+    title: Header
+    description: Page header content.
+  navigation:
+    title: Navigation
+    description: Main navigation.
+  content:
+    title: Content
+    description: Main page content.
+  sidebar:
+    title: Sidebar
+    description: Sidebar content.
+  footer:
+    title: Footer
+    description: Page footer.
+

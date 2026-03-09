@@ -1,0 +1,22 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: View Unformatted
+description: Component for displaying a Drupal View with unformatted rows.
+status: stable
+group: "View"
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: View Title
+      description: The title of the view.
+      default: ''
+    rows:
+      type: string
+      description: 'Rendered rows of content to display in the View.'
+      default: ''
+    default_row_class:
+      type: boolean
+      title: Default Row Class
+      description: Flag indicating whether default classes should be used on rows.
+      default: true

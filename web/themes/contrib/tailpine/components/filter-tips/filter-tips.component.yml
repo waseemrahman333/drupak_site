@@ -1,0 +1,15 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Filter Tips
+status: stable
+props:
+  type: object
+  properties:
+    tips:
+      type: ['array', 'string', 'null']
+      description: Descriptions and a CSS ID in the form of 'module-name/filter-id' (only used when 'long' is TRUE) for each filter in one or more text formats.
+    long:
+      type: ['null', 'boolean']
+      description: Boolean indicating whether the fieldset element is required.
+    multiple:
+      type: ['null', 'boolean']
+      description: A flag indicating there is more than one filter tip.

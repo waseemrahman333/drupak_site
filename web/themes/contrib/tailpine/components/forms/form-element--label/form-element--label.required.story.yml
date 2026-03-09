@@ -1,0 +1,8 @@
+name: Form Label Required
+description: Form label for required field
+
+props:
+  title: "Email Address"
+  title_display: before
+  required: true
+

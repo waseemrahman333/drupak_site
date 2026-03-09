@@ -1,0 +1,10 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/metadata.schema.json
+name: Button Group
+status: stable
+description: Group series of buttons together on a single line.
+group: Forms
+slots:
+  buttons:
+    title: Buttons
+    description: Button components to group.
+

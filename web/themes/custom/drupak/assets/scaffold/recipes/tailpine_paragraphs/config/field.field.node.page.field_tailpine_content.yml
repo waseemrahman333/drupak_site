@@ -1,0 +1,197 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tailpine_content
+    - node.type.page
+    - paragraphs.paragraphs_type.hero
+    - paragraphs.paragraphs_type.tailpine_404_page
+    - paragraphs.paragraphs_type.tailpine_accordion_header
+    - paragraphs.paragraphs_type.tailpine_accordion_one_header
+    - paragraphs.paragraphs_type.tailpine_banner
+    - paragraphs.paragraphs_type.tailpine_banner_style_two
+    - paragraphs.paragraphs_type.tailpine_cards_header
+    - paragraphs.paragraphs_type.tailpine_carousel
+    - paragraphs.paragraphs_type.tailpine_contact_us_form
+    - paragraphs.paragraphs_type.tailpine_cta
+    - paragraphs.paragraphs_type.tailpine_get_in_touch
+    - paragraphs.paragraphs_type.tailpine_hero_style_two
+    - paragraphs.paragraphs_type.tailpine_media_and_text
+    - paragraphs.paragraphs_type.tailpine_modal
+    - paragraphs.paragraphs_type.tailpine_post_style_one_wrapper
+    - paragraphs.paragraphs_type.tailpine_post_wrapper
+    - paragraphs.paragraphs_type.tailpine_sidebar
+    - paragraphs.paragraphs_type.tailpine_social_icons
+    - paragraphs.paragraphs_type.tailpine_sponser_header
+    - paragraphs.paragraphs_type.tailpine_sponser_two_header
+    - paragraphs.paragraphs_type.tailpine_sub_page_hero
+    - paragraphs.paragraphs_type.tailpine_tabs_wrapper
+    - paragraphs.paragraphs_type.tailpine_team_style_two_header
+    - paragraphs.paragraphs_type.tailpine_teams_header
+    - paragraphs.paragraphs_type.tailpine_testimonial_header
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: FN3vbawrU4noRk1oKpiZdTw6-lWb3p4GiKO7SGjSjak
+id: node.page.field_tailpine_content
+field_name: field_tailpine_content
+entity_type: node
+bundle: page
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      hero: hero
+      tailpine_accordion_header: tailpine_accordion_header
+      tailpine_cards_header: tailpine_cards_header
+      tailpine_cta: tailpine_cta
+      tailpine_post_wrapper: tailpine_post_wrapper
+      tailpine_hero_style_two: tailpine_hero_style_two
+      tailpine_teams_header: tailpine_teams_header
+      tailpine_contact_us_form: tailpine_contact_us_form
+      tailpine_get_in_touch: tailpine_get_in_touch
+      tailpine_sponser_header: tailpine_sponser_header
+      tailpine_media_and_text: tailpine_media_and_text
+      tailpine_post_style_one_wrapper: tailpine_post_style_one_wrapper
+      tailpine_testimonial_header: tailpine_testimonial_header
+      tailpine_sub_page_hero: tailpine_sub_page_hero
+      tailpine_accordion_one_header: tailpine_accordion_one_header
+      tailpine_social_icons: tailpine_social_icons
+      tailpine_404_page: tailpine_404_page
+      tailpine_banner: tailpine_banner
+      tailpine_modal: tailpine_modal
+      tailpine_team_style_two_header: tailpine_team_style_two_header
+      tailpine_banner_style_two: tailpine_banner_style_two
+      tailpine_carousel: tailpine_carousel
+      tailpine_sidebar: tailpine_sidebar
+      tailpine_sponser_two_header: tailpine_sponser_two_header
+      tailpine_tabs_wrapper: tailpine_tabs_wrapper
+    negate: 0
+    target_bundles_drag_drop:
+      hero:
+        weight: 9
+        enabled: true
+      tailpine_404_page:
+        weight: 39
+        enabled: true
+      tailpine_accordion:
+        weight: 10
+        enabled: false
+      tailpine_accordion_header:
+        weight: 11
+        enabled: true
+      tailpine_accordion_one_header:
+        weight: 33
+        enabled: true
+      tailpine_accordion_sytle_one:
+        weight: 34
+        enabled: false
+      tailpine_banner:
+        weight: 45
+        enabled: true
+      tailpine_banner_style_two:
+        weight: 47
+        enabled: true
+      tailpine_blog_post_with_cta:
+        weight: 32
+        enabled: false
+      tailpine_card:
+        weight: 12
+        enabled: false
+      tailpine_card_two:
+        weight: 30
+        enabled: false
+      tailpine_cards_header:
+        weight: 13
+        enabled: true
+      tailpine_carousel:
+        weight: 53
+        enabled: true
+      tailpine_contact_us_form:
+        weight: 24
+        enabled: true
+      tailpine_cta:
+        weight: 14
+        enabled: true
+      tailpine_get_in_touch:
+        weight: 24
+        enabled: true
+      tailpine_hero_style_two:
+        weight: 20
+        enabled: true
+      tailpine_media_and_text:
+        weight: 25
+        enabled: true
+      tailpine_modal:
+        weight: 45
+        enabled: true
+      tailpine_post_cards:
+        weight: 15
+        enabled: false
+      tailpine_post_inner_wrapper:
+        weight: 42
+        enabled: false
+      tailpine_post_style_one_wrapper:
+        weight: 28
+        enabled: true
+      tailpine_post_wrapper:
+        weight: 16
+        enabled: true
+      tailpine_sidebar:
+        weight: 54
+        enabled: true
+      tailpine_sidebar_links:
+        weight: 55
+        enabled: false
+      tailpine_social_icons:
+        weight: 38
+        enabled: true
+      tailpine_sponser_company:
+        weight: 23
+        enabled: false
+      tailpine_sponser_header:
+        weight: 24
+        enabled: true
+      tailpine_sponser_logo_style_one:
+        weight: 33
+        enabled: false
+      tailpine_sponser_two_header:
+        weight: 56
+        enabled: true
+      tailpine_sub_page_hero:
+        weight: 30
+        enabled: true
+      tailpine_tabs_content:
+        weight: 37
+        enabled: false
+      tailpine_tabs_wrapper:
+        weight: 65
+        enabled: true
+      tailpine_team:
+        weight: 19
+        enabled: false
+      tailpine_team_style_two:
+        weight: 44
+        enabled: false
+      tailpine_team_style_two_header:
+        weight: 45
+        enabled: true
+      tailpine_teams_header:
+        weight: 20
+        enabled: true
+      tailpine_testimonial:
+        weight: 27
+        enabled: false
+      tailpine_testimonial_header:
+        weight: 28
+        enabled: true
+      tailpine_testimonial_style_two:
+        weight: 48
+        enabled: false
+field_type: entity_reference_revisions

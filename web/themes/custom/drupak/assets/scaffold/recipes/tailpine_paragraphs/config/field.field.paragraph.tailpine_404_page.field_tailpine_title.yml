@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tailpine_title
+    - paragraphs.paragraphs_type.tailpine_404_page
+id: paragraph.tailpine_404_page.field_tailpine_title
+field_name: field_tailpine_title
+entity_type: paragraph
+bundle: tailpine_404_page
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

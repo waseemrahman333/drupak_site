@@ -1,0 +1,111 @@
+{#
+/**
+ * @file
+ * Theme override for an 'input' #type form element.
+ *
+ * Available variables:
+ * - attributes: A list of HTML attributes for the input element.
+ * - children: Optional additional rendered elements.
+ *
+ * @see template_preprocess_input()
+ */
+#}
+{% set classes1 = [
+  'mt-1',
+  'rounded-md',
+  'shadow-sm',
+  'focus:border-indigo-500',
+  'focus:ring-indigo-500',
+  'text-xs',
+  'md:text-sm',
+  'lg:text-base',
+  'py-2',
+  'px-2',
+  'md:py-3',
+  'border-gray-400',
+  'border',
+  'outline-none'
+] %}
+
+{% set classes = [] %}
+
+  {% if type == 'file' %}
+    {% set classes = classes|merge([
+      'block',
+      'w-full',
+      'text-sm',
+      'text-gray-900',
+      'border',
+      'border-gray-300',
+      'rounded-lg',
+      'cursor-pointer',
+      'bg-gray-50',
+      'focus:outline-none',
+    ]) %}
+  {% elseif type == 'number' %}
+    {% set classes = classes|merge([
+      'bg-gray-50',
+      'border',
+      'border-gray-300',
+      'text-gray-900',
+      'text-sm',
+      'rounded-lg',
+      'focus:ring-blue-500',
+      'focus:border-blue-500',
+      'block',
+      'w-full',
+      'p-2.5',
+    ]) %}
+  {% elseif type == 'checkbox' %}
+    {% set classes = classes|merge([
+      'w-4',
+      'h-4',
+      'text-primay',
+      'bg-gray-100',
+      'border-gray-300',
+      'rounded-sm',
+      'focus:ring-blue-500',
+      'focus:ring-2',
+
+    ]) %}
+  {% elseif type == 'radio' %}
+    {% set classes = classes|merge([
+      'w-4',
+      'h-4',
+      'text-primay',
+      'bg-gray-100',
+      'border-gray-300',
+      'focus:ring-blue-500',
+      'focus:ring-2',
+    ]) %}
+  {% elseif type == 'submit' %}
+    {% set classes = classes|merge([
+      'text-white',
+      'bg-secondary',
+      'hover:bg-secondary/90',
+      'focus:ring-4',
+      'focus:ring-primary',
+      'font-medium',
+      'text-sm',
+      'cursor-pointer',
+      'px-5',
+      'py-2.5',
+      'focus:outline-none',
+    ]) %}
+  {% else %}
+    {% set classes = classes|merge([
+      'bg-gray-50',
+      'border',
+      'border-gray-700',
+      'text-gray-900',
+      'text-sm',
+      'block',
+      'w-full',
+      'p-2.5',
+    ]) %}
+  {% endif %}
+
+<input{{ attributes.addClass(classes) }} />
+{% block children %}
+  {{ children }}
+{% endblock %}

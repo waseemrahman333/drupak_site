@@ -1,0 +1,16 @@
+{% stories page with { title: 'Components/Page' } %}
+
+{% story default with {
+    name: '1. Page Layout',
+    args: { 
+      content: '<div class="p-8"><h1 class="text-3xl font-bold">Page Content</h1><p>This is the main content area.</p></div>'
+    }
+  } %}
+{% embed 'tailpine:page' %}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

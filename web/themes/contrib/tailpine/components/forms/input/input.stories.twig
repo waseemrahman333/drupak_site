@@ -1,0 +1,132 @@
+{% stories input with { title: 'Components/Input' } %}
+
+{% story default with {
+    name: '1. Text Input',
+    args: { 
+      default: '<div class="p-6 bg-white">
+  <div class="form-item mb-4">
+    <label class="block text-sm font-semibold text-gray-900 mb-2">Text Input</label>
+    <input type="text" name="username" placeholder="Enter your username" class="!bg-white border border-gray-300 text-gray-900 text-base focus:ring-2 focus:ring-primary focus:border-primary block w-full px-4 py-3 transition-all placeholder:text-gray-400 hover:border-gray-400" />
+  </div>
+</div>
+'
+    }
+  } %}
+{% embed 'components:input' %}
+  {% block default %}
+    {{ default }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% story email with {
+    name: '2. Email Input',
+    args: { 
+      default: '<div class="p-6 bg-white">
+  <div class="form-item mb-4">
+    <label class="block text-sm font-semibold text-gray-900 mb-2">Email Input</label>
+    <input type="email" name="user_email" placeholder="your.email@example.com" class="!bg-white border border-gray-300 text-gray-900 text-base focus:ring-2 focus:ring-primary focus:border-primary block w-full px-4 py-3 transition-all placeholder:text-gray-400 hover:border-gray-400" />
+  </div>
+</div>
+'
+    }
+  } %}
+{% embed 'components:input' %}
+  {% block default %}
+    {{ default }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% story number with {
+    name: '3. Number Input',
+    args: { 
+      default: '<div class="p-6 bg-white">
+  <div class="form-item mb-4">
+    <label class="block text-sm font-semibold text-gray-900 mb-2">Number Input</label>
+    <input type="number" name="quantity" value="1" placeholder="Quantity" class="!bg-white border border-gray-300 text-gray-900 text-base focus:ring-2 focus:ring-primary focus:border-primary block w-full px-4 py-3 transition-all placeholder:text-gray-400 hover:border-gray-400" />
+  </div>
+</div>
+'
+    }
+  } %}
+{% embed 'components:input' %}
+  {% block default %}
+    {{ default }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% story password with {
+    name: '4. Password Input',
+    args: { 
+      default: '<div class="p-6 bg-white">
+  <div class="form-item mb-4">
+    <label class="block text-sm font-semibold text-gray-900 mb-2">Password Input</label>
+    <input type="password" name="user_password" placeholder="Enter your password" class="!bg-white border border-gray-300 text-gray-900 text-base focus:ring-2 focus:ring-primary focus:border-primary block w-full px-4 py-3 transition-all placeholder:text-gray-400 hover:border-gray-400" />
+  </div>
+</div>
+'
+    }
+  } %}
+{% embed 'components:input' %}
+  {% block default %}
+    {{ default }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% story search with {
+    name: '5. Search Input',
+    args: { 
+      default: '<div class="p-6 bg-white">
+  <div class="form-item mb-4">
+    <label class="block text-sm font-semibold text-gray-900 mb-2">Search Input</label>
+    <input type="search" name="search_query" placeholder="Search..." class="!bg-white border border-gray-300 text-gray-900 text-base focus:ring-2 focus:ring-primary focus:border-primary block w-full px-4 py-3 transition-all placeholder:text-gray-400 hover:border-gray-400" />
+  </div>
+</div>
+'
+    }
+  } %}
+{% embed 'components:input' %}
+  {% block default %}
+    {{ default }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% story submit with {
+    name: '6. Submit Button',
+    args: { 
+      default: '<div class="p-6 bg-white">
+  <div class="form-actions">
+    <input type="submit" value="Submit Form" class="bg-primary text-white hover:opacity-90 focus:ring-2 focus:ring-primary focus:ring-offset-2 font-semibold text-base px-8 py-3 transition-all cursor-pointer inline-flex items-center justify-center shadow-sm hover:shadow-md" />
+  </div>
+</div>
+'
+    }
+  } %}
+{% embed 'components:input' %}
+  {% block default %}
+    {{ default }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% story text with {
+    name: '7. Input - Text',
+    args: { 
+      type: 'text',
+      value: '',
+      placeholder: 'Enter text here...'
+    }
+  } %}
+{% embed 'components:input' with { 
+  type: type,
+  value: value,
+  placeholder: placeholder
+} %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

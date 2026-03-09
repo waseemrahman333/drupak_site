@@ -1,0 +1,37 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tailpine_tabs_wrapper.field_tailpine_content
+    - field.field.paragraph.tailpine_tabs_wrapper.field_tailpine_tab_style
+    - paragraphs.paragraphs_type.tailpine_tabs_wrapper
+  module:
+    - entity_reference_revisions
+    - nomarkup
+    - options
+id: paragraph.tailpine_tabs_wrapper.default
+targetEntityType: paragraph
+bundle: tailpine_tabs_wrapper
+mode: default
+content:
+  field_tailpine_content:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: ''
+        referenced_entity: ''
+    weight: 0
+    region: content
+  field_tailpine_tab_style:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

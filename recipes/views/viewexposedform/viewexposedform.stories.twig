@@ -1,0 +1,14 @@
+{% stories viewexposedform with { title: 'Components/View Exposed Form' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      form: ''
+    }
+  } %}
+{% embed 'components:viewexposedform' with { 
+  form: form
+} %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

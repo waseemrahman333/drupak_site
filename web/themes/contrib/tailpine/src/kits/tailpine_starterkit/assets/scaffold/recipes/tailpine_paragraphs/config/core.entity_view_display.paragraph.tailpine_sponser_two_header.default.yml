@@ -1,0 +1,113 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tailpine_sponser_two_header.field_tailpine_content
+    - field.field.paragraph.tailpine_sponser_two_header.field_tailpine_title
+    - paragraphs.paragraphs_type.tailpine_sponser_two_header
+  module:
+    - entity_reference_revisions
+    - layout_builder
+    - nomarkup
+    - ui_patterns
+    - ui_patterns_layouts
+  theme:
+    - tailpine
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: 'ui_patterns:tailpine:sponserlogoheader'
+        layout_settings:
+          label: ''
+          context_mapping:
+            entity: layout_builder.entity
+          ui_patterns:
+            component_id: 'tailpine:sponserlogoheader'
+            variant_id: null
+            props:
+              attributes:
+                source_id: attributes
+                source:
+                  value: ''
+            slots: {  }
+        components:
+          6806a2ad-6769-4506-b039-0b8e46b2fe89:
+            uuid: 6806a2ad-6769-4506-b039-0b8e46b2fe89
+            region: title
+            configuration:
+              id: 'field_block:paragraph:tailpine_sponser_two_header:field_tailpine_title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings: {  }
+                third_party_settings:
+                  nomarkup:
+                    enabled: true
+                    separator: '|'
+                    referenced_entity: ''
+            weight: 0
+            additional: {  }
+          dcf492a6-914d-4457-9bb6-6e31b13b600b:
+            uuid: dcf492a6-914d-4457-9bb6-6e31b13b600b
+            region: content
+            configuration:
+              id: 'field_block:paragraph:tailpine_sponser_two_header:field_tailpine_content'
+              label: 'Add Sponsor'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: hidden
+                settings:
+                  view_mode: default
+                third_party_settings:
+                  nomarkup:
+                    enabled: true
+                    separator: ''
+                    referenced_entity: ''
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+id: paragraph.tailpine_sponser_two_header.default
+targetEntityType: paragraph
+bundle: tailpine_sponser_two_header
+mode: default
+content:
+  field_tailpine_content:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: ''
+        referenced_entity: ''
+    weight: 1
+    region: content
+  field_tailpine_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 0
+    region: content
+hidden: {  }

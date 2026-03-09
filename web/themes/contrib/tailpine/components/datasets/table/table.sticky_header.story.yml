@@ -1,0 +1,92 @@
+name: Sticky Header
+props:
+  caption: "Long List with Sticky Header"
+  header:
+    - content: "#"
+      tag: "th"
+    - content: "Title"
+      tag: "th"
+    - content: "Category"
+      tag: "th"
+    - content: "Date"
+      tag: "th"
+  rows:
+    - cells:
+        - content: "1"
+          tag: "td"
+        - content: "Introduction to TailwindCSS"
+          tag: "td"
+        - content: "Tutorial"
+          tag: "td"
+        - content: "2024-01-15"
+          tag: "td"
+    - cells:
+        - content: "2"
+          tag: "td"
+        - content: "Building Responsive Layouts"
+          tag: "td"
+        - content: "Guide"
+          tag: "td"
+        - content: "2024-01-20"
+          tag: "td"
+    - cells:
+        - content: "3"
+          tag: "td"
+        - content: "Alpine.js Fundamentals"
+          tag: "td"
+        - content: "Tutorial"
+          tag: "td"
+        - content: "2024-01-25"
+          tag: "td"
+    - cells:
+        - content: "4"
+          tag: "td"
+        - content: "Component Architecture"
+          tag: "td"
+        - content: "Article"
+          tag: "td"
+        - content: "2024-02-01"
+          tag: "td"
+    - cells:
+        - content: "5"
+          tag: "td"
+        - content: "State Management Best Practices"
+          tag: "td"
+        - content: "Guide"
+          tag: "td"
+        - content: "2024-02-05"
+          tag: "td"
+    - cells:
+        - content: "6"
+          tag: "td"
+        - content: "Performance Optimization"
+          tag: "td"
+        - content: "Tutorial"
+          tag: "td"
+        - content: "2024-02-10"
+          tag: "td"
+    - cells:
+        - content: "7"
+          tag: "td"
+        - content: "Accessibility Guidelines"
+          tag: "td"
+        - content: "Article"
+          tag: "td"
+        - content: "2024-02-15"
+          tag: "td"
+    - cells:
+        - content: "8"
+          tag: "td"
+        - content: "Dark Mode Implementation"
+          tag: "td"
+        - content: "Tutorial"
+          tag: "td"
+        - content: "2024-02-20"
+          tag: "td"
+  sticky: true
+  responsive: true
+  bordered: true
+  hoverable: true
+  size: "default"
+  no_striping: false
+

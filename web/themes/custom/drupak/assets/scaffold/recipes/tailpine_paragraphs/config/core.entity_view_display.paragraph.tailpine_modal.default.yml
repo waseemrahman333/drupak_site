@@ -1,0 +1,170 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero.field_tailpine_description
+    - field.field.paragraph.hero.field_tailpine_title
+    - field.field.paragraph.tailpine_404_page.field_tailpine_description
+    - field.field.paragraph.tailpine_404_page.field_tailpine_title
+    - field.field.paragraph.tailpine_accordion.field_tailpine_description
+    - field.field.paragraph.tailpine_accordion.field_tailpine_title
+    - field.field.paragraph.tailpine_accordion_header.field_tailpine_description
+    - field.field.paragraph.tailpine_accordion_header.field_tailpine_title
+    - field.field.paragraph.tailpine_accordion_one_header.field_tailpine_title
+    - field.field.paragraph.tailpine_accordion_sytle_one.field_tailpine_description
+    - field.field.paragraph.tailpine_accordion_sytle_one.field_tailpine_title
+    - field.field.paragraph.tailpine_banner.field_tailpine_description
+    - field.field.paragraph.tailpine_banner.field_tailpine_title
+    - field.field.paragraph.tailpine_banner_style_two.field_tailpine_description
+    - field.field.paragraph.tailpine_banner_style_two.field_tailpine_title
+    - field.field.paragraph.tailpine_blog_post_with_cta.field_tailpine_description
+    - field.field.paragraph.tailpine_blog_post_with_cta.field_tailpine_title
+    - field.field.paragraph.tailpine_card.field_tailpine_title
+    - field.field.paragraph.tailpine_card_two.field_tailpine_description
+    - field.field.paragraph.tailpine_card_two.field_tailpine_title
+    - field.field.paragraph.tailpine_cards_header.field_tailpine_description
+    - field.field.paragraph.tailpine_cards_header.field_tailpine_title
+    - field.field.paragraph.tailpine_carousel.field_tailpine_description
+    - field.field.paragraph.tailpine_carousel.field_tailpine_title
+    - field.field.paragraph.tailpine_contact_us_form.field_tailpine_title
+    - field.field.paragraph.tailpine_cta.field_tailpine_title
+    - field.field.paragraph.tailpine_get_in_touch.field_tailpine_title
+    - field.field.paragraph.tailpine_hero_style_two.field_tailpine_description
+    - field.field.paragraph.tailpine_hero_style_two.field_tailpine_title
+    - field.field.paragraph.tailpine_media_and_text.field_tailpine_description
+    - field.field.paragraph.tailpine_media_and_text.field_tailpine_title
+    - field.field.paragraph.tailpine_modal.field_tailpine_description
+    - field.field.paragraph.tailpine_modal.field_tailpine_modal_btn_text
+    - field.field.paragraph.tailpine_modal.field_tailpine_title
+    - field.field.paragraph.tailpine_post_cards.field_tailpine_description
+    - field.field.paragraph.tailpine_post_cards.field_tailpine_title
+    - field.field.paragraph.tailpine_post_style_one_wrapper.field_tailpine_title
+    - field.field.paragraph.tailpine_post_wrapper.field_tailpine_title
+    - field.field.paragraph.tailpine_sidebar.field_tailpine_title
+    - field.field.paragraph.tailpine_sidebar_links.field_tailpine_title
+    - field.field.paragraph.tailpine_sponser_header.field_tailpine_title
+    - field.field.paragraph.tailpine_sponser_two_header.field_tailpine_title
+    - field.field.paragraph.tailpine_sub_page_hero.field_tailpine_description
+    - field.field.paragraph.tailpine_sub_page_hero.field_tailpine_title
+    - field.field.paragraph.tailpine_tabs_content.field_tailpine_description
+    - field.field.paragraph.tailpine_tabs_content.field_tailpine_title
+    - field.field.paragraph.tailpine_team.field_tailpine_title
+    - field.field.paragraph.tailpine_team_style_two.field_tailpine_description
+    - field.field.paragraph.tailpine_team_style_two.field_tailpine_title
+    - field.field.paragraph.tailpine_team_style_two_header.field_tailpine_title
+    - field.field.paragraph.tailpine_teams_header.field_tailpine_title
+    - field.field.paragraph.tailpine_testimonial.field_tailpine_description
+    - field.field.paragraph.tailpine_testimonial.field_tailpine_title
+    - field.field.paragraph.tailpine_testimonial_header.field_tailpine_title
+    - field.field.paragraph.tailpine_testimonial_style_two.field_tailpine_description
+    - field.field.paragraph.tailpine_testimonial_style_two.field_tailpine_title
+    - paragraphs.paragraphs_type.tailpine_modal
+  module:
+    - layout_builder
+    - nomarkup
+    - text
+    - ui_patterns
+    - ui_patterns_layouts
+  theme:
+    - tailpine
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: 'ui_patterns:tailpine:modal'
+        layout_settings:
+          label: ''
+          ui_patterns:
+            component_id: 'tailpine:modal'
+            variant_id:
+              source_id: select
+              source:
+                value: ''
+            slots: {  }
+            props:
+              attributes:
+                source_id: attributes
+                source:
+                  value: ''
+              content:
+                source_id: entity_field
+                source:
+                  derivable_context: 'field:paragraph:tailpine_modal:field_tailpine_description'
+                  'field:paragraph:tailpine_modal:field_tailpine_description':
+                    value:
+                      source_id: 'field_property:paragraph:field_tailpine_description:value'
+              top_title:
+                source_id: entity_field
+                source:
+                  derivable_context: 'field:paragraph:tailpine_modal:field_tailpine_title'
+                  'field:paragraph:tailpine_modal:field_tailpine_title':
+                    value:
+                      source_id: 'field_property:paragraph:field_tailpine_title:value'
+          context_mapping:
+            entity: layout_builder.entity
+        components:
+          5909a721-62e2-485c-a09a-1c3ad2ff4530:
+            uuid: 5909a721-62e2-485c-a09a-1c3ad2ff4530
+            region: button_text
+            configuration:
+              id: 'field_block:paragraph:tailpine_modal:field_tailpine_modal_btn_text'
+              label: 'Modal Btn Text'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings: {  }
+                third_party_settings:
+                  nomarkup:
+                    enabled: true
+                    separator: '|'
+                    referenced_entity: ''
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+_core:
+  default_config_hash: HVMjNT90EME6TMy7ZCy2gRIO79VNcS9Hm0jSnqiX80g
+id: paragraph.tailpine_modal.default
+targetEntityType: paragraph
+bundle: tailpine_modal
+mode: default
+content:
+  field_tailpine_description:
+    type: text_trimmed
+    label: hidden
+    settings:
+      trim_length: 300
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 2
+    region: content
+  field_tailpine_modal_btn_text:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_tailpine_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 1
+    region: content
+hidden: {  }

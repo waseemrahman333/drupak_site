@@ -1,0 +1,28 @@
+ {# <section class="max-w-480 bg-secondary mx-auto container-px grid grid-cols-1 gap-[clamp(60px,calc(60px+5.04vw),80px)] pt-[clamp(30px,4vh,50px)]"> #}
+                <!-- post card -->
+                <div role="group" class="bg-body-bg xl:bg-transparent relative xl:pt-[clamp(30px,-25px+5vw,60px)] xl:pl-[clamp(30px,-25px+5vw,60px)]">
+                    <div class=" flex flex-col xl:flex-row h-fit xl:after:content-[] xl:after:absolute xl:after:top-0 xl:after:left-0  xl:after:-z-10 xl:after:w-full xl:after:h-[85%] xl:after:bg-body-bg">
+                        <div class="overflow-clip xl:w-6/10">
+                            <img src="{{image}}" class="h-full w-full object-cover" alt="Selling Access to Content using Drupal Commerce">
+                        </div>
+                    <div role="" class="flex flex-col justify-around gap-[clamp(23px,5vw,73px)] pb-6 pt-6 xl:pt-0 px-[clamp(16px,3vw,24px)]">
+                        <div class="flex flex-col gap-[clamp(16px,2vw,24px)]">
+                            <p class="text-sm leading-6 text-tertiary/80">{{blog_category}} <span>|</span>  {{date}}</p>
+                            <h3 class="text-h3 text-tertiary">{{title}}</h3>
+                        </div>
+                        {# <div class="flex self-start">
+                        {{cta}}
+                       </div> #}
+                        <a class="group flex items-center  capitalize w-fit justify-between gap-2.5 text-tertiary font-semibold py-1.5 px-5 rounded-lg xl:mt-0 xl:px-5 xl:py-3 bg-primary hover:bg-transparent border border-transparent hover:border-tertiary transition-all duration-300"
+                                    href="{{link}}">{{title2}}
+                                    <svg class="group-hover:transform group-hover:translate-x-1 transition-all duration-300"
+                                        xmlns="http://www.w3.org/2000/svg" width="17" height="8" viewBox="0 0 17 8" fill="none">
+                                        <path d="M12.7393 8V4.8H0.0255641L0 3.192H12.7393V0L17 4L12.7393 8Z"
+                                            fill="currentColor" />
+                                    </svg>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+             
+        {# </section>   #}

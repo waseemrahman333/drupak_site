@@ -1,0 +1,22 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/metadata.schema.json
+name: Collapse
+status: stable
+description: Collapsible content panel with Alpine.js toggle.
+group: UI
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: Title
+      description: Collapse trigger title.
+    open:
+      type: boolean
+      title: Open by Default
+      description: Whether collapse starts open.
+      default: false
+slots:
+  content:
+    title: Content
+    description: Collapsible content.
+

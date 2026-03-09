@@ -1,0 +1,27 @@
+
+<div class="w-full max-w-3xl mx-auto space-y-3" x-data="{ activeIndex: 0 }">
+
+  <!-- Accordion Item 1 -->
+  <div class="overflow-hidden transition-all duration-500 ease-in-out">
+    <button
+      @click="activeIndex = activeIndex === 0 ? null : 0"
+      class="w-full flex justify-between items-center border border-gray-200 text-left bg-gray-100 px-5 py-4 font-semibold text-gray-800 hover:bg-gray-200 transition"
+    >
+      <span>{{ title }}</span>
+      <span
+        class="text-2xl font-bold text-gray-800 transition-transform duration-300 ease-in-out"
+        x-text="activeIndex === 0 ? '+' : '–'"
+      ></span>
+    </button>
+
+    <div
+      x-ref="panel0"
+      x-bind:style="activeIndex != 0 ? 'max-height:' + $refs.panel0.scrollHeight + 'px; opacity:1;' : 'max-height:0; opacity:0;'"
+      class="overflow-hidden transition-all duration-700 ease-in-out"
+    >
+      <div class="px-5 py-5  text-gray-700 text-sm leading-relaxed">
+  {{description}}
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: db946c45-9aa6-4cae-a916-cbfd62b953b4
+  bundle: tailpine_team
+  default_langcode: en
+  depends:
+    ae7b14aa-ee88-4dc9-9abf-c06a1143ece6: media
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Team Member Three'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  field_tailpine_media_image:
+    -
+      entity: ae7b14aa-ee88-4dc9-9abf-c06a1143ece6
+  field_tailpine_subtitle:
+    -
+      value: 'Developer Three'
+  field_tailpine_title:
+    -
+      value: 'Team Member Three'

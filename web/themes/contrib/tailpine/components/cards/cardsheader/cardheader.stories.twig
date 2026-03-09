@@ -1,0 +1,29 @@
+{% stories cardheader with { title: 'Components/Cards/Cards Header (Cardheader)' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      columns: 'grid-cols-1',
+      bg_color: 'Background Color',
+      title: 'Title',
+      description: 'Description',
+      content: 'Content'
+    }
+  } %}
+{% embed 'tailpine:cardheader' with { 
+  columns: columns,
+  bg_color: bg_color
+} %}
+  {% block title %}
+    {{ title }}
+  {% endblock %}
+  {% block description %}
+    {{ description }}
+  {% endblock %}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

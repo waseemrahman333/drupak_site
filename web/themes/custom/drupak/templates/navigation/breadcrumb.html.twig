@@ -1,0 +1,31 @@
+{#
+/**
+ * @file
+ * Theme override for a breadcrumb trail.
+ *
+ * Available variables:
+ * - breadcrumb: Breadcrumb trail items.
+ */
+#}
+
+{% set array  = [] %}
+{% if breadcrumb %}
+
+	{% for item in breadcrumb %}
+
+{% set obj = {
+
+   url: item.url,
+   text: item.text
+ 
+} %}
+		
+
+  {% set breadcrumb = array|merge([obj]) %}
+{% endfor %}
+{% endif %}
+
+{# Include the Storybook component's variables and structure here #}
+{% include 'tailpine:breadcrumb' with {
+    breadcrumb: breadcrumb
+} %}

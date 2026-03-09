@@ -1,0 +1,17 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Post Style  Header
+status: stable
+group: Cards & Posts
+description: 'A post style with a header.'
+slots:
+  title:
+    title: Title
+    description: "Name of the Speaker. Plain text."
+  cta:
+    title: Cta
+    description: "Subtitle of the Speaker. Plain text."
+  content:
+    title: Content
+    description: "Subtitle of the Speaker. Plain text."
+
+

@@ -1,0 +1,7 @@
+name: 'Outline Button'
+props:
+  text: 'Outline Button'
+  url: ''
+  size: md
+  disabled: false
+  variant: outline

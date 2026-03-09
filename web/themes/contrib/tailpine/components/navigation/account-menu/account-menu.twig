@@ -1,0 +1,22 @@
+{% if items %}
+  <div class="flex flex-col md:flex-row gap-4">
+    {% for action in items %}
+      <a
+        href="{{ action.url }}"
+        target="{{ action.target }}"
+        class="px-4 py-2 rounded text-body-bg font-medium transition block w-100 text-center md:w-fit max-w-[290px]
+          {% if loop.index == 1 %}
+            !bg-primary hover:!bg-primary hover:!opacity-80
+          {% elseif loop.index == 2 %}
+            !bg-body hover:!bg-body hover:!opacity-80
+          {% endif %}
+        ">
+        {{ action.title }}
+      </a>
+    {% endfor %}
+  </div>
+{% endif %}
+
+
+
+

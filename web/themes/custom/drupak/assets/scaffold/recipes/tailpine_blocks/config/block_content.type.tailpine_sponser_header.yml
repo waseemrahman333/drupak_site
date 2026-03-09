@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 7GyqaKJFbQTGGljXnQPWbqwH8zqQm-WCouxyrxxCdIo
+id: tailpine_sponser_header
+label: 'Sponsor Header'
+revision: false
+description: null

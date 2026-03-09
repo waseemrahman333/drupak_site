@@ -1,0 +1,91 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tailpine_content
+    - paragraphs.paragraphs_type.tailpine_card
+    - paragraphs.paragraphs_type.tailpine_card_two
+    - paragraphs.paragraphs_type.tailpine_cards_header
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: KT0QejDLybyjwB3CtN_6MKhj3oB8LiD571SVrKncyzY
+id: paragraph.tailpine_cards_header.field_tailpine_content
+field_name: field_tailpine_content
+entity_type: paragraph
+bundle: tailpine_cards_header
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      tailpine_card: tailpine_card
+      tailpine_card_two: tailpine_card_two
+    negate: 0
+    target_bundles_drag_drop:
+      hero:
+        weight: 3
+        enabled: false
+      tailpine_accordion:
+        weight: 10
+        enabled: false
+      tailpine_accordion_header:
+        weight: 11
+        enabled: false
+      tailpine_card:
+        weight: 12
+        enabled: true
+      tailpine_card_two:
+        weight: 21
+        enabled: true
+      tailpine_cards_header:
+        weight: 13
+        enabled: false
+      tailpine_contact_us_form:
+        weight: 27
+        enabled: false
+      tailpine_cta:
+        weight: 4
+        enabled: false
+      tailpine_get_in_touch:
+        weight: 29
+        enabled: false
+      tailpine_hero_style_two:
+        weight: 30
+        enabled: false
+      tailpine_media_and_text:
+        weight: 31
+        enabled: false
+      tailpine_post_cards:
+        weight: 15
+        enabled: false
+      tailpine_post_wrapper:
+        weight: 16
+        enabled: false
+      tailpine_sponser_company:
+        weight: 34
+        enabled: false
+      tailpine_sponser_header:
+        weight: 35
+        enabled: false
+      tailpine_sub_page_hero:
+        weight: 36
+        enabled: false
+      tailpine_team:
+        weight: 37
+        enabled: false
+      tailpine_teams_header:
+        weight: 38
+        enabled: false
+      tailpine_testimonial:
+        weight: 39
+        enabled: false
+      tailpine_testimonial_header:
+        weight: 40
+        enabled: false
+field_type: entity_reference_revisions

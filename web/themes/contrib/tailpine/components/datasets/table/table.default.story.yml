@@ -1,0 +1,64 @@
+name: Default
+props:
+  caption: "Employee Directory"
+  header:
+    - content: "ID"
+      tag: "th"
+    - content: "Name"
+      tag: "th"
+    - content: "Department"
+      tag: "th"
+    - content: "Position"
+      tag: "th"
+    - content: "Email"
+      tag: "th"
+  rows:
+    - cells:
+        - content: "1"
+          tag: "td"
+        - content: "John Doe"
+          tag: "td"
+        - content: "Engineering"
+          tag: "td"
+        - content: "Senior Developer"
+          tag: "td"
+        - content: "john.doe@example.com"
+          tag: "td"
+    - cells:
+        - content: "2"
+          tag: "td"
+        - content: "Jane Smith"
+          tag: "td"
+        - content: "Design"
+          tag: "td"
+        - content: "Lead Designer"
+          tag: "td"
+        - content: "jane.smith@example.com"
+          tag: "td"
+    - cells:
+        - content: "3"
+          tag: "td"
+        - content: "Bob Johnson"
+          tag: "td"
+        - content: "Marketing"
+          tag: "td"
+        - content: "Marketing Manager"
+          tag: "td"
+        - content: "bob.johnson@example.com"
+          tag: "td"
+    - cells:
+        - content: "4"
+          tag: "td"
+        - content: "Alice Williams"
+          tag: "td"
+        - content: "Sales"
+          tag: "td"
+        - content: "Sales Representative"
+          tag: "td"
+        - content: "alice.williams@example.com"
+          tag: "td"
+  responsive: true
+  bordered: true
+  hoverable: true
+  size: "default"
+  no_striping: false

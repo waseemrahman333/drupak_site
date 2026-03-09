@@ -1,0 +1,21 @@
+<div class="container max-w-[1920px] w-full mx-auto  {{ header_fixed_class }}">
+  <header
+    class="flex justify-between items-center px-6 lg:px-10 py-4 bg-body-bg text-body shadow-md"
+    x-data="{ open: false, mobOpen: false, searchOpen: false }"
+    @click.away="searchOpen = false"
+    @keydown.escape="searchOpen = false"
+  >
+    {# Branding site logo #}
+    <div class="header_branding"> {{ page.branding }}</div>
+
+    {# Menu links with search icon #}
+    <div class="main-links flex flex-col lg:flex-row justify-center items-center gap-10 flex-row-reverse">
+      {# Menu links #}
+      {{ page.primary_menu }}
+
+      {# Right Actions #}
+      <div class="right-actions hidden md:!block">{{ page.top_right_actions }}</div>
+    </div> <!-- Closing .main-links div -->
+
+  </header>
+</div>

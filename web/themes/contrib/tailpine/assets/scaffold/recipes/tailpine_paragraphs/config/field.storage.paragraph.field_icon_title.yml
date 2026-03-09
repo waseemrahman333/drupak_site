@@ -1,0 +1,44 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_icon_title
+field_name: field_icon_title
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: icon_facebook
+      label: Facebook
+    -
+      value: icon_youtube
+      label: Youtube
+    -
+      value: icon_instagram
+      label: Instagram
+    -
+      value: icon_mail
+      label: Mail
+    -
+      value: icon_contact
+      label: Contact
+    -
+      value: icon_x
+      label: X
+    -
+      value: icon_location
+      label: Location
+    -
+      value: icon_linkedlin
+      label: Linkedin
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

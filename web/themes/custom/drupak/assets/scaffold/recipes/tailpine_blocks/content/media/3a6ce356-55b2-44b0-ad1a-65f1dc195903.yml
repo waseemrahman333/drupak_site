@@ -1,0 +1,35 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 3a6ce356-55b2-44b0-ad1a-65f1dc195903
+  bundle: image
+  default_langcode: en
+  depends:
+    f21d9d07-2775-4e8f-94f5-c28cfe994d7b: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: poststyleimage4.png
+  created:
+    -
+      value: 1756752497
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+  field_media_image:
+    -
+      entity: f21d9d07-2775-4e8f-94f5-c28cfe994d7b
+      alt: 'post image 4'
+      title: ''
+      width: 393
+      height: 220

@@ -1,0 +1,9 @@
+name: Default
+props:
+  imageurl: https://cdn.pixabay.com/photo/2017/10/04/18/11/trees-2817102_1280.jpg
+slots:
+  title: Title
+  subtitle: Subtitle
+  description: Description
+  date: Date
+  cta: CTA

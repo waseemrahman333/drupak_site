@@ -1,0 +1,14 @@
+{% stories image_widget with { title: 'Components/Image Widget' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      data: []
+    }
+  } %}
+{% embed 'tailpine:image-widget' with { 
+  data: data
+} %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

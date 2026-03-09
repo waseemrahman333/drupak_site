@@ -1,0 +1,14 @@
+{% stories main_menu with { title: 'Components/Main Menu' } %}
+
+{% story default with {
+    name: '1. Main Menu Example',
+    args: { 
+      nested: [{"title":"Home","url":"\/","target":"_self"},{"title":"Services","url":"\/services","target":"_self","children":[{"title":"Web Development","url":"\/services\/web","target":"_self","children":[{"title":"Frontend","url":"\/services\/web\/frontend","target":"_self","children":[{"title":"React","url":"\/services\/web\/frontend\/react","target":"_self","children":[{"title":"Expert","url":"\/services\/web\/frontend\/react\/expert","target":"_self"}]}]},{"title":"Backend","url":"\/services\/web\/backend","target":"_self"}]},{"title":"Mobile Development","url":"\/services\/mobile","target":"_self"},{"title":"SEO","url":"\/services\/seo","target":"_self"}]},{"title":"Products","url":"\/products","target":"_self","children":[{"title":"Enterprise","url":"\/products\/enterprise","target":"_self","children":[{"title":"CMS Solutions","url":"\/products\/enterprise\/cms","target":"_self"},{"title":"E-commerce","url":"\/products\/enterprise\/ecommerce","target":"_self"}]},{"title":"Small Business","url":"\/products\/small-business","target":"_self"}]},{"title":"About","url":"\/about","target":"_self","children":[{"title":"Our Team","url":"\/about\/team","target":"_self"},{"title":"Contact Us","url":"\/about\/contact","target":"_self"}]},{"title":"Blog","url":"\/blog","target":"_self"}]
+    }
+  } %}
+{% embed 'components:main-menu' with { 
+  nested: nested
+} %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

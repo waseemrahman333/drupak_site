@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.media_and_text
+    - field.storage.block_content.field_select_the_media_postion
+  module:
+    - options
+id: block_content.media_and_text.field_select_the_media_postion
+field_name: field_select_the_media_postion
+entity_type: block_content
+bundle: media_and_text
+label: 'Select The Media Postion'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,9 @@
+name: Button - Success Color
+description: Success colored button
+
+props:
+  content: 'Success Button'
+  color: success
+  size: md
+  outline: false
+

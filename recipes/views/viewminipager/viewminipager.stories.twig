@@ -1,0 +1,18 @@
+{% stories viewminipager with { title: 'Components/View Mini Pager' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      heading_id: 'mini-pager',
+      size: 'md',
+      items: {"previous":{"href":"#","text":"\u2039 Prev","attributes":[]},"current":"2s","next":{"href":"#","text":"Next \u203a","attributes":[]}}
+    }
+  } %}
+{% embed 'components:viewminipager' with { 
+  heading_id: heading_id,
+  size: size,
+  items: items
+} %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

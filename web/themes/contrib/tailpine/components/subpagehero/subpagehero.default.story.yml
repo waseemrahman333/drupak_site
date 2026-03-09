@@ -1,0 +1,10 @@
+name: Sub Page Hero
+description: Sub-page hero with background image and gradient
+
+slots:
+  title: 'About Our Company'
+  description: 'Discover our mission, values, and the team behind our success. We are committed to excellence and innovation.'
+
+props:
+  bg_image: 'https://cdn.pixabay.com/photo/2024/04/02/10/28/bangladesh-8670559_1280.jpg'
+  heading_level: 1

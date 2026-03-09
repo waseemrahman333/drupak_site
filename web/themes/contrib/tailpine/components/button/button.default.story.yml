@@ -1,0 +1,13 @@
+name: Default
+props:
+  button_html_tag: button
+  url: 'URL Link'
+  id: ID
+  color: primary
+  outline: false
+  size: md
+  disabled: false
+  rounded: none
+  button_utility_classes: {  }
+slots:
+  content: Content

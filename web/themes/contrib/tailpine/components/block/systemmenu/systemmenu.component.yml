@@ -1,0 +1,52 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: System Menu
+label: 'System Menu'
+description: 'Component for rendering a system menu block with accessible heading and content.'
+category: 'Navigation'
+status: stable
+group: Blocks
+
+props:
+  type: object
+  properties:
+    plugin_id:
+      type: string
+      description: 'The ID of the block implementation.'
+      default: 'system_menu_block'
+    derivative_plugin_id:
+      type: string
+      description: 'Used to build a class name specific to the menu (e.g., main, footer).'
+      default: 'main'
+    configuration:
+      type: object
+      properties:
+        label:
+          type: string
+          description: 'The configured label of the block.'
+          default: 'Main navigation'
+        label_display:
+          type: string
+          description: 'Controls if the label is visible.'
+          default: 'true'
+        provider:
+          type: string
+          description: 'The module or provider of the block.'
+          default: 'system'
+    title_prefix:
+      type: string
+      description: 'Additional markup before the title.'
+      default: ''
+    title_suffix:
+      type: string
+      description: 'Additional markup after the title.'
+      default: ''
+slots:
+  block_label:
+    title: Label Slot
+    description: Slot for the block label.
+  block_content:
+    title: Content Slot
+    description: Slot for the block content.
+  content:
+    title: Default Content
+    description: Default content for Block.

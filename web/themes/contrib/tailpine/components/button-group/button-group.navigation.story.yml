@@ -1,0 +1,46 @@
+name: Button Group - Navigation
+description: Pagination or navigation button group
+
+slots:
+  buttons:
+    - type: component
+      component: "tailpine:button"
+      slots:
+        content: "← Previous"
+      props:
+        color: primary
+        size: md
+        outline: true
+    - type: component
+      component: "tailpine:button"
+      slots:
+        content: "1"
+      props:
+        color: primary
+        size: md
+        outline: false
+    - type: component
+      component: "tailpine:button"
+      slots:
+        content: "2"
+      props:
+        color: primary
+        size: md
+        outline: true
+    - type: component
+      component: "tailpine:button"
+      slots:
+        content: "3"
+      props:
+        color: primary
+        size: md
+        outline: true
+    - type: component
+      component: "tailpine:button"
+      slots:
+        content: "Next →"
+      props:
+        color: primary
+        size: md
+        outline: true
+

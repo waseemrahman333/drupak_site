@@ -1,0 +1,14 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: SUb Hero CTA
+description: "An optional CTA that hides itself if no data is provided."
+status: stable
+group: sub hero cta
+props:
+  type: object
+  properties:
+    link:
+      type: string
+      title: Link URL
+    link_text:
+      type: string
+      title: Link Text

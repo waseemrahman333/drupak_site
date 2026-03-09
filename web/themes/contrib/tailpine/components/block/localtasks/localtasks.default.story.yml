@@ -1,0 +1,7 @@
+name: Default
+props:
+  configuration:
+    label: 'Local Tasks'
+    provider: system
+slots:
+  content: 'Content Slot'

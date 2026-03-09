@@ -1,0 +1,7 @@
+name: 'Ghost Button'
+props:
+  text: 'Ghost Button'
+  url: ''
+  size: md
+  disabled: false
+  variant: ghost

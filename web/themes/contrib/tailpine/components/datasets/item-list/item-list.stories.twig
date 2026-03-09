@@ -1,0 +1,22 @@
+{% stories item_list with { title: 'Components/Item List' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      items: [],
+      title: 'Value',
+      list_type: 'Value',
+      empty: 'Value',
+      context: []
+    }
+  } %}
+{% embed 'components:item-list' with { 
+  items: items,
+  title: title,
+  list_type: list_type,
+  empty: empty,
+  context: context
+} %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

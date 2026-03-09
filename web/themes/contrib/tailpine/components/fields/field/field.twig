@@ -1,0 +1,75 @@
+{#
+/**
+ * Field Component
+ * 
+ * Versatile field component for displaying various content types.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the containing element.
+ * - label_hidden: Whether to show the field label or not.
+ * - label: The label for the field.
+ * - multiple: TRUE if a field can contain multiple items.
+ * - items: List of all the field items. Each item contains:
+ *   - attributes: List of HTML attributes for each item.
+ *   - content: The field item's content.
+ * - field_name: The name of the field.
+ * - field_type: The type of the field.
+ * - label_display: The display settings for the label.
+ * - field_utility_classes: Additional Tailwind classes for field wrapper.
+ * - field_title_utility_classes: Additional classes for field label.
+ * - field_item_utility_classes: Additional classes for field items.
+ */
+#}
+{%
+  set field_classes = [
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display,
+    label_display == 'inline' ? 'flex flex-wrap items-start gap-2' : 'mb-4',
+    multiple ? 'field--items' : 'field--item',
+  ]|merge(field_utility_classes ?: [])
+%}
+
+{%
+  set field_item_classes = [
+    'field__item',
+    'text-gray-900 dark:text-gray-100',
+  ]|merge(field_item_utility_classes ?: [])
+%}
+
+{%
+  set field_title_classes = [
+    'field__label',
+    'text-sm font-semibold text-gray-900 dark:text-gray-100 mb-2',
+    label_display == 'visually_hidden' ? 'visually-hidden' : '',
+    label_display == 'inline' ? 'mb-0 mr-2' : '',
+  ]|merge(field_title_utility_classes ?: [])
+%}
+
+{% if label_hidden %}
+  {% if multiple %}
+    <div{{ attributes.addClass(field_classes) }}>
+      {% for item in items %}
+        <div{{ item.attributes.addClass(field_item_classes) }}>{{ item.content }}</div>
+      {% endfor %}
+    </div>
+  {% else %}
+    {% for item in items %}
+      <div{{ attributes.addClass(field_classes) }}>{{ item.content }}</div>
+    {% endfor %}
+  {% endif %}
+{% else %}
+  <div{{ attributes.addClass(field_classes) }}>
+    <div{{ title_attributes.addClass(field_title_classes) }}>{{ label }}</div>
+    {% if multiple %}
+      <div class="field__items space-y-2">
+    {% endif %}
+    {% for item in items %}
+      <div{{ item.attributes.addClass(field_item_classes) }}>{{ item.content }}</div>
+    {% endfor %}
+    {% if multiple %}
+      </div>
+    {% endif %}
+  </div>
+{% endif %}

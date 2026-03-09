@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+id: block_content.field_tailpine_btn_border_radius
+field_name: field_tailpine_btn_border_radius
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: rounded-full
+      label: 'Rounded Full'
+    -
+      value: rounded-sm
+      label: 'Rounded  Normal'
+    -
+      value: rounded-md
+      label: 'Rounded Medium'
+    -
+      value: rounded-lg
+      label: 'Rounded  large'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

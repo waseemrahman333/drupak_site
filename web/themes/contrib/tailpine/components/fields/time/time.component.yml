@@ -1,0 +1,15 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+status: stable
+title: 'Time'
+name: Time
+description: 'A simple time component to display time text.'
+defaults:
+  attributes: {}
+  text: 'time'
+  timestamp: '94994954'
+props:
+  type: object
+  properties:
+    text:
+      type: [string, 'null']
+      description: List of all time text.

@@ -1,0 +1,15 @@
+name: Hero Style Four
+description: "A hero section with a background image, title, description, and call-to-action buttons."
+props:
+  imageurl: 'https://cdn.pixabay.com/photo/2025/08/06/12/41/hand-9758764_1280.jpg'
+slots:
+  title: "Empowering Business Growth with Technology"
+  description: "Techesolve provides custom software, cloud services, and IT support to streamline operations and drive business success."
+  cta:
+  - type:  component
+    component: "tailpine:cta"
+    slots:
+      title: "CTA Component"
+      color_schema: primary
+      button_variant: hover_arrow_move
+

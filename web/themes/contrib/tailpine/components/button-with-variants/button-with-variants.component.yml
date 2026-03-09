@@ -1,0 +1,65 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/11.x/core/modules/sdc/src/metadata.schema.json
+name: Button with Variants
+description: A button component with multiple TailwindCSS style variants
+status: stable
+props:
+  type: object
+  properties:
+    text:
+      type: string
+      title: Button Text
+      description: The text displayed on the button
+      default: Click me
+    url:
+      type: string
+      title: URL
+      description: Optional URL if the button should be a link
+      default: ''
+    size:
+      type: string
+      title: Size
+      description: The size of the button
+      enum:
+        - sm
+        - md
+        - lg
+      default: md
+    variant:
+      type: string
+      title: Variant
+      description: The style variant of the button
+      enum:
+        - primary
+        - secondary
+        - outline
+        - ghost
+        - danger
+        - success
+      default: primary
+    disabled:
+      type: boolean
+      title: Disabled
+      description: Whether the button is disabled
+      default: false
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: HTML attributes
+      description: Additional HTML attributes for the button element
+variants:
+  primary:
+    title: Primary Button
+  secondary:
+    title: Secondary Button
+  outline:
+    title: Outline Button
+  ghost:
+    title: Ghost Button
+  danger:
+    title: Danger Button
+  success:
+    title: Success Button
+  large_primary:
+    title: Large Primary Button
+  small_outline:
+    title: Small Outline Button
+

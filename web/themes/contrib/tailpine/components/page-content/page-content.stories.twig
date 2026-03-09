@@ -1,0 +1,16 @@
+{% stories page_content with { title: 'Components/Page Content' } %}
+
+{% story default with {
+    name: '1. Page Content',
+    args: { 
+      content: '<h2 class="text-2xl font-bold mb-4">Welcome</h2><p>This is the page content area with some text.</p>'
+    }
+  } %}
+{% embed 'tailpine:page-content' %}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

@@ -1,0 +1,30 @@
+name: Select Dropdown
+description: Dropdown select menu with options
+
+props:
+  options:
+    - type: option
+      value: ""
+      label: "-- Select an option --"
+      selected: true
+    - type: option
+      value: "option1"
+      label: "Option 1"
+      selected: false
+    - type: option
+      value: "option2"
+      label: "Option 2"
+      selected: false
+    - type: option
+      value: "option3"
+      label: "Option 3"
+      selected: false
+    - type: optgroup
+      label: "Group of Options"
+      options:
+        - value: "group1"
+          label: "Grouped Option 1"
+          selected: false
+        - value: "group2"
+          label: "Grouped Option 2"
+          selected: false

@@ -1,0 +1,10 @@
+name: Button - As Link
+description: Button rendered as anchor tag
+
+props:
+  content: 'Visit Page'
+  button_html_tag: a
+  url: '/some-page'
+  color: secondary
+  size: md
+

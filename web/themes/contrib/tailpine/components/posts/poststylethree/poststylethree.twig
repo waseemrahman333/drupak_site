@@ -1,0 +1,93 @@
+{#
+/**
+ * Post Style Three Component
+ * 
+ * Blog post card with image, category badge, date, title, and description.
+ * Designed for blog listings and article grids.
+ *
+ * Available variables:
+ * - title: (string) Post title. Required.
+ * - description: (string|markup) Post excerpt or summary. Required.
+ * - subtitle: (string) Category or tag label. Optional.
+ * - date: (string) Publication date. Use formatted date string.
+ * - imageurl: (string) Featured image URL. Use 16:9 or 3:2 aspect ratio images.
+ * - link_url: (string) Post destination URL. Optional.
+ * - heading_level: (number) HTML heading level (1-6). Default: 2
+ *
+ * Accessibility:
+ * - Uses <article> semantic HTML
+ * - Proper heading hierarchy
+ * - Descriptive alt text on images
+ * - Sufficient color contrast
+ * - <time> element for dates with datetime attribute
+ * - Decorative separator has aria-hidden
+ *
+ * Theme Variables Used:
+ * - bg-primary: Category badge background
+ * - text-body-bg: Badge text color
+ * - text-body: Main text color
+ * - bg-body: Separator line color
+ *
+ * Examples:
+ * {% include 'tailpine:poststylethree' with {
+ *   title: 'Getting Started with Tailwind',
+ *   description: 'Learn the basics of Tailwind CSS...',
+ *   subtitle: 'Tutorial',
+ *   date: '2025-01-15',
+ *   imageurl: 'https://cdn.pixabay.com/photo/...jpg',
+ * } %}
+ */
+#}
+
+{% set post_heading = heading_level|default(2) %}
+{% set post_image = imageurl|default('') %}
+
+<article class="blogPost flex flex-col h-full">
+  <!-- Featured Image -->
+  {% if post_image %}
+  <div class="image overflow-hidden">
+    <img 
+      loading="lazy"
+      src="{{ post_image }}" 
+      class="w-full h-full aspect-[16/9] object-cover hover:scale-105 transition-transform duration-300" 
+      alt="{{ title }}"
+    >
+  </div>
+  {% endif %}
+
+  <!-- Post Content -->
+  <div class="content flex flex-col flex-grow">
+    <!-- Meta Information (Category + Date) -->
+    <div class="flex gap-2 items-center pt-8 pb-5 text-xs font-medium text-body">
+      {% if subtitle %}
+        <span class="bg-primary bg-opacity-70 px-3 py-2 text-body-bg">
+          {{ subtitle }}
+        </span>
+      {% endif %}
+      
+      {% if subtitle and date %}
+        <span class="w-8 h-[1px] bg-body" aria-hidden="true"></span>
+      {% endif %}
+      
+      {% if date %}
+        <time class="text-sm" datetime="{{ date }}" >
+          {{ date }}
+        </time>
+      {% endif %}
+    </div>
+
+    <!-- Post Title -->
+    {% if title %}
+      <h{{ post_heading }} class="text-[clamp(26px,5vw,40px)] text-body font-medium leading-tight mb-5">
+        {{ title }}
+      </h{{ post_heading }}>
+    {% endif %}
+
+    <!-- Post Description -->
+    {% if description %}
+      <div class="text-gray-700 text-base lg:text-lg font-light leading-relaxed">
+        {{ description }}
+      </div>
+    {% endif %}
+  </div>
+</article>

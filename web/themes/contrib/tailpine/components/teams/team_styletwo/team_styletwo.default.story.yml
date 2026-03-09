@@ -1,0 +1,41 @@
+name: Default
+props:
+  imageurl: "https://cdn.pixabay.com/photo/2017/10/04/18/11/trees-2817102_1280.jpg"
+slots:
+  title: "Full Name"
+  subtitle: "Senior Developer"
+  description: "John is a passionate web developer with years of experience in building scalable and user-friendly applications."
+  icons: 
+  - type: component
+    component: tailpine:tailpine_icons
+    props:
+      iconTitle:  'icon_facebook'
+      iconStyle:  'fill'
+      iconFillColor: 'primary'
+      iconStrokeColor: 'body-bg'
+      iconSize: 'lg'
+      showLinkText: ''
+      linkText: 'facebook'
+      iconLink: '/facebook.com'
+  - type: component
+    component: tailpine:tailpine_icons
+    props:
+      iconTitle:  'icon_x'
+      iconStyle:  'fill'
+      iconFillColor: 'primary'
+      iconStrokeColor: 'body-bg'
+      iconSize: 'lg'
+      showLinkText: ''
+      linkText: 'facebook'
+      iconLink: '/facebook.com'  
+  - type: component
+    component: tailpine:tailpine_icons
+    props:
+      iconTitle:  'icon_instagram'
+      iconStyle:  'fill'
+      iconFillColor: 'primary'
+      iconStrokeColor: 'body-bg'
+      iconSize: 'lg'
+      showLinkText: ''
+      linkText: 'facebook'
+      iconLink: '/facebook.com'  

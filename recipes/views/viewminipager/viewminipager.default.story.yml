@@ -1,0 +1,14 @@
+name: Default
+props:
+  heading_id: "mini-pager"
+  size: md
+  items:
+    previous:
+      href: "#"
+      text: "‹ Prev"
+      attributes: {}
+    current: 2s
+    next:
+      href: "#"
+      text: "Next ›"
+      attributes: {}

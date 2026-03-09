@@ -1,0 +1,13 @@
+name: Field - Inline Label
+description: Field with label displayed inline with content
+
+props:
+  field_name: field_author
+  field_type: string
+  label: "Author:"
+  label_hidden: false
+  label_display: inline
+  multiple: false
+  items:
+    - content: "John Doe"
+

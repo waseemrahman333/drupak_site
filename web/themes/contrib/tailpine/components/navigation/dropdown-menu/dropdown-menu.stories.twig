@@ -1,0 +1,29 @@
+{% stories dropdown_menu with { title: 'Components/Dropdown Menu' } %}
+
+{% story default with {
+    name: '1. Dropdown Menu Item',
+    args: { 
+      text: 'Account Settings',
+      url: '/account/settings',
+      divider: false
+    }
+  } %}
+{% embed 'components:dropdown-menu' with { 
+  text: text,
+  url: url,
+  divider: divider
+} %}{% endembed %}
+{% endstory %}
+
+{% story divider with {
+    name: '2. Dropdown Menu Divider',
+    args: { 
+      divider: true
+    }
+  } %}
+{% embed 'components:dropdown-menu' with { 
+  divider: divider
+} %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

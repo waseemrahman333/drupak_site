@@ -1,0 +1,47 @@
+{#
+/**
+ * @file
+ * Template to display a view of unformatted rows with TailwindCSS styling.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ * - row_utility_classes: An array of optional utility classes to be used.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+{% block views_unformatted_title %}
+  {% if title %}
+    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+      {{ title }}
+    </h3>
+  {% endif %}
+{% endblock %}
+
+{% block views_unformatted_rows %}
+  <div class="space-y-4">
+    {% for row in rows %}
+      {%
+        set row_classes = [
+          default_row_class ? 'views-row' : '',
+          'p-4',
+          'bg-white dark:bg-gray-900',
+          'border border-gray-200 dark:border-gray-700',
+          'shadow-sm',
+          'hover:shadow-md',
+          'transition-shadow duration-150',
+        ]|merge(row_utility_classes ?: [])
+      %}
+
+      <div{{ row.attributes.addClass(row_classes) }}>
+        {{- row.content -}}
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}

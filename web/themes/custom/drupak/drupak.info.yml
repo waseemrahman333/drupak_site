@@ -1,0 +1,36 @@
+name: drupak
+type: theme
+'base theme': tailpine
+starterkit: true
+libraries:
+  - drupak/main
+  - drupak/alpine
+  - drupak/fixed-header
+  - drupak/swiper
+  - drupak/swiper-custom
+  - drupak/form-styling
+description: 'A modern Drupal  Theme powered by Tailwind CSS and Alpine.js, designed for flexibility, speed, and clean UI development.'
+core_version_requirement: ^11
+generator: 'tailpine_starterkit:1.0.0-rc7'
+logo: logo.svg
+favicon: favicon.svg
+regions:
+  branding: Branding
+  primary_menu: 'Primary Menu'
+  search: Search
+  top_right_actions: 'Top Right Actions'
+  header: Header
+  secondary_menu: 'Secondary Menu'
+  breadcrumb: Breadcrumb
+  highlighted: Highlighted
+  help: Help
+  content: Content
+  sidebar_first: 'Sidebar First'
+  sidebar_second: 'Sidebar Second'
+  footer: Footer
+dependencies:
+  - 'drupal:search'
+  - 'drupal:help'
+version: 1.0.0-rc7
+project: tailpine
+datestamp: 1763417260

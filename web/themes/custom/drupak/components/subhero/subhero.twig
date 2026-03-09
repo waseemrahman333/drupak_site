@@ -1,0 +1,29 @@
+<!-- Hero Services -->
+<section class="grid w-full relative bg-grey-bg overflow-hidden">
+
+	<div class="col-start-1 row-start-1 w-full h-full">
+		<img src="{{ imageurl }}" alt="" class="w-full h-full object-cover block"/>
+	</div>
+
+	<div class="col-start-1 row-start-1 relative z-10 w-full container-px pt-[clamp(100px,71.43px+8.93vw,140px)] md:pt-[clamp(140px,125px+1.95vw,150px)] xl:pt-[clamp(150px,50px+7.81vw,200px)] pb-25 md:w-[87.5%] xl:w-full md:max-xl:pb-[clamp(72px,calc(72px+48*((100vw-768px)/512)),120px)] flex flex-col justify-center">
+
+		<div class="max-w-480 mx-auto w-full xl:flex xl:items-start gap-12">
+			<div class="xl:w-1/2">
+
+				<div class="flex gap-4 items-center text-tertiary">
+					{{ hero_cta }}
+				</div>
+
+				<h2 class="mt-4 text-h2 leading-tight">{{ title }}</h2>
+			</div>
+
+			<div class="xl:w-1/2 mt-4 xl:!mt-0">
+				<p class="text-p opacity-90">
+					{{ description }}
+				</p>
+			</div>
+
+		</div>
+	</div>
+
+</section>

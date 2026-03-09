@@ -1,0 +1,32 @@
+<div class="container max-w-[1920px] w-full mx-auto  {{ header_fixed_class }}">
+  <header
+    class="relative flex items-center justify-between px-6 lg:px-10 py-4 bg-body-bg text-body shadow-md"
+    x-data="{ open: false, mobOpen: false, searchOpen: false }"
+    @click.away="searchOpen = false"
+    @keydown.escape="searchOpen = false"
+  >
+    <!-- Branding: always left -->
+    <div class="header_branding flex-shrink-0">
+      {{ page.branding }}
+    </div>
+
+    <!-- Centered menu (only on desktop) -->
+    <div class="hidden lg:!block absolute z-40 left-1/2 transform -translate-x-1/2">
+      {{ page.primary_menu }}
+    </div>
+
+    <!-- Right-side content: search and menu (menu only shows on mobile here) -->
+    <div class="flex items-center gap-10 lg:gap-6">
+      <!-- Search Icon -->
+      <div class="search-icon">
+        {{ page.search }}
+      </div>
+
+      <!-- Menu (visible only on mobile) -->
+      <div class="lg:hidden">
+        {{ page.primary_menu }}
+      </div>
+    </div>
+  </header>
+</div>
+

@@ -1,0 +1,199 @@
+{#
+/**
+ * @file
+ * Vertical Tabs Component
+ * 
+ * A modern vertical tabs interface with side navigation and content panels.
+ * Uses Alpine.js for interactive tab switching.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the wrapper element
+ * - children: The rendered tab panes (usually details elements)
+ * - layout: Navigation position ('left' or 'right')
+ *
+ * Features:
+ * - Interactive tab navigation with Alpine.js
+ * - Smooth transitions and hover effects
+ * - Dark mode support
+ * - Accessible markup with ARIA attributes
+ * - Beautiful Tailwind CSS 4 styling
+ */
+#}
+
+{% set layout = layout|default('left') %}
+
+{# Parse the children to extract tab data #}
+{% set tabs_data = [] %}
+{% if children %}
+  {# This is a placeholder - in real usage, Drupal will parse details elements #}
+  {# For now, we'll use the children directly and let Alpine handle the display #}
+{% endif %}
+
+{%
+  set wrapper_classes = [
+    'vertical-tabs',
+    'flex',
+    'flex-col',
+    'lg:flex-row',
+    'gap-6',
+    'w-full',
+    'max-w-full',
+    'min-h-[400px]',
+    layout == 'right' ? 'lg:flex-row-reverse' : '',
+  ]
+%}
+
+<div 
+  {{ (attributes|default(create_attribute())).addClass(wrapper_classes).setAttribute('data-vertical-tabs-panes', TRUE) }}
+  x-data="{
+    activeTab: 0,
+    tabs: [],
+    init() {
+      const container = this.$refs.originalContent;
+      if (!container) {
+        console.error('Original content container not found');
+        return;
+      }
+      
+      const details = container.querySelectorAll('details, .vertical-tabs__pane');
+      console.log('Found tabs:', details.length);
+      
+      if (details.length === 0) {
+        console.warn('No vertical tabs found in container');
+        return;
+      }
+      
+      this.tabs = Array.from(details).map((detail, index) => {
+        let title = 'Tab ' + (index + 1);
+        let content = '';
+        
+        if (detail.tagName === 'DETAILS') {
+          const summary = detail.querySelector('summary');
+          if (summary) {
+            const titleSpan = summary.querySelector('span, .vertical-tabs__pane-title');
+            title = titleSpan ? titleSpan.textContent.trim() : summary.textContent.trim();
+            
+            const contentEl = detail.querySelector('.vertical-tabs__pane-content');
+            if (contentEl) {
+              content = contentEl.innerHTML;
+            } else {
+              const contentWrapper = document.createElement('div');
+              Array.from(detail.children).forEach(node => {
+                if (node !== summary && node.tagName !== 'SUMMARY') {
+                  contentWrapper.appendChild(node.cloneNode(true));
+                }
+              });
+              content = contentWrapper.innerHTML;
+            }
+          } else {
+            content = detail.innerHTML;
+          }
+        } else {
+          const titleEl = detail.querySelector('.vertical-tabs__pane-title, summary');
+          if (titleEl) {
+            const titleSpan = titleEl.querySelector('span');
+            title = titleSpan ? titleSpan.textContent.trim() : titleEl.textContent.trim();
+          }
+          
+          const contentEl = detail.querySelector('.vertical-tabs__pane-content');
+          if (contentEl) {
+            content = contentEl.innerHTML;
+          } else {
+            content = detail.innerHTML;
+          }
+        }
+        
+        console.log('Tab ' + index + ':', title, 'Content length:', content.length);
+        
+        return {
+          title: title,
+          content: content
+        };
+      });
+      
+      this.activeTab = 0;
+      console.log('Vertical tabs initialized with', this.tabs.length, 'tabs');
+    },
+    selectTab(index) {
+      this.activeTab = index;
+    },
+    selectPreviousTab() {
+      if (this.activeTab > 0) {
+        this.activeTab--;
+      } else {
+        this.activeTab = this.tabs.length - 1;
+      }
+    },
+    selectNextTab() {
+      if (this.activeTab < this.tabs.length - 1) {
+        this.activeTab++;
+      } else {
+        this.activeTab = 0;
+      }
+    }
+  }"
+  x-on:keydown.arrow-up.prevent="selectPreviousTab()"
+  x-on:keydown.arrow-down.prevent="selectNextTab()"
+>
+  
+  {# Navigation Sidebar #}
+  <div class="vertical-tabs__menu-wrapper w-full lg:w-64 lg:max-w-xs flex-shrink-0">
+    <nav 
+      class="vertical-tabs__menu bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 lg:sticky lg:top-4 overflow-hidden"
+      role="tablist" 
+      aria-label="Vertical tabs navigation"
+    >
+      <ul class="vertical-tabs__menu-list">
+        <template x-for="(tab, index) in tabs" x-bind:key="index">
+          <li class="vertical-tabs__menu-item-wrapper">
+            <button
+              type="button"
+              class="vertical-tabs__menu-item w-full text-left px-4 py-3 text-sm font-medium transition-all duration-150 border-l-4 flex items-center justify-between gap-3"
+              x-bind:class="{
+                'bg-white dark:bg-gray-900 text-primary dark:text-primary border-primary font-semibold shadow-sm': activeTab === index,
+                'text-gray-700 dark:text-gray-300 border-transparent hover:bg-white/50 dark:hover:bg-gray-700/50 hover:text-gray-900 dark:hover:text-gray-100 hover:border-gray-300 dark:hover:border-gray-600': activeTab !== index
+              }"
+              x-on:click="selectTab(index)"
+              x-bind:aria-selected="activeTab === index"
+              x-bind:tabindex="activeTab === index ? 0 : -1"
+              role="tab"
+              x-text="tab.title"
+            ></button>
+          </li>
+        </template>
+      </ul>
+    </nav>
+  </div>
+
+  {# Content Panels #}
+  <div 
+    class="vertical-tabs__panes flex-1 min-w-0 w-full lg:w-auto overflow-hidden"
+    role="region"
+    aria-live="polite"
+  >
+    <template x-for="(tab, index) in tabs" x-bind:key="index">
+      <div
+        x-show="activeTab === index"
+        x-transition:enter="transition ease-out duration-200"
+        x-transition:enter-start="opacity-0 translate-x-4"
+        x-transition:enter-end="opacity-100 translate-x-0"
+        x-transition:leave="transition ease-in duration-150"
+        x-transition:leave-start="opacity-100 translate-x-0"
+        x-transition:leave-end="opacity-0 -translate-x-4"
+        class="vertical-tabs__pane"
+        role="tabpanel"
+        x-bind:aria-hidden="activeTab !== index"
+      >
+        <div class="vertical-tabs__pane-inner bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 p-6 shadow-sm w-full max-w-full">
+          <div class="w-full max-w-full" x-html="tab.content"></div>
+        </div>
+      </div>
+    </template>
+  </div>
+
+  {# Hidden container for original children to parse #}
+  <div class="hidden" x-ref="originalContent">
+    {{ children }}
+  </div>
+
+</div>

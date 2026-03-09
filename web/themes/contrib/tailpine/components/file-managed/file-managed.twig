@@ -1,0 +1,10 @@
+{{ attach_library('tailpine/file') }}
+{%
+  set classes = [
+    'js-form-managed-file',
+    'form-managed-file',
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {{ element }}
+</div>

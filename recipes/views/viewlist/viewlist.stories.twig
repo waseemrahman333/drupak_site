@@ -1,0 +1,18 @@
+{% stories viewlist with { title: 'Components/View List' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      title: '',
+      rows: 'Value',
+      list_type: 'ul'
+    }
+  } %}
+{% embed 'components:viewlist' with { 
+  title: title,
+  rows: rows,
+  list_type: list_type
+} %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

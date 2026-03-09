@@ -1,0 +1,42 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: d96a72d6-2a53-454d-a5af-f3e05d508428
+  bundle: tailpine_sponser_header
+  default_langcode: en
+  depends:
+    5d555ed6-1fe3-4444-be3c-a4d923d83e7c: block_content
+    7192cb02-9f77-454a-a2fc-c92d5b2446a8: block_content
+    1c16de47-f360-4cbb-b7eb-8e60d5994c84: block_content
+    e2cba888-a98b-4e0b-95a5-e72d91a288ab: block_content
+    2e68bb0c-b59c-426e-b342-7b73f2993c83: block_content
+    1818e808-73a5-4d4c-adb7-df068f5bdc7f: block_content
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Sponsor Header'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  field_block:
+    -
+      entity: 5d555ed6-1fe3-4444-be3c-a4d923d83e7c
+    -
+      entity: 7192cb02-9f77-454a-a2fc-c92d5b2446a8
+    -
+      entity: 1c16de47-f360-4cbb-b7eb-8e60d5994c84
+    -
+      entity: e2cba888-a98b-4e0b-95a5-e72d91a288ab
+    -
+      entity: 2e68bb0c-b59c-426e-b342-7b73f2993c83
+    -
+      entity: 1818e808-73a5-4d4c-adb7-df068f5bdc7f
+  field_tailpine_title:
+    -
+      value: "Sponsor's & Partners"

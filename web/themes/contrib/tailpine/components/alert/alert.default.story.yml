@@ -1,0 +1,6 @@
+name: Alert - Success
+description: Success alert message with auto-dismiss and close button.
+
+props:
+  messages: "Your changes have been saved successfully!"
+  type: "success"

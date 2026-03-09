@@ -1,0 +1,14 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: View Exposed Form
+description: Component for displaying a Drupal View's exposed form.
+status: stable
+group: "View"
+props:
+  type: object
+  properties:
+    form:
+      type: string
+      title: Form
+      description: The HTML string representing the exposed form.
+      default: ''
+

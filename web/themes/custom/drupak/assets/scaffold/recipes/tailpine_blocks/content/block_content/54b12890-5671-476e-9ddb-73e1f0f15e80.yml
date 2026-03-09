@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 54b12890-5671-476e-9ddb-73e1f0f15e80
+  bundle: tailpine_cta
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Team Cta'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  field_tailpine_btn_border_radius:
+    -
+      value: rounded-full
+  field_tailpine_btn_type:
+    -
+      value: hover_arrow_move
+  field_tailpine_button_style:
+    -
+      value: primary
+  field_tailpine_link:
+    -
+      uri: 'internal:/'
+      title: 'View All Team'
+      options: {  }

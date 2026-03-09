@@ -1,0 +1,28 @@
+{#
+/**
+ * Image Formatter Component
+ * 
+ * Formats image field output with optional link wrapper.
+ *
+ * Available variables:
+ * - url: Optional link URL to wrap image.
+ * - image: Image markup/render array.
+ * - image_formatter_utility_classes: Additional Tailwind classes.
+ */
+#}
+{%
+  set wrapper_classes = [
+    'image-formatter',
+    'block',
+  ]|merge(image_formatter_utility_classes ?: [])
+%}
+
+{% if url %}
+  <a href="{{ url }}" class="{{ wrapper_classes|join(' ') }} hover:opacity-90 transition-opacity duration-150">
+    {{ image }}
+  </a>
+{% else %}
+  <div class="{{ wrapper_classes|join(' ') }}">
+    {{ image }}
+  </div>
+{% endif %}

@@ -1,0 +1,38 @@
+name: Button Group - Toolbar Actions
+description: Toolbar with common editing actions
+
+slots:
+  buttons:
+    - type: component
+      component: "tailpine:button"
+      slots:
+        content: "Bold"
+      props:
+        color: body
+        size: sm
+        outline: true
+    - type: component
+      component: "tailpine:button"
+      slots:
+        content: "Italic"
+      props:
+        color: body
+        size: sm
+        outline: true
+    - type: component
+      component: "tailpine:button"
+      slots:
+        content: "Underline"
+      props:
+        color: body
+        size: sm
+        outline: true
+    - type: component
+      component: "tailpine:button"
+      slots:
+        content: "Link"
+      props:
+        color: body
+        size: sm
+        outline: true
+

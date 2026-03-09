@@ -1,0 +1,22 @@
+{% if context.list_style %}
+  {%- set wrapper_attributes = wrapper_attributes ? wrapper_attributes.addClass('item-list--' ~ context.list_style) : '' %}
+  {%- set attributes = attributes ? attributes.addClass('item-list__' ~ context.list_style) : '' %}
+{% endif %}
+
+{% if items is not empty or empty is not empty -%}
+  <div class="item-list   rounded-xl shadow-sm p-6 max-w-3xl mx-auto my-6 transition-all duration-300 hover:shadow-md">
+    {%- if title is not empty -%}
+      <h3 class="text-2xl font-semibold text-primary mb-4 border-b border-secondary/20 pb-2">{{ title }}</h3>
+    {%- endif -%}
+
+    {%- if items -%}
+      <{{ list_type }}{{ attributes.addClass('space-y-3 list-disc list-inside text-body text-base leading-relaxed') }}>
+        {%- for item in items %}
+          <li class="hover:text-primary transition-colors duration-200">{{ item.value }}</li>
+        {%- endfor -%}
+      </{{ list_type }}>
+    {%- else -%}
+      <p class="text-secondary italic">{{ empty }}</p>
+    {%- endif -%}
+  </div>
+{%- endif %}

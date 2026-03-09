@@ -1,0 +1,28 @@
+{% stories cardtwostyle with { title: 'Components/Card Style Two' } %}
+
+{% story default with {
+    name: '1. Card Style Two - Vertical',
+    args: { 
+      imageurl: 'https://cdn.pixabay.com/photo/2024/04/02/10/28/bangladesh-8670559_1280.jpg',
+      heading_level: 2,
+      title: 'Build Modern Websites',
+      description: 'Discover how to create stunning, responsive websites with our comprehensive toolkit. Perfect for developers of all skill levels.'
+    }
+  } %}
+{% embed 'components:cardtwostyle' with { 
+  imageurl: imageurl,
+  heading_level: heading_level
+} %}
+  {% block title %}
+    {{ title }}
+  {% endblock %}
+  {% block description %}
+    {{ description }}
+  {% endblock %}
+  {% block cta %}
+    {{ cta }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

@@ -1,0 +1,27 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: filter_caption
+description: Component for displaying an image with a caption.
+status: stable
+props:
+  type: object
+  properties:
+    tag:
+      type: string
+      title: Caption Tag
+      description: The tag used for the caption container.
+      default: 'media'
+    classes:
+      type: string
+      title: Additional Classes
+      description: Extra Tailwind classes for styling.
+      default: 'text-gray-600 italic'
+    src:
+      type: string
+      title: Image Source
+      description: The URL of the image.
+      default: 'https://via.placeholder.com/150'
+    caption:
+      type: string
+      title: Caption Text
+      description: The caption displayed below the image.
+      default: 'This is a sample image with a caption.'

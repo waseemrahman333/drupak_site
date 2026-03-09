@@ -1,0 +1,14 @@
+name: Title - H1 Page Title
+description: Main page title as H1 heading
+
+props:
+  field_name: title
+  field_type: string
+  label_display: hidden
+  is_inline: false
+  heading_level: h1
+  items:
+    - content: "Welcome to Our Platform"
+  title_utility_classes:
+    - "text-4xl"
+    - "mb-6"

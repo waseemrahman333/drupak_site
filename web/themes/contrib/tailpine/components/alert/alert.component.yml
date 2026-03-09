@@ -1,0 +1,25 @@
+# This is so your IDE knows about the syntax for fixes and autocomplete.
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+
+# The human readable name.
+name: Alert
+description: drupal status messages.
+status: stable
+variants:
+  warning:
+    title: warning
+  error:
+    title: error
+  success:
+    title: success
+  tertiary:
+    title: primary
+props:
+  type: object
+  properties:
+    messages:
+      type: string
+      title: Messages
+    type:
+      type: string
+      title: Status Headings

@@ -1,0 +1,18 @@
+{% stories spinner with { title: 'Components/Spinner' } %}
+
+{% story default with {
+    name: '1. Spinner - Loading',
+    args: { 
+      size: 'md',
+      color: 'primary',
+      label: 'Loading...'
+    }
+  } %}
+{% embed 'tailpine:spinner' with { 
+  size: size,
+  color: color,
+  label: label
+} %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

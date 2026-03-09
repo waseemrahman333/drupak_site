@@ -1,0 +1,7 @@
+name: Navbar Brand
+description: Site logo and name
+
+props:
+  url: '/'
+  text: 'Tailpine'
+

@@ -1,0 +1,18 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Form
+group: Forms & Inputs
+status: stable
+description: A form component.
+props:
+  type: object
+  properties:
+    action:
+      type: string
+      description: Form action URL
+    method:
+      type: string
+      description: Form method (GET/POST)
+slots:
+  children:
+    title: Children
+    description: The child elements of the form.

@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.accordion_sytle_one
+    - field.storage.block_content.field_tailpine_description
+  module:
+    - text
+id: block_content.accordion_sytle_one.field_tailpine_description
+field_name: field_tailpine_description
+entity_type: block_content
+bundle: accordion_sytle_one
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

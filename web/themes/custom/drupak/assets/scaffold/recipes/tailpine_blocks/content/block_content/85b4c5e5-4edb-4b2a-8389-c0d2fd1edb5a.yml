@@ -1,0 +1,40 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 85b4c5e5-4edb-4b2a-8389-c0d2fd1edb5a
+  bundle: tailpine_post_header
+  default_langcode: en
+  depends:
+    834ccfc8-8284-4010-96e8-9738bc1a75d6: block_content
+    7b200a85-b9d8-48f0-a51d-5844618e0cd4: block_content
+    2d6c32cd-ffda-4e8d-b55d-aa8766fc6ef1: block_content
+    1fa7df57-24cc-4c8a-affb-7289d7a0f254: block_content
+    5127ee26-77d2-4285-8b13-dc043eeb11f5: block_content
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Post Header'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  field_block:
+    -
+      entity: 834ccfc8-8284-4010-96e8-9738bc1a75d6
+  field_tailpine_add_post_card:
+    -
+      entity: 7b200a85-b9d8-48f0-a51d-5844618e0cd4
+    -
+      entity: 2d6c32cd-ffda-4e8d-b55d-aa8766fc6ef1
+    -
+      entity: 1fa7df57-24cc-4c8a-affb-7289d7a0f254
+    -
+      entity: 5127ee26-77d2-4285-8b13-dc043eeb11f5
+  field_tailpine_title:
+    -
+      value: "New's & Insights"

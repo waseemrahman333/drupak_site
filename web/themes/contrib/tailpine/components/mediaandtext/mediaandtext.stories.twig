@@ -1,0 +1,30 @@
+{% stories mediaandtext with { title: 'Components/Media and Text' } %}
+
+{% story default with {
+    name: '1. Media and Text',
+    args: { 
+      image: 'https://cdn.pixabay.com/photo/2024/04/02/10/28/bangladesh-8670559_1280.jpg',
+      title: 'Media and Text Component',
+      position: 'row',
+      description: 'This is a Media and Text Description for Media and Text Component Demo Page to show how it works  and how it looks like. You can add any content here as per your requirement. This is a Media and Text Description for Media and Text Component Demo Page. You can add any content here as per your requirement. This is a Media and Text Description for Media and Text Component Demo Page to show how it works  and how it'
+    }
+  } %}
+{% embed 'tailpine:mediaandtext' with { 
+  image: image
+} %}
+  {% block title %}
+    {{ title }}
+  {% endblock %}
+  {% block position %}
+    {{ position }}
+  {% endblock %}
+  {% block description %}
+    {{ description }}
+  {% endblock %}
+  {% block cta %}
+    {{ cta }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

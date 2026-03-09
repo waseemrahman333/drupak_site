@@ -1,0 +1,41 @@
+<table class="w-full border border-secondary/30 border-collapse rounded-2xl shadow-sm overflow-hidden bg-body-bg" {{ attributes }}>
+  {% if caption %}
+    <caption class="text-xl font-semibold text-primary mb-3 py-3 text-center  rounded-t-2xl">
+      {{ caption }}
+    </caption>
+  {% endif %}
+
+  {% if header %}
+    <thead class=" text-secondary uppercase text-sm font-semibold tracking-wide border-b border-secondary/20">
+      <tr>
+        {% for cell in header %}
+          <th class="px-5 py-3 text-center border-b border-secondary/20">
+            {{ cell.content|raw }}
+          </th>
+        {% endfor %}
+      </tr>
+    </thead>
+  {% endif %}
+
+  {% if rows %}
+    <tbody class="text-body divide-y divide-secondary/20">
+      {% for row in rows %}
+        <tr class="{{ cycle(['bg-body-bg', ''], loop.index0) }} hover:bg-primary/5 transition-colors duration-300">
+          {% for cell in row.cells %}
+            <td class="px-5 py-3 text-center align-middle">
+              {{ cell.content|raw }}
+            </td>
+          {% endfor %}
+        </tr>
+      {% endfor %}
+    </tbody>
+  {% elseif empty %}
+    <tbody>
+      <tr class="">
+        <td colspan="{{ header_columns }}" class="text-center py-6 text-secondary italic">
+          {{ empty }}
+        </td>
+      </tr>
+    </tbody>
+  {% endif %}
+</table>

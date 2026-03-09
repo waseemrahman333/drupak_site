@@ -1,0 +1,55 @@
+{#
+/**
+ * Progress Bar Component
+ * 
+ * Visual progress indicator for task completion.
+ *
+ * Accessibility:
+ * - role="progressbar"
+ * - aria-valuenow, aria-valuemin, aria-valuemax
+ * - aria-label for screen readers
+ */
+#}
+
+{% set progress_value = value|default(0) %}
+{% set progress_max = max|default(100) %}
+{% set progress_percentage = (progress_value / progress_max * 100)|round %}
+{% set progress_color = color|default('primary') %}
+{% set progress_height = height|default('md') %}
+{% set show_percent = show_percentage ?? true %}
+
+{% set height_classes = {
+  'sm': 'h-2',
+  'md': 'h-4',
+  'lg': 'h-6',
+} %}
+
+{% set color_classes = {
+  'primary': 'bg-primary',
+  'secondary': 'bg-secondary',
+  'success': 'bg-success',
+  'warning': 'bg-warning',
+  'error': 'bg-error',
+} %}
+
+<div class="w-full">
+  {% if label or show_percent %}
+  <div class="flex justify-between mb-1 text-sm">
+    {% if label %}<span class="text-body font-medium">{{ label }}</span>{% endif %}
+    {% if show_percent %}<span class="text-gray-600">{{ progress_percentage }}%</span>{% endif %}
+  </div>
+  {% endif %}
+  
+  <div class="w-full bg-gray-200 overflow-hidden {{ height_classes[progress_height] }}">
+    <div 
+      class="{{ color_classes[progress_color] }} {{ height_classes[progress_height] }} transition-all duration-300"
+      style="width: {{ progress_percentage }}%"
+      role="progressbar"
+      aria-valuenow="{{ progress_value }}"
+      aria-valuemin="0"
+      aria-valuemax="{{ progress_max }}"
+      aria-label="{{ label|default('Progress') }}"
+    ></div>
+  </div>
+</div>
+

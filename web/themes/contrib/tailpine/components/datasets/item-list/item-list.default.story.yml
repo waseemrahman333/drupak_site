@@ -1,0 +1,7 @@
+name: Default
+props:
+  items: {  }
+  title: Value
+  list_type: Value
+  empty: Value
+  context: {  }

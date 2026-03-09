@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services 2</title>
+    <link rel="stylesheet" href="src/output.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body class="bg-body-gray">
+    <!----------------------------- navbar start ----------------------------->
+    <nav class="fixed top-0 left-0 w-full nav-px z-20">
+                <div class="relative flex items-end items-center justify-between bg-body-bg p-[clamp(16px,3vw,18.5px)]">
+                    <!-- Logo -->
+                    <div class="flex items-center gap-3">
+                    <a href="index.html"> <img class="w-[clamp(96px,12vw,151px)] h-[clamp(35px,7vw,55px)]" src="images/Logo.svg" alt=""></a>
+                    </div>
+
+                    <!-- Nav Options -->
+                    <div class="">
+                        <!-- Hamburger -->
+                        <div onclick="openMenu(this)" class="xl:hidden cursor-pointer px-[clamp(8px,2vw,12px)] py-[clamp(9px,2vw,14px)] bg-secondary ">
+                            <svg class="w-[clamp(19px,3.5vw,31px)] h-[clamp(19px,3.5vw,31px)]" viewBox="0 0 32 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="31.6667" height="3.8" fill="var(--color-tertiary)" />
+                                <rect y="11.8" width="31.6667" height="3.8" fill="var(--color-tertiary)" />
+                                <rect y="23.6" width="31.6667" height="3.8" fill="var(--color-tertiary)" />
+                            </svg>
+                        </div>
+
+                        <!-- Links -->
+                        <div
+                            class="nav__option--links text-tertiary font-semibold load hidden border-t-2 border-primary top-full absolute right-0 left-0 shadow-2xl flex flex-col gap-2.5 bg-body-bg px-4 py-2.5 xl:static xl:flex xl:flex-row xl:min-h-fit xl:border-0 xl:shadow-none xl:gap-[clamp(28px,2.2vw,40px)] xl:bg-transparent xl:p-0 xl:items-center">
+                            <a class=" py-1.5 px-5 xl:py-1 xl:px-0 lg:flex lg:items-center h-fit  rounded-sm"
+                                href="./index.html"><p class="relative after:content-[] after:h-0.5 xl:after:h-1 after:absolute after:left-0 after:top-full after:bg-primary after:w-0 hover:after:w-full after:transition-all after:duration-200 after:ease-in-out">HOME</p></a>
+                            <a class=" py-1.5 px-5 xl:py-1 xl:px-0 lg:flex lg:items-center h-fit  rounded-sm"
+                                href="./about-us.html"><p class="relative after:content-[] after:h-0.5 xl:after:h-1 after:absolute after:left-0 after:top-full after:bg-primary after:w-0 hover:after:w-full after:transition-all after:duration-200 after:ease-in-out">ABOUT US</p></a>
+                            <div class="relative flex flex-col xl:justify-center">
+                                <div id="services" onclick="dropDown()"
+                                    class="cursor-pointer flex justify-between items-center py-1.5 px-5 xl:py-1 h-fit xl:px-0 xl:gap-2 rounded-sm">
+                                    <p class="relative after:content-[] after:h-0.5 xl:after:h-1 after:absolute after:left-0 after:top-full after:bg-primary after:w-0 hover:after:w-full after:transition-all after:duration-200 after:ease-in-out">SERVICES</p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8"
+                                        fill="none">
+                                        <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <div style="max-height: 0px; opacity: 0;"
+                                    class="services bg-body-bg px-4 flex flex-col gap-3 transition-all duration-300 ease-in-out overflow-hidden xl:absolute xl:z-10 xl:top-full xl:border-t-2 border-primary xl:left-0 xl:shadow-2xl">
+                                    <a class=" py-1.5 hover:bg-secondary transition-all duration-300 px-5 xl:py-2.5 xl:flex xl:items-center text-nowrap"
+                                        href="services-detail.html">Drupal 10 development</a>
+                                    <a class=" py-1.5 hover:bg-secondary transition-all duration-300 px-5 xl:py-2.5 xl:flex xl:items-center text-nowrap"
+                                        href="services.html">Upgrade & Migration</a>
+                                    <a class=" py-1.5 hover:bg-secondary transition-all duration-300 px-5 xl:py-2.5 xl:flex xl:items-center text-nowrap"
+                                        href="#">Maintenance & Support</a>
+                                    <a class=" py-1.5 hover:bg-secondary transition-all duration-300 px-5 xl:py-2.5 xl:flex xl:items-center text-nowrap"
+                                        href="#">Drupal Consulting</a>
+                                    <a class=" py-1.5 hover:bg-secondary transition-all duration-300 px-5 xl:py-2.5 xl:flex xl:items-center text-nowrap"
+                                        href="#">Digital Marketing</a>
+                                    <a class=" py-1.5 hover:bg-secondary transition-all duration-300 px-5 xl:py-2.5 xl:flex xl:items-center text-nowrap"
+                                        href="#">Drupal Commerce</a>
+                                </div>
+                            </div>
+                            <a class=" py-1.5 px-5 xl:py-1 xl:px-0 lg:flex lg:items-center h-fit  rounded-sm"
+                                href="traning.html"><p class="relative after:content-[] after:h-0.5 xl:after:h-1 after:absolute after:left-0 after:top-full after:bg-primary after:w-0 hover:after:w-full after:transition-all after:duration-200 after:ease-in-out">TRAINING</p></a>
+                            <a class=" py-1.5 px-5 xl:py-1 xl:px-0 lg:flex lg:items-center h-fit  rounded-sm"
+                                href="blog.html"><p class="relative after:content-[] after:h-0.5 xl:after:h-1 after:absolute after:left-0 after:top-full after:bg-primary after:w-0 hover:after:w-full after:transition-all after:duration-200 after:ease-in-out">BLOG</p></a>
+
+                            <!-- Contact -->
+                            <a class="mt-5 group flex items-center justify-between gap-2.5 text-tertiary font-semibold py-1.5 px-5 rounded-lg xl:mt-0 xl:px-5 xl:py-3 bg-primary hover:bg-transparent border border-transparent hover:border-tertiary transition-all duration-300"
+                                href="contactus.html">Contact Us
+                                <svg class="group-hover:transform group-hover:translate-x-1 transition-all duration-300"
+                                    xmlns="http://www.w3.org/2000/svg" width="17" height="8" viewBox="0 0 17 8" fill="none">
+                                    <path d="M12.7393 8V4.8H0.0255641L0 3.192H12.7393V0L17 4L12.7393 8Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    </nav>
+    <!-- ------------------------- Section One --------------------------- -->
+    <div class="relative w-full  overflow-hidden">
+
+
+        <picture class="absolute inset-0 -z-10 pointer-events-none w-full">
+            <!-- <source media="(min-width:1920px)" srcset="./images/1920.png">
+            <source media="(min-width:1280px)" srcset="./images/1280.png">
+            <source media="(min-width:768px)" srcset="./images/tablet1.png"> -->
+        
+            <img
+            src="./images/services 4.svg"
+            alt=""
+            class="w-full h-full object-cover"
+            aria-hidden="true"
+            />
+
+        </picture>
+
+
+            <!-- CONTENT WRAPPER -->
+            <div
+            class="herosection container-px pb-14 pt-24.5 flex flex-col text-tertiary gap-4
+                    md:pt-35 md:pb-12
+                    xl:flex-row xl:justify-between xl:pt-37.5 xl:pb-28.5
+                    2xl:pt-50 2xl:pb-29.5
+                    mx-auto max-w-480"
+            >
+            <!----------------------------- navbar end ------------------------------>
+
+            <!-- HERO CONTENT -->
+            <div class="flex flex-col gap-3 xl:basis-1/2 xl:gap-5 xl:gap-8">
+                <div class="text-p flex items-center gap-1.5">
+                <a class="text-tertiary/80" href="#">Home</a>
+                <svg width="9" height="28" viewBox="0 0 9 28">
+                    <path d="M2 19L7 14L2 9" stroke="black" />
+                </svg>
+                <a href="#">Services</a>
+                </div>
+
+                <h1 class="text-h1">Drupak SEO</h1>
+            </div>
+
+            <div class="xl:max-w-141">
+                <p class="font-normal text-sm leading-6 md:text-base md:leading-7 xl:text-lg xl:leading-7.5 max-w-153">
+At Drupak, we deliver affordable SEO services tailored for Drupal development projects to boost visibility and growth. Our team goes beyond basics with in-depth SEO audit services to identify technical gaps and opportunities.                </p>
+            </div>
+
+            </div>
+    </div>
+
+    <!-- Media and text -->
+    <section class="">
+        <div class="max-w-480 mx-auto flex flex-col xl:flex-row pt-[clamp(60px,2.64vw+49.7px,70px)] md:pt-[clamp(70px,1.95vw+55px,80px)] xl:pt-[clamp(80px,6.25vw,120px)] xl:justify-between gap-[clamp(24px,11vw,92px)]">
+            <div
+                class="xl:basis-1/2 pt-[clamp(60px,10dvh,100px)] xl:pb-[clamp(60px,10dvh,100px)] pr-[var(--container-px)] pl-[var(--container-px)] xl:pr-0 ">
+
+                <h2
+                    class="uppercase text-h2 relative pb-5 font-bold text-tertiary after:h-1 after:w-15 after:content-[] after:bg-tertiary after:absolute after:bottom-0 after:left-0">
+                    Elevating Your Online Presence</h2>
+
+                <p class="text-sm leading-6 md:text-base md:leading-7 xl:text-lg xl:leading-7.5 pt-[clamp(24px,2.1vw+16px,32px)] md:pt-8">
+                    In today's digital landscape, optimizing your Drupal website for search engines is essential
+                    to achieve visibility and long-term success. As a trusted drupal seo company, At Drupak, we
+                    provide expert SEO services tailored for Drupal, helping identify gaps and opportunities
+                    that can boost rankings.
+                    <br><br>
+                    Our solutions focus on keyword optimization, content refinement, and technical SEO
+                    enhancements—ensuring your website performs seamlessly and attracts the right audience.
+                </p>
+
+            </div>
+            <div
+                class=" xl:h-auto xl:basis-1/2 relative h-[clamp(300px,50vh,420px)] sm:h-[clamp(380px,55vh,520px)] md:h-[clamp(420px,60vh,658px)] overflow-visible z-10">
+                <img src="images/drupak-group.png" alt="Drupak team"
+                    class=" absolute top-0 right-0 w-[95%] md:w-[85%] xl:w-full h-full object-cover xl:h-[120%]">
+            </div>
+        </div>
+
+    </section>
+    <section class="">
+
+        <div
+            class="relative bg-grey-bg w-full min-h-fit overflow-hidden [clip-path:polygon(0_10%,_100%_0,_100%_100%,_0%_100%)]">
+
+            <div class="absolute inset-0 bg-secondary [clip-path:polygon(10%_0%,_100%_10%,_100%_100%,_0%_100%,_0%_0%)]">
+            </div>
+            <!-- content -->
+            <div
+                class="max-w-480 mx-auto relative flex flex-col-reverse z-10 xl:items-center xl:flex-row xl:justify-between gap-[clamp(24px,11vw,92px)]">
+                <div
+                    class=" relative h-[clamp(280px,50vw,500px)] xl:pt-30 xl:w-[clamp(561px,40vw,930px)] xl:min-h-[598px] xl:basis-1/2">
+                    <img class=" object-cover absolute h-full w-[94%] md:w-[84%] xl:w-full xl:top-1/10"
+                        src="images/cafe.png" alt="cafe img">
+                </div>
+                <div
+                    class="pl-[var(--container-px)] xl:pl-0 flex flex-col pt-[clamp(90px,9vw,116px)] md:pt-[clamp(116px,10vw,164px)] xl:py-41  xl:basis-1/2 pr-[var(--container-px)]">
+                    <h2
+                        class="uppercase text-h2 relative pb-5 font-bold text-tertiary after:h-1 after:w-15 after:content-[] after:bg-tertiary after:absolute after:bottom-0 after:left-0">
+                        We have the support you need</h2>
+
+                    <p class="text-sm leading-6 md:text-base md:leading-7 xl:text-lg xl:leading-7.5 pt-[clamp(24px,2.1vw+16px,32px)] md:pt-8">
+                        Our dedicated team of experts works closely with you to craft a comprehensive SEO strategy that
+                        aligns with your business goals. By focusing on organic traffic growth and improved search
+                        engine
+                        rankings, we ensure long-term value for your Drupal website. <br><br>
+                        With an emphasis on sustainable
+                        results, our drupal seo services are designed to strengthen your online presence and unlock the
+                        full
+                        potential of your digital platform.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SEO Services -->
+    <section class="container-px bg-body-bg ">
+        <div
+            class="mx-auto max-w-480 h-auto py-[clamp(60px,2.64vw+49.7px,70px)] md:py-[clamp(70px,1.95vw+55px,80px)] xl:py-[clamp(80px,6.25vw,120px)] grid grid-cols-4 md:grid-cols-8 xl:grid-cols-12">
+            <div
+                class="relative z-10 w-full gap-[clamp(20px,3dvw,40px)] text-left col-span-4 md:col-span-8 xl:col-span-6 xl:grid xl:grid-cols-6">
+                <h2
+                    class="uppercase text-h2 relative z-10 pb-5 font-montserrat text-tertiary basis-1/3 after:h-1 after:w-15 after:content-[] after:bg-tertiary after:absolute after:bottom-0 after:left-0 xl:col-span-4">
+                    SEO Services We Provide
+                </h2>
+                <p class="relative z-10 text-sm leading-6 md:text-base md:leading-7 xl:text-lg xl:leading-7.5 max-w-145 pt-6 xl:col-span-4">
+                    Comprehensive SEO solutions tailored for your Drupal website's success
+                </p>
+
+                <a href="#" class="group bg-primary hover:bg-transparent border border-transparent hover:border-tertiary transition-all duration-300 py-4 px-5 flex gap-2.5 items-center justify-center max-w-fit rounded-lg font-semibold text-sm font-open-sans uppercase mt-[clamp(32px,2.12vw+23.7px,40px)] md:mt-10 xl:col-span-6">Talk
+                    to a Drupal SEO Expert<svg
+                        class="group-hover:transform group-hover:translate-x-1 transition-all duration-300"
+                        xmlns="http://www.w3.org/2000/svg" width="17" height="8" viewBox="0 0 17 8" fill="none">
+                        <path d="M12.7393 8V4.8H0.0255641L0 3.192H12.7393V0L17 4L12.7393 8Z" fill="#111111" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="pt-[clamp(40px,2.25vw+31.2px,60px)] xl:pt-0 col-span-4 gap-y-5 md:col-span-8 grid grid-cols-1 md:grid-cols-2 text-lg leading-7.5 xl:text-xl xl:leading-8 xl:col-span-6 xl:h-fit">
+                <div class="flex gap-3 items-center  ">
+                    <div class="w-5 h-5">
+                        <img src="./images/services-svg.svg" alt="" class="w-full h-full object-cover">
+                    </div>
+                    <p class="">On page seo services</p>
+                </div>
+                <div class="flex gap-3 items-center ">
+                    <div class="w-5 h-5">
+                        <img src="./images/services-svg.svg" alt="" class="w-full h-full object-cover">
+                    </div>
+                    <p class="">Technical seo services</p>
+                </div>
+                <div class="flex gap-3 items-center">
+                    <div class="w-5 h-5">
+                        <img src="./images/services-svg.svg" alt="" class="w-full h-full object-cover">
+                    </div>
+                    <p class="">Seo link building services</p>
+                </div>
+                <div class="flex gap-3 items-center">
+                    <div class="w-5 h-5">
+                        <img src="./images/services-svg.svg" alt="" class="w-full h-full object-cover">
+                    </div>
+                    <p class="">Organic seo services</p>
+                </div>
+                <div class="flex gap-3 items-center">
+                    <div class="w-5 h-5">
+                        <img src="./images/services-svg.svg" alt="" class="w-full h-full object-cover">
+                    </div>
+                    <p class="">Seo copywriting services</p>
+                </div>
+                <div class="flex gap-3 items-center">
+                    <div class="w-5 h-5">
+                        <img src="./images/services-svg.svg" alt="" class="w-full h-full object-cover">
+                    </div>
+                    <p class="">Local seo services</p>
+                </div>
+                <div class="flex gap-3 items-center">
+                    <div class="w-5 h-5">
+                        <img src="./images/services-svg.svg" alt="" class="w-full h-full object-cover">
+                    </div>
+                    <p class="">Seo audit services</p>
+                </div>
+                <div class="flex gap-3 items-center">
+                    <div class="w-5 h-5">
+                        <img src="./images/services-svg.svg" alt="" class="w-full h-full object-cover">
+                    </div>
+                    <p class="">International seo services</p>
+                </div>
+                <div class="flex gap-3 items-center">
+                    <div class="w-5 h-5">
+                        <img src="./images/services-svg.svg" alt="" class="w-full h-full object-cover">
+                    </div>
+                    <p class="">Keyword research</p>
+                </div>
+                <div class="flex gap-3 items-center">
+                    <div class="w-5 h-5">
+                        <img src="./images/services-svg.svg" alt="" class="w-full h-full object-cover">
+                    </div>
+                    <p class="">Competitive analysis</p>
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Other Services -->
+    <section class=" container-px">
+        <div
+            class="mx-auto max-w-480 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 py-[clamp(60px,2.64vw+49.7px,70px)] md:py-[clamp(70px,1.95vw+55px,80px)] xl:py-[clamp(80px,6.25vw,120px)]">
+            <div class="xl:text-center col-span-1 md:col-span-2 xl:col-span-3">
+                <h2
+                    class="uppercase col-span-1 md:col-span-2 xl:col-span-3 text-h2 relative z-10 pb-5 font-montserrat text-tertiary basis-1/3 after:h-1 after:w-15 after:content-[] after:bg-tertiary after:absolute after:bottom-0 after:left-0 after:right-0 xl:after:mx-auto">
+                    Other Services
+                </h2>
+                <p class="text-sm leading-6 md:text-base md:leading-7 pt-6 md:pt-[clamp(24px,1.56vw+12px,32px)]">Explore our full range of Drupal development
+                    and digital services</p>
+            </div>
+
+            <div
+                class="col-span-1 md:col-span-2 xl:col-span-3 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-[clamp(16px,0.53vw+13.9px,24px)] xl:gap-[clamp(24px,0.94vw+12px,30px)] pt-12 md:pt-[clamp(48px,2.34vw+30px,60px)] ">
+                <a href=""
+                    class="group col-span-1 border border-secondary rounded-sm bg-body-bg text-tertiary p-5 flex items-center justify-between transition-all duration-300 cursor-pointer">
+                    <div class="flex items-center gap-5">
+                        <div
+                            class="bg-secondary rounded-sm w-12.5 h-12.5 flex items-center justify-center transition-colors duration-300 group-hover:bg-primary">
+                            <img src="./images/drupak-icon-1.svg" alt="icon">
+                        </div>
+                        <p class="text-sm leading-6 md:text-base md:leading-7 xl:text-lg xl:leading-7.5 font-semibold">Drupal Development</p>
+                    </div>
+                    <div class="transition-transform duration-300 group-hover:translate-x-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="text-tertiary">
+                            <path d="M5 12h14m-7-7 7 7-7 7" />
+                        </svg>
+                    </div>
+                </a>
+
+                <a href=""
+                    class="group col-span-1 border border-secondary rounded-sm bg-body-bg text-tertiary p-5 flex items-center justify-between transition-all duration-300 cursor-pointer">
+                    <div class="flex items-center gap-5">
+                        <div
+                            class="bg-secondary rounded-sm w-12.5 h-12.5 flex items-center justify-center transition-colors duration-300 group-hover:bg-primary">
+                            <img src="./images/drupak-icon-2.svg" alt="icon">
+                        </div>
+                        <p class="text-sm leading-6 md:text-base md:leading-7 xl:text-lg xl:leading-7.5 font-semibold">Upgrade & Migration</p>
+                    </div>
+                    <div class="transition-transform duration-300 group-hover:translate-x-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="text-tertiary">
+                            <path d="M5 12h14m-7-7 7 7-7 7" />
+                        </svg>
+                    </div>
+                </a>
+
+                <a href=""
+                    class="group col-span-1 border border-secondary rounded-sm bg-body-bg text-tertiary p-5 flex items-center justify-between transition-all duration-300 cursor-pointer">
+                    <div class="flex items-center gap-5">
+                        <div
+                            class="bg-secondary rounded-sm w-12.5 h-12.5 flex items-center justify-center transition-colors duration-300 group-hover:bg-primary">
+                            <img src="./images/drupak-icon-3.svg" alt="icon">
+                        </div>
+                        <p class="text-sm leading-6 md:text-base md:leading-7 xl:text-lg xl:leading-7.5 font-semibold">Maintenance & Support</p>
+                    </div>
+                    <div class="transition-transform duration-300 group-hover:translate-x-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="text-tertiary">
+                            <path d="M5 12h14m-7-7 7 7-7 7" />
+                        </svg>
+                    </div>
+                </a>
+
+                <a href=""
+                    class="group col-span-1 border border-secondary rounded-sm bg-body-bg text-tertiary p-5 flex items-center justify-between transition-all duration-300 cursor-pointer">
+                    <div class="flex items-center gap-5">
+                        <div
+                            class="bg-secondary rounded-sm w-12.5 h-12.5 flex items-center justify-center transition-colors duration-300 group-hover:bg-primary">
+                            <img src="./images/drupak-icon-4.svg" alt="icon">
+                        </div>
+                        <p class="text-sm leading-6 md:text-base md:leading-7 xl:text-lg xl:leading-7.5 font-semibold">Drupal Consulting</p>
+                    </div>
+                    <div class="transition-transform duration-300 group-hover:translate-x-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="text-tertiary">
+                            <path d="M5 12h14m-7-7 7 7-7 7" />
+                        </svg>
+                    </div>
+                </a>
+
+                <a href=""
+                    class="group col-span-1 border border-secondary rounded-sm bg-body-bg text-tertiary p-5 flex items-center justify-between transition-all duration-300 cursor-pointer">
+                    <div class="flex items-center gap-5">
+                        <div
+                            class="bg-secondary rounded-sm w-12.5 h-12.5 flex items-center justify-center transition-colors duration-300 group-hover:bg-primary">
+                            <img src="./images/drupak-icon-5.svg" alt="icon">
+                        </div>
+                        <p class="text-sm leading-6 md:text-base md:leading-7 xl:text-lg xl:leading-7.5 font-semibold">Digital Marketing</p>
+                    </div>
+                    <div class="transition-transform duration-300 group-hover:translate-x-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="text-tertiary">
+                            <path d="M5 12h14m-7-7 7 7-7 7" />
+                        </svg>
+                    </div>
+                </a>
+
+                <a href=""
+                    class="group col-span-1 border border-secondary rounded-sm bg-body-bg text-tertiary p-5 flex items-center justify-between transition-all duration-300 cursor-pointer">
+                    <div class="flex items-center gap-5">
+                        <div
+                            class="bg-secondary rounded-sm w-12.5 h-12.5 flex items-center justify-center transition-colors duration-300 group-hover:bg-primary">
+                            <img src="./images/drupak-icon-6.svg" alt="icon">
+                        </div>
+                        <p class="text-sm leading-6 md:text-base md:leading-7 xl:text-lg xl:leading-7.5 font-semibold">Drupal Commerce</p>
+                    </div>
+                    <div class="transition-transform duration-300 group-hover:translate-x-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="text-tertiary">
+                            <path d="M5 12h14m-7-7 7 7-7 7" />
+                        </svg>
+                    </div>
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FAQ's -->
+    <section class="bg-body-bg container-px">
+        <div class="mx-auto max-w-480 py-[clamp(60px,2.64vw+49.7px,70px)] md:py-[clamp(70px,1.95vw+55px,80px)] xl:py-[clamp(80px,6.25vw,120px)] grid grid-cols-1 xl:grid-cols-2"
+            x-data="{ selected: null }">
+
+            <div class="mb-12 col-span-1">
+                <h2
+                    class="uppercase text-h2 relative pb-5 font-bold text-tertiary after:h-1 after:w-15 after:content-[''] after:bg-tertiary after:absolute after:bottom-0 after:left-0">
+                    FREQUENTLY ASKED QUESTIONS
+                </h2>
+            </div>
+
+            <div class="col-span-1">
+                <!-- FAQ's 1-->
+                <div class="border-b border-tertiary/10" x-data="{ open: false, id: Math.random() }"
+                    @close-others.window="if ($event.detail.id !== id) open = false">
+
+                    <button @click="open = !open; if (open) $dispatch('close-others', { id: id })"
+                        class="w-full flex justify-between items-center py-6 text-left group cursor-pointer outline-none">
+                        <span class="text-h6 font-semibold text-tertiary transition-colors duration-300"
+                            :class="open ? 'text-primary' : ''">
+                            What is Drupal and what is it used for?
+                        </span>
+                        <span class="text-2xl font-bold text-primary transition-transform duration-500 ease-in-out"
+                            :class="open ? 'rotate-180' : ''" x-text="open ? '−' : '+'">
+                        </span>
+                    </button>
+
+                    <div class="grid transition-[grid-template-rows] duration-500 ease-in-out"
+                        :class="open ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'">
+                        <div class="overflow-hidden">
+                            <div class="pb-6 text-p text-tertiary/80 leading-relaxed transition-opacity duration-500"
+                                :class="open ? 'opacity-100 delay-150' : 'opacity-0'">
+                                Drupal is a powerful CMS. This block now auto-closes others!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ's 2-->
+                <div class="border-b border-tertiary/10" x-data="{ open: false, id: Math.random() }"
+                    @close-others.window="if ($event.detail.id !== id) open = false">
+
+                    <button @click="open = !open; if (open) $dispatch('close-others', { id: id })"
+                        class="w-full flex justify-between items-center py-6 text-left group cursor-pointer outline-none">
+                        <span class="text-h6 font-semibold text-tertiary transition-colors duration-300"
+                            :class="open ? 'text-primary' : ''">
+                            Is Drupal free to use?
+                        </span>
+                        <span class="text-2xl font-bold text-primary transition-transform duration-500 ease-in-out"
+                            :class="open ? 'rotate-180' : ''" x-text="open ? '−' : '+'">
+                        </span>
+                    </button>
+
+                    <div class="grid transition-[grid-template-rows] duration-500 ease-in-out"
+                        :class="open ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'">
+                        <div class="overflow-hidden">
+                            <div class="pb-6 text-sm leading-6 md:text-base md:leading-7 text-tertiary/80 leading-relaxed transition-opacity duration-500"
+                                :class="open ? 'opacity-100 delay-150' : 'opacity-0'">
+                                Yes, it is open-source and free to download.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ's 3-->
+                <div class="border-b border-tertiary/10" x-data="{ open: false, id: Math.random() }"
+                    @close-others.window="if ($event.detail.id !== id) open = false">
+
+                    <button @click="open = !open; if (open) $dispatch('close-others', { id: id })"
+                        class="w-full flex justify-between items-center py-6 text-left group cursor-pointer outline-none">
+                        <span class="text-h6 font-semibold text-tertiary transition-colors duration-300"
+                            :class="open ? 'text-primary' : ''">
+                            What is the difference between Drupal and WordPress?
+                        </span>
+                        <span class="text-2xl font-bold text-primary transition-transform duration-500 ease-in-out"
+                            :class="open ? 'rotate-180' : ''" x-text="open ? '−' : '+'">
+                        </span>
+                    </button>
+
+                    <div class="grid transition-[grid-template-rows] duration-500 ease-in-out"
+                        :class="open ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'">
+                        <div class="overflow-hidden">
+                            <div class="pb-6 text-sm leading-6 md:text-base md:leading-7 text-tertiary/80 leading-relaxed transition-opacity duration-500"
+                                :class="open ? 'opacity-100 delay-150' : 'opacity-0'">
+                                WordPress is beginner-friendly with a huge plugin ecosystem, ideal for blogs and
+                                small-to-medium sites, while Drupal is more complex and developer-focused, offering
+                                superior content architecture and security for large-scale enterprise or government
+                                websites.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ's 4-->
+                <div class="border-b border-tertiary/10" x-data="{ open: false, id: Math.random() }"
+                    @close-others.window="if ($event.detail.id !== id) open = false">
+
+                    <button @click="open = !open; if (open) $dispatch('close-others', { id: id })"
+                        class="w-full flex justify-between items-center py-6 text-left group cursor-pointer outline-none">
+                        <span class="text-h6 font-semibold text-tertiary transition-colors duration-300"
+                            :class="open ? 'text-primary' : ''">
+                            Do I need coding skills to build a site with Drupal?
+                        </span>
+                        <span class="text-2xl font-bold text-primary transition-transform duration-500 ease-in-out"
+                            :class="open ? 'rotate-180' : ''" x-text="open ? '−' : '+'">
+                        </span>
+                    </button>
+
+                    <div class="grid transition-[grid-template-rows] duration-500 ease-in-out"
+                        :class="open ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'">
+                        <div class="overflow-hidden">
+                            <div class="pb-6 text-sm leading-6 md:text-base md:leading-7 text-tertiary/80  transition-opacity duration-500"
+                                :class="open ? 'opacity-100 delay-150' : 'opacity-0'">
+                                Lorem ipsum dolor sit amet consectetur adipiscing elit, rhoncus vulputate curae justo
+                                vivamus magna, habitasse ultrices mollis nostra netus iaculis.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ's 5-->
+                <div class="border-b border-tertiary/10" x-data="{ open: false, id: Math.random() }"
+                    @close-others.window="if ($event.detail.id !== id) open = false">
+
+                    <button @click="open = !open; if (open) $dispatch('close-others', { id: id })"
+                        class="w-full flex justify-between items-center py-6 text-left group cursor-pointer outline-none">
+                        <span class="text-h6 font-semibold text-tertiary transition-colors duration-300"
+                            :class="open ? 'text-primary' : ''">
+                            What are Drupal modules and how do they work?
+                        </span>
+                        <span class="text-2xl font-bold text-primary transition-transform duration-500 ease-in-out"
+                            :class="open ? 'rotate-180' : ''" x-text="open ? '−' : '+'">
+                        </span>
+                    </button>
+
+                    <div class="grid transition-[grid-template-rows] duration-500 ease-in-out"
+                        :class="open ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'">
+                        <div class="overflow-hidden">
+                            <div class="pb-6 text-sm leading-6 md:text-base md:leading-7 text-tertiary/80 transition-opacity duration-500"
+                                :class="open ? 'opacity-100 delay-150' : 'opacity-0'">
+                                Congue tristique vitae gravida urna fermentum lacus tempus consequat montes, leo primis
+                                eu ad iaculis phasellus natoque
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ's 6-->
+                <div class="border-b border-tertiary/10" x-data="{ open: false, id: Math.random() }"
+                    @close-others.window="if ($event.detail.id !== id) open = false">
+
+                    <button @click="open = !open; if (open) $dispatch('close-others', { id: id })"
+                        class="w-full flex justify-between items-center py-6 text-left group cursor-pointer outline-none">
+                        <span class="text-h6 font-semibold text-tertiary transition-colors duration-300"
+                            :class="open ? 'text-primary' : ''">
+                            How do I update Drupal core and modules safely?
+                        </span>
+                        <span class="text-2xl font-bold text-primary transition-transform duration-500 ease-in-out"
+                            :class="open ? 'rotate-180' : ''" x-text="open ? '−' : '+'">
+                        </span>
+                    </button>
+
+                    <div class="grid transition-[grid-template-rows] duration-500 ease-in-out"
+                        :class="open ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'">
+                        <div class="overflow-hidden">
+                            <div class="pb-6 text-sm leading-6 md:text-base md:leading-7 text-tertiary/80  transition-opacity duration-500"
+                                :class="open ? 'opacity-100 delay-150' : 'opacity-0'">
+                                Semper scelerisque dignissim aptent interdum felis ante penatibus, molestie quam conubia
+                                vivamus habitasse consequat nisl class, pretium auctor nec magna taciti ut.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ's 7-->
+                <div class="border-b border-tertiary/10" x-data="{ open: false, id: Math.random() }"
+                    @close-others.window="if ($event.detail.id !== id) open = false">
+
+                    <button @click="open = !open; if (open) $dispatch('close-others', { id: id })"
+                        class="w-full flex justify-between items-center py-6 text-left group cursor-pointer outline-none">
+                        <span class="text-h6 font-semibold text-tertiary transition-colors duration-300"
+                            :class="open ? 'text-primary' : ''">
+                            Is Drupal secure for enterprise-level websites?
+                        </span>
+                        <span class="text-2xl font-bold text-primary transition-transform duration-500 ease-in-out"
+                            :class="open ? 'rotate-180' : ''" x-text="open ? '−' : '+'">
+                        </span>
+                    </button>
+
+                    <div class="grid transition-[grid-template-rows] duration-500 ease-in-out"
+                        :class="open ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'">
+                        <div class="overflow-hidden">
+                            <div class="pb-6 text-sm leading-6 md:text-base md:leading-7 text-tertiary/80 transition-opacity duration-500"
+                                :class="open ? 'opacity-100 delay-150' : 'opacity-0'">
+                                Feugiat mollis rhoncus sollicitudin diam mauris netus litora, phasellus leo nisl
+                                eleifend.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ's 8-->
+                <div class="border-b border-tertiary/10" x-data="{ open: false, id: Math.random() }"
+                    @close-others.window="if ($event.detail.id !== id) open = false">
+
+                    <button @click="open = !open; if (open) $dispatch('close-others', { id: id })"
+                        class="w-full flex justify-between items-center py-6 text-left group cursor-pointer outline-none">
+                        <span class="text-h6 font-semibold text-tertiary transition-colors duration-300"
+                            :class="open ? 'text-primary' : ''">
+                            What themes are available in Drupal, and can I create custom themes?
+                        </span>
+                        <span class="text-2xl font-bold text-primary transition-transform duration-500 ease-in-out"
+                            :class="open ? 'rotate-180' : ''" x-text="open ? '−' : '+'">
+                        </span>
+                    </button>
+
+                    <div class="grid transition-[grid-template-rows] duration-500 ease-in-out"
+                        :class="open ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'">
+                        <div class="overflow-hidden">
+                            <div class="pb-6 text-sm leading-6 md:text-base md:leading-7 text-tertiary/80 transition-opacity duration-500"
+                                :class="open ? 'opacity-100 delay-150' : 'opacity-0'">
+                                Viverra montes nascetur potenti in justo turpis aptent fermentum, risus netus cum
+                                condimentum aliquet nisl facilisis egestas eu, porttitor eleifend primis magnis dis
+                                augue vestibulum.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ's 9-->
+                <div class="border-b border-tertiary/10" x-data="{ open: false, id: Math.random() }"
+                    @close-others.window="if ($event.detail.id !== id) open = false">
+
+                    <button @click="open = !open; if (open) $dispatch('close-others', { id: id })"
+                        class="w-full flex justify-between items-center py-6 text-left group cursor-pointer outline-none">
+                        <span class="text-h6 font-semibold text-tertiary transition-colors duration-300"
+                            :class="open ? 'text-primary' : ''">
+                            How does Drupal handle multilingual content?
+                        </span>
+                        <span class="text-2xl font-bold text-primary transition-transform duration-500 ease-in-out"
+                            :class="open ? 'rotate-180' : ''" x-text="open ? '−' : '+'">
+                        </span>
+                    </button>
+
+                    <div class="grid transition-[grid-template-rows] duration-500 ease-in-out"
+                        :class="open ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'">
+                        <div class="overflow-hidden">
+                            <div class="pb-6 text-sm leading-6 md:text-base md:leading-7 text-tertiary/80 transition-opacity duration-500"
+                                :class="open ? 'opacity-100 delay-150' : 'opacity-0'">
+                                Fermentum ultricies mollis rhoncus vivamus ultrices sollicitudin felis feugiat, tortor
+                                nisi eget rutrum orci eu venenatis morbi, ridiculus fusce integer pretium sapien est
+                                tellus.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ's 10-->
+                <div class="border-b border-tertiary/10" x-data="{ open: false, id: Math.random() }"
+                    @close-others.window="if ($event.detail.id !== id) open = false">
+
+                    <button @click="open = !open; if (open) $dispatch('close-others', { id: id })"
+                        class="w-full flex justify-between items-center py-6 text-left group cursor-pointer outline-none">
+                        <span class="text-h6 font-semibold text-tertiary transition-colors duration-300"
+                            :class="open ? 'text-primary' : ''">
+                            What hosting requirements does Drupal need?
+                        </span>
+                        <span class="text-2xl font-bold text-primary transition-transform duration-500 ease-in-out"
+                            :class="open ? 'rotate-180' : ''" x-text="open ? '−' : '+'">
+                        </span>
+                    </button>
+
+                    <div class="grid transition-[grid-template-rows] duration-500 ease-in-out"
+                        :class="open ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'">
+                        <div class="overflow-hidden">
+                            <div class="pb-6 text-sm leading-6 md:text-base md:leading-7 text-tertiary/80 transition-opacity duration-500"
+                                :class="open ? 'opacity-100 delay-150' : 'opacity-0'">
+                                Dapibus facilisis lobortis sed non neque feugiat litora porta massa quis mus egestas
+                                inceptos parturient, ante conubia auctor viverra quam mauris nascetur nisi leo ac vitae
+                                ultricies.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class=" container-px">
+        <div class="py-[clamp(50px,4vw,60px)] flex flex-col gap-[clamp(40px,5vw,70px)] max-w-480 mx-auto">
+            <div class="flex items-center xl:items-start justify-between border-b border-tertiary/40 pb-[clamp(20px,2vw,30px)]">
+                <div>
+                    <img class="w-full h-full object-cover" src="images/Logo.svg" alt="">
+                </div>
+                <ul class="flex gap-2 ">
+                    <li>
+                        <a aria-label="Facebook" href="#"
+                            class="grid place-items-center w-7.5 h-7.5 bg-primary hover:bg-transparent border border-transparent hover:border-tertiary transition-all duration-300 rounded">
+                            <img src="images/facebook.svg" alt="facebook icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-label="Twitter" href="#"
+                            class="grid place-items-center w-7.5 h-7.5 bg-primary hover:bg-transparent border border-transparent hover:border-tertiary transition-all duration-300 rounded">
+                            <img src="images/twitter.svg" alt="twitter icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-label="LinkedIn" href="#"
+                            class="grid place-items-center w-7.5 h-7.5 bg-primary hover:bg-transparent border border-transparent hover:border-tertiary transition-all duration-300 ease rounded h-full min-w-7.5">
+                            <img src="images/linkedIn.svg" alt="linkedIn svg">
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-label="Drupal" href="#"
+                            class="grid place-items-center w-7.5 h-7.5 bg-primary hover:bg-transparent border border-transparent hover:border-tertiary transition-all duration-300 rounded h-full min-w-7.5">
+                            <img src="images/drupal.svg" alt="drupal icon">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- footer navigations -->
+            <div
+                class=" grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-y-[clamp(24px,4vw,40px)] gap-x-25 justify-between">
+                <div>
+                    <h1 class="text-tertiary text-h6">Location</h1>
+                    <p class="leading-7 text-tertiary mt-[clamp(8px,4vw,24px)]">
+                        Office 18,19 1st Floor, City Trade Center (CTC), Block M, New City Phase 2, Wah Cantt Pakistan.
+                    </p>
+                </div>
+                <div class="w-fit xl:justify-self-end">
+                    <h1 class="text-tertiary text-h6">Quick Links</h1>
+                    <div class="mt-[clamp(8px,4vw,24px)] text-sm leading-6 xl:text-base xl:leading-7 flex flex-col gap-2">
+                        <a class="w-fit relative after:content-[] after:h-1 after:absolute after:left-0 after:top-full after:bg-primary after:w-0 hover:after:w-full after:transition-all after:duration-200 after:ease-in-out"
+                            href="#">About Us</a>
+                        <a class="w-fit relative after:content-[] after:h-1 after:absolute after:left-0 after:top-full after:bg-primary after:w-0 hover:after:w-full after:transition-all after:duration-200 after:ease-in-out"
+                            href="#">Services</a>
+                        <a class="w-fit relative after:content-[] after:h-1 after:absolute after:left-0 after:top-full after:bg-primary after:w-0 hover:after:w-full after:transition-all after:duration-200 after:ease-in-out"
+                            href="#">Blog</a>
+                        <a class="w-fit relative after:content-[] after:h-1 after:absolute after:left-0 after:top-full after:bg-primary after:w-0 hover:after:w-full after:transition-all after:duration-200 after:ease-in-out"
+                            href="#">Training</a>
+                    </div>
+                </div>
+                <div class="w-fit xl:justify-self-end">
+                    <h1 class="text-tertiary text-h6">Phone</h1>
+                    <div class="mt-[clamp(8px,4vw,24px)] text-sm leading-6 xl:text-base xl:leading-7 flex flex-col gap-2">
+                        <a class="w-fit  relative after:content-[] after:h-1 after:absolute after:left-0 after:top-full after:bg-primary after:w-0 hover:after:w-full after:transition-all after:duration-200 after:ease-in-out"
+                            href="tel:+92-3139760741">+92-3139760741</a>
+                    </div>
+                </div>
+                <div class=" w-fit xl:justify-self-end">
+                    <h1 class="text-tertiary text-h6">Email</h1>
+                    <div class="mt-[clamp(8px,4vw,24px)] text-sm leading-6 xl:text-base xl:leading-7 flex flex-col gap-2">
+                        <a class="w-fit  relative after:content-[] after:h-1 after:absolute after:left-0 after:top-full after:bg-primary after:w-0 hover:after:w-full after:transition-all after:duration-200 after:ease-in-out"
+                            href="mailto:info@drupak.com">info@drupak.com</a>
+                    </div>
+                </div>
+            </div>
+            <!-- footer copyright section -->
+
+        </div>
+        <div class="container-px bg-primary w-full text-center py-4  ">
+            <p>&copy; Drupak 2024. All rights reserved.</p>
+        </div>
+    </footer>
+
+    </div>
+    <script src="./src/js/script.js"></script>
+</body>
+
+</html>

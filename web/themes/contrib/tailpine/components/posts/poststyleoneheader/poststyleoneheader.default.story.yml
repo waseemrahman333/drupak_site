@@ -1,0 +1,6 @@
+name: Default
+props: {  }
+slots:
+  title: Title
+  content: Content
+  cta: CTA

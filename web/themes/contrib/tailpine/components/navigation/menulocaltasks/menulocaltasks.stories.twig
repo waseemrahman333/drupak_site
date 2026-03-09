@@ -1,0 +1,20 @@
+{% stories menulocaltasks with { title: 'Components/Local Tasks' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      primary: 'Primary',
+      secondary: 'Secondary'
+    }
+  } %}
+{% embed 'components:menulocaltasks' %}
+  {% block primary %}
+    {{ primary }}
+  {% endblock %}
+  {% block secondary %}
+    {{ secondary }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

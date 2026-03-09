@@ -1,0 +1,22 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Team Style Two Header
+status: stable
+description: "Team Wrapper are used to group and display content in a way that is easily readable."
+group: Teams & Testimonials
+props:
+  type: object
+  properties:
+    columns:
+      type: string
+      title: Columns
+      description:  "No Of Columns of the Wrapper"
+slots:
+  title:
+    title: Title
+    description: "Name of the card. Plain text."
+  content:
+    title: Content
+    description: "Content of the Wrapper. Plain text."
+
+
+

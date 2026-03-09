@@ -1,0 +1,25 @@
+{% stories select with { title: 'Components/Select' } %}
+
+{% story default with {
+    name: '1. Select Dropdown',
+    args: { 
+      options: [{"type":"option","value":"","label":"-- Select an option --","selected":true},{"type":"option","value":"option1","label":"Option 1","selected":false},{"type":"option","value":"option2","label":"Option 2","selected":false},{"type":"option","value":"option3","label":"Option 3","selected":false},{"type":"optgroup","label":"Group of Options","options":[{"value":"group1","label":"Grouped Option 1","selected":false},{"value":"group2","label":"Grouped Option 2","selected":false}]}]
+    }
+  } %}
+{% embed 'components:select' with { 
+  options: options
+} %}{% endembed %}
+{% endstory %}
+
+{% story with_groups with {
+    name: '2. Select with Option Groups',
+    args: { 
+      options: [{"type":"option","value":"","label":"Choose a country","selected":true},{"type":"optgroup","label":"North America","options":[{"value":"us","label":"United States","selected":false},{"value":"ca","label":"Canada","selected":false},{"value":"mx","label":"Mexico","selected":false}]},{"type":"optgroup","label":"Europe","options":[{"value":"uk","label":"United Kingdom","selected":false},{"value":"fr","label":"France","selected":false},{"value":"de","label":"Germany","selected":false}]},{"type":"optgroup","label":"Asia","options":[{"value":"jp","label":"Japan","selected":false},{"value":"cn","label":"China","selected":false},{"value":"in","label":"India","selected":false}]}]
+    }
+  } %}
+{% embed 'components:select' with { 
+  options: options
+} %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

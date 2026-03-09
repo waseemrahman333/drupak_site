@@ -1,0 +1,17 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Account Menu
+description: Account Menu Component
+status: stable
+group: Navigation
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: Title
+    url:
+      type: string
+      title: URL
+    target:
+      type: string
+      title: Target

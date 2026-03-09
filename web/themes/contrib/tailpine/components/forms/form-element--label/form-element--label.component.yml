@@ -1,0 +1,17 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Form Element Label
+status: stable
+group: Forms & Inputs
+description: Form element label component.
+props:
+  type: object
+  properties:
+    title:
+      type: ['string', 'null']
+      description: The label's text.
+    title_display:
+      type: ['string', 'null']
+      description: Element's title_display setting.
+    required:
+      type: ['null', 'boolean']
+      description: An indicator for whether the associated form element is required.

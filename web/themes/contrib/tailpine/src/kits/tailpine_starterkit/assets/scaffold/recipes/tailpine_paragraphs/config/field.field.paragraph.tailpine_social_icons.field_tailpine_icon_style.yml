@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tailpine_icon_style
+    - paragraphs.paragraphs_type.tailpine_social_icons
+  module:
+    - options
+id: paragraph.tailpine_social_icons.field_tailpine_icon_style
+field_name: field_tailpine_icon_style
+entity_type: paragraph
+bundle: tailpine_social_icons
+label: 'Icon Style '
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

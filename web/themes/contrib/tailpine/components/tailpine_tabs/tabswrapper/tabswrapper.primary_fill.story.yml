@@ -1,0 +1,119 @@
+name: Tabswrapper - Primary Fill Style
+description: Tab wrapper with primary fill style tabs
+
+props:
+  firstTabTitle: 'dashboard'
+
+slots:
+  tabTitleContent: |
+    <button
+      type="button"
+      x-on:click="activeTab = 'dashboard'"
+      x-bind:class="activeTab === 'dashboard' ? 'bg-primary text-body-bg' : ''"
+      class="w-1/3 py-3 text-body font-bold transition-all duration-200"
+      role="tab"
+    >
+      Dashboard
+    </button>
+    <button
+      type="button"
+      x-on:click="activeTab = 'analytics'"
+      x-bind:class="activeTab === 'analytics' ? 'bg-primary text-body-bg' : ''"
+      class="w-1/3 py-3 text-body font-bold transition-all duration-200"
+      role="tab"
+    >
+      Analytics
+    </button>
+    <button
+      type="button"
+      x-on:click="activeTab = 'reports'"
+      x-bind:class="activeTab === 'reports' ? 'bg-primary text-body-bg' : ''"
+      class="w-1/3 py-3 text-body font-bold transition-all duration-200"
+      role="tab"
+    >
+      Reports
+    </button>
+
+  tabContents: |
+    <div x-show="activeTab === 'dashboard'" x-transition role="tabpanel">
+      <div class="space-y-4">
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-gray-100">Dashboard Overview</h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+          <div class="p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm">
+            <div class="text-sm text-gray-600 dark:text-gray-400 mb-1">Total Users</div>
+            <div class="text-2xl font-bold text-gray-900 dark:text-gray-100">12,543</div>
+            <div class="text-xs text-green-600 dark:text-green-400 mt-1">↑ 12% this month</div>
+          </div>
+          <div class="p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm">
+            <div class="text-sm text-gray-600 dark:text-gray-400 mb-1">Revenue</div>
+            <div class="text-2xl font-bold text-gray-900 dark:text-gray-100">$45,231</div>
+            <div class="text-xs text-green-600 dark:text-green-400 mt-1">↑ 8% this month</div>
+          </div>
+          <div class="p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm">
+            <div class="text-sm text-gray-600 dark:text-gray-400 mb-1">Active Projects</div>
+            <div class="text-2xl font-bold text-gray-900 dark:text-gray-100">24</div>
+          </div>
+          <div class="p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm">
+            <div class="text-sm text-gray-600 dark:text-gray-400 mb-1">Completion Rate</div>
+            <div class="text-2xl font-bold text-gray-900 dark:text-gray-100">94.5%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div x-show="activeTab === 'analytics'" x-transition role="tabpanel">
+      <div class="space-y-4">
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-gray-100">Analytics</h2>
+        <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6 shadow-sm">
+          <h3 class="font-semibold text-lg mb-4 text-gray-900 dark:text-gray-100">Traffic Sources</h3>
+          <div class="space-y-3">
+            <div>
+              <div class="flex justify-between text-sm mb-1">
+                <span class="text-gray-600 dark:text-gray-400">Direct</span>
+                <span class="text-gray-900 dark:text-gray-100 font-semibold">45%</span>
+              </div>
+              <div class="w-full bg-gray-200 h-2">
+                <div class="bg-primary h-2" style="width: 45%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-sm mb-1">
+                <span class="text-gray-600 dark:text-gray-400">Organic Search</span>
+                <span class="text-gray-900 dark:text-gray-100 font-semibold">30%</span>
+              </div>
+              <div class="w-full bg-gray-200 h-2">
+                <div class="bg-secondary h-2" style="width: 30%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div x-show="activeTab === 'reports'" x-transition role="tabpanel">
+      <div class="space-y-4">
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-gray-100">Reports</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700">
+            <thead class="bg-gray-50 dark:bg-gray-800">
+              <tr>
+                <th class="px-4 py-3 text-left text-xs font-semibold text-gray-900 dark:text-gray-100 uppercase">Report Name</th>
+                <th class="px-4 py-3 text-left text-xs font-semibold text-gray-900 dark:text-gray-100 uppercase">Date</th>
+                <th class="px-4 py-3 text-left text-xs font-semibold text-gray-900 dark:text-gray-100 uppercase">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-t border-gray-200 dark:border-gray-700">
+                <td class="px-4 py-3 text-sm text-gray-900 dark:text-gray-100">Monthly Sales Report</td>
+                <td class="px-4 py-3 text-sm text-gray-600 dark:text-gray-400">Nov 1, 2025</td>
+                <td class="px-4 py-3 text-sm"><span class="px-2 py-1 text-xs bg-green-100 text-green-800">Complete</span></td>
+              </tr>
+              <tr class="border-t border-gray-200 dark:border-gray-700">
+                <td class="px-4 py-3 text-sm text-gray-900 dark:text-gray-100">Q3 Performance Review</td>
+                <td class="px-4 py-3 text-sm text-gray-600 dark:text-gray-400">Oct 28, 2025</td>
+                <td class="px-4 py-3 text-sm"><span class="px-2 py-1 text-xs bg-green-100 text-green-800">Complete</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+

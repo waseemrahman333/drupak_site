@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 7ZwQuix-l1VI0cRYa1uDCXOYOXJ46s2-TpmsU0JhSBE
+id: tailpine_accordion_header
+label: 'Accordion Header'
+revision: false
+description: null

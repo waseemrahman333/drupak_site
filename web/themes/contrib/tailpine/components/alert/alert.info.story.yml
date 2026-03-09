@@ -1,0 +1,7 @@
+name: Alert - Info
+description: Informational alert message.
+
+props:
+  messages: "This feature is currently in beta. Your feedback is welcome!"
+  type: "info"
+

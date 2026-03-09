@@ -1,0 +1,64 @@
+# Schema for the configuration files of the tailpine Subtheme.
+
+tailpine.settings:
+  type: theme_settings
+  label: "tailpine settings"
+  mapping:
+    # Colors.
+    # ----------------------------
+    tailpine_enable_color:
+      type: boolean
+      label: "Enable color Sheme"
+    tailpine_color_scheme:
+      type: string
+      label: "tailpine Color Scheme"
+    tailpine_base_primary_color:
+      type: string
+      label: "Primary base color"
+    tailpine_base_secondary_color:
+      type: string
+      label: "Secondary base color"
+    tailpine_base_tertiary_color:
+      type: string
+      label: "Tertiary base color"
+    tailpine_body_color:
+      type: string
+      label: "Body color"
+    tailpine_body_bg_color:
+      type: string
+      label: "Body Background Color"
+    tailpine_h1_color:
+      type: string
+      label: "H1 color"
+    tailpine_h2_color:
+      type: string
+      label: "H2 color"
+    tailpine_h3_color:
+      type: string
+      label: "H3 color"
+    tailpine_h4_color:
+      type: string
+      label: "H4 color"
+    tailpine_success_color:
+      type: string
+      label: "Success Color"
+    tailpine_warning_color:
+      type: string
+      label: "Warning Color"
+    tailpine_error_color:
+      type: string
+      label: "Error Color"
+    # header style
+    header_class:
+      type: string
+      label: "Header style"
+    footer_class:
+      type: string
+      label: "Footer style"
+    header_fixed:
+      type: string
+      label: "Fixed Header"
+    daisyui_enable:
+      type: boolean
+      label: "Enable DaisyUI"
+

@@ -1,0 +1,16 @@
+{% stories navbar_brand with { title: 'Components/Navbar Brand' } %}
+
+{% story default with {
+    name: '1. Navbar Brand',
+    args: { 
+      url: '/',
+      text: 'Tailpine'
+    }
+  } %}
+{% embed 'components:navbar-brand' with { 
+  url: url,
+  text: text
+} %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

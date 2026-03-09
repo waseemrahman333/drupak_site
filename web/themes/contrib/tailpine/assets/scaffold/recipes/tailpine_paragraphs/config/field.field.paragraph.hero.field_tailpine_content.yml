@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tailpine_content
+    - paragraphs.paragraphs_type.hero
+    - paragraphs.paragraphs_type.tailpine_cta
+  module:
+    - entity_reference_revisions
+id: paragraph.hero.field_tailpine_content
+field_name: field_tailpine_content
+entity_type: paragraph
+bundle: hero
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      tailpine_cta: tailpine_cta
+    negate: 0
+    target_bundles_drag_drop:
+      hero:
+        weight: 3
+        enabled: false
+      tailpine_cta:
+        weight: 4
+        enabled: true
+field_type: entity_reference_revisions

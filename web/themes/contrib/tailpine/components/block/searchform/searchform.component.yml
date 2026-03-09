@@ -1,0 +1,51 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Search Form
+label: 'Search Form Block'
+description: 'Component for rendering the search form block.'
+category: 'Blocks'
+status: stable
+group: Blocks
+
+props:
+  type: object
+  properties:
+    plugin_id:
+      type: string
+      description: 'The ID of the block implementation.'
+      default: 'search_form_block'
+    label:
+      type: string
+      description: 'The label of the block, if visible.'
+      default: 'Search'
+    configuration:
+      type: object
+      description: 'Block configuration values.'
+      properties:
+        label:
+          type: string
+          description: 'Configured label for the block.'
+          default: 'Search'
+        label_display:
+          type: string
+          description: 'Display settings for the label.'
+          default: 'visible'
+        provider:
+          type: string
+          description: 'The module or provider that provided this block.'
+          default: 'search'
+    in_preview:
+      type: boolean
+      description: 'Whether the plugin is being rendered in preview mode.'
+      default: false
+    content:
+      type: string
+      description: 'Rendered content of the search form.'
+      default: ''
+    title_prefix:
+      type: string
+      description: 'Additional output before the block title.'
+      default: ''
+    title_suffix:
+      type: string
+      description: 'Additional output after the block title.'
+      default: ''

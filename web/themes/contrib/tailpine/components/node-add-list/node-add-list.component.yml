@@ -1,0 +1,21 @@
+schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+title: 'Node Add List'
+name: Node Add List
+status: stable
+defaults:
+  types: []
+props:
+  type: object
+  properties:
+    types:
+      type: array
+      description: 'A list of content types, each with an add_link and description.'
+      items:
+        type: object
+        properties:
+          type:
+            type: [string, 'null']
+          add_link:
+            description: 'Rendered link to add content of this type.'
+          description:
+            description: 'A brief description of the content type.'

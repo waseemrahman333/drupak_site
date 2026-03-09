@@ -1,0 +1,7 @@
+name: Alert - Warning
+description: Warning alert for important notices.
+
+props:
+  messages: "Please review your information before submitting."
+  type: "warning"
+

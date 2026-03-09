@@ -1,0 +1,27 @@
+{% stories testimonialstyletwo with { title: 'Components/Testimonial  Style Two' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      imageurl: 'https://cdn.pixabay.com/photo/2024/04/02/10/28/bangladesh-8670559_1280.jpg',
+      name: 'Name',
+      description: 'Description',
+      subtitle: 'Subtitle'
+    }
+  } %}
+{% embed 'components:testimonialstyletwo' with { 
+  imageurl: imageurl
+} %}
+  {% block name %}
+    {{ name }}
+  {% endblock %}
+  {% block description %}
+    {{ description }}
+  {% endblock %}
+  {% block subtitle %}
+    {{ subtitle }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

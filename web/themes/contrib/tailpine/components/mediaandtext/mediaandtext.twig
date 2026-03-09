@@ -1,0 +1,18 @@
+<section {{attributes.addClass("wrapper sm:py-12.5 p-[clamp(20px,5vw,100px)] max-w-480 mx-auto flex flex-col gap-10")}}>
+	<div class="flex flex-col lg:flex-{{position}}  gap-[clamp(30px,5vw,40px)]">
+		<div class=" lg:w-1/2 ">
+			<img class="object-cover h-full w-full" src="{{image}}" alt="{{title|render|trim}}"/>
+		</div>
+		<div class="info_container flex flex-col pt-5 gap-8 lg:w-1/2">
+			<div class="info lg:mr-10 w-full flex flex-col lg:pr-8 gap-[clamp(18px,2vw,24px)]">
+				<h2 class="text-[clamp(30px,2vw+1rem,46px)] lg:mr-10 font-medium  leading-tight">
+					{{title}}
+				</h2>
+				<div class="text-body/70 lg:mr-10 font-normal leading-8">
+					{{description}}
+				</div>
+			</div>
+			<div class="flex gap-5">{{cta}}</div>
+		</div>
+	</div>
+</section>

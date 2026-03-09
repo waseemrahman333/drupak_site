@@ -1,0 +1,37 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 2d6c32cd-ffda-4e8d-b55d-aa8766fc6ef1
+  bundle: tailpine_post_cards
+  default_langcode: en
+  depends:
+    c5e8dd7c-0205-40e4-826f-663749ff934a: media
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Post Card Two'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  field_tailpine_date:
+    -
+      value: '2025-10-09'
+  field_tailpine_description:
+    -
+      value: '<p>Probaretur privamur officiis omnisque pecuniae aliena consulatu. Gloriae sensum epicuri pariter disciplinae fabulas inmensae scilicet militaris.</p>'
+      format: basic_html
+  field_tailpine_media_image:
+    -
+      entity: c5e8dd7c-0205-40e4-826f-663749ff934a
+  field_tailpine_subtitle:
+    -
+      value: Probaretur
+  field_tailpine_title:
+    -
+      value: 'The Future of Digital Agencies: Trends to Watch'

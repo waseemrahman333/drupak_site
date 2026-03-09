@@ -1,0 +1,22 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/metadata.schema.json
+name: Navbar Brand
+status: stable
+description: Navbar brand logo/title component.
+group: Navigation
+props:
+  type: object
+  properties:
+    url:
+      type: string
+      title: URL
+      description: Brand link URL.
+      default: '/'
+    image_url:
+      type: string
+      title: Image URL
+      description: Logo image URL.
+    text:
+      type: string
+      title: Text
+      description: Brand text/site name.
+

@@ -1,0 +1,14 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Menu Local Task
+description: Component for displaying a local task in Drupal's navigation system.
+status: stable
+group: Navigation
+props:
+  type: object
+  properties:
+    is_active:
+      type: boolean
+      description: Indicates if the node is currently active.
+    link:
+      type: string
+      description: The URL link for the node.

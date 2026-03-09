@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.tailpine_banner
+    - block_content.type.tailpine_cta
+    - field.storage.block_content.field_block
+id: block_content.tailpine_banner.field_block
+field_name: field_block
+entity_type: block_content
+bundle: tailpine_banner
+label: 'Add Block'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block_content'
+  handler_settings:
+    target_bundles:
+      tailpine_cta: tailpine_cta
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,12 @@
+name: Default
+
+props:
+  attributes:
+    class:
+      - "!m-2"
+
+  link: "https://example.com"
+  title: "CTA Text"
+  color_schema: null
+  size: "rounded-sm"
+  button_variant: "solid"

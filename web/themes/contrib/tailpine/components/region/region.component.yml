@@ -1,0 +1,17 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/metadata.schema.json
+name: Region
+status: stable
+description: Drupal region wrapper component.
+group: Layout
+props:
+  type: object
+  properties:
+    region_name:
+      type: string
+      title: Region Name
+      description: Machine name of the region.
+slots:
+  content:
+    title: Content
+    description: Region content (blocks).
+

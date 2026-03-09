@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drupak</title>
+    <link rel="stylesheet" href="src/output.css">
+</head>
+<style>
+    @keyframes load {
+        from{
+            transform: translateY(-20px);
+            opacity: 0;
+        }
+        to{
+            transform: translateY(none);
+            opacity: 1;
+        }
+    }
+    .load{
+        animation: load 0.3s ease-in-out forwards;
+    }
+</style>
+<body>
+    <header>
+        <div class="relative w-full overflow-hidden ">
+        <picture class="absolute inset-0  pointer-events-none w-full">
+            <!-- <source media="(min-width:1920px)" srcset="./images/1920.png">
+            <source media="(min-width:1280px)" srcset="./images/1280.png">
+            <source media="(min-width:768px)" srcset="./images/tablet1.png"> -->
+        
+            <img
+            src="./images/services 4.svg"
+            alt=""
+            class="w-full h-full object-cover"
+            aria-hidden="true"
+            />
+
+        </picture>
+
+
+            <!-- CONTENT WRAPPER -->
+            <div
+            class="herosection container-px pb-14 pt-24.5 flex flex-col text-tertiary gap-4
+                    md:pt-35 md:pb-12
+                    xl:flex-row xl:justify-between xl:pt-37.5 xl:pb-28.5
+                    2xl:pt-50 2xl:pb-29.5
+                    mx-auto max-w-480"
+            >
+
+            <!----------------------------- navbar start ----------------------------->
+            <nav class="fixed top-0 left-0 w-full nav-px z-20">
+                    <div class="relative flex items-end justify-between bg-body-bg p-[clamp(16px,3vw,18.5px)]">
+                        <!-- Logo -->
+                        <div class="flex items-center gap-3">
+                            <a href="index.html"> <img src="images/Logo.svg" alt=""></a>
+                        </div>
+
+                        <!-- Nav Options -->
+                        <div class="">
+                            <!-- Hamburger -->
+                            <div onclick="openMenu(this)" class="xl:hidden cursor-pointer px-3 py-3.5 bg-secondary ">
+                                <svg width="32" height="28" viewBox="0 0 32 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="31.6667" height="3.8" fill="var(--color-tertiary)" />
+                                    <rect y="11.8" width="31.6667" height="3.8" fill="var(--color-tertiary)" />
+                                    <rect y="23.6" width="31.6667" height="3.8" fill="var(--color-tertiary)" />
+                                </svg>
+                            </div>
+
+                            <!-- Links -->
+                            <div
+                                class="nav__option--links text-tertiary font-semibold load hidden border-t-2 border-primary top-full absolute right-0 left-0 shadow-2xl flex flex-col gap-2.5 bg-body-bg px-4 py-2.5 xl:static xl:flex xl:flex-row xl:min-h-fit xl:border-0 xl:shadow-none xl:gap-[clamp(28px,2.2vw,40px)] xl:bg-transparent xl:p-0 xl:items-center">
+                                <a class=" py-1.5 px-5 xl:py-1 xl:px-0 lg:flex lg:items-center h-fit  rounded-sm"
+                                    href="./index.html"><p class="relative after:content-[] after:h-0.5 xl:after:h-1 after:absolute after:left-0 after:top-full after:bg-primary after:w-0 hover:after:w-full after:transition-all after:duration-200 after:ease-in-out">HOME</p></a>
+                                <a class=" py-1.5 px-5 xl:py-1 xl:px-0 lg:flex lg:items-center h-fit  rounded-sm"
+                                    href="./about-us.html"><p class="relative after:content-[] after:h-0.5 xl:after:h-1 after:absolute after:left-0 after:top-full after:bg-primary after:w-0 hover:after:w-full after:transition-all after:duration-200 after:ease-in-out">ABOUT US</p></a>
+                                <div class="relative flex flex-col xl:justify-center">
+                                    <div id="services" onclick="dropDown()"
+                                        class="cursor-pointer flex justify-between items-center py-1.5 px-5 xl:py-1 h-fit xl:px-0 xl:gap-2 rounded-sm">
+                                        <p class="relative after:content-[] after:h-0.5 xl:after:h-1 after:absolute after:left-0 after:top-full after:bg-primary after:w-0 hover:after:w-full after:transition-all after:duration-200 after:ease-in-out">SERVICES</p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8"
+                                            fill="none">
+                                            <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <div style="max-height: 0px; opacity: 0;"
+                                        class="services bg-body-bg px-4 flex flex-col gap-3 transition-all duration-300 ease-in-out overflow-hidden xl:absolute xl:z-10 xl:top-full xl:border-t-2 border-primary xl:left-0 xl:shadow-2xl">
+                                        <a class=" py-1.5 hover:bg-secondary transition-all duration-300 px-5 xl:py-2.5 xl:flex xl:items-center text-nowrap"
+                                            href="services-detail.html">Drupal 10 development</a>
+                                        <a class=" py-1.5 hover:bg-secondary transition-all duration-300 px-5 xl:py-2.5 xl:flex xl:items-center text-nowrap"
+                                            href="services.html">Upgrade & Migration</a>
+                                        <a class=" py-1.5 hover:bg-secondary transition-all duration-300 px-5 xl:py-2.5 xl:flex xl:items-center text-nowrap"
+                                            href="#">Maintenance & Support</a>
+                                        <a class=" py-1.5 hover:bg-secondary transition-all duration-300 px-5 xl:py-2.5 xl:flex xl:items-center text-nowrap"
+                                            href="#">Drupal Consulting</a>
+                                        <a class=" py-1.5 hover:bg-secondary transition-all duration-300 px-5 xl:py-2.5 xl:flex xl:items-center text-nowrap"
+                                            href="#">Digital Marketing</a>
+                                        <a class=" py-1.5 hover:bg-secondary transition-all duration-300 px-5 xl:py-2.5 xl:flex xl:items-center text-nowrap"
+                                            href="#">Drupal Commerce</a>
+                                    </div>
+                                </div>
+                                <a class=" py-1.5 px-5 xl:py-1 xl:px-0 lg:flex lg:items-center h-fit  rounded-sm"
+                                    href="traning.html"><p class="relative after:content-[] after:h-0.5 xl:after:h-1 after:absolute after:left-0 after:top-full after:bg-primary after:w-0 hover:after:w-full after:transition-all after:duration-200 after:ease-in-out">TRAINING</p></a>
+                                <a class=" py-1.5 px-5 xl:py-1 xl:px-0 lg:flex lg:items-center h-fit  rounded-sm"
+                                    href="blog.html"><p class="relative after:content-[] after:h-0.5 xl:after:h-1 after:absolute after:left-0 after:top-full after:bg-primary after:w-0 hover:after:w-full after:transition-all after:duration-200 after:ease-in-out">BLOG</p></a>
+
+                                <!-- Contact -->
+                                <a class="mt-5 group flex items-center justify-between gap-2.5 text-tertiary font-semibold py-1.5 px-5 rounded-lg xl:mt-0 xl:px-5 xl:py-3 bg-primary hover:bg-transparent border border-transparent hover:border-tertiary transition-all duration-300"
+                                    href="contactus.html">Contact Us
+                                    <svg class="group-hover:transform group-hover:translate-x-1 transition-all duration-300"
+                                        xmlns="http://www.w3.org/2000/svg" width="17" height="8" viewBox="0 0 17 8" fill="none">
+                                        <path d="M12.7393 8V4.8H0.0255641L0 3.192H12.7393V0L17 4L12.7393 8Z"
+                                            fill="currentColor" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            <!----------------------------- navbar end ------------------------------>
+
+            <!-- HERO CONTENT -->
+            <div class="flex flex-col gap-3  xl:gap-5 z-10">
+                <div class="text-p flex items-center gap-1.5">
+                <a class="text-tertiary/80" href="#">Home</a>
+                <svg width="9" height="28" viewBox="0 0 9 28">
+                    <path d="M2 19L7 14L2 9" stroke="black" />
+                </svg>
+                <a href="#">Blog</a>
+                </div>
+
+                <h1 class="text-h1">Drupal WOWs - Episode 3 - Selling Access to Content using Drupal Commerce</h1>
+            </div>
+
+
+
+            </div>
+        </div>
+    </header>
+    <main class="pt-[clamp(50px,calc(5vh+10px),80px)]  text-tertiary">
+        <!-- BLOG DETAILS -->
+        <section class="container-px">
+            <div class="pb-[clamp(60px,10dvh,120px)] mx-auto max-w-480">
+                <div class="flex flex-col gap-[clamp(20px,2.5vw,50px)] mb-[clamp(20px,2.5vw,50px)]">
+                <!-- Headlines -->
+                    <div class="flex flex-col gap-[clamp(32px,2.5vw,48px)]">
+                    <!-- About Auther -->
+                    <div class="flex flex-col gap-6 md:flex-row justify-between">
+                            <p class="text-tertiary/80 font-medium ">BLOG | OCT 30, 2025</p>
+                            <div class="flex gap-5 items-center">
+                                <p class="font-semibold text-tertiary/80">SHARE</p>
+                                <div class="flex gap-2.5">
+                                    <a href="#">
+                                        <div class="h-7.5 w-7.5 bg-secondary grid place-items-center">
+                                        <svg width="8" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7 0H5.09091C4.24704 0 3.43773 0.316071 2.84102 0.87868C2.24432 1.44129 1.90909 2.20435 1.90909 3V4.8H0V7.2H1.90909V12H4.45455V7.2H6.36364L7 4.8H4.45455V3C4.45455 2.84087 4.52159 2.68826 4.64093 2.57574C4.76027 2.46321 4.92213 2.4 5.09091 2.4H7V0Z" fill="#111111"/>
+                                        </svg>
+                                    </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="h-7.5 w-7.5 bg-secondary grid place-items-center">
+                                            <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8.66328 0L5.88436 3.19497L3.48144 0H0L4.15893 5.46909L0.217486 10H1.90509L4.94711 6.5035L7.60589 10H11L6.66475 4.23552L10.3498 0H8.66328ZM8.07145 8.98462L1.97017 0.961678H2.97305L9.00592 8.98406L8.07145 8.98462Z" fill="black"/>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                    <div class="h-7.5 w-7.5 bg-secondary grid place-items-center">
+                                        <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.47268 12H0.194625V3.98878H2.47268V12ZM1.33167 2.89561C1.06947 2.89689 0.812808 2.81323 0.594144 2.65522C0.37548 2.4972 0.204632 2.27192 0.103205 2.00786C0.00177831 1.74381 -0.025672 1.45283 0.0243254 1.17174C0.0743228 0.890644 0.199522 0.632053 0.384092 0.428666C0.568661 0.225279 0.804311 0.0862306 1.06124 0.0291044C1.31817 -0.0280218 1.58485 -0.00066019 1.82754 0.107729C2.07023 0.216119 2.27804 0.400668 2.42469 0.638039C2.57134 0.875411 2.65025 1.15494 2.65143 1.44129C2.6517 1.82484 2.51312 2.19296 2.2659 2.46538C2.01868 2.73781 1.68286 2.89246 1.33167 2.89561ZM10.997 11.9989H8.72393V8.09471C8.72393 7.16529 8.70705 5.97342 7.53922 5.97342C6.35451 5.97342 6.17378 6.98309 6.17378 8.02747V11.9935H3.8987V3.98878H6.08341V5.08196H6.11519C6.33341 4.67299 6.64922 4.33641 7.02893 4.10816C7.40863 3.87991 7.83797 3.76855 8.2711 3.78598C10.576 3.78598 11 5.44419 11 7.59692V11.9978L10.997 11.9989Z" fill="#111111"/>
+                                        </svg>
+                                    </div>
+                                    </a>
+                                </div>
+                            </div>
+                    </div>
+                    </div>
+                    <!--Blog Image -->
+                    <img class="object-cover w-full" src="images/image1.png" alt="blog Image">
+                </div>
+                <div class="flex flex-col gap-[clamp(32px,3.5vw,60px)] max-w-255 mx-auto">
+                    <!-- Text -->
+                    <div class="flex flex-col gap-[clamp(20px,2.5vw,50px)]">
+                    <p class="text-[clamp(16px,1.5vw+12px,18px)] leading-[clamp(28px,1.8vw+20px,30px)] mb-[clamp(14px,1vw+10px,16px)]" >Ever wondered how you could turn your content into a product - and sell access to it without building an entirely separate system and all this without a single line of code in Drupal? That's exactly what we explore in the <a class="text-[#006AF3] underline" href="https://www.linkedin.com/pulse/selling-access-content-drupal-commerce-syed-muhammad-azmat-shah-qjocf">third episode of my Drupal WOWS</a> video series, where I showcase the incredible flexibility of Drupal to audiences who may not be familiar with its true potential.</p>
+                    <div class="flex flex-col gap-6">
+                        <h4 class="text-h4">In this episode, I demonstrate how to :</h4>
+                        <ul class="list-disc pl-6 text-[clamp(16px,1.5vw+12px,18px)] leading-[clamp(28px,1.8vw+20px,30px)] mb-[clamp(14px,1vw+10px,16px)]">
+                            <li>Sell user roles so that purchasing a specific role instantly grants access to certain types of content.</li>
+                            <li>Use Drupal Commerce and <a href="https://www.drupal.org/project/commerce_license" class="text-[#006AF3] underline">Commerce Licence</a> modules to handle purchasing of user roles.</li>
+                            <li>Create a Journal content type where articles are behind a paywall, accessible only to those with the Journal Viewer role. I am giving an impression that the system is being built for a premium research journal so that users would have to purchase access to journal articles</li>
+                            <li>Add a separate “Journal Listing Viewer” role to allow curated listing views for subscribers.</li>
+                            <li>Go beyond per content type access and instead, sell access to individual pieces of content for ultimate flexibility using Commerce License Access Control module.</li>
+                        </ul>
+                    </div>
+                    </div>
+                    <!-- Highlighted Text -->
+                    <p class="p-5 bg-secondary text-[clamp(16px,1.5vw+12px,18px)] leading-[clamp(28px,1.8vw+20px,30px)] mb-[clamp(14px,1vw+10px,16px)]">
+                        From role-based access to granular, per-article sales, this episode is packed with practical tips you can adapt to your own projects.
+                    </p>
+                    <!-- More Text -->
+                    <p class="text-[clamp(16px,1.5vw+12px,18px)] leading-[clamp(28px,1.8vw+20px,30px)] mb-[clamp(14px,1vw+10px,16px)]">If you want to see Drupal and Drupal Commerce flex its muscles in real-world scenarios, this one's a must-watch. Check out the full video and see how easily you can turn your content into a revenue stream the Drupal and Drupal Commerce way.</p>
+                    <!-- Video Heading -->
+                    <h4 class="text-h4">Drupal WOWs - Episode 3 - Selling Access to Content using Drupal Commerce</h4>
+                    <!-- Video -->
+                    <iframe class="aspect-16/9" src="https://www.youtube.com/embed/x2JXs6h2GCU?list=PLTO6otPvezyKtk26GsfOS9jWZrNazTken" title="Drupal Wows - Episode 3 - Selling Access to Content using Drupal Commerce" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="flex gap-5 items-center w-fit ">
+                        <img class="h-15 w-15 object-cover" src="images/Azmat Sir.png" alt="Azmat Sir">
+                            <div class="flex flex-col">
+                                <p class="text-lg font-semibold">S M Azmat Shah</p>
+                                <p class="font-medium text-tertiary/80 italic pt-1">CEO Drupak</p>
+                            </div>
+                    </div>
+                    <!-- Add comment -->
+                    <h3 class="text-h3">Add new comment</h3>
+                    <div class="">
+                        <form class="flex flex-col gap-5 bg-secondary p-[clamp(24px,3vw,48px)] rounded-xl">
+                            <div class="flex flex-col gap-5 md:flex-row">
+                                <input class="px-5 py-4 md:w-full rounded-sm bg-body-bg" type="text" placeholder="Name">
+                                <input class="px-5 py-4 md:w-full rounded-sm bg-body-bg" type="email" placeholder="Your email address">
+                            </div>
+                            <textarea class="px-5 min-h-49.5 py-4 rounded-sm bg-body-bg" placeholder="Message"></textarea>
+                            <a href="#" class="group inline-flex items-center text-base gap-3 bg-primary hover:bg-transparent border border-transparent hover:border-tertiary transition-all duration-300 px-8 py-4 justify-center font-semibold uppercase rounded-lg">
+                                Send Message
+                                <svg class="group-hover:transform group-hover:translate-x-1 transition-all duration-300" width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.7393 8V4.8H0.0255641L0 3.192H12.7393V0L17 4L12.7393 8Z" fill="#111111"/>
+                                </svg>
+                            </a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Related blog -->
+        <section class="container-px   bg-secondary py-[clamp(60px,10dvh,100px)]">
+            <div class="mx-auto max-w-480 flex flex-col gap-[clamp(40px,3.5vw,60px)]">
+                <h2 class="text-tertiary relative text-h2 pb-5 font-montserrat text-center after:content-[''] after:absolute after:h-1.5 after:w-15 after:bg-tertiary after:top-full after:left-1/2 after:transform after:-translate-1/2">RELATED BLOG</h2>
+                <section class=" grid grid-cols-1 gap-[clamp(60px,calc(60px+5.04vw),80px)] pt-[clamp(30px,4vh,50px)]">
+                <!-- post card --> 
+                <div role="group" class="bg-body-bg xl:bg-transparent z-10 relative xl:pt-[clamp(30px,-25px+5vw,60px)] xl:pl-[clamp(30px,-25px+5vw,60px)] ">
+                    <div class=" flex flex-col xl:flex-row h-fit xl:after:content-[] xl:after:absolute xl:after:top-0 xl:after:left-0 xl:after:-z-10  xl:after:w-full xl:after:h-[85%] xl:after:bg-body-bg ">
+                        <div class="overflow-clip xl:w-6/10">
+                            <img src="images/image1.png" class="h-full w-full object-cover" alt="Selling Access to Content using Drupal Commerce">
+                        </div>
+                        <div role="" class="flex flex-col justify-around gap-[clamp(23px,5vw,73px)] pb-6 pt-6 xl:pt-0 px-[clamp(16px,3vw,24px)]">
+                            <div class="flex flex-col gap-[clamp(16px,2vw,24px)]">
+                                <p class="text-sm leading-6 text-tertiary/80">BLOG <span>|</span>  OCT 30, 2025</p>
+                                <h3 class="text-h3 text-tertiary">Drupal WOWs - Episode 3 - Selling Access to Content using Drupal Commerce</h3>
+                            </div>
+                            <a class="group flex items-center  capitalize w-fit justify-between gap-2.5 text-tertiary font-semibold py-1.5 px-5 rounded-lg xl:mt-0 xl:px-5 xl:py-3 bg-primary hover:bg-transparent border border-transparent hover:border-tertiary transition-all duration-300"
+                                    href="#">read more 
+                                    <svg class="group-hover:transform group-hover:translate-x-1 transition-all duration-300"
+                                        xmlns="http://www.w3.org/2000/svg" width="17" height="8" viewBox="0 0 17 8" fill="none">
+                                        <path d="M12.7393 8V4.8H0.0255641L0 3.192H12.7393V0L17 4L12.7393 8Z"
+                                            fill="currentColor" />
+                                    </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- post card -->
+                <div role="group" class="bg-body-bg xl:bg-transparent z-10  relative xl:pt-[clamp(30px,-25px+5vw,60px)] xl:pl-[clamp(30px,-25px+5vw,60px)]">
+                    <div class=" flex flex-col xl:flex-row h-fit xl:after:content-[] xl:after:absolute xl:after:top-0 xl:after:left-0  xl:after:-z-10 xl:after:w-full xl:after:h-[85%] xl:after:bg-body-bg ">
+                        <div class="overflow-clip xl:w-6/10">
+                            <img src="images/image2.png" class="h-full w-full object-cover" alt="Selling Access to Content using Drupal Commerce">
+                        </div>
+                    <div role="" class="flex flex-col justify-around gap-[clamp(23px,5vw,73px)] pb-6 pt-6 xl:pt-0 px-[clamp(16px,3vw,24px)]">
+                        <div class="flex flex-col gap-[clamp(16px,2vw,24px)]">
+                            <p class="text-sm leading-6 text-tertiary/80">BLOG <span>|</span>  OCT 30, 2025</p>
+                            <h3 class="text-h3 text-tertiary">Drupal WOWs - Episode 3 - Selling Access to Content using Drupal Commerce</h3>
+                        </div>
+                        <a class="group flex items-center  capitalize w-fit justify-between gap-2.5 text-tertiary font-semibold py-1.5 px-5 rounded-lg xl:mt-0 xl:px-5 xl:py-3 bg-primary hover:bg-transparent border border-transparent hover:border-tertiary transition-all duration-300"
+                                    href="#">read more 
+                                    <svg class="group-hover:transform group-hover:translate-x-1 transition-all duration-300"
+                                        xmlns="http://www.w3.org/2000/svg" width="17" height="8" viewBox="0 0 17 8" fill="none">
+                                        <path d="M12.7393 8V4.8H0.0255641L0 3.192H12.7393V0L17 4L12.7393 8Z"
+                                            fill="currentColor" />
+                                    </svg>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+            </section>
+            </div>
+        </section>
+        <!-- Consultation -->
+        <section class="container-px py-[clamp(60px,10dvh,100px)] text-tertiary bg-body-bg">
+            <div class="relative mx-auto max-w-480 bg-grey-bg rounded-[clamp(10px,1dvw,20px)] overflow-hidden flex flex-col">
+                <!-- Text -->
+                <div class="relative z-10 w-full grid grid-cols-1 gap-[clamp(20px,3dvw,40px)] p-[clamp(20px,3dvw,80px)] text-left md:w-1/2">
+                    <h2
+                        class="uppercase text-h2 relative z-10 pb-5 font-montserrat text-tertiary basis-1/3 after:h-1 after:w-15 after:content-[] after:bg-tertiary after:absolute after:bottom-0 after:left-0">
+                        WHY CHOOSE US AS YOUR DRUPAL PARTNER?
+                    </h2>
+
+                    <p class="relative z-10 leading-7 xl:text-lg xl:leading-7.5 max-w-145">
+                        Choosing us as your Drupal development partner is a strategic decision rooted in our commitment
+                        to delivering unparalleled expertise and value.
+                    </p>
+
+                    <a href="#"
+                        class="group bg-primary hover:bg-transparent border border-transparent hover:border-tertiary transition-all duration-300 py-4 px-5 flex gap-2.5 items-center justify-center max-w-68 rounded-lg font-semibold text-sm font-open-sans uppercase">GET
+                        Free consultation<svg
+                            class="group-hover:transform group-hover:translate-x-1 transition-all duration-300"
+                            xmlns="http://www.w3.org/2000/svg" width="17" height="8" viewBox="0 0 17 8" fill="none">
+                            <path d="M12.7393 8V4.8H0.0255641L0 3.192H12.7393V0L17 4L12.7393 8Z" fill="#111111" />
+                        </svg></a>
+                </div>
+
+                <!-- Image -->
+                <div class="md:absolute md:top-0 md:right-0 z-0 overflow-hidden flex justify-end">
+                    <img src="images/consultation.svg" alt="consultation image"
+                        class="block md:w-full h-full object-contain w-87.5 opacity-90" />
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-grey-bg container-px">
+        <div class="py-[clamp(50px,4vw,60px)] flex flex-col gap-[clamp(40px,5vw,70px)] max-w-480 mx-auto">
+            <div class="flex items-center xl:items-start justify-between border-b border-tertiary/40 pb-[clamp(20px,2vw,30px)]">
+                <div>
+                    <img class="w-full h-full object-cover" src="images/Logo.svg" alt="">
+                </div>
+                <ul class="flex gap-2 ">
+                    <li>
+                        <a aria-label="Facebook" href="#"
+                            class="grid place-items-center w-7.5 h-7.5 bg-primary hover:bg-transparent border border-transparent hover:border-tertiary transition-all duration-300 rounded">
+                            <img src="images/facebook.svg" alt="facebook icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-label="Twitter" href="#"
+                            class="grid place-items-center w-7.5 h-7.5 bg-primary hover:bg-transparent border border-transparent hover:border-tertiary transition-all duration-300 rounded">
+                            <img src="images/twitter.svg" alt="twitter icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-label="LinkedIn" href="#"
+                            class="grid place-items-center w-7.5 h-7.5 bg-primary hover:bg-transparent border border-transparent hover:border-tertiary transition-all duration-300 ease rounded h-full min-w-7.5">
+                            <img src="images/linkedIn.svg" alt="linkedIn svg">
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-label="Drupal" href="#"
+                            class="grid place-items-center w-7.5 h-7.5 bg-primary hover:bg-transparent border border-transparent hover:border-tertiary transition-all duration-300 rounded h-full min-w-7.5">
+                            <img src="images/drupal.svg" alt="drupal icon">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- footer navigations -->
+            <div
+                class=" grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-y-[clamp(24px,4vw,40px)] gap-x-25 justify-between">
+                <div>
+                    <h1 class="text-tertiary text-h6">Location</h1>
+                    <p class="leading-7 text-tertiary mt-[clamp(8px,4vw,24px)]">
+                        Office 18,19 1st Floor, City Trade Center (CTC), Block M, New City Phase 2, Wah Cantt Pakistan.
+                    </p>
+                </div>
+                <div class="w-fit xl:justify-self-end">
+                    <h1 class="text-tertiary text-h6">Quick Links</h1>
+                    <div class="mt-[clamp(8px,4vw,24px)] text-sm leading-6 xl:text-base xl:leading-7 flex flex-col gap-2">
+                        <a class="w-fit relative after:content-[] after:h-1 after:absolute after:left-0 after:top-full after:bg-primary after:w-0 hover:after:w-full after:transition-all after:duration-200 after:ease-in-out"
+                            href="#">About Us</a>
+                        <a class="w-fit relative after:content-[] after:h-1 after:absolute after:left-0 after:top-full after:bg-primary after:w-0 hover:after:w-full after:transition-all after:duration-200 after:ease-in-out"
+                            href="#">Services</a>
+                        <a class="w-fit relative after:content-[] after:h-1 after:absolute after:left-0 after:top-full after:bg-primary after:w-0 hover:after:w-full after:transition-all after:duration-200 after:ease-in-out"
+                            href="#">Blog</a>
+                        <a class="w-fit relative after:content-[] after:h-1 after:absolute after:left-0 after:top-full after:bg-primary after:w-0 hover:after:w-full after:transition-all after:duration-200 after:ease-in-out"
+                            href="#">Training</a>
+                    </div>
+                </div>
+                <div class="w-fit xl:justify-self-end">
+                    <h1 class="text-tertiary text-h6">Phone</h1>
+                    <div class="mt-[clamp(8px,4vw,24px)] text-sm leading-6 xl:text-base xl:leading-7 flex flex-col gap-2">
+                        <a class="w-fit  relative after:content-[] after:h-1 after:absolute after:left-0 after:top-full after:bg-primary after:w-0 hover:after:w-full after:transition-all after:duration-200 after:ease-in-out"
+                            href="tel:+92-3139760741">+92-3139760741</a>
+                    </div>
+                </div>
+                <div class=" w-fit xl:justify-self-end">
+                    <h1 class="text-tertiary text-h6">Email</h1>
+                    <div class="mt-[clamp(8px,4vw,24px)] text-sm leading-6 xl:text-base xl:leading-7 flex flex-col gap-2">
+                        <a class="w-fit  relative after:content-[] after:h-1 after:absolute after:left-0 after:top-full after:bg-primary after:w-0 hover:after:w-full after:transition-all after:duration-200 after:ease-in-out"
+                            href="mailto:info@drupak.com">info@drupak.com</a>
+                    </div>
+                </div>
+            </div>
+            <!-- footer copyright section -->
+
+        </div>
+        <div class="container-px bg-primary w-full text-center py-4  ">
+            <p>&copy; Drupak 2024. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="src/js/script.js"></script>
+</body>
+</html>

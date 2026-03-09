@@ -1,0 +1,327 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Messenger\MessengerInterface;
+use Drupal\Core\Render\Element\StatusMessages;
+use Drupal\Core\Url;
+
+/**
+ * @file
+ * Functions to support theming.
+ */
+/**
+ * Implements hook_preprocess_image_widget().
+ */
+function tailpine_preprocess_image_widget(array &$variables): void
+{
+  $data = &$variables['data'];
+
+  // This prevents image widget templates from rendering preview container HTML
+  // to users that do not have permission to access these previews.
+  // @todo revisit in https://drupal.org/node/953034
+  // @todo revisit in https://drupal.org/node/3114318
+  if (isset($data['preview']['#access']) && $data['preview']['#access'] === FALSE) {
+    unset($data['preview']);
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for HTML document templates.
+ *
+ * Adds body classes if certain regions have content.
+ */
+function tailpine_preprocess_html(&$variables)
+{
+  if (!isset($variables['attributes']['class'])) {
+    $variables['attributes']['class'] = [];
+  }
+
+  // Color settings
+  if (theme_get_setting('tailpine_enable_color')) {
+    $pc = theme_get_setting('tailpine_base_primary_color') ?? '#10B981';
+    $sc = theme_get_setting('tailpine_base_secondary_color') ?? '#064E3B';
+    $tc = theme_get_setting('tailpine_base_tertiary_color') ?? '#06B6D4';
+    $bc = theme_get_setting('tailpine_body_color') ?? '#1F2937';
+    $bgc = theme_get_setting('tailpine_body_bg_color') ?? '#FFFFFF';
+    $h1c = theme_get_setting('tailpine_h1_color') ?? '#1F2937';
+    $h2c = theme_get_setting('tailpine_h2_color') ?? '#1F2937';
+    $h3c = theme_get_setting('tailpine_h3_color') ?? '#1F2937';
+    $h4c = theme_get_setting('tailpine_h4_color') ?? '#1F2937';
+    $suc = theme_get_setting('tailpine_success_color') ?? '#14A44D';
+    $wc = theme_get_setting('tailpine_warning_color') ?? '#E4A11B';
+    $ec = theme_get_setting('tailpine_error_color') ?? '#DC4C64';
+
+    $styles = [
+      "--color-primary:$pc;",
+      "--color-secondary:$sc;",
+      "--color-tertiary:$tc;",
+      "--color-body: $bc;",
+      "--color-body_bg: $bgc;",
+      "--color-h1: $h1c;",
+      "--color-h2: $h2c;",
+      "--color-h3: $h3c;",
+      "--color-h4: $h4c;",
+      "--color-success: $suc;",
+      "--color-warning: $wc;",
+      "--color-error: $ec;",
+    ];
+    $variables['html_attributes']->setAttribute('style', implode('', $styles));
+  }
+}
+
+/**
+ * Implements hook_preprocess_menu().
+ */
+function tailpine_preprocess_menu__main(array &$variables): void
+{
+  $items = $variables["items"];
+
+  $variables['array_for_sdc'] = processNestedArray($items);
+}
+
+/**
+ * Process a nested array structure recursively
+ *
+ * @param array $items The input array to process
+ * @return array
+ */
+function processNestedArray($items): array
+{
+  $result = [];
+  $current_path = \Drupal::service('path.current')->getPath(); // Get the current path
+
+  // Get the front page path from configuration
+  $front_page = \Drupal::config('system.site')->get('page.front');
+
+  foreach ($items as $item) {
+    $newItem = [
+      'title' => $item['title'] ?? '',
+      'url' => $item['url']?->toString() ?? '#',
+      // 'target' => '__self',
+      'class' => '',
+    ];
+
+    // Add 'active' class if the menu item is in the active trail
+    if (!empty($item['in_active_trail'])) {
+      $newItem['class'] = 'active';
+    }
+
+    // Add active class if the menu item's URL matches the current path
+    if (!empty($item['url']) && $item['url']->toString() === $current_path) {
+      $newItem['class'] = 'active';
+    }
+
+    // Ensure Home is active only when on the front page
+    if (($current_path === '/' || $current_path === $front_page) && ($item['url']?->toString() === '/' || $item['url']?->toString() === $front_page)) {
+      $newItem['class'] = 'active';
+    }
+
+    // Process children recursively if they exist
+    if (!empty($item['below']) && is_array($item['below'])) {
+      $newItem['children'] = processNestedArray($item['below']);
+    }
+
+    $result[] = $newItem;
+  }
+
+  return $result;
+}
+
+function tailpine_preprocess_page(array &$variables): void
+{
+  // Load selected header style from theme settings.
+  $header_style = theme_get_setting('header_class') ?: 'style4';
+  $variables['header_template'] = 'header--' . $header_style;
+
+  // Get the theme setting for fixed header.
+  $variables['fixed'] = theme_get_setting('header_fixed');
+
+  // Set the appropriate class based on the setting.
+  $variables['header_fixed_class'] = $variables['fixed'] ? 'fixed z-40 w-full' : '';
+
+  // Set the footer template.
+  $footer_style = theme_get_setting('footer_class') ?: 'style2';
+  $variables['footer_template'] = 'footer--' . $footer_style;
+
+  if (!isset($variables['logo'])) {
+    $variables['logo'] = theme_get_setting('logo.url');
+  }
+}
+
+
+function tailpine_preprocess_menu(array &$variables) {
+  // Get the account menu by its machine name.
+  $account_menu_name = 'account';
+  // Load the menu tree parameters (e.g., top-level only).
+  $parameters = new \Drupal\Core\Menu\MenuTreeParameters();
+  // Load the tree.
+  $menu_tree = \Drupal::menuTree()->load($account_menu_name, $parameters);
+  // Build the tree into a renderable array.
+  $manipulated = \Drupal::menuTree()->build($menu_tree);
+  // Optionally, extract only the '#items' part if needed.
+  $variables['account_menu'] = $manipulated['#items'] ?? [];
+  // Get selected header style for menu twig
+  $header_style = theme_get_setting('header_class');
+  $variables['selected__header_template'] = $header_style;
+  // Check if the user is logged in
+  $current_user = \Drupal::currentUser();
+  // If the user is logged out, remove the "My Account" link from the menu.
+  if (!$current_user->isAuthenticated()) {
+    foreach ($variables['account_menu'] as $key => $item) {
+      if (
+        isset($item['url']) &&
+        $item['url'] instanceof \Drupal\Core\Url &&
+        $item['url']->isRouted() &&
+        $item['url']->getRouteName() === 'user.page'
+      ) {
+        unset($variables['account_menu'][$key]);
+      }
+    }
+  }
+}
+
+function tailpine_page_attachments_alter(array &$attachments)
+{
+  // Retrieve the 'daisyui_enable' setting from the theme configuration.
+  $theme = \Drupal::theme()->getActiveTheme()->getName();
+  $daisyui_enabled = \Drupal::config($theme . '.settings')->get('daisyui_enable');
+
+
+
+  // Check if the 'tailpine/main' library is attached.
+  if (!empty($attachments['#attached']['library']) && is_array($attachments['#attached']['library'])) {
+    $libraries = &$attachments['#attached']['library'];
+
+    // If DaisyUI is enabled, remove 'tailpine/main' and add 'tailpine/daisyui_styles'.
+    if ($daisyui_enabled) {
+      // Remove 'tailpine/main' if it's present.dd
+      $key = array_search('tailpine/main', $libraries);
+      if ($key !== FALSE) {
+        unset($libraries[$key]);
+      }
+
+      // Add 'tailpine/daisyui_styles' if it's not already attached.
+      if (!in_array('tailpine/daisyui_styles', $libraries)) {
+        $libraries[] = 'tailpine/daisyui_styles';
+      }
+    } else {
+      // If DaisyUI is not enabled, ensure 'tailpine/main' is attached and 'tailpine/daisyui_styles' is not.
+      $key = array_search('tailpine/daisyui_styles', $libraries);
+      if ($key !== FALSE) {
+        unset($libraries[$key]);
+      }
+
+      if (!in_array('tailpine/main', $libraries)) {
+        $libraries[] = 'tailpine/main';
+      }
+    }
+  }
+}
+
+
+/**
+ * Implements hook_form_alter().
+ */
+// function tailpine_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+//   if ($form_id === 'user_login_form') {
+//     $form['custom_title'] = [
+//       '#type' => 'markup',
+//       '#markup' => '<div class="mb-6 text-center"><img src="logo.svg" alt="Custom Image" /></div>',
+//       '#weight' => -100, // Force it at the top.
+//     ];
+//     // Style the form wrapper.
+//     $form['#attributes']['class'][] = 'max-w-sm md:max-w-lg lg:max-w-2xl mx-auto my-20 py-20 px-6 bg-body-bg shadow-lg shadow-primary rounded-2xl';
+
+//     // Username field (name).
+//     $form['name']['#attributes']['class'][] = 'w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary mb-4';
+//     $form['name']['#attributes']['placeholder'] = t('Username or Email');
+
+//     // Password field.
+//     $form['pass']['#attributes']['class'][] = 'w-full px-4 py-3 mb-6 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary mb-4';
+//     $form['pass']['#attributes']['placeholder'] = t('Password');
+
+//     // Login button.
+//     $form['actions']['submit']['#attributes']['class'][] = 'w-full bg-primary hover:bg-secondary text-body-bg font-semibold py-3 px-4 rounded-lg transition duration-300';
+
+//     // Optional: center the form actions.
+//     $form['actions']['#attributes']['class'][] = 'flex justify-center';
+//   }
+// }
+function tailpine_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if ($form_id === 'user_login_form') {
+
+    // Add a beautiful logo and heading section.
+    $form['custom_title'] = [
+      '#type' => 'markup',
+      '#markup' => '
+        <div class="text-center mb-8 animate-fade-in">
+          <img src="/themes/custom/tailpine/logo.svg" alt="Logo" class="mx-auto w-40 h-20 mb-4 drop-shadow-md">
+          <h2 class="text-3xl font-extrabold bg-gradient-to-r from-primary via-tertiary to-secondary bg-clip-text text-transparent">
+            Welcome Back 👋
+          </h2>
+          <p class="text-gray-700 mt-2">Log in to your account and continue your journey</p>
+        </div>
+      ',
+      '#weight' => -100,
+    ];
+
+    // Wrap the form in a beautiful card container.
+    $form['#prefix'] = '<div class="flex items-center justify-center min-h-screen ">
+                          <div class="backdrop-blur-md bg-white/10 border  mx-auto border-gray-700 p-8 sm:p-12 w-full max-w-xl transform transition duration-500">';
+    $form['#suffix'] = '</div></div>';
+
+// Username field.
+$form['name']['#prefix'] = '
+<div class="relative w-full">
+
+';
+
+$form['name']['#suffix'] = '</div>';
+
+$form['name']['#attributes']['class'][] = 'w-full  pr-4 py-3 mb-4 border border-gray-700 bg-white/5 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-300 rounded-lg';
+$form['name']['#attributes']['placeholder'] = t('Username or Email');
+
+
+    // Password field.
+    $form['pass']['#attributes']['class'][] = 'w-full  pr-4 py-3 mb-4 sborder border-gray-700 bg-white/5  placeholder-gray-400  focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-300';
+    $form['pass']['#attributes']['placeholder'] = t('Password');
+
+    // Login button.
+    $form['actions']['submit']['#attributes']['class'][] = 'w-full py-3 px-4 cursor-pointer font-semibold text-lg text-white bg-gradient-to-r from-primary  to-secondary  focus:ring-4 focus:ring-secondary  transition-all duration-500 ease-in-out transform ';
+    $form['actions']['#attributes']['class'][] = 'flex justify-center mt-4';
+
+    // Add footer links (e.g., Forgot password or signup).
+    $form['footer_links'] = [
+      '#type' => 'markup',
+      '#markup' => '
+        <div class="text-center mt-8 text-gray-700 text-sm">
+          <a href="/user/password" class="hover:text-primary transition">Forgot your password?</a><br>
+          <a href="/user/register" class="hover:text-secondary transition">Create a new account</a>
+        </div>
+      ',
+      '#weight' => 100,
+    ];
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for HTML document templates.
+ *
+ * Adds 'type' to input.html.twig
+ */
+function tailpine_preprocess_input(&$variables) {
+  // Get the input type.
+  $type = $variables['element']['#type'] ?? '';
+  $variables['type'] = $type;
+}
+
+/**
+ * Implements hook_preprocess_block__system_messages_block().
+ */
+function tailpine_preprocess_block__system_messages_block(&$variables) {
+ $variables['content'] = StatusMessages::renderMessages();
+}
+
+function tailpine_preprocess_paragraph__tailpine_slider(&$variables) {
+  $variables['#attached']['library'][] = 'tailpine/slick';
+}

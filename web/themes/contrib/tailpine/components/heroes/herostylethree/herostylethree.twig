@@ -1,0 +1,22 @@
+<section
+	class="w-full bg-center bg-cover" style="background-image:
+		        linear-gradient(0deg, rgba(10,15,20,0.6), rgba(10,15,20,0.6)),
+		        linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 75%),
+		        url('{{imageurl}}');">
+
+	<!-- Main Content -->
+	<main class="container-px max-w-480 mx-auto w-full pt-[clamp(327px,25vw,478px)]  pb-[clamp(5rem,12vw,180px)] flex flex-col gap-8 font-archivo">
+		<div class="flex flex-col gap-5 text-body-bg">
+
+			<h1 class=" font-bold text-[clamp(2.5rem,6vw,5rem)] leading-tight tracking-tighter xl:max-w-[900px]">
+				{{title}}
+			</h1>
+
+			<div class="text-base font-normal md:text-xl md:max-w-[624px] tracking-[2%]  w-auto">{{description}}
+			</div>
+		</div>
+		<div class="flex gap-5 flex-col md:flex-row">
+			{{cta}}
+		</div>
+	</main>
+</section>

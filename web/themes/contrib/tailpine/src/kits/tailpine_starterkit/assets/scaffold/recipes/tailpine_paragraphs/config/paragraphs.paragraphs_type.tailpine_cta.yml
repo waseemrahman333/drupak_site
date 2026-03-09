@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 0vlU61tsQfD-pZfF02K_up_4-nON4-ajI-XfqdxAlgU
+id: tailpine_cta
+label: 'Tailpine Cta'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

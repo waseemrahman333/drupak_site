@@ -1,0 +1,13 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Carousel
+status: stable
+description: >
+  A carousel component built from paragraph reference items.
+fields:
+  field_carousel_items:
+    type: [string, 'null']
+    label: Carousel Items
+    multiple: true
+    component: carousel_item
+
+

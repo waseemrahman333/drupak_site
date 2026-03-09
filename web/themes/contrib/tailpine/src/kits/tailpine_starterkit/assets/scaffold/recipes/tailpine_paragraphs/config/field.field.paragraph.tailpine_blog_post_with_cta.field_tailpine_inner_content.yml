@@ -1,0 +1,105 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tailpine_inner_content
+    - paragraphs.paragraphs_type.tailpine_blog_post_with_cta
+    - paragraphs.paragraphs_type.tailpine_cta
+  module:
+    - entity_reference_revisions
+id: paragraph.tailpine_blog_post_with_cta.field_tailpine_inner_content
+field_name: field_tailpine_inner_content
+entity_type: paragraph
+bundle: tailpine_blog_post_with_cta
+label: 'Add CTA'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      tailpine_cta: tailpine_cta
+    negate: 0
+    target_bundles_drag_drop:
+      hero:
+        weight: 6
+        enabled: false
+      tailpine_accordion:
+        weight: 7
+        enabled: false
+      tailpine_accordion_header:
+        weight: 8
+        enabled: false
+      tailpine_blog_post_with_cta:
+        weight: 27
+        enabled: false
+      tailpine_card:
+        weight: 21
+        enabled: false
+      tailpine_card_two:
+        weight: 21
+        enabled: false
+      tailpine_cards_header:
+        weight: 22
+        enabled: false
+      tailpine_contact_us_form:
+        weight: 27
+        enabled: false
+      tailpine_cta:
+        weight: 9
+        enabled: true
+      tailpine_get_in_touch:
+        weight: 24
+        enabled: false
+      tailpine_hero_style_two:
+        weight: 30
+        enabled: false
+      tailpine_media_and_text:
+        weight: 25
+        enabled: false
+      tailpine_post_cards:
+        weight: 26
+        enabled: false
+      tailpine_post_inner_wrapper:
+        weight: 40
+        enabled: false
+      tailpine_post_wrapper:
+        weight: 10
+        enabled: false
+      tailpine_social_icons:
+        weight: 42
+        enabled: false
+      tailpine_sponser_company:
+        weight: 28
+        enabled: false
+      tailpine_sponser_header:
+        weight: 29
+        enabled: false
+      tailpine_sub_page_hero:
+        weight: 30
+        enabled: false
+      tailpine_team:
+        weight: 31
+        enabled: false
+      tailpine_team_style_two:
+        weight: 47
+        enabled: false
+      tailpine_team_style_two_header:
+        weight: 48
+        enabled: false
+      tailpine_teams_header:
+        weight: 32
+        enabled: false
+      tailpine_testimonial:
+        weight: 33
+        enabled: false
+      tailpine_testimonial_header:
+        weight: 34
+        enabled: false
+      tailpine_testimonial_style_two:
+        weight: 52
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,84 @@
+{#
+  Themes a single-select exposed form element as radio buttons.
+
+  Available variables:
+    - wrapper_attributes: attributes for the wrapper element.
+    - element: The collection of checkboxes.
+    - children: An array of keys for the children of element.
+    - is_nested: TRUE if this is to be rendered as a nested list.
+    - depth: If is_nested is TRUE, this holds an array in the form of
+      child_id => nesting_level which defines the depth a given element should
+      appear in the nested list.
+#}
+{# {%
+  set classes = [
+    'bef-links',
+    is_nested ? 'bef-nested'
+  ]
+%}
+{% set is_nested = true %}
+{% for name, value in hiddens %}
+  <input type="hidden" name="{{ name }}" value="{{ value }}" id="edit-{{ name }}" />
+{% endfor %}
+<div{{ attributes.removeClass('form-select').addClass(classes) }}>
+  {% set current_nesting_level = 0 %}
+  {% for child in children %}
+    {% set item = attribute(element, child) %}
+    {% set new_nesting_level = attribute(depth, child) ?? 0 %}
+    {% include '@better_exposed_filters/bef-nested-elements.html.twig' %}
+    {% set current_nesting_level = new_nesting_level %}
+  {% endfor %}
+</div> #}
+
+
+{# <nav class="w-full overflow-x-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden py-[clamp(40px,6vh,100px)]">
+
+  <div id="blog-categories" class="flex justify-center gap-2.5 min-w-max container-px">
+
+    {% for child in children %}
+      {% set item = attribute(element, child) %}
+      {% set is_active = item['#active'] ?? false %}
+
+      <a
+        href="{{ item['#url'] }}"
+        href="{{ path('<current>') }}?{{ item['#url'].query|url_encode }}"
+        href="{{ path('<current>') }}{{ item['#url'].options.query ? '?' ~ item['#url'].options.query|url_encode : '' }}"
+        class="
+          capitalize px-3 py-1.5 text-sm transition-colors duration-300 rounded whitespace-nowrap
+          {{ is_active
+            ? 'bg-primary text-white'
+            : 'bg-secondary hover:bg-primary'
+          }}
+        "
+      >
+        {{ item['#title'] }}
+      </a>
+
+    {% endfor %}
+
+  </div>
+
+</nav> #}
+
+
+{# 
+ <nav class="w-full  overflow-x-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden py-[clamp(40px,6vh,100px)]">
+
+  <div id="blog-categories" class="flex justify-center gap-2.5 min-w-max container-px">
+
+    {% for child in children %}
+      {% set item = attribute(element, child) %}
+      {% set is_active = item['#active'] ?? false %}
+
+      <a
+        href="{{ path('<current>') }}{{ item['#url'].options.query ? '?' ~ item['#url'].options.query|url_encode : '' }}"
+        class="capitalize px-3 py-1.5 text-sm transition-colors duration-300 rounded whitespace-nowrap {{ is_active ? 'bg-primary text-white' : 'bg-secondary hover:bg-primary' }}"
+      >
+        {{ item['#title'] }}
+      </a>
+
+    {% endfor %}
+
+  </div> 
+
+</nav> #}

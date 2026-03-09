@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 834ccfc8-8284-4010-96e8-9738bc1a75d6
+  bundle: tailpine_cta
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Post CTA'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  field_tailpine_btn_border_radius:
+    -
+      value: rounded-sm
+  field_tailpine_btn_type:
+    -
+      value: with_arrow
+  field_tailpine_button_style:
+    -
+      value: primary
+  field_tailpine_link:
+    -
+      uri: 'internal:/'
+      title: 'View All Posts'
+      options: {  }

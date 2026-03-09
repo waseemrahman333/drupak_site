@@ -1,0 +1,41 @@
+{#
+/**
+ * @file
+ * Theme override to list node types available for adding content.
+ *
+ * This list is displayed on the Add content admin page.
+ *
+ * Available variables:
+ * - types: A list of content types, each with the following properties:
+ *   - add_link: Link to create a piece of content of this type.
+ *   - description: Description of this type of content.
+ *
+ * @see template_preprocess_node_add_list()
+ */
+#}
+{% if types is not empty %}
+  <dl class="node-type-list bg-body-bg border border-gray-200 my-5  shadow-sm p-6 space-y-4">
+    {% for type in types %}
+      <div class="flex flex-col gap-2 sm:items-start sm:justify-between border-b border-gray-500 last:border-0">
+        <dt class="font-semibold text-lg hover:text-primary duration-200 text-body mb-2 sm:mb-0">
+          {{ type.add_link }}
+        </dt>
+        <dd class="text-sm text-secondary leading-relaxed mt-2 ">
+          {{ type.description|render }}
+        </dd>
+      </div>
+    {% endfor %}
+  </dl>
+{% else %}
+  <p class="text-body text-sm bg-body-bg border border-dashed border-gray-700  p-4">
+    {% set create_content = path('node.type_add') %}
+    {% trans %}
+      You have not created any content types yet. Go to the 
+      <a href="{{ create_content }}" class="text-primary underline hover:text-secondary transition-colors duration-200">
+        content type creation page
+      </a>
+      to add a new content type.
+    {% endtrans %}
+  </p>
+{% endif %}
+

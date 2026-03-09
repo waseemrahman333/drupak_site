@@ -1,0 +1,7 @@
+name: 'Primary Button'
+props:
+  text: 'Primary Button'
+  url: ''
+  size: md
+  disabled: false
+  variant: primary

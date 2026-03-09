@@ -1,0 +1,45 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+status: stable
+name: Field
+description: A reusable field component for Storybook.
+
+props:
+  type: object
+  properties:
+    field_name:
+      type: [string, 'null']
+      title: Field Name
+      description: The machine name of the field.
+    field_type:
+      type: [string, 'null']
+      title: Field Type
+      description: The type of field (e.g., text, image).ddev
+    label:
+      type: [string, 'null']
+      title: Label
+      description: The field label.
+    label_hidden:
+      type: boolean
+      title: Label Hidden
+      description: Hide or show the label.
+    label_display:
+      type: [string, 'null']
+      title: Label Display Mode
+      description: Controls how the field label is displayed.
+      enum:
+        - inline
+        - above
+        - visually_hidden
+        - hidden
+    items:
+      type: array
+      title: Field Items
+      description: The content inside the field.
+      items:
+        type: object
+        properties:
+          content:
+            type:
+              - string
+              - object
+            title: Item Content

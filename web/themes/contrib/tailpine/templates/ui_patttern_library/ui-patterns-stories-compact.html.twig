@@ -1,0 +1,53 @@
+<div class="ui_patterns_component__stories">
+	{% for story_id, story in component.stories %}
+		{{ _self.render_story(component.id, story_id, story, component.variants) }}
+	{% endfor %}
+</div>
+
+{% macro render_story(component_id, story_id, story, variants) %}
+	<div
+		class="ui_patterns_story mb-6">
+		{# Heading from story.yml (name) #}
+		{% if story.name %}
+			<h2 class="ui_patterns_story__heading font-bold mb-4">{{ story.name|split(' ')|map(v => v|capitalize)|join(' ') }}</h2>
+		{% endif %}
+
+		{# {% if variants and not story.props.variant %}
+		      {% for variant_id, variant in variants %}
+
+		        {{ component_story(component_id, story_id, {}, {variant: variant_id,   attributes: { class: "mr-2" ~ variant_id }
+		      }) }}
+		      {% endfor %}
+		    {% else %}
+		       {% set extra_class = '' %}
+		        {% if component_id == 'tailpine:cardonestyle' or component_id == 'tailpine:team_styletwo' %}
+		          {% set extra_class = 'max-w-96' %}
+		        {% endif %}
+		        {{ component_story(component_id, story_id, {}, {
+		          attributes: {
+		          class: ' !p-0 ' ~ extra_class
+		          }
+		        }) }}
+		        {% endif %}
+		    {% endif %} #}
+		{% if variants and not story.props.variant %}
+			{% for variant_id, variant in variants %}
+				{{ component_story(component_id, story_id, {}, {
+          variant: variant_id,
+          attributes: { class: "mr-2" ~ variant_id }
+          }) }}
+			{% endfor %}
+		{% else %}
+			{% set extra_class = '' %}
+			{% if component_id == 'tailpine:cardonestyle' or component_id == 'tailpine:team_styletwo' %}
+				{% set extra_class = 'max-w-96' %}
+			{% endif %}
+			{{ component_story(component_id, story_id, {}, {
+          attributes: {
+          class: ' !p-0 ' ~ extra_class
+          }
+          }) }}
+		{% endif %}
+
+	</div>
+{% endmacro %}

@@ -1,0 +1,22 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/metadata.schema.json
+name: Dropdown Menu
+status: stable
+description: Individual dropdown menu item.
+group: Navigation
+props:
+  type: object
+  properties:
+    text:
+      type: string
+      title: Text
+      description: Menu item text.
+    url:
+      type: string
+      title: URL
+      description: Menu item link URL.
+    divider:
+      type: boolean
+      title: Divider
+      description: Show as divider line.
+      default: false
+

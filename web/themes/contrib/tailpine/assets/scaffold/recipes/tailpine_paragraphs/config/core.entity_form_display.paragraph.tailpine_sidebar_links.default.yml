@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tailpine_sidebar_links.field_tailpine_title
+    - paragraphs.paragraphs_type.tailpine_sidebar_links
+id: paragraph.tailpine_sidebar_links.default
+targetEntityType: paragraph
+bundle: tailpine_sidebar_links
+mode: default
+content:
+  field_tailpine_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

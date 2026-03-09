@@ -1,0 +1,18 @@
+{% stories figure with { title: 'Components/Figure' } %}
+
+{% story default with {
+    name: '1. Figure - With Caption',
+    args: { 
+      image_url: 'https://cdn.pixabay.com/photo/2024/04/02/10/28/bangladesh-8670559_1280.jpg',
+      image_alt: 'Beautiful sunset over mountains',
+      caption: 'A stunning sunset captured in the mountains'
+    }
+  } %}
+{% embed 'tailpine:figure' with { 
+  image_url: image_url,
+  image_alt: image_alt,
+  caption: caption
+} %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

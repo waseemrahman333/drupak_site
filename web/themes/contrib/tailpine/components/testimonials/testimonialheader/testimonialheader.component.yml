@@ -1,0 +1,20 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Testimonial   Header
+status: stable
+description: "Testimonial Wrapper are used to group and display content in a way that is easily readable."
+group: Teams & Testimonials
+props:
+  type: object
+  properties:
+    bg_color:
+      type: string
+      title: Background Color
+      description: "Background color of the Wrapper. Plain text."
+slots:
+  title:
+    title: Title
+    description: "Name of the card. Plain text."
+  content:
+    title: Content
+    description: "Content of the Wrapper. Plain text."
+    

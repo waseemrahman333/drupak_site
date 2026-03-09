@@ -1,0 +1,15 @@
+name: Title - H2 Section Title
+description: Section title as H2 heading
+
+props:
+  field_name: title
+  field_type: string
+  label_display: hidden
+  is_inline: false
+  heading_level: h2
+  items:
+    - content: "Latest Articles"
+  title_utility_classes:
+    - "text-3xl"
+    - "mb-4"
+

@@ -1,0 +1,11 @@
+name: Progress - 60%
+description: Progress bar at 60% completion
+
+props:
+  value: 60
+  max: 100
+  label: 'Upload Progress'
+  show_percentage: true
+  color: primary
+  height: md
+

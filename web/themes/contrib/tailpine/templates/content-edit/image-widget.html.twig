@@ -1,0 +1,17 @@
+{#
+/**
+ * @file
+ * Theme override for an image field widget.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the containing element.
+ * - data: Render elements of the image widget.
+ *
+ * @see template_preprocess_image_widget()
+ */
+#}
+
+{% include 'tailpine:image-widget' with {
+  attributes: attributes,
+  data: data
+} %}

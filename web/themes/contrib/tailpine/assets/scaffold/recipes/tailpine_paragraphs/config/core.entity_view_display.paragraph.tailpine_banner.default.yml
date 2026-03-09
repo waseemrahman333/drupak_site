@@ -1,0 +1,178 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.image.field_media_image
+    - field.field.paragraph.tailpine_banner.field_tailpine_description
+    - field.field.paragraph.tailpine_banner.field_tailpine_inner_content
+    - field.field.paragraph.tailpine_banner.field_tailpine_media_image
+    - field.field.paragraph.tailpine_banner.field_tailpine_title
+    - paragraphs.paragraphs_type.tailpine_banner
+  module:
+    - entity_reference_revisions
+    - layout_builder
+    - nomarkup
+    - text
+    - ui_patterns
+    - ui_patterns_layouts
+  theme:
+    - tailpine
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: 'ui_patterns:tailpine:herostylethree'
+        layout_settings:
+          label: ''
+          context_mapping:
+            entity: layout_builder.entity
+          ui_patterns:
+            component_id: 'tailpine:herostylethree'
+            variant_id: null
+            props:
+              attributes:
+                source_id: attributes
+                source:
+                  value: ''
+              imageurl:
+                source_id: entity_reference
+                source:
+                  derivable_context: 'entity_reference:paragraph:tailpine_banner:field_tailpine_media_image:media:image'
+                  'entity_reference:paragraph:tailpine_banner:field_tailpine_media_image:media:image':
+                    value:
+                      source_id: entity_reference
+                      source:
+                        derivable_context: 'entity_reference:media:image:field_media_image:file:file'
+                        'entity_reference:media:image:field_media_image:file:file':
+                          value:
+                            source_id: entity_field
+                            source:
+                              derivable_context: 'field:file:file:uri'
+                              'field:file:file:uri':
+                                value:
+                                  source_id: 'field_property:file:uri:url'
+            slots: {  }
+        components:
+          ddca19c4-c0c8-420d-9c3e-0f1c78c5c8ac:
+            uuid: ddca19c4-c0c8-420d-9c3e-0f1c78c5c8ac
+            region: title
+            configuration:
+              id: 'field_block:paragraph:tailpine_banner:field_tailpine_title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings: {  }
+                third_party_settings:
+                  nomarkup:
+                    enabled: true
+                    separator: '|'
+                    referenced_entity: ''
+            weight: 0
+            additional: {  }
+          85806358-7468-4105-8f60-e216501b8e6c:
+            uuid: 85806358-7468-4105-8f60-e216501b8e6c
+            region: description
+            configuration:
+              id: 'field_block:paragraph:tailpine_banner:field_tailpine_description'
+              label: Description
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_trimmed
+                label: hidden
+                settings:
+                  trim_length: 400
+                third_party_settings:
+                  nomarkup:
+                    enabled: true
+                    separator: '|'
+                    referenced_entity: ''
+            weight: 0
+            additional: {  }
+          5f00ff0a-103b-490a-b738-f58a5fec72c2:
+            uuid: 5f00ff0a-103b-490a-b738-f58a5fec72c2
+            region: cta
+            configuration:
+              id: 'field_block:paragraph:tailpine_banner:field_tailpine_inner_content'
+              label: 'Add CTA'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: hidden
+                settings:
+                  view_mode: default
+                third_party_settings:
+                  nomarkup:
+                    enabled: true
+                    separator: ''
+                    referenced_entity: ''
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+id: paragraph.tailpine_banner.default
+targetEntityType: paragraph
+bundle: tailpine_banner
+mode: default
+content:
+  field_tailpine_description:
+    type: text_trimmed
+    label: hidden
+    settings:
+      trim_length: 300
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 1
+    region: content
+  field_tailpine_inner_content:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: ''
+        referenced_entity: ''
+    weight: 3
+    region: content
+  field_tailpine_media_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_tailpine_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 0
+    region: content
+hidden: {  }

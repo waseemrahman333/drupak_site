@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: idMbWSMMdnObClKnsHjqKYpwb_B8EzUE7MyqVbxxTQc
+id: tailpine_post_header
+label: 'Post Header'
+revision: false
+description: null

@@ -1,0 +1,109 @@
+name: Tabswrapper - Secondary Fill Style
+description: Tab wrapper with secondary fill style tabs
+
+props:
+  firstTabTitle: 'getting-started'
+
+slots:
+  tabTitleContent: |
+    <button
+      type="button"
+      x-on:click="activeTab = 'getting-started'"
+      x-bind:class="activeTab === 'getting-started' ? 'bg-secondary text-body-bg' : ''"
+      class="w-1/3 py-3 text-body font-bold transition-all duration-200"
+      role="tab"
+    >
+      Getting Started
+    </button>
+    <button
+      type="button"
+      x-on:click="activeTab = 'api-reference'"
+      x-bind:class="activeTab === 'api-reference' ? 'bg-secondary text-body-bg' : ''"
+      class="w-1/3 py-3 text-body font-bold transition-all duration-200"
+      role="tab"
+    >
+      API Reference
+    </button>
+    <button
+      type="button"
+      x-on:click="activeTab = 'examples'"
+      x-bind:class="activeTab === 'examples' ? 'bg-secondary text-body-bg' : ''"
+      class="w-1/3 py-3 text-body font-bold transition-all duration-200"
+      role="tab"
+    >
+      Examples
+    </button>
+
+  tabContents: |
+    <div x-show="activeTab === 'getting-started'" x-transition role="tabpanel">
+      <div class="space-y-4">
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-gray-100">Getting Started Guide</h2>
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">Follow these simple steps to get up and running with our platform in minutes.</p>
+        <div class="space-y-6 mt-6">
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-8 h-8 bg-primary text-white flex items-center justify-center font-bold">1</div>
+            <div>
+              <h3 class="font-semibold text-lg mb-2 text-gray-900 dark:text-gray-100">Create Your Account</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400">Sign up for a free account using your email or social login.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-8 h-8 bg-primary text-white flex items-center justify-center font-bold">2</div>
+            <div>
+              <h3 class="font-semibold text-lg mb-2 text-gray-900 dark:text-gray-100">Configure Your Workspace</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400">Set up your workspace preferences and invite team members.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-8 h-8 bg-primary text-white flex items-center justify-center font-bold">3</div>
+            <div>
+              <h3 class="font-semibold text-lg mb-2 text-gray-900 dark:text-gray-100">Start Building</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400">Create your first project and begin working.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div x-show="activeTab === 'api-reference'" x-transition role="tabpanel">
+      <div class="space-y-4">
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-gray-100">API Reference</h2>
+        <p class="text-gray-700 dark:text-gray-300">Complete API documentation for developers.</p>
+        <div class="bg-gray-900 text-green-400 p-4 font-mono text-sm overflow-x-auto">
+          <div>POST /api/v1/auth/login</div>
+          <div class="mt-2">{</div>
+          <div class="ml-4">"email": "user@example.com",</div>
+          <div class="ml-4">"password": "your-password"</div>
+          <div>}</div>
+        </div>
+        <div class="mt-6">
+          <h3 class="font-semibold text-lg mb-3 text-gray-900 dark:text-gray-100">Common Endpoints</h3>
+          <ul class="space-y-2 text-sm">
+            <li class="p-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+              <span class="font-mono text-primary font-semibold">GET</span>
+              <span class="font-mono text-gray-900 dark:text-gray-100 ml-3">/api/v1/users</span>
+            </li>
+            <li class="p-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+              <span class="font-mono text-green-600 font-semibold">POST</span>
+              <span class="font-mono text-gray-900 dark:text-gray-100 ml-3">/api/v1/users</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div x-show="activeTab === 'examples'" x-transition role="tabpanel">
+      <div class="space-y-4">
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-gray-100">Code Examples</h2>
+        <div class="space-y-4">
+          <div>
+            <h3 class="font-semibold mb-2 text-gray-900 dark:text-gray-100">JavaScript Example</h3>
+            <div class="bg-gray-900 text-green-400 p-4 font-mono text-sm overflow-x-auto">
+              <div>const apiKey = "your-api-key";</div>
+              <div class="mt-2">fetch("https://api.example.com/v1/data", {</div>
+              <div class="ml-4">method: "GET",</div>
+              <div class="ml-4">headers: { "Authorization": `Bearer ${apiKey}` }</div>
+              <div>})</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

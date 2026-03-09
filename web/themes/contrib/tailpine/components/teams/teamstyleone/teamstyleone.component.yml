@@ -1,0 +1,20 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Team Style One
+status: stable
+description: "Team components are used to group and display content in a readable format."
+group: Teams & Testimonials
+props:
+  type: object
+  properties:
+    imageurl:
+      type: string
+      title: Team image
+      description: "The image overlay URL."
+
+slots:
+  name:
+    title: Name
+    description: "Name of the card. Plain text."
+  subtitle:
+    title: Subtitle
+    description: "Subtitle of the card. Plain text."

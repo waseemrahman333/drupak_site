@@ -1,0 +1,122 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tailpine_cta.field_tailpine_btn_border_radius
+    - field.field.paragraph.tailpine_cta.field_tailpine_btn_type
+    - field.field.paragraph.tailpine_cta.field_tailpine_button_style
+    - field.field.paragraph.tailpine_cta.field_tailpine_link
+    - field.field.paragraph.tailpine_social_icons.field_tailpine_button_style
+    - field.field.paragraph.tailpine_social_icons.field_tailpine_link
+    - field.field.paragraph.tailpine_sponser_company.field_tailpine_link
+    - field.field.paragraph.tailpine_sponser_logo_style_one.field_tailpine_link
+    - paragraphs.paragraphs_type.tailpine_cta
+  module:
+    - layout_builder
+    - link
+    - options
+    - ui_patterns
+    - ui_patterns_layouts
+  theme:
+    - tailpine
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: 'ui_patterns:tailpine:cta'
+        layout_settings:
+          label: ''
+          context_mapping:
+            entity: layout_builder.entity
+          ui_patterns:
+            component_id: 'tailpine:cta'
+            variant_id:
+              source_id: select
+              source:
+                value: ''
+            props:
+              attributes:
+                source_id: attributes
+                source:
+                  value: ''
+              title:
+                source_id: entity_field
+                source:
+                  derivable_context: 'field:paragraph:tailpine_cta:field_tailpine_link'
+                  'field:paragraph:tailpine_cta:field_tailpine_link':
+                    value:
+                      source_id: 'field_property:paragraph:field_tailpine_link:title'
+              link:
+                source_id: entity_field
+                source:
+                  derivable_context: 'field:paragraph:tailpine_cta:field_tailpine_link'
+                  'field:paragraph:tailpine_cta:field_tailpine_link':
+                    value:
+                      source_id: 'field_property:paragraph:field_tailpine_link:uri'
+              color_schema:
+                source_id: entity_field
+                source:
+                  derivable_context: 'field:paragraph:tailpine_cta:field_tailpine_button_style'
+                  'field:paragraph:tailpine_cta:field_tailpine_button_style':
+                    value:
+                      source_id: 'field_property:paragraph:field_tailpine_button_style:value'
+              size:
+                source_id: entity_field
+                source:
+                  derivable_context: 'field:paragraph:tailpine_cta:field_tailpine_btn_border_radius'
+                  'field:paragraph:tailpine_cta:field_tailpine_btn_border_radius':
+                    value:
+                      source_id: 'field_property:paragraph:field_tailpine_btn_border_radius:value'
+              button_variant:
+                source_id: entity_field
+                source:
+                  derivable_context: 'field:paragraph:tailpine_cta:field_tailpine_btn_type'
+                  'field:paragraph:tailpine_cta:field_tailpine_btn_type':
+                    value:
+                      source_id: 'field_property:paragraph:field_tailpine_btn_type:value'
+            slots: {  }
+        components: {  }
+        third_party_settings: {  }
+_core:
+  default_config_hash: c9eQUHCsxYKQEJpZRaqGbw_HzWNh7sY6NWuTwZyGR2k
+id: paragraph.tailpine_cta.default
+targetEntityType: paragraph
+bundle: tailpine_cta
+mode: default
+content:
+  field_tailpine_btn_border_radius:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_tailpine_btn_type:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: null
+  field_tailpine_button_style:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_tailpine_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

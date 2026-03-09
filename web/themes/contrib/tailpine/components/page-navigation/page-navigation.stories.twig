@@ -1,0 +1,16 @@
+{% stories page_navigation with { title: 'Components/Page Navigation' } %}
+
+{% story default with {
+    name: '1. Page Navigation',
+    args: { 
+      content: '<ul class="flex space-x-4"><li><a href="/" class="hover:underline">Home</a></li><li><a href="/about" class="hover:underline">About</a></li><li><a href="/contact" class="hover:underline">Contact</a></li></ul>'
+    }
+  } %}
+{% embed 'tailpine:page-navigation' %}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

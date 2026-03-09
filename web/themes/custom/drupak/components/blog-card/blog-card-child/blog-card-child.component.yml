@@ -1,0 +1,37 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Blog card child component
+status: stable
+description: "Blog card child component for displaying individual blog posts with image, title, date, category and link."
+group: Drupak
+props:
+  type: object
+  properties:
+    image:
+      type: string
+      title:  Image
+      description: "The consultation image ."
+slots:
+    title:
+      type: string
+      title: Title
+      description: "Title of the Inspiration Item component" 
+    date:
+      type: string
+      title: Date
+      description: "Date of the blog post"
+    blog_category:
+      type: string
+      title: Category
+      description: "Category of the blog post"
+    # cta:
+    #   type: string
+    #   title: CTA
+    #   description: "Call to action for the blog post"
+    link:
+      type: string
+      title: Link
+      description: "URL for the blog post"
+    title2:
+      type: string
+      title: Link Text
+      description: "Text for the blog post link"

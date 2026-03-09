@@ -1,0 +1,11 @@
+name: rounded lg
+
+props:
+  attributes:
+    class:
+      - "!m-2"
+  title: "CTA Text"
+  color_schema: null
+  size: "rounded-lg"
+  link: "https://example.com"
+  button_variant: "with_arrow"

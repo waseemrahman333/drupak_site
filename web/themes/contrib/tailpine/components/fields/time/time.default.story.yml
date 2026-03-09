@@ -1,0 +1,6 @@
+name: Time - Default
+description: Basic datetime display
+
+props:
+  text: "November 5, 2025"
+  datetime: "2025-11-05T10:30:00Z"

@@ -1,0 +1,9 @@
+name: Button - Sizes
+description: Button size variants
+
+props:
+  content: 'Large Button'
+  color: primary
+  size: lg
+  outline: false
+

@@ -1,0 +1,25 @@
+{% stories teamstyleone with { title: 'Components/Team Style One' } %}
+
+{% story default with {
+    name: '1. Team Style One - Simple Card',
+    args: { 
+      imageurl: 'https://cdn.pixabay.com/photo/2024/04/02/10/28/bangladesh-8670559_1280.jpg',
+      heading_level: 2,
+      name: 'Sarah Johnson',
+      subtitle: 'Lead Designer'
+    }
+  } %}
+{% embed 'components:teamstyleone' with { 
+  imageurl: imageurl,
+  heading_level: heading_level
+} %}
+  {% block name %}
+    {{ name }}
+  {% endblock %}
+  {% block subtitle %}
+    {{ subtitle }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

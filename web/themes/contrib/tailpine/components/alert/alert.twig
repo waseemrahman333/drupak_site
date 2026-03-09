@@ -1,0 +1,145 @@
+{#
+/**
+ * Alert Component
+ * 
+ * Displays status messages with icons and optional dismiss functionality.
+ * Uses Alpine.js for interactive behavior and auto-dismiss.
+ *
+ * Available variables:
+ * - messages: (string) The message text to display. Required.
+ * - type: (string) The alert type. Options: 'error', 'warning', 'success', 'info'. Default: 'info'
+ * - variant: (string) Visual variant for non-standard types. Default: 'primary'
+ * - status_headings: (array) Optional array of status heading labels for accessibility
+ * - dismissible: (boolean) Whether the alert can be dismissed. Default: true (via Alpine.js)
+ * - auto_dismiss: (number) Time in milliseconds before auto-dismiss. Default: 4555000 (75+ minutes)
+ *
+ * Accessibility:
+ * - Uses role="alert" for important messages
+ * - Uses role="status" for informational messages
+ * - aria-live="polite" for non-critical updates
+ * - Close button has aria-label for screen readers
+ *
+ * Theme Variables Used:
+ * - bg-error: Error background color
+ * - bg-warning: Warning background color
+ * - bg-success: Success background color
+ * - bg-primary: Info/primary background color
+ * - text-body-bg: Text color on colored backgrounds
+ * - text-error: Error text color
+ *
+ * Examples:
+ * {% include 'tailpine:alert' with {
+ *   messages: 'Your changes have been saved!',
+ *   type: 'success',
+ * } %}
+ */
+#}
+
+{% set alert_type = type|default('info') %}
+{% set alert_role = alert_type in ['error', 'warning'] ? 'alert' : 'status' %}
+{% set aria_live = alert_type in ['error', 'warning'] ? 'assertive' : 'polite' %}
+
+<div class="space-y-4 mb-2">
+
+{% set classes = [
+    alert_type == 'error' ? 'bg-error text-body-bg' : '',
+    alert_type == 'warning' ? 'bg-warning text-body-bg' : '',
+    alert_type == 'success' ? 'bg-success text-body-bg' : '',
+    alert_type == 'info' ? 'bg-primary text-body-bg' : '',
+    variant and alert_type not in ['error', 'warning', 'success', 'info'] ? 'bg-' ~ variant : '',
+    'p-4 flex items-center justify-between'
+  ]|filter(v => v) %}
+
+  <div role="{{ alert_role }}" aria-live="{{ aria_live }}" aria-atomic="true" aria-label="{{ status_headings[alert_type]|default(alert_type|capitalize ~ ' message') }}">
+    <div
+    x-data="{ show: true }"
+    x-show="show"
+    x-init="setTimeout(() => show = false, {{ auto_dismiss|default(4555000) }})"
+    x-transition:enter="transition transform ease-out duration-500"
+    x-transition:enter-start="opacity-0 translate-y-4"
+    x-transition:enter-end="opacity-100 translate-y-0"
+    x-transition:leave="transition transform ease-in duration-500"
+    x-transition:leave-start="opacity-100 translate-y-0"
+    x-transition:leave-end="opacity-0 translate-y-4"
+    class="{{ classes|join(' ') }}"
+    >
+     <div class="flex items-center">
+     {% if alert_type == 'success' %}
+      <svg
+        class="w-5 h-5 text-body-bg mr-3"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+        >
+        <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M5 13l4 4L19 7"
+        ></path>
+      </svg>
+      {% elseif  alert_type == 'error' %}
+       <svg
+            class="w-5 h-5 text-body-bg mr-3"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M18 6L6 18M6 6l12 12"
+            ></path>
+          </svg>
+      {% else %}
+          <svg
+            class="w-5 h-5 text-body mr-3"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M11 7h2v6h-2zm0 4h2v2h-2z"
+            ></path>
+          </svg>
+      {% endif %}
+          <ul>
+              <li>{{ variant|capitalize ~ '!' }} {{ messages }}</li>
+          </ul>
+      </div>
+
+      <button 
+        type="button"
+        x-on:click="show = false"
+        aria-label="Dismiss alert"
+        class="ml-auto focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary rounded p-1 hover:bg-black hover:bg-opacity-10 transition-colors"
+      >
+        <svg
+          class="w-5 h-5 text-error"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M18 6L6 18M6 6l12 12"
+          ></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 8ad8e67d-c506-4b74-8afc-c684f51b7f18
+  bundle: tailpine_cards_header
+  default_langcode: en
+  depends:
+    c19aef7a-4c8e-4dd7-b0d7-aa29c0221cd5: block_content
+    8292b101-4350-40f7-8247-ea5727cd9d27: block_content
+    67ea8402-4fbe-4417-bb97-815082102b3b: block_content
+    e26fd9d9-d7b8-4081-9ca3-3f94fc7ee931: block_content
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Cards header'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  field_block:
+    -
+      entity: c19aef7a-4c8e-4dd7-b0d7-aa29c0221cd5
+    -
+      entity: 8292b101-4350-40f7-8247-ea5727cd9d27
+    -
+      entity: 67ea8402-4fbe-4417-bb97-815082102b3b
+    -
+      entity: e26fd9d9-d7b8-4081-9ca3-3f94fc7ee931
+  field_tailpine_comp_bg_color:
+    -
+      value: secondary
+  field_tailpine_description:
+    -
+      value: '<p>Artem turpe autem inesse solet diligant deinde contemnit. Consilia foris interesse putanda aliter imperitos levitatibus aristotelem percurri.</p>'
+      format: basic_html
+  field_tailpine_select_column:
+    -
+      value: grid-cols-4
+  field_tailpine_title:
+    -
+      value: 'Redefining Learning for a New Era'

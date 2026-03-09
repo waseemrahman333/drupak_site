@@ -1,0 +1,11 @@
+name: Video - Default
+description: Basic video player with controls
+
+slots:
+  children: |
+    <div class="video-wrapper max-w-3xl">
+      <video class="w-full max-w-full h-auto bg-black shadow-md" controls>
+        <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+        <p class="text-gray-700 dark:text-gray-300 p-4">Your browser does not support the video tag.</p>
+      </video>
+    </div>

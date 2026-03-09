@@ -1,0 +1,123 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tailpine_content
+    - paragraphs.paragraphs_type.tailpine_sponser_logo_style_one
+    - paragraphs.paragraphs_type.tailpine_sponser_two_header
+  module:
+    - entity_reference_revisions
+id: paragraph.tailpine_sponser_two_header.field_tailpine_content
+field_name: field_tailpine_content
+entity_type: paragraph
+bundle: tailpine_sponser_two_header
+label: 'Add Sponsor'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      tailpine_sponser_logo_style_one: tailpine_sponser_logo_style_one
+    negate: 0
+    target_bundles_drag_drop:
+      hero:
+        weight: 3
+        enabled: false
+      tailpine_accordion:
+        weight: 35
+        enabled: false
+      tailpine_accordion_header:
+        weight: 36
+        enabled: false
+      tailpine_accordion_one_header:
+        weight: 37
+        enabled: false
+      tailpine_accordion_sytle_one:
+        weight: 38
+        enabled: false
+      tailpine_blog_post_with_cta:
+        weight: 39
+        enabled: false
+      tailpine_card:
+        weight: 40
+        enabled: false
+      tailpine_card_two:
+        weight: 41
+        enabled: false
+      tailpine_cards_header:
+        weight: 42
+        enabled: false
+      tailpine_contact_us_form:
+        weight: 43
+        enabled: false
+      tailpine_cta:
+        weight: 4
+        enabled: false
+      tailpine_get_in_touch:
+        weight: 45
+        enabled: false
+      tailpine_hero_style_two:
+        weight: 46
+        enabled: false
+      tailpine_media_and_text:
+        weight: 47
+        enabled: false
+      tailpine_modal:
+        weight: 48
+        enabled: false
+      tailpine_post_cards:
+        weight: 49
+        enabled: false
+      tailpine_post_inner_wrapper:
+        weight: 50
+        enabled: false
+      tailpine_post_style_one_wrapper:
+        weight: 51
+        enabled: false
+      tailpine_post_wrapper:
+        weight: 52
+        enabled: false
+      tailpine_social_icons:
+        weight: 53
+        enabled: false
+      tailpine_sponser_company:
+        weight: 54
+        enabled: false
+      tailpine_sponser_header:
+        weight: 55
+        enabled: false
+      tailpine_sponser_logo_style_one:
+        weight: 33
+        enabled: true
+      tailpine_sponser_two_header:
+        weight: 56
+        enabled: false
+      tailpine_sub_page_hero:
+        weight: 57
+        enabled: false
+      tailpine_team:
+        weight: 58
+        enabled: false
+      tailpine_team_style_two:
+        weight: 59
+        enabled: false
+      tailpine_team_style_two_header:
+        weight: 60
+        enabled: false
+      tailpine_teams_header:
+        weight: 61
+        enabled: false
+      tailpine_testimonial:
+        weight: 62
+        enabled: false
+      tailpine_testimonial_header:
+        weight: 63
+        enabled: false
+      tailpine_testimonial_style_two:
+        weight: 64
+        enabled: false
+field_type: entity_reference_revisions

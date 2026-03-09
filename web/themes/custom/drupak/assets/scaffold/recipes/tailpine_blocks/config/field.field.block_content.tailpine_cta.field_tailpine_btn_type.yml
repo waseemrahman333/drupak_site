@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.tailpine_cta
+    - field.storage.block_content.field_tailpine_btn_type
+  module:
+    - options
+id: block_content.tailpine_cta.field_tailpine_btn_type
+field_name: field_tailpine_btn_type
+entity_type: block_content
+bundle: tailpine_cta
+label: 'Select The Button Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

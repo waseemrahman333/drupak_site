@@ -1,0 +1,14 @@
+{% stories node_add_list with { title: 'Components/Node Add List' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      types: []
+    }
+  } %}
+{% embed 'tailpine:node-add-list' with { 
+  types: types
+} %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

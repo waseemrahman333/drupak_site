@@ -1,0 +1,23 @@
+{% stories accordionstyletwoheader with { title: 'Components/Accordion Style Two  Header' } %}
+
+{% story default with {
+    name: '1. Accordion Header',
+    args: { 
+      title: 'Accordion Header',
+      description: 'This is the description of the accordion header component. You can put any content here.'
+    }
+  } %}
+{% embed 'components:accordionstyletwoheader' %}
+  {% block title %}
+    {{ title }}
+  {% endblock %}
+  {% block description %}
+    {{ description }}
+  {% endblock %}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

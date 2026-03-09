@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: tailpine_sponser_company
+label: 'Sponser Company'
+revision: false
+description: null

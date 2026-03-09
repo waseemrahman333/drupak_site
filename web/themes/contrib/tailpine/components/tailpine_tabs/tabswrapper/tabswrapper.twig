@@ -1,0 +1,58 @@
+{#
+/**
+ * Tailpine Tabs Wrapper Component
+ * 
+ * Interactive tab interface using Alpine.js for state management.
+ * Container for tab buttons and panels with accessible markup.
+ *
+ * Available variables:
+ * - firstTabTitle: (string) Title of the default active tab. Required. Used to generate initial state.
+ * - tabTitleContent: (markup) Rendered tab button components. Required.
+ * - tabContents: (markup) Rendered tab panel components. Required.
+ *
+ * Accessibility:
+ * - Uses ARIA tablist pattern
+ * - role="tablist" on button container
+ * - role="tab" on buttons (set in child components)
+ * - role="tabpanel" on panels (set in child components)
+ * - aria-selected for active tabs
+ * - Keyboard navigation (Arrow keys, Home, End)
+ * - Focus management
+ *
+ * Theme Variables Used:
+ * - bg-gray-100: Wrapper background color
+ * - border-gray-400: Tab button border
+ *
+ * Usage:
+ * This component should be used with tabscontent child components.
+ * The firstTabTitle must match one of the tab button IDs.
+ *
+ * Examples:
+ * {% include 'tailpine:tabswrapper' with {
+ *   firstTabTitle: 'Overview',
+ *   tabTitleContent: tab_buttons,
+ *   tabContents: tab_panels,
+ * } %}
+ */
+#}
+
+{% set default_tab_id = firstTabTitle|striptags|lower|replace({' ': '-'}) %}
+
+<div 
+  x-data="{ activeTab: '{{ default_tab_id }}' }" 
+  class="tabs container max-w-[1920px] w-full flex flex-col items-center justify-center font-medium bg-gray-100 shadow-md"
+>    
+  <!-- Tab Buttons Container -->
+  <div 
+    class="w-full flex border-b-2 border-gray-400" 
+    role="tablist" 
+    aria-label="Content tabs"
+  >
+    {{ tabTitleContent }}
+  </div>
+
+  <!-- Tab Content Panels -->
+  <div class="w-full p-6 text-left">
+    {{ tabContents }}
+  </div>
+</div>

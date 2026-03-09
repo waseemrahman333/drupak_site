@@ -1,0 +1,17 @@
+name: Field - Multiple Items
+description: Field with multiple items displayed as a list
+
+props:
+  field_name: field_tags
+  field_type: entity_reference
+  label: Tags
+  label_hidden: false
+  label_display: above
+  multiple: true
+  items:
+    - content: "Drupal"
+    - content: "Tailwind CSS"
+    - content: "Alpine.js"
+    - content: "Single Page Components"
+    - content: "UI Patterns"
+

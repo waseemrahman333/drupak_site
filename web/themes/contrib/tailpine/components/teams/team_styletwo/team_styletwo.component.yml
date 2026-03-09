@@ -1,0 +1,25 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Teams style two
+status: stable
+description: "team two are used to group and display content in a way that is easily readable."
+group: Teams & Testimonials
+props:
+  type: object
+  properties:
+    imageurl:
+      type: string
+      title: Image url
+      description:  "url of the image"
+slots:
+  title:
+    title: title
+    description: "title of the team member"
+  subtitle:
+    title: subtitle
+    description: "designation of the team member"
+  description:
+    title: description
+    description: "introduction of the team member "
+  icons:
+    title: Icons
+    description: "social icon links of the team member "

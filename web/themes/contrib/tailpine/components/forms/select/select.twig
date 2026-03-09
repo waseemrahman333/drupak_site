@@ -1,0 +1,59 @@
+{#
+/**
+ * @file
+ * Theme override for a select element.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the <select> tag.
+ * - options: The <option> element children.
+ *
+ * Theme Variables Used:
+ * - bg-white: Background color
+ * - text-body: Body text color
+ * - border-gray-300: Border colors
+ * - focus:ring-primary: Focus ring colors
+ *
+ * @see template_preprocess_select()
+ */
+#}
+{% set classes = [
+  'block',
+  'w-full',
+  '!bg-white',
+  'dark:!bg-gray-900',
+  'border',
+  'border-gray-300',
+  'dark:border-gray-700',
+  'text-gray-900',
+  'dark:text-gray-100',
+  'text-base',
+  'focus:ring-2',
+  'focus:ring-primary',
+  'focus:border-primary',
+  'px-4',
+  'py-3',
+  'transition-all',
+  'cursor-pointer',
+  'appearance-none',
+  'bg-[url(\'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDEyIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEgMUw2IDZMMTEgMSIgc3Ryb2tlPSIjNkI3MjgwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjwvc3ZnPg==\')]',
+  'bg-no-repeat',
+  'bg-[position:right_1rem_center]',
+  'pr-10',
+  'hover:border-gray-400',
+] %}
+
+{% apply spaceless %}
+  <select{{ attributes.addClass(classes) }}>
+    {% for option in options %}
+      {% if option.type == 'optgroup' %}
+        <optgroup label="{{ option.label }}">
+          {% for sub_option in option.options %}
+            <option value="{{ sub_option.value }}"{{ sub_option.selected ? ' selected="selected"' }}>{{ sub_option.label }}</option>
+          {% endfor %}
+        </optgroup>
+      {% elseif option.type == 'option' %}
+        <option value="{{ option.value }}"{{ option.selected ? ' selected="selected"' }}>{{ option.label }}</option>
+      {% endif %}
+    {% endfor %}
+  </select>
+{% endapply %}

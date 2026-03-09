@@ -1,0 +1,35 @@
+{% stories poststyleone with { title: 'Components/Post Style One' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      imageurl: 'https://cdn.pixabay.com/photo/2017/10/04/18/11/trees-2817102_1280.jpg',
+      title: 'Title',
+      subtitle: 'Subtitle',
+      description: 'Description',
+      date: 'Date',
+      cta: 'CTA'
+    }
+  } %}
+{% embed 'components:poststyleone' with { 
+  imageurl: imageurl
+} %}
+  {% block title %}
+    {{ title }}
+  {% endblock %}
+  {% block subtitle %}
+    {{ subtitle }}
+  {% endblock %}
+  {% block description %}
+    {{ description }}
+  {% endblock %}
+  {% block date %}
+    {{ date }}
+  {% endblock %}
+  {% block cta %}
+    {{ cta }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

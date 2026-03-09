@@ -1,0 +1,25 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Tailpine logo section  drupak component
+status: stable
+description: "Tailpine logo section component with title, description and tailpine logo image."
+group: Tailpine
+props:
+  type: object
+  properties:
+    tailpineimage:
+      type: string
+      title: Tailpine Image URL
+      description: "URL of the tailpine logo image."
+slots:
+  title:
+    type: string
+    title: Title 
+    description: "Title of the tailpine section. Plain text."
+  description:
+    type: string
+    title: Description
+    description: "Description of the tailpine section. Plain text."
+  cta:
+    type: string
+    title: CTA
+    description: "CTA of the tailpine section. Plain text."

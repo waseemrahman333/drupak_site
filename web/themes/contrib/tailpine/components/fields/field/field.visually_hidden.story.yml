@@ -1,0 +1,13 @@
+name: Field - Visually Hidden Label
+description: Field with label hidden visually but accessible to screen readers
+
+props:
+  field_name: field_email
+  field_type: email
+  label: Email Address
+  label_hidden: false
+  label_display: visually_hidden
+  multiple: false
+  items:
+    - content: "user@example.com"
+

@@ -1,0 +1,67 @@
+{#
+/**
+ * @file
+ * Theme override for a main view template.
+ *
+ * Available variables:
+ * - attributes: Remaining HTML attributes for the element.
+ * - css_name: A CSS-safe version of the view name.
+ * - css_class: The user-specified classes names, if any.
+ * - header: The optional header.
+ * - footer: The optional footer.
+ * - rows: The results of the view query, if any.
+ * - empty: The content to display if there are no rows.
+ * - pager: The optional pager next/prev links to display.
+ * - exposed: Exposed widget form/info to display.
+ * - feed_icons: Optional feed icons to display.
+ * - more: An optional link to the next page of results.
+ * - title: Title of the view, only used when displaying in the admin preview.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the view title.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the view title.
+ * - attachment_before: An optional attachment view to be displayed before the
+ *   view content.
+ * - attachment_after: An optional attachment view to be displayed after the
+ *   view content.
+ * - dom_id: Unique id for every view being printed to give unique class for
+ *   JavaScript.
+ *
+ * @see template_preprocess_views_view()
+ */
+#}
+  
+{% set classes = [
+  dom_id ? 'js-view-dom-id-' ~ dom_id,
+] %}
+
+<div{{ attributes.addClass(classes) }}>
+
+  <section class="max-w-480 bg-body-gray mx-auto container-px grid grid-cols-1 gap-[clamp(60px,calc(60px+5.04vw),80px)] pt-[clamp(30px,4vh,50px)]">
+
+    
+    <div class="py-[clamp(60px,10dvh,100px)]">
+
+      <nav class="w-full overflow-x-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden py-[clamp(40px,6vh,100px)]">
+        <div id="blog-categories" class="flex justify-center gap-2.5 min-w-max container-px">
+          {{ exposed }}
+        </div>
+      </nav>
+
+      {# <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 md:gap-7.5 xl:gap-10.5"> #}
+        {{ rows }}
+      {# </div> #}
+       {# {% if pager %} #}
+    {# <div class="mt-10"> #}
+    {# </div> #}
+  {# {% endif %} #}
+
+    </div>
+      {{ pager }}
+
+  </section>
+
+
+
+</div>
+

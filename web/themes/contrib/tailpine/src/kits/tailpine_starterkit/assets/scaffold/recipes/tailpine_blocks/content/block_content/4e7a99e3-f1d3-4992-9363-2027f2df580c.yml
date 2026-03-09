@@ -1,0 +1,37 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 4e7a99e3-f1d3-4992-9363-2027f2df580c
+  bundle: tailpine_accordion_header
+  default_langcode: en
+  depends:
+    f2ac319a-6af5-40e2-83c5-aef885ca5eec: block_content
+    b5269ac3-0010-4e5f-8e91-411425599889: block_content
+    99b7ae77-d427-4919-87d6-656bc96e3d04: block_content
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Accordion Header'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  field_block:
+    -
+      entity: f2ac319a-6af5-40e2-83c5-aef885ca5eec
+    -
+      entity: b5269ac3-0010-4e5f-8e91-411425599889
+    -
+      entity: 99b7ae77-d427-4919-87d6-656bc96e3d04
+  field_tailpine_description:
+    -
+      value: '<p>Vocet brute optari scribere rationem chremes bello foedus laudem. Putet omnis efficiantur idque negant placatae finitum. Concordia maximos orestem conquirendae dicas legerint regione arguerent.</p>'
+      format: basic_html
+  field_tailpine_title:
+    -
+      value: 'Briefly And Concisely Explain What You Do For Your Audience'

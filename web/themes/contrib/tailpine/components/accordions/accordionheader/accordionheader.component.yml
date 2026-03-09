@@ -1,0 +1,12 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Accordions Header
+status: stable
+description: "Accordion are used to group and display content in a way that is easily readable."
+slots:
+  title:
+    title: Title
+    description: "Title of the Accordion. Plain text."
+  content:
+    title: content
+    description: "Content of the of the Accordion. Plain text."
+

@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.tailpine_sponser_header
+    - field.storage.block_content.field_tailpine_title
+_core:
+  default_config_hash: k2PKzspjwRLuQG_kkxxo9OR7pAR3J2_YQe8avZ-1Z0g
+id: block_content.tailpine_sponser_header.field_tailpine_title
+field_name: field_tailpine_title
+entity_type: block_content
+bundle: tailpine_sponser_header
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

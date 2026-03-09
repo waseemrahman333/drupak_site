@@ -1,0 +1,37 @@
+# This is so your IDE knows about the syntax for fixes and autocomplete.
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+
+# The human readable name.
+name: search result
+group: Forms & Inputs
+description: search result.
+status: stable
+
+
+# Schema for the props. We support www.json-schema.org. Learn more about the
+# syntax there.
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: title
+    result_title:
+      type: string
+      title: result title
+    result_url:
+      type:
+        - string
+        - 'null'
+      title: Result url
+      format: uri
+    snippet:
+      type: string
+      title: snippet
+      #   - string
+      #   - 'null'
+      # title: URL
+      # format: uri
+
+
+

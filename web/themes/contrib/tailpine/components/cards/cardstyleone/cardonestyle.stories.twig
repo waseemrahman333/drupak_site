@@ -1,0 +1,23 @@
+{% stories cardonestyle with { title: 'Components/Cards/Card Style One (Cardonestyle)' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      imageurl: 'Image URL',
+      title: 'Title',
+      subtitle: 'Subtitle'
+    }
+  } %}
+{% embed 'tailpine:cardonestyle' with { 
+  imageurl: imageurl
+} %}
+  {% block title %}
+    {{ title }}
+  {% endblock %}
+  {% block subtitle %}
+    {{ subtitle }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

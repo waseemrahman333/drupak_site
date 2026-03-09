@@ -1,0 +1,12 @@
+name: Video - Autoplay Muted
+description: Video with autoplay and muted (for background videos)
+
+slots:
+  children: |
+    <div class="video-wrapper max-w-3xl">
+      <video class="w-full max-w-full h-auto bg-black shadow-md" autoplay muted loop playsinline>
+        <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
+        <p class="text-gray-700 dark:text-gray-300 p-4">Your browser does not support the video tag.</p>
+      </video>
+    </div>
+

@@ -1,0 +1,14 @@
+{% stories media with { title: 'Components/Media Name' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      label: 'Value'
+    }
+  } %}
+{% embed 'tailpine:media' with { 
+  label: label
+} %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

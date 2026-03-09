@@ -1,0 +1,55 @@
+{% stories image_style with { title: 'Components/ImageStyle' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      image: 'https://cdn.pixabay.com/photo/2024/04/02/10/28/bangladesh-8670559_1280.jpg',
+      style_name: 'Style name'
+    }
+  } %}
+{% embed 'components:image-style' with { 
+  image: image,
+  style_name: style_name
+} %}{% endembed %}
+{% endstory %}
+
+{% story large with {
+    name: '2. Image Style - Large',
+    args: { 
+      style_name: 'large',
+      image: '<img src="https://images.unsplash.com/photo-1682687220063-4742bd7fd538?w=1200&q=80" alt="Large hero image" class="w-full h-auto object-cover shadow-md">'
+    }
+  } %}
+{% embed 'components:image-style' with { 
+  style_name: style_name,
+  image: image
+} %}{% endembed %}
+{% endstory %}
+
+{% story medium with {
+    name: '3. Image Style - Medium',
+    args: { 
+      style_name: 'medium',
+      image: '<img src="https://images.unsplash.com/photo-1682687220063-4742bd7fd538?w=600&q=80" alt="Medium image" class="max-w-full h-auto object-cover shadow-sm">'
+    }
+  } %}
+{% embed 'components:image-style' with { 
+  style_name: style_name,
+  image: image
+} %}{% endembed %}
+{% endstory %}
+
+{% story thumbnail with {
+    name: '4. Image Style - Thumbnail',
+    args: { 
+      style_name: 'thumbnail',
+      image: '<img src="https://images.unsplash.com/photo-1682687220063-4742bd7fd538?w=150&h=150&fit=crop&q=80" alt="Thumbnail" class="w-24 h-24 object-cover shadow-sm">'
+    }
+  } %}
+{% embed 'components:image-style' with { 
+  style_name: style_name,
+  image: image
+} %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

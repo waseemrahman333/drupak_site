@@ -1,0 +1,1 @@
+{"title":"Components\/User","parameters":{"server":{"url":"https:\/\/tailpine1.ddev.site\/storybook\/stories\/render"}},"stories":[{"name":"1. Default","args":{"content":"Content"},"parameters":{"server":{"id":"eyJwYXRoIjoidGhlbWVzXC9jdXN0b21cL3RhaWxwaW5lXC9jb21wb25lbnRzXC91c2VyXC91c2VyLnN0b3JpZXMudHdpZyIsImlkIjoiZGVmYXVsdCJ9"}}}]}

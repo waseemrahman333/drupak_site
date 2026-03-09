@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - tailpine
+_core:
+  default_config_hash: pb6E_-rGW6fqryVECWazZ_05ogjig5x4StdgaljkXEU
+id: tailpine_primaryadminactions
+theme: tailpine
+region: highlighted
+weight: 0
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

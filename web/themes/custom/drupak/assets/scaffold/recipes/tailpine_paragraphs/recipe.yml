@@ -1,0 +1,73 @@
+name: Tailpine content
+description: >
+  Configures the Page content type with Paragraphs components
+  (Hero, CTA, Cards, Posts, Sponsors, Teams, Accordion, Testimonials, Contact form, etc.)
+  for the Tailpine theme homepage.
+
+install:
+  - paragraphs
+  - media
+  - media_library
+  - layout_builder
+  - layout_discovery
+  - ui_patterns
+  - ui_patterns_layouts
+  - inline_entity_form
+  - nomarkup
+  - ui_patterns_library
+  - webform
+
+config:
+  actions:
+    # Attach Tailpine content field to Page content type view + form displays
+    core.entity_view_display.node.page.default:
+      setComponent:
+        name: field_tailpine_content
+        options:
+          label: hidden
+          type: entity_reference_revisions_entity_view
+          settings:
+            view_mode: default
+          weight: 10
+          region: content
+
+    core.entity_form_display.node.page.default:
+      setComponent:
+        name: field_tailpine_content
+        options:
+          type: entity_reference_paragraphs
+          weight: 5
+          region: content
+          settings:
+            title: 'Paragraph'
+            title_plural: 'Paragraphs'
+            edit_mode: closed
+            closed_mode: summary
+            closed_mode_threshold: 0
+            add_mode: dropdown
+            form_display_mode: default
+            default_paragraph_type: ''
+            features:
+              duplicate: true
+              collapse_edit_all: true
+              add_above: true
+          hidden: { }
+
+  strict:
+    # Field storages
+    - field.storage.node.field_tailpine_content.yml
+    - field.storage.paragraph.field_tailpin_column_start.yml
+    - field.storage.paragraph.field_tailpine_btn_border_radius.yml
+    - field.storage.paragraph.field_tailpine_button_style.yml
+    - field.storage.paragraph.field_tailpine_content.yml
+    - field.storage.paragraph.field_tailpine_date.yml
+    - field.storage.paragraph.field_tailpine_description.yml
+    - field.storage.paragraph.field_tailpine_inner_content.yml
+    - field.storage.paragraph.field_tailpine_link.yml
+    - field.storage.paragraph.field_tailpine_media_image.yml
+    - field.storage.paragraph.field_tailpine_select_column.yml
+    - field.storage.paragraph.field_tailpine_subtitle.yml
+    - field.storage.paragraph.field_tailpine_title.yml
+    - field.storage.paragraph.field_tailpine_add_form.yml
+    - field.storage.paragraph.field_tailpine_media_position.yml
+

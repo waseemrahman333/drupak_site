@@ -1,0 +1,16 @@
+status: true
+dependencies:
+  theme:
+    - tailpine_starterkit
+id: tailpine_starterkit_primaryadminactions
+theme: tailpine_starterkit
+region: highlighted
+weight: 0
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: "Primary admin actions"
+  label_display: "0"
+  provider: core
+visibility: {}

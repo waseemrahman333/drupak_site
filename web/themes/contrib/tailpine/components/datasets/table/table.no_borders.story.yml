@@ -1,0 +1,46 @@
+name: No Borders
+props:
+  caption: "Team Members"
+  header:
+    - content: "Avatar"
+      tag: "th"
+    - content: "Name"
+      tag: "th"
+    - content: "Role"
+      tag: "th"
+    - content: "Location"
+      tag: "th"
+  rows:
+    - cells:
+        - content: '<div class="w-10 h-10 bg-blue-500 flex items-center justify-center text-white font-semibold">JD</div>'
+          tag: "td"
+        - content: "John Doe"
+          tag: "td"
+        - content: "Frontend Developer"
+          tag: "td"
+        - content: "New York, USA"
+          tag: "td"
+    - cells:
+        - content: '<div class="w-10 h-10 bg-purple-500 flex items-center justify-center text-white font-semibold">JS</div>'
+          tag: "td"
+        - content: "Jane Smith"
+          tag: "td"
+        - content: "UX Designer"
+          tag: "td"
+        - content: "London, UK"
+          tag: "td"
+    - cells:
+        - content: '<div class="w-10 h-10 bg-green-500 flex items-center justify-center text-white font-semibold">BJ</div>'
+          tag: "td"
+        - content: "Bob Johnson"
+          tag: "td"
+        - content: "Backend Developer"
+          tag: "td"
+        - content: "Toronto, Canada"
+          tag: "td"
+  responsive: true
+  bordered: false
+  hoverable: true
+  size: "default"
+  no_striping: false
+

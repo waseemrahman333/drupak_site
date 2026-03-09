@@ -1,0 +1,22 @@
+{% stories tailpinegrid_3_regions with { title: 'Components/Tailpine Grid – 3 Column' } %}
+
+{% story default with {
+    name: '1. Tailpine Grid 3 Regions',
+    args: { 
+
+    }
+  } %}
+{% embed 'tailpine:tailpinegrid_3_regions' %}
+  {% block col_first %}
+    {{ col_first }}
+  {% endblock %}
+  {% block col_second %}
+    {{ col_second }}
+  {% endblock %}
+  {% block col_third %}
+    {{ col_third }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

@@ -1,0 +1,12 @@
+name: Field - Single Item
+description: Basic field with label and single item
+
+props:
+  field_name: body
+  field_type: text_long
+  label: Description
+  label_hidden: false
+  label_display: above
+  multiple: false
+  items:
+    - content: "This is a single field item with descriptive text content. It demonstrates how a typical text field would appear with a label above the content."

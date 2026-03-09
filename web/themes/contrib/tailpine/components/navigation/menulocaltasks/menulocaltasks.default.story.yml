@@ -1,0 +1,5 @@
+name: Default
+props: {  }
+slots:
+  primary: Primary
+  secondary: Secondary

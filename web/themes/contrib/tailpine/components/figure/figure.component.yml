@@ -1,0 +1,28 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/metadata.schema.json
+name: Figure
+status: stable
+description: Figure element with image and optional caption.
+group: Content
+props:
+  type: object
+  properties:
+    image_url:
+      type: string
+      title: Image URL
+      description: Source URL for the image.
+    image_alt:
+      type: string
+      title: Image Alt Text
+      description: Alternative text for the image.
+    caption:
+      type: string
+      title: Caption
+      description: Figure caption text.
+    figure_utility_classes:
+      type: array
+      items:
+        type: string
+      title: Utility Classes
+      description: Additional Tailwind classes.
+      default: []
+

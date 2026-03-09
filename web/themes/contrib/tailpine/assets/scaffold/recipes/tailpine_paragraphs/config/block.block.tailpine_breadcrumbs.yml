@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - tailpine
+_core:
+  default_config_hash: AEj6pgj8VPCuPPV7VogaTP-QyBeBLA1X4x-t9OMr_Oc
+id: tailpine_breadcrumbs
+theme: tailpine
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

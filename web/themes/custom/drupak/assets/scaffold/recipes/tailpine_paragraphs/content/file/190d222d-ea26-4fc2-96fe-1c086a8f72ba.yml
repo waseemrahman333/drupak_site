@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 190d222d-ea26-4fc2-96fe-1c086a8f72ba
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: Logo2.png
+  uri:
+    -
+      value: 'public://2025-09/Logo2.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 1753
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1756754755

@@ -1,0 +1,13 @@
+name: Tertiary Breadcrumb
+
+props:
+  breadcrumb_style: tertiary
+  breadcrumb:
+    - text: "Home"
+      url: "/page/1"
+    - text: "Profile"
+      url: "/page/2"
+    - text: "Contact"
+      url: "/page/3"
+    - text: "Settings"
+      url: "/settings"

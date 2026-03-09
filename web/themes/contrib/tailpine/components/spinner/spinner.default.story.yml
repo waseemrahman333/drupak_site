@@ -1,0 +1,8 @@
+name: Spinner - Loading
+description: Standard loading spinner
+
+props:
+  size: md
+  color: primary
+  label: 'Loading...'
+

@@ -1,0 +1,6 @@
+name: Dropdown Menu Divider
+description: Divider line for dropdown
+
+props:
+  divider: true
+

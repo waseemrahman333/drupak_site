@@ -1,0 +1,15 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Local Action
+label: 'Local Action'
+description: 'Component for rendering local action (primary admin actions).'
+category: 'Navigation'
+status: stable
+group: Blocks
+props:
+  type: object
+  properties:
+    content:
+      title: 'Content'
+      type: string
+      description: 'The rendered HTML content of the local actions.'
+      default: '<li><a href="/admin">Admin Action</a></li>'

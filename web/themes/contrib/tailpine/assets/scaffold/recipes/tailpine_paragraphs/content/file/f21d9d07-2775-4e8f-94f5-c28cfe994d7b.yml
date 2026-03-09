@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: f21d9d07-2775-4e8f-94f5-c28cfe994d7b
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: poststyleimage4.png
+  uri:
+    -
+      value: 'public://2025-09/poststyleimage4.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 72942
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1756752497

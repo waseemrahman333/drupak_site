@@ -1,0 +1,9 @@
+name: Post Style Three
+description: 'A post style with a three column layout.'
+slots:
+  subtitle: "Subtitle"
+  title: This is the Post Title Of the Post Component
+  description: "This is the description of the post component. It can be a bit longer to show how it looks with more text."
+  date: "Jan 1, 2024"
+props:
+  imageurl: https://cdn.pixabay.com/photo/2017/10/04/18/11/trees-2817102_1280.jpg

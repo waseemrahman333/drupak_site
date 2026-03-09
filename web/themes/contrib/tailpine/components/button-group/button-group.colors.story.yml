@@ -1,0 +1,41 @@
+name: Button Group - Color Variants
+description: Group showcasing different color schemes
+
+slots:
+  buttons:
+    - type: component
+      component: "tailpine:button"
+      slots:
+        content: "Primary"
+      props:
+        color: primary
+        size: md
+    - type: component
+      component: "tailpine:button"
+      slots:
+        content: "Secondary"
+      props:
+        color: secondary
+        size: md
+    - type: component
+      component: "tailpine:button"
+      slots:
+        content: "Success"
+      props:
+        color: success
+        size: md
+    - type: component
+      component: "tailpine:button"
+      slots:
+        content: "Warning"
+      props:
+        color: warning
+        size: md
+    - type: component
+      component: "tailpine:button"
+      slots:
+        content: "Error"
+      props:
+        color: error
+        size: md
+

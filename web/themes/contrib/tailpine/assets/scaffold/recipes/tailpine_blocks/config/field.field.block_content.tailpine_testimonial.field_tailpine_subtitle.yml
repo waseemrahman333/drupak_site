@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.tailpine_testimonial
+    - field.storage.block_content.field_tailpine_subtitle
+id: block_content.tailpine_testimonial.field_tailpine_subtitle
+field_name: field_tailpine_subtitle
+entity_type: block_content
+bundle: tailpine_testimonial
+label: Designation
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 3aa8d347-dece-489d-944f-ce2688576287
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: hero_background.jpg
+  uri:
+    -
+      value: 'public://2025-09/hero_background.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 93608
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1756751739

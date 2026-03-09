@@ -1,0 +1,28 @@
+{#
+/**
+ * Time Component
+ * 
+ * Displays datetime with semantic HTML5 time element.
+ *
+ * Available variables:
+ * - attributes: HTML attributes including datetime attribute.
+ * - text: Human-readable date/time text.
+ * - datetime: Machine-readable datetime value.
+ * - time_utility_classes: Additional Tailwind classes.
+ */
+#}
+{% set time_attributes = attributes ?: create_attribute() %}
+
+{% if datetime %}
+  {% set time_attributes = time_attributes.setAttribute('datetime', datetime) %}
+{% endif %}
+
+{%
+  set time_classes = [
+    'datetime',
+    'text-sm',
+    'text-gray-600 dark:text-gray-400',
+  ]|merge(time_utility_classes ?: [])
+%}
+
+<time{{ time_attributes.addClass(time_classes) }}>{{ text }}</time>

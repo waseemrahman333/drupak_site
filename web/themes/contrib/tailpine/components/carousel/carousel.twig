@@ -1,0 +1,26 @@
+{# <div class="carousel">
+ {% for item in field_carousel_items %}
+  <div class="carousel-item">
+   {% if item is iterable and '#markup' in item %}
+    {{ item['#markup']|raw }}
+     {% elseif item is not iterable %} {{ item|raw }}
+      {% else %} {{ item }} 
+       {% endif %}
+      </div>
+         {% endfor %}
+     </div> #}
+
+
+<div class="carousel">
+  {% for item in field_carousel_items %}
+    <div class="carousel-item">
+      {% if item['#markup'] is defined %}
+        {# Storybook mock data #}
+        {{ item['#markup']|raw }}
+      {% else %}
+        {# Drupal's pre-rendered HTML #}
+        {{ item|raw }}
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>

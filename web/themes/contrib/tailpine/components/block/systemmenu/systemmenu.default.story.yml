@@ -1,0 +1,15 @@
+name: Default
+props:
+  plugin_id: system_menu_block
+  derivative_plugin_id: main
+  configuration:
+    label: 'Main navigation'
+    label_display: 'true'
+    provider: system
+  title_prefix: ''
+  title_suffix: ''
+  title_attributes: {  }
+slots:
+  block_label: 'Label Slot'
+  block_content: 'Content Slot'
+  content: 'Default Content'

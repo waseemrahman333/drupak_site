@@ -1,0 +1,30 @@
+{% stories team_styletwo with { title: 'Components/Teams style two' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      imageurl: 'https://cdn.pixabay.com/photo/2017/10/04/18/11/trees-2817102_1280.jpg',
+      title: 'Full Name',
+      subtitle: 'Senior Developer',
+      description: 'John is a passionate web developer with years of experience in building scalable and user-friendly applications.'
+    }
+  } %}
+{% embed 'components:team_styletwo' with { 
+  imageurl: imageurl
+} %}
+  {% block title %}
+    {{ title }}
+  {% endblock %}
+  {% block subtitle %}
+    {{ subtitle }}
+  {% endblock %}
+  {% block description %}
+    {{ description }}
+  {% endblock %}
+  {% block icons %}
+    {{ icons }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

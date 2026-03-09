@@ -1,0 +1,15 @@
+# This is so your IDE knows about the syntax for fixes and autocomplete.
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+
+# The human readable name.
+name: Page Title
+description: drupal page title.
+status: stable
+# Schema for the props. We support www.json-schema.org. Learn more about the
+# syntax there.
+props:
+  type: object
+  properties:
+    page_title:
+      type: string
+      title: Page Title

@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tailpine_select_column
+    - paragraphs.paragraphs_type.tailpine_post_inner_wrapper
+  module:
+    - options
+id: paragraph.tailpine_post_inner_wrapper.field_tailpine_select_column
+field_name: field_tailpine_select_column
+entity_type: paragraph
+bundle: tailpine_post_inner_wrapper
+label: 'Select Column'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

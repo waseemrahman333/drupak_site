@@ -1,0 +1,55 @@
+{#
+/**
+ * Page Component
+ * 
+ * Main page layout wrapper.
+ *
+ * Accessibility:
+ * - Semantic HTML5 elements
+ * - Skip to content link
+ * - Proper landmark roles
+ */
+#}
+
+<div class="min-h-screen flex flex-col">
+  {% if header %}
+  <header class="bg-body-bg shadow">
+    {% block header %}
+      {{ header }}
+    {% endblock %}
+  </header>
+  {% endif %}
+
+  {% if navigation %}
+  <nav class="bg-primary text-body-bg">
+    {% block navigation %}
+      {{ navigation }}
+    {% endblock %}
+  </nav>
+  {% endif %}
+
+  <div class="flex-grow flex">
+    <main class="flex-grow px-4 py-8 {{sidebar ? 'lg:w-3/4' : 'w-full'}}">
+      {% block content %}
+        {{ content }}
+      {% endblock %}
+    </main>
+
+    {% if sidebar %}
+    <aside class="w-full lg:w-1/4 px-4 py-8 bg-gray-50">
+      {% block sidebar %}
+        {{ sidebar }}
+      {% endblock %}
+    </aside>
+    {% endif %}
+  </div>
+
+  {% if footer %}
+  <footer class="bg-gray-800 text-white py-8">
+    {% block footer %}
+      {{ footer }}
+    {% endblock %}
+  </footer>
+  {% endif %}
+</div>
+

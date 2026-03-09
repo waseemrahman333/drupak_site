@@ -1,0 +1,11 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: CTA Button Wrapper drupak component
+status: stable
+description: "Primary and Outline CTA button with hover swap effect."
+group: CTAs
+slots:
+  content:
+    type: string
+    title: content
+    description: "Content of the wrapper. Plain text."
+

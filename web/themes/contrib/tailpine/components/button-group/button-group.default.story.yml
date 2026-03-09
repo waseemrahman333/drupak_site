@@ -1,0 +1,29 @@
+name: Button Group - Default
+description: Group of buttons with different actions
+
+slots:
+  buttons:
+    - type: component
+      component: "tailpine:button"
+      slots:
+        content: "Save"
+      props:
+        color: primary
+        size: md
+        outline: false
+    - type: component
+      component: "tailpine:button"
+      slots:
+        content: "Cancel"
+      props:
+        color: secondary
+        size: md
+        outline: false
+    - type: component
+      component: "tailpine:button"
+      slots:
+        content: "Delete"
+      props:
+        color: error
+        size: md
+        outline: false

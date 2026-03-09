@@ -1,0 +1,29 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 2e68bb0c-b59c-426e-b342-7b73f2993c83
+  bundle: tailpine_sponser_company
+  default_langcode: en
+  depends:
+    05dc3045-c4a7-4aff-a2f9-a686f1c61b14: media
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Sponsor Five'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  field_tailpine_link:
+    -
+      uri: 'internal:/'
+      title: ''
+      options: {  }
+  field_tailpine_media_image:
+    -
+      entity: 05dc3045-c4a7-4aff-a2f9-a686f1c61b14

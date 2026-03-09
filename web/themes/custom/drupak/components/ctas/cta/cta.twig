@@ -1,0 +1,22 @@
+{% set base_classes = "group uppercase flex gap-2.5 justify-between items-center border transition-all duration-300 rounded-lg py-4 px-4 font-semibold font-open-sans" %}
+
+{% set variant_classes = {
+  'primary': 'bg-primary hover:bg-transparent border-transparent hover:border-tertiary text-tertiary font-secondary',
+  'outline': 'bg-transparent hover:bg-primary border-tertiary hover:border-transparent text-tertiary font-secondary'
+} %}
+
+{% set button_classes = base_classes ~ ' ' ~ variant_classes[variant|default('primary')] %}
+
+<a href="{{ link }}" {{ attributes.addClass(button_classes) }}>
+  {{ title }}
+
+  <svg
+    class="group-hover:translate-x-1 transition-all duration-300"
+    width="17"
+    height="8"
+    viewBox="0 0 17 8"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg">
+    <path d="M12.7393 8V4.8H0.0255641L0 3.192H12.7393V0L17 4L12.7393 8Z"/>
+  </svg>
+</a>

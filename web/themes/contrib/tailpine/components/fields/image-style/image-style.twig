@@ -1,0 +1,22 @@
+{#
+/**
+ * Image Style Component
+ * 
+ * Wrapper for image style output.
+ *
+ * Available variables:
+ * - image: Image markup with applied image style.
+ * - style_name: Image style machine name.
+ * - image_style_utility_classes: Additional Tailwind classes.
+ */
+#}
+{%
+  set wrapper_classes = [
+    'image-style',
+    style_name ? 'image-style--' ~ style_name|clean_class : '',
+  ]|merge(image_style_utility_classes ?: [])
+%}
+
+<div class="{{ wrapper_classes|join(' ') }}">
+  {{ image }}
+</div>

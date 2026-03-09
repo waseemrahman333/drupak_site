@@ -1,0 +1,16 @@
+{% stories user with { title: 'Components/User' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      content: 'Content'
+    }
+  } %}
+{% embed 'tailpine:user' %}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

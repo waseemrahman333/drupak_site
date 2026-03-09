@@ -1,0 +1,33 @@
+schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Modal
+description: This is the modal that should open to show content
+status: stable
+variants:
+  Start:
+    title: Start
+  Center:
+    title: Center
+  End:
+    title: End
+props:
+  type: object
+  properties:
+    content:
+      type: string
+      title: Content
+      description: This is used for the content
+    top_title:
+      type: string
+      title: Top Title
+      description: This is used for the top_title
+
+slots:
+  button_text:
+    title: button_text
+    description: This is used for the button_text
+
+
+
+
+
+

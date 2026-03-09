@@ -1,0 +1,14 @@
+{% stories viewgrid with { title: 'Components/View  grid' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      content: 'Content'
+    }
+  } %}
+{% embed 'components:viewgrid' with { 
+  content: content
+} %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

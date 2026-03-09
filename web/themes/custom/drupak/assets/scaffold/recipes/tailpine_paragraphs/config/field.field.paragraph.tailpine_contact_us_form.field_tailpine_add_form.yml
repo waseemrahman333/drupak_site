@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tailpine_add_form
+    - paragraphs.paragraphs_type.tailpine_contact_us_form
+  module:
+    - webform
+id: paragraph.tailpine_contact_us_form.field_tailpine_add_form
+field_name: field_tailpine_add_form
+entity_type: paragraph
+bundle: tailpine_contact_us_form
+label: 'Add Form'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: webform

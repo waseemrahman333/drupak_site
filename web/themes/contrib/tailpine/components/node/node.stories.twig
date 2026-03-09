@@ -1,0 +1,65 @@
+{% stories node with { title: 'Components/Node' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      title_prefix: [],
+      title_suffix: [],
+      display_submitted: false,
+      author_picture: 'https://cdn.pixabay.com/photo/2024/04/02/10/28/bangladesh-8670559_1280.jpg',
+      author_name: 'John Doe',
+      date: '2024-01-15',
+      metadata: 'Published',
+      label: 'Sample Article',
+      url: '/node/1',
+      node_classes: [],
+      node_content_classes: [],
+      node_utility_classes: [],
+      author_utility_classes: [],
+      node_content_utility_classes: [],
+      node_title: 'Title',
+      node_metadata: 'Metadata',
+      node_title_prefix: 'Title Prefix',
+      node_title_suffix: 'Title Suffix',
+      node_content: 'Content',
+      content: 'Content'
+    }
+  } %}
+{% embed 'tailpine:node' with { 
+  title_prefix: title_prefix,
+  title_suffix: title_suffix,
+  display_submitted: display_submitted,
+  author_picture: author_picture,
+  author_name: author_name,
+  date: date,
+  metadata: metadata,
+  label: label,
+  url: url,
+  node_classes: node_classes,
+  node_content_classes: node_content_classes,
+  node_utility_classes: node_utility_classes,
+  author_utility_classes: author_utility_classes,
+  node_content_utility_classes: node_content_utility_classes
+} %}
+  {% block node_title %}
+    {{ node_title }}
+  {% endblock %}
+  {% block node_metadata %}
+    {{ node_metadata }}
+  {% endblock %}
+  {% block node_title_prefix %}
+    {{ node_title_prefix }}
+  {% endblock %}
+  {% block node_title_suffix %}
+    {{ node_title_suffix }}
+  {% endblock %}
+  {% block node_content %}
+    {{ node_content }}
+  {% endblock %}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

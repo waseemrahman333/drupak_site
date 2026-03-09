@@ -1,0 +1,36 @@
+{#
+/**
+ * Spinner Component
+ * 
+ * Animated loading spinner.
+ *
+ * Accessibility:
+ * - role="status"
+ * - aria-label for screen readers
+ * - sr-only text
+ */
+#}
+
+{% set spinner_size = size|default('md') %}
+{% set spinner_color = color|default('primary') %}
+{% set spinner_label = label|default('Loading...') %}
+
+{% set size_classes = {
+  'sm': 'w-4 h-4 border-2',
+  'md': 'w-8 h-8 border-2',
+  'lg': 'w-12 h-12 border-3',
+  'xl': 'w-16 h-16 border-4',
+} %}
+
+{% set color_classes = {
+  'primary': 'border-primary border-t-transparent',
+  'secondary': 'border-secondary border-t-transparent',
+  'body': 'border-body border-t-transparent',
+  'white': 'border-white border-t-transparent',
+} %}
+
+<div role="status" aria-label="{{ spinner_label }}" class="inline-block">
+  <div class="{{ size_classes[spinner_size] }} {{ color_classes[spinner_color] }} animate-spin"></div>
+  <span class="sr-only">{{ spinner_label }}</span>
+</div>
+

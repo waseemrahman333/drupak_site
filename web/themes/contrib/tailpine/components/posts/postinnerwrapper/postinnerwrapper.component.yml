@@ -1,0 +1,16 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Post Inner Wrapper
+description: "Post Inner Wrapper are used to group and display content in a way that is easily readable."
+status: stable
+group: Cards & Posts
+props:
+  type: object
+  properties:
+    columns:
+      type: string
+      description: "No Of Columns of the Wrapper. Plain text."
+      title: "Columns"
+slots:
+  content:
+    title: Content
+    description: "Content of the Wrapper. Plain text."

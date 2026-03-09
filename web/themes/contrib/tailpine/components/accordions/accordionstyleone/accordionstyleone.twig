@@ -1,0 +1,77 @@
+{#
+/**
+ * Accordion Style One Component
+ * 
+ * Collapsible accordion item with smooth transitions and accessible markup.
+ * Uses Alpine.js for interactive behavior.
+ *
+ * Available variables:
+ * - title: (string) Accordion button text. Required.
+ * - description: (string|markup) Accordion panel content. Required.
+ * - default_open: (boolean) Whether accordion starts open. Default: true
+ * - accordion_id: (string) Unique ID for accessibility. Auto-generated if not provided.
+ *
+ * Accessibility:
+ * - Uses <button> for accordion header
+ * - aria-expanded indicates open/closed state
+ * - aria-controls links button to panel
+ * - role="region" on panel for screen readers
+ * - Keyboard navigation (Enter/Space to toggle)
+ * - Focus indicators on button
+ *
+ * Theme Variables Used:
+ * - bg-gray-300: Button background
+ * - text-gray-900: Button text color
+ * - text-gray-800: Panel text color
+ * - border-gray-500: Border color
+ * - bg-body: Icon color
+ *
+ * Examples:
+ * {% include 'tailpine:accordionstyleone' with {
+ *   title: 'What is included?',
+ *   description: 'All features and premium support...',
+ * } %}
+ */
+#}
+
+{% set is_open = default_open ?? true %}
+{% set accordion_unique_id = accordion_id|default('accordion-' ~ random()) %}
+
+<!-- Accordion Item -->
+<div x-data="{ isOpen: {{ is_open ? 'true' : 'false' }} }" class="border-b-2 border-gray-500">
+  <button
+    type="button"
+    x-on:click="isOpen = !isOpen"
+    class="relative bg-gray-300 w-full flex justify-between items-center px-3 md:px-5 py-4 text-sm md:text-base lg:text-lg font-medium text-gray-900 hover:bg-gray-400 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+    x-bind:aria-expanded="isOpen.toString()"
+    x-bind:aria-controls="'{{ accordion_unique_id }}-panel'"
+    id="{{ accordion_unique_id }}-button"
+  >
+    <span>{{ title }}</span>
+    <!-- Plus/Minus Icon -->
+    <div class="relative w-4 h-4" aria-hidden="true">
+      <div class="absolute top-1/2 left-0 w-full h-0.5 bg-body transform -translate-y-1/2"></div>
+      <div
+        class="absolute top-0 left-1/2 w-0.5 h-full bg-body transform -translate-x-1/2 transition-transform duration-200"
+        x-bind:class="isOpen ? 'rotate-90 opacity-0' : ''"
+      ></div>
+    </div>
+  </button>
+
+  <!-- Accordion Content -->
+  <div
+    x-cloak
+    x-show="isOpen"
+    x-collapse
+    x-bind:id="'{{ accordion_unique_id }}-panel'"
+    role="region"
+    x-bind:aria-labelledby="'{{ accordion_unique_id }}-button'"
+  >
+    <div
+      class="px-3 md:pl-5 md:pr-9 pb-4 text-gray-800 text-xs md:text-sm lg:text-base leading-relaxed"
+    >
+      {{ description }}
+    </div>
+  </div>
+
+</div>

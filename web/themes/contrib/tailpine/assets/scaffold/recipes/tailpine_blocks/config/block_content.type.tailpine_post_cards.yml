@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: tailpine_post_cards
+label: 'Post Card'
+revision: false
+description: null

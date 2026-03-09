@@ -1,0 +1,4 @@
+name: Default
+props:
+  links: {  }
+  heading: '(optional) A heading to precede the links.'

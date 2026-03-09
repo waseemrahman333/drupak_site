@@ -1,0 +1,47 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tailpine_cta.field_tailpine_btn_border_radius
+    - field.field.paragraph.tailpine_cta.field_tailpine_btn_type
+    - field.field.paragraph.tailpine_cta.field_tailpine_button_style
+    - field.field.paragraph.tailpine_cta.field_tailpine_link
+    - paragraphs.paragraphs_type.tailpine_cta
+  module:
+    - link
+_core:
+  default_config_hash: a4_zZlfzacIBySTqymWQ2Cwm4bmf_Oe25RgIsI2TFGQ
+id: paragraph.tailpine_cta.default
+targetEntityType: paragraph
+bundle: tailpine_cta
+mode: default
+content:
+  field_tailpine_btn_border_radius:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_tailpine_btn_type:
+    type: options_select
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_tailpine_button_style:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_tailpine_link:
+    type: link_default
+    weight: 1
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

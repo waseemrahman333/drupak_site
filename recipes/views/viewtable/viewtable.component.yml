@@ -1,0 +1,52 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: View Table
+description: Component for rendering a responsive table in a Drupal view with TailwindCSS styling.
+status: stable
+group: "View"
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: Title
+      description: Title for this group of rows.
+    caption:
+      type: string
+      title: Caption
+      description: The caption for the table.
+    header:
+      type: array
+      title: Header
+      description: The table header columns.
+    rows:
+      type: array
+      title: Rows
+      description: Table row items.
+      default: []
+    responsive:
+      type: boolean
+      title: Responsive
+      description: Flag indicating whether the table is responsive.
+      default: true
+    sticky:
+      type: boolean
+      title: Sticky Header
+      description: Flag indicating whether the table header is sticky.
+      default: false
+    bordered:
+      type: boolean
+      title: Bordered
+      description: Flag whether the table should be styled with borders.
+      default: true
+    accessibility_description:
+      type: string
+      title: Accessibility Description
+      description: Extended description of the table details for accessibility.
+    accessibility_summary:
+      type: string
+      title: Accessibility Summary
+      description: Summary of the table details for accessibility.
+    caption_needed:
+      type: boolean
+      title: Caption Needed
+      description: Flag to determine if the caption tag is required.

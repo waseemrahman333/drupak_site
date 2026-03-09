@@ -1,0 +1,26 @@
+{% stories tailpinegrid_4_regions with { title: 'Components/Tailpine Grid – 4 Column' } %}
+
+{% story default with {
+    name: '1. Tailpine Grid 4 Regions',
+    args: { 
+    }
+  } %}
+{% embed 'tailpine:tailpinegrid_4_regions' %}
+  {% block col_first %}  
+    {{ col_first }}
+  {% endblock %}
+  {% block col_second %}
+  <h1>hello</h1>
+    {{ col_second }}
+  {% endblock %}
+  {% block col_third %}
+  <h1>hello</h1>
+    {{ col_third }}
+  {% endblock %}
+  {% block col_fourth %}
+    {{ col_fourth }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

@@ -1,0 +1,19 @@
+{% stories testimonialheader with { title: 'Components/Testimonial   Header' } %}
+
+{% story default with {
+    name: '1. Testimonial Header Default',
+    args: { 
+      title: 'Testimonial Header'
+    }
+  } %}
+{% embed 'components:testimonialheader' %}
+  {% block title %}
+    {{ title }}
+  {% endblock %}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

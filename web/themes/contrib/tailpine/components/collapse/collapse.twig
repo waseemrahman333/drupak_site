@@ -1,0 +1,41 @@
+{#
+/**
+ * Collapse Component
+ * 
+ * Collapsible panel with smooth Alpine.js transitions.
+ */
+#}
+
+{% set is_open = open|default(false) %}
+
+<div x-data="{ open: {{ is_open ? 'true' : 'false' }} }" class="border border-gray-300 overflow-hidden">
+  <button
+    type="button"
+    @click="open = !open"
+    class="w-full px-4 py-3 bg-gray-50 hover:bg-gray-100 flex justify-between items-center text-left font-medium text-body focus:outline-none focus:ring-2 focus:ring-primary focus:ring-inset transition-colors"
+    :aria-expanded="open.toString()"
+  >
+    <span>{{ title }}</span>
+    <svg 
+      class="w-5 h-5 transform transition-transform duration-200"
+      :class="{'rotate-180': open}"
+      fill="none" 
+      stroke="currentColor" 
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+    </svg>
+  </button>
+  
+  <div 
+    x-show="open"
+    x-collapse
+    class="px-4 py-3 bg-body-bg text-body border-t border-gray-300"
+  >
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+  </div>
+</div>
+

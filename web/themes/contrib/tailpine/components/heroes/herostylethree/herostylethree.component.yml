@@ -1,0 +1,23 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Hero Style Three
+description: "A hero section with a background image, title, description, and call-to-action buttons."
+status: stable
+group: Heros
+category: Hero
+props:
+  type: object
+  properties:
+    imageurl:
+      type: string
+      description: "The URL of the background image for the hero section."
+      title: Hero Background Image
+slots:
+  title:
+    title: Title
+    description: "The main title text for the hero section."
+  description:
+    title: Description
+    description: "A brief description or subtitle for the hero section."
+  cta:
+    title: Call to Action
+    description: "Call to action buttons or links for the hero section."

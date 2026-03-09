@@ -1,0 +1,7 @@
+name: 'Success Button'
+props:
+  text: 'Success Button'
+  url: ''
+  size: md
+  disabled: false
+  variant: success

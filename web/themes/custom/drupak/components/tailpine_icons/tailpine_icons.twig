@@ -1,0 +1,121 @@
+{#
+  ------------------------------------------------------------
+  Custom Icon Component: icon.twig
+  ------------------------------------------------------------
+
+  ✅ Usage Guidelines for Developers:
+
+  1. 🔧 ICON FOLDER & NAMING (IMPORTANT):
+     - All SVG icons must be placed inside:
+       ➤ themes/custom/YOUR_THEME_NAME/icons/custom/
+     - Icon filenames must follow the pattern:
+       ➤ icon_NAME.svg
+       ➤ Examples:
+         • icon_facebook.svg
+         • icon_x.svg
+
+     - These icons are registered via `YOURTHEME.icons.yml`.
+       ➤ Ensure your pack name (e.g., `tailpine_icons`) is declared properly.
+
+  2. 🧩 COMPONENT STRUCTURE (custom_icon.component.yml):
+     This component accepts the following **props**:
+
+       ┌───────────────────┬───────────────────────────────────────────────┐
+       │ Prop Name         │ Description                                   │
+       ├───────────────────┼───────────────────────────────────────────────┤
+       │ iconTitle         │ Machine name of the icon (e.g., icon_facebook) │
+       │ iconStyle         │ Visual style variant (options):                │
+       │                   │   - solid                                      │
+       │                   │   - fill                                       │
+       │                   │   - outline                                    │
+       │                   │   - roundfill                                  │
+       │                   │   - roundoutline                               │
+       │ iconFillColor     │ Fill color (uses Tailwind color tokens)        │
+       │ iconStrokeColor   │ Stroke color (uses Tailwind color tokens)      │
+       │ iconSize          │ Icon size (miro, mini, default, lg, xl)        │
+       │ Linktext          │ Optional link text shown beside the icon       │
+       │ iconLink          │ URL the icon should link to                    │
+       └───────────────────┴───────────────────────────────────────────────┘
+
+     ❗ Note:
+        - `iconTitle` must match the filename (excluding `.svg`).
+          Example:
+            - iconTitle: icon_facebook → filename: icon_facebook.svg
+        - All SVGs **must use**:
+          ➤ `viewBox="0 0 100 100"`
+          ➤ `stroke="currentColor"` / `fill="currentColor"`
+          (No hardcoded colors!)
+
+  3. 🎨 ICON STYLE → CLASS MAP
+     Tailwind utility classes applied based on `iconStyle`:
+
+       - solid        → outline-none bg-none
+       - fill         → rounded bg-[fillColor] hover:bg-[strokeColor]
+       - outline      → rounded outline-2 outline-[strokeColor] hover:bg-[strokeColor]
+                        hover:outline-none hover:text-[fillColor] hover:stroke-[fillColor]
+       - roundfill    → rounded-full bg-[fillColor] hover:bg-[strokeColor]
+       - roundoutline → rounded-full outline-2 outline-[strokeColor] hover:bg-[strokeColor]
+                        hover:outline-none hover:text-[fillColor] hover:stroke-[fillColor]
+
+  📁 This file dynamically renders SVGs using the `icon()` function,
+     while applying Tailwind classes according to props.
+
+#}
+
+{% set icon_name = iconTitle|striptags %}
+{% set icon_style = iconStyle|striptags %}
+{% set fill_color = iconFillColor|striptags %}
+{% set stroke_color = iconStrokeColor|striptags %}
+{% set icon_Size = iconSize|striptags %}
+{% set selected_icon = icon_name %}
+
+{% set sizeMap = {
+  'micro' : 16,
+  'mini' : 20,
+  'default' : 24,
+  'lg' : 32,
+  'xl' : 40,
+  '2xl': 48
+}%}
+
+{% set style_classes = {
+  'solid': 'outline-none bg-none group-hover:text-' ~ fill_color ~ ' group-hover:bg-' ~ stroke_colors,
+  'fill': 'rounded bg-' ~ fill_color ~ ' hover:bg-' ~ stroke_color ~ ' group-hover:text-' ~ fill_color ~ ' group-hover:bg-' ~ stroke_color,
+  'outline': 'rounded outline-2 outline-' ~ stroke_color ~ ' hover:bg-' ~ stroke_color ~ ' hover:outline-' ~ fill_color  ~ ' hover:stroke-' ~ fill_color ~ ' group-hover:outline-' ~ fill_color ~ ' group-hover:text-' ~ fill_color,
+  'roundfill': 'rounded-full bg-' ~ fill_color ~ ' hover:bg-' ~ stroke_color ~ ' group-hover:text-' ~ fill_color ~ ' group-hover:bg-' ~ stroke_color,
+  'roundoutline': 'rounded-full outline-2 outline-' ~ stroke_color ~ ' hover:bg-' ~ stroke_color ~ ' hover:outline-none hover:text-' ~ fill_color ~ ' hover:stroke-' ~ fill_color
+} %}
+
+{% set iconStyle_classes = style_classes[icon_style|default('solid')] %}
+{% set sizeOfIcon = sizeMap[icon_Size|default('default')] %}
+
+{% if showLinkText or linkText %}
+  {% set linkClasses = 'flex justify-start items-center gap-5 mb-5' %}
+{% else %}
+  {% set linkClasses = 'inline-block h-fit w-fit group' %}
+{% endif %}
+
+<div class="{{ linkClasses }}">
+  <a 
+    href="{{ iconLink }}"
+    class="inline-block w-fit {{ iconStyle_classes }} text-{{ stroke_color }} hover:text-{{ fill_color }} {{ linkText }}"
+    width="{{ sizeOfIcon }}" 
+    height="{{ sizeOfIcon }}"
+    role="link"
+    aria-label="{{ linkText is not empty ? linkText : icon_name }}"
+    title="{{ linkText is not empty ? linkText : icon_name }}"
+    tabindex="0"
+  >
+    {{ icon('tailpine_icons', selected_icon, {
+      size: sizeOfIcon,
+      attributes: {
+        'aria-hidden': 'true',
+        'focusable': 'false'
+      }
+    }) }}
+  </a>
+
+  {% if showLinkText and linkText %}
+    <span>{{ linkText }}</span>
+  {% endif %}
+</div>

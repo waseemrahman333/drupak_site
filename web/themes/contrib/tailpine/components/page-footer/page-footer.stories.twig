@@ -1,0 +1,16 @@
+{% stories page_footer with { title: 'Components/Page Footer' } %}
+
+{% story default with {
+    name: '1. Page Footer',
+    args: { 
+      content: '<p class="text-center">&copy; 2025 Tailpine Theme. All rights reserved.</p>'
+    }
+  } %}
+{% embed 'tailpine:page-footer' %}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

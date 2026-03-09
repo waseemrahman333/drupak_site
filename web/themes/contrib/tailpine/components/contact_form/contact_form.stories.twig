@@ -1,0 +1,20 @@
+{% stories contact_form with { title: 'Components/Contact Form' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      title: 'Title',
+      content: 'Content'
+    }
+  } %}
+{% embed 'tailpine:contact_form' %}
+  {% block title %}
+    {{ title }}
+  {% endblock %}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

@@ -1,0 +1,67 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tailpine_social_icons.field_icon_title
+    - field.field.paragraph.tailpine_social_icons.field_tailpine_button_style
+    - field.field.paragraph.tailpine_social_icons.field_tailpine_icon_size
+    - field.field.paragraph.tailpine_social_icons.field_tailpine_icon_stroke_color
+    - field.field.paragraph.tailpine_social_icons.field_tailpine_icon_style
+    - field.field.paragraph.tailpine_social_icons.field_tailpine_link
+    - field.field.paragraph.tailpine_social_icons.field_tailpine_show_link_text
+    - paragraphs.paragraphs_type.tailpine_social_icons
+  module:
+    - link
+id: paragraph.tailpine_social_icons.default
+targetEntityType: paragraph
+bundle: tailpine_social_icons
+mode: default
+content:
+  field_icon_title:
+    type: options_select
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_tailpine_button_style:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_tailpine_icon_size:
+    type: options_select
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_tailpine_icon_stroke_color:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_tailpine_icon_style:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_tailpine_link:
+    type: link_default
+    weight: 1
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_tailpine_show_link_text:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

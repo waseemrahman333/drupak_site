@@ -1,0 +1,17 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+status: stable
+title: 'Image Formatter'
+name: Image Formatter
+description: 'A simple image formatter to display an image with a link.'
+defaults:
+  image: ''
+  url: '/'
+props:
+  type: object
+  properties:
+    image:
+      type: [string, 'null']
+      description: Rendered HTML of the image.
+    url:
+      type: [string, 'null']
+      description: The URL to link the image.

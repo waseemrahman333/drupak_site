@@ -1,0 +1,6 @@
+name: Heading - H2 Default
+description: Default H2 heading
+
+props:
+  content: 'This is a heading'
+  heading_html_tag: h2

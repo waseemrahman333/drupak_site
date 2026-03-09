@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+id: block_content.field_tailpine_btn_type
+field_name: field_tailpine_btn_type
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: solid
+      label: Solid
+    -
+      value: outline
+      label: Outline
+    -
+      value: with_arrow
+      label: 'With Arrow'
+    -
+      value: gradient
+      label: Gradient
+    -
+      value: outline_with_arrow
+      label: 'Outline With Arrow'
+    -
+      value: hover_arrow_move
+      label: 'Hover Arrow Move'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

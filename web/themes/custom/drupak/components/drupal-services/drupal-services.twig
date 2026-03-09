@@ -1,0 +1,33 @@
+<!-- Drupal Services -->
+
+<section class="bg-grey-bg relative">
+	<div class="mx-auto !max-w-480 !grid !grid-cols-1 xl:!grid-cols-2 gap-7.5 xl:!gap-[clamp(68px,8vw,150px)] ">
+
+		<div class="grid !grid-cols-1 justify-between gap-[clamp(40px,8.5vw,62px)] xl:!overflow-x-hidden">
+
+			<div class="pl-[var(--container-px)] pt-[clamp(60px,10dvh,120px)]">
+				<h2 class="!max-w-130 uppercase text-h2 relative pb-5 font-montserrat after:h-1 after:w-15 after:content-[] after:bg-tertiary after:absolute after:bottom-0 after:left-0">
+					{{title}}
+				</h2>
+
+				<div class="w-130 leading-7 md:text-lg md:leading-7.5 mt-8">
+					{{description}}
+				</div>
+			</div>
+
+			<div class="row-span-4 relative min-h-[clamp(280px,50vw,500px)] xl:min-w-[clamp(561px,40vw,930px)] xl:!min-h-[598px]">
+
+				<img class="object-cover absolute h-full w-![94%] md:w-![80%] xl:!w-full" src="{{image}}" alt="cafe img">
+
+			</div>
+
+		</div>
+		<div class="!grid gap-5 md:!grid-cols-2 md:gap-6 pl-[var(--container-px)] xl:pl-0  pr-[var(--container-px)] xl:py-[clamp(60px,10dvh,120px)] ">
+
+			{{content}}
+		</div>
+	</div>
+</section>
+
+
+

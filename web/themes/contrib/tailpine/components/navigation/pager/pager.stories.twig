@@ -1,0 +1,129 @@
+{% stories pager with { title: 'Components/pager' } %}
+
+{% story default with {
+    name: '1. Default pager',
+    args: { 
+      heading_id: 'example-pagination-heading',
+      pagination_heading_level: 'h2',
+      current: 2,
+      size: 'md',
+      items: {"first":{"href":"\/page\/1","text":"\u00ab First"},"previous":{"href":"\/page\/2","text":"\u2039 Previous"},"pages":{"1":{"href":"\/page\/1","text":"1"},"2":{"href":"\/page\/2","text":"2"},"3":{"href":"\/page\/3","text":"3"},"4":{"href":"\/page\/4","text":"4"},"5":{"href":"\/page\/5","text":"5"}},"next":{"href":"\/page\/4","text":"Next \u203a"},"last":{"href":"\/page\/10","text":"Last \u00bb"}},
+      ellipses: {"previous":false,"next":true}
+    }
+  } %}
+{% embed 'components:pager' with { 
+  heading_id: heading_id,
+  pagination_heading_level: pagination_heading_level,
+  current: current,
+  size: size,
+  items: items,
+  ellipses: ellipses
+} %}{% endembed %}
+{% endstory %}
+
+{% story size_lg with {
+    name: '2. Size: lg',
+    args: { 
+      heading_id: 'example-pagination-heading',
+      pagination_heading_level: 'h2',
+      current: 2,
+      size: 'lg',
+      items: {"first":{"href":"\/page\/1","text":"\u00ab First"},"previous":{"href":"\/page\/2","text":"\u2039 Previous"},"pages":{"1":{"href":"\/page\/1","text":"1"},"2":{"href":"\/page\/2","text":"2"},"3":{"href":"\/page\/3","text":"3"},"4":{"href":"\/page\/4","text":"4"},"5":{"href":"\/page\/5","text":"5"}},"next":{"href":"\/page\/4","text":"Next \u203a"},"last":{"href":"\/page\/10","text":"Last \u00bb"}},
+      ellipses: {"previous":false,"next":true}
+    }
+  } %}
+{% embed 'components:pager' with { 
+  heading_id: heading_id,
+  pagination_heading_level: pagination_heading_level,
+  current: current,
+  size: size,
+  items: items,
+  ellipses: ellipses
+} %}{% endembed %}
+{% endstory %}
+
+{% story size_md with {
+    name: '3. Size: md',
+    args: { 
+      heading_id: 'example-pagination-heading',
+      pagination_heading_level: 'h2',
+      current: 2,
+      size: 'md',
+      items: {"first":{"href":"\/page\/1","text":"\u00ab First"},"previous":{"href":"\/page\/2","text":"\u2039 Previous"},"pages":{"1":{"href":"\/page\/1","text":"1"},"2":{"href":"\/page\/2","text":"2"},"3":{"href":"\/page\/3","text":"3"},"4":{"href":"\/page\/4","text":"4"},"5":{"href":"\/page\/5","text":"5"}},"next":{"href":"\/page\/4","text":"Next \u203a"},"last":{"href":"\/page\/10","text":"Last \u00bb"}},
+      ellipses: {"previous":false,"next":true}
+    }
+  } %}
+{% embed 'components:pager' with { 
+  heading_id: heading_id,
+  pagination_heading_level: pagination_heading_level,
+  current: current,
+  size: size,
+  items: items,
+  ellipses: ellipses
+} %}{% endembed %}
+{% endstory %}
+
+{% story size_sm with {
+    name: '4. Size: sm',
+    args: { 
+      heading_id: 'example-pagination-heading',
+      pagination_heading_level: 'h2',
+      current: 2,
+      size: 'sm',
+      items: {"first":{"href":"\/page\/1","text":"\u00ab First"},"previous":{"href":"\/page\/2","text":"\u2039 Previous"},"pages":{"1":{"href":"\/page\/1","text":"1"},"2":{"href":"\/page\/2","text":"2"},"3":{"href":"\/page\/3","text":"3"},"4":{"href":"\/page\/4","text":"4"},"5":{"href":"\/page\/5","text":"5"}},"next":{"href":"\/page\/4","text":"Next \u203a"},"last":{"href":"\/page\/10","text":"Last \u00bb"}},
+      ellipses: {"previous":false,"next":true}
+    }
+  } %}
+{% embed 'components:pager' with { 
+  heading_id: heading_id,
+  pagination_heading_level: pagination_heading_level,
+  current: current,
+  size: size,
+  items: items,
+  ellipses: ellipses
+} %}{% endembed %}
+{% endstory %}
+
+{% story size_xl with {
+    name: '5. Size: xl',
+    args: { 
+      heading_id: 'example-pagination-heading',
+      pagination_heading_level: 'h2',
+      current: 2,
+      size: 'xl',
+      items: {"first":{"href":"\/page\/1","text":"\u00ab First"},"previous":{"href":"\/page\/2","text":"\u2039 Previous"},"pages":{"1":{"href":"\/page\/1","text":"1"},"2":{"href":"\/page\/2","text":"2"},"3":{"href":"\/page\/3","text":"3"},"4":{"href":"\/page\/4","text":"4"},"5":{"href":"\/page\/5","text":"5"}},"next":{"href":"\/page\/4","text":"Next \u203a"},"last":{"href":"\/page\/10","text":"Last \u00bb"}},
+      ellipses: {"previous":false,"next":true}
+    }
+  } %}
+{% embed 'components:pager' with { 
+  heading_id: heading_id,
+  pagination_heading_level: pagination_heading_level,
+  current: current,
+  size: size,
+  items: items,
+  ellipses: ellipses
+} %}{% endembed %}
+{% endstory %}
+
+{% story size_xs with {
+    name: '6. Size: xs',
+    args: { 
+      heading_id: 'example-pagination-heading',
+      pagination_heading_level: 'h2',
+      current: 2,
+      size: 'xs',
+      items: {"first":{"href":"\/page\/1","text":"\u00ab First"},"previous":{"href":"\/page\/2","text":"\u2039 Previous"},"pages":{"1":{"href":"\/page\/1","text":"1"},"2":{"href":"\/page\/2","text":"2"},"3":{"href":"\/page\/3","text":"3"},"4":{"href":"\/page\/4","text":"4"},"5":{"href":"\/page\/5","text":"5"}},"next":{"href":"\/page\/4","text":"Next \u203a"},"last":{"href":"\/page\/10","text":"Last \u00bb"}},
+      ellipses: {"previous":false,"next":true}
+    }
+  } %}
+{% embed 'components:pager' with { 
+  heading_id: heading_id,
+  pagination_heading_level: pagination_heading_level,
+  current: current,
+  size: size,
+  items: items,
+  ellipses: ellipses
+} %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

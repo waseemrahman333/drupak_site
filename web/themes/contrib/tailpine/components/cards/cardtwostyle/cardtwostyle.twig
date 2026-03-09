@@ -1,0 +1,72 @@
+{#
+/**
+ * Card Style Two Component
+ * 
+ * Vertical card with image, title, description, and CTA button.
+ * Ideal for blog posts, products, or services listings.
+ *
+ * Available variables:
+ * - title: (string) Card title. Required.
+ * - description: (string|markup) Card description text. Required.
+ * - imageurl: (string) Card image URL. Use images with 3:2 aspect ratio.
+ * - cta: (markup) Call-to-action button or link. Optional.
+ * - heading_level: (number) HTML heading level (1-6). Default: 2
+ *
+ * Accessibility:
+ * - Uses <article> semantic HTML
+ * - Proper heading hierarchy
+ * - alt text on images via parent context
+ * - Sufficient color contrast
+ * - Focus indicators on interactive elements
+ *
+ * Theme Variables Used:
+ * - bg-body-bg: Card background color
+ * - text-body: Body text color
+ * - shadow-md: Card shadow
+ *
+ * Examples:
+ * {% include 'tailpine:cardtwostyle' with {
+ *   title: 'Getting Started Guide',
+ *   description: 'Learn the basics in 5 minutes',
+ *   imageurl: 'https://cdn.pixabay.com/photo/...jpg',
+ *   cta: cta_button,
+ * } %}
+ */
+#}
+
+{% set card_heading = heading_level|default(2) %}
+{% set card_image = imageurl|default('') %}
+
+<article class="bg-body-bg shadow-md overflow-hidden min-h-[clamp(423px,5vw,480px)] flex flex-col justify-between transition-shadow hover:shadow-xl">
+  <!-- Content container with proper spacing -->
+  <div class="flex flex-col h-full gap-[clamp(16px,2vw,24px)]">
+    {% if card_image %}
+    <img 
+      src="{{ card_image }}" 
+      alt="{{ title }}" 
+      class="w-full aspect-[3/2] object-cover"
+      loading="lazy"
+    >
+    {% endif %}
+    
+    <!-- Text content -->
+    <div class="flex flex-col gap-[clamp(8px,2vw,16px)] px-4">
+      <h{{ card_heading }} class="text-2xl font-semibold text-body">
+        {{ title }}
+      </h{{ card_heading }}>
+      
+      {% if description %}
+      <div class="text-body font-normal text-sm leading-normal xl:leading-loose xl:text-base">
+        {{ description }}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  
+  <!-- CTA Button -->
+  {% if cta %}
+  <div class="px-4 pb-5">
+    {{ cta }}
+  </div>
+  {% endif %}
+</article>

@@ -1,0 +1,20 @@
+{% stories textarea with { title: 'Components/Textarea' } %}
+
+{% story default with {
+    name: '1. Textarea',
+    args: { 
+      value: 'This is a sample textarea with some content.
+You can enter multiple lines of text here.
+Perfect for comments, descriptions, or any long-form content.',
+      resizable: 'vertical',
+      required: false
+    }
+  } %}
+{% embed 'components:textarea' with { 
+  value: value,
+  resizable: resizable,
+  required: required
+} %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

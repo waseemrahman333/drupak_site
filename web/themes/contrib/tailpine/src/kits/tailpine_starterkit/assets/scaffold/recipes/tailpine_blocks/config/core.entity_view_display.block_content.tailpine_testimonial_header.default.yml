@@ -1,0 +1,151 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.tailpine_testimonial_header
+    - field.field.block_content.tailpine_cards_header.field_tailpine_comp_bg_color
+    - field.field.block_content.tailpine_testimonial_header.field_block
+    - field.field.block_content.tailpine_testimonial_header.field_tailpine_comp_bg_color
+    - field.field.block_content.tailpine_testimonial_header.field_tailpine_title
+  content:
+    - 'block_content:tailpine_testimonial:45b007c9-787c-44d3-a0f0-b0980a2ae7ee'
+    - 'block_content:tailpine_testimonial:82e1caf8-5ae8-4634-818a-aef661c21142'
+    - 'block_content:tailpine_testimonial:e897eba9-261b-4096-902a-a27af4f068b2'
+  module:
+    - block_content
+    - layout_builder
+    - nomarkup
+    - options
+    - ui_patterns
+    - ui_patterns_layouts
+  theme:
+    - tailpine
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: 'ui_patterns:tailpine:testimonialheader'
+        layout_settings:
+          label: ''
+          context_mapping:
+            entity: layout_builder.entity
+          ui_patterns:
+            component_id: 'tailpine:testimonialheader'
+            variant_id: null
+            props:
+              attributes:
+                source_id: attributes
+                source:
+                  value: ''
+              bg_color:
+                source_id: entity_field
+                source:
+                  derivable_context: 'field:block_content:tailpine_testimonial_header:field_tailpine_comp_bg_color'
+                  'field:block_content:tailpine_testimonial_header:field_tailpine_comp_bg_color':
+                    value:
+                      source_id: 'field_property:block_content:field_tailpine_comp_bg_color:value'
+            slots: {  }
+        components:
+          7d27aecb-45b2-4f2d-b671-9fc0d1e21cf8:
+            uuid: 7d27aecb-45b2-4f2d-b671-9fc0d1e21cf8
+            region: title
+            configuration:
+              id: 'field_block:block_content:tailpine_testimonial_header:field_tailpine_title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings:
+                  nomarkup:
+                    enabled: true
+                    separator: '|'
+                    referenced_entity: ''
+            weight: 0
+            additional: {  }
+          6a606a95-6cde-4868-bb85-066c076f2815:
+            uuid: 6a606a95-6cde-4868-bb85-066c076f2815
+            region: content
+            configuration:
+              id: 'block_content:82e1caf8-5ae8-4634-818a-aef661c21142'
+              label: 'Testimonial One'
+              label_display: '0'
+              provider: block_content
+              context_mapping: {  }
+              status: true
+              info: ''
+              view_mode: full
+            weight: 0
+            additional: {  }
+          3f1c86f2-880f-45dd-affa-bcd59eec1fa1:
+            uuid: 3f1c86f2-880f-45dd-affa-bcd59eec1fa1
+            region: content
+            configuration:
+              id: 'block_content:e897eba9-261b-4096-902a-a27af4f068b2'
+              label: 'Testimonial Two'
+              label_display: '0'
+              provider: block_content
+              context_mapping: {  }
+              status: true
+              info: ''
+              view_mode: full
+            weight: 1
+            additional: {  }
+          31d14db5-b37f-4c51-9cbe-436619580b4f:
+            uuid: 31d14db5-b37f-4c51-9cbe-436619580b4f
+            region: content
+            configuration:
+              id: 'block_content:45b007c9-787c-44d3-a0f0-b0980a2ae7ee'
+              label: 'Testimonial Three'
+              label_display: '0'
+              provider: block_content
+              context_mapping: {  }
+              status: true
+              info: ''
+              view_mode: full
+            weight: 2
+            additional: {  }
+        third_party_settings: {  }
+_core:
+  default_config_hash: ObpGLUDRYAstrnRVgqNrPrzvGJ4MqqLRhmSHTf2Lbso
+id: block_content.tailpine_testimonial_header.default
+targetEntityType: block_content
+bundle: tailpine_testimonial_header
+mode: default
+content:
+  field_block:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: title
+  field_tailpine_comp_bg_color:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_tailpine_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 0
+    region: content
+hidden: {  }

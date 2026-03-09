@@ -1,0 +1,60 @@
+
+
+{#
+/**
+ * @file
+ * Template for the Wrapper component.
+ *
+ * Available variables:
+ * - title: (string) The section title.
+ * - description: (string) The section description.
+ * - content: (array) The card items or inner content.
+ * - columns: (string|int) Number of grid columns on large screens (e.g., 2, 3, 4).
+ * - attributes: (object) HTML attributes for the wrapper element.
+ */
+#}
+{% set bg_color = bg_color|striptags %}
+
+{% set bg_variant = {
+  'primary': 'bg-primary text-gray-50',
+  'secondary': 'bg-secondary text-gray-100',
+  'gradient': 'bg-gradient-to-r from-primary to-secondary text-body-bg',
+  'tertiary': 'bg-tertiary text-body-bg'
+} %}
+{% set bg_color_variant = bg_variant[bg_color] %}
+
+<div{{ attributes.addClass(
+  'wrapper',
+  'max-w-[1920px]',
+  'mx-auto',
+  'w-full',
+  'px-[clamp(20px,5vw,50px)]',
+  'xl:px-24',
+  'py-[clamp(81px,5vw,107px)]',
+  'grid',
+  'gap-8',
+    bg_color_variant
+) }}>
+  {# --- Header Text Section --- #}
+  <div class="wrapper__text grid gap-5 md:w-7/10 xl:w-1/2   text-center md:text-left">
+    {% if title %}
+      <h2 class="text-[clamp(34px,6vw,50px)] font-medium  tracking-tight leading-[1.15]">
+        {{ title }}
+      </h2>
+    {% endif %}
+
+    {% if description %}
+      <div class="text-[clamp(14px,2vw,18px)]  font-light  leading-relaxed tracking-wide">
+        {{ description }}
+      </div>
+    {% endif %}
+  </div>
+
+  {# --- Cards Section --- #}
+  {% if content %}
+    <div class="wrapper__cards grid grid-cols-1 gap-6 md:grid-cols-2 lg:{{ columns }}">
+      {{ content }}
+    </div>
+  {% endif %}
+</div>
+

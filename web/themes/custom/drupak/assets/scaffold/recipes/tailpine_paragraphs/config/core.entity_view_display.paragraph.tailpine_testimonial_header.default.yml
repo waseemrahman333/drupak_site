@@ -1,0 +1,131 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tailpine_testimonial_header.field_tailpine_comp_bg_color
+    - field.field.paragraph.tailpine_testimonial_header.field_tailpine_content
+    - field.field.paragraph.tailpine_testimonial_header.field_tailpine_title
+    - paragraphs.paragraphs_type.tailpine_testimonial_header
+  module:
+    - entity_reference_revisions
+    - layout_builder
+    - nomarkup
+    - options
+    - ui_patterns
+    - ui_patterns_layouts
+  theme:
+    - tailpine
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: 'ui_patterns:tailpine:testimonialheader'
+        layout_settings:
+          label: ''
+          context_mapping:
+            entity: layout_builder.entity
+          ui_patterns:
+            component_id: 'tailpine:testimonialheader'
+            variant_id: null
+            props:
+              attributes:
+                source_id: attributes
+                source:
+                  value: ''
+              bg_color:
+                source_id: entity_field
+                source:
+                  derivable_context: 'field:paragraph:tailpine_testimonial_header:field_tailpine_comp_bg_color'
+                  'field:paragraph:tailpine_testimonial_header:field_tailpine_comp_bg_color':
+                    value:
+                      source_id: 'field_property:paragraph:field_tailpine_comp_bg_color:value'
+            slots: {  }
+        components:
+          b3420718-9a05-4aed-a7e1-18b453f6f477:
+            uuid: b3420718-9a05-4aed-a7e1-18b453f6f477
+            region: title
+            configuration:
+              id: 'field_block:paragraph:tailpine_testimonial_header:field_tailpine_title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings: {  }
+                third_party_settings:
+                  nomarkup:
+                    enabled: true
+                    separator: '|'
+                    referenced_entity: ''
+            weight: 0
+            additional: {  }
+          63f6acb6-bdc6-45a4-b018-a0b896848806:
+            uuid: 63f6acb6-bdc6-45a4-b018-a0b896848806
+            region: content
+            configuration:
+              id: 'field_block:paragraph:tailpine_testimonial_header:field_tailpine_content'
+              label: 'Add Testimonial'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: hidden
+                settings:
+                  view_mode: default
+                third_party_settings:
+                  nomarkup:
+                    enabled: true
+                    separator: ''
+                    referenced_entity: ''
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+_core:
+  default_config_hash: C2iNaBDk5m6oxDvfaZ0E3o1pNLBfssyEfALz6UtqyV0
+id: paragraph.tailpine_testimonial_header.default
+targetEntityType: paragraph
+bundle: tailpine_testimonial_header
+mode: default
+content:
+  field_tailpine_comp_bg_color:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: title
+  field_tailpine_content:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: ''
+        referenced_entity: ''
+    weight: 1
+    region: content
+  field_tailpine_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 0
+    region: content
+hidden: {  }

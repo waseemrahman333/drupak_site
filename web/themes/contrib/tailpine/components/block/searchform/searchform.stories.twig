@@ -1,0 +1,26 @@
+{% stories searchform with { title: 'Components/Search Form' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      plugin_id: 'search_form_block',
+      label: 'Search',
+      configuration: {"label":"Search","label_display":"visible","provider":"search"},
+      in_preview: false,
+      content: '',
+      title_prefix: '',
+      title_suffix: ''
+    }
+  } %}
+{% embed 'components:searchform' with { 
+  plugin_id: plugin_id,
+  label: label,
+  configuration: configuration,
+  in_preview: in_preview,
+  content: content,
+  title_prefix: title_prefix,
+  title_suffix: title_suffix
+} %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

@@ -1,0 +1,51 @@
+{#
+/**
+ * @file
+ * Theme override for a 'textarea' #type form element.
+ *
+ * Available variables
+ * - wrapper_attributes: A list of HTML attributes for the wrapper element.
+ * - attributes: A list of HTML attributes for the <textarea> element.
+ * - resizable: An indicator for whether the textarea is resizable.
+ * - required: An indicator for whether the textarea is required.
+ * - value: The textarea content.
+ *
+ * Theme Variables Used:
+ * - bg-white: Background color
+ * - text-body: Body text color
+ * - border-gray-300: Border colors
+ * - focus:ring-primary: Focus ring colors
+ *
+ * @see template_preprocess_textarea()
+ */
+#}
+{%
+  set classes = [
+    'form-textarea',
+    resizable ? 'resize-' ~ resizable : 'resize-y',
+    required ? 'required' : '',
+    'block',
+    'w-full',
+    '!bg-white',
+    'dark:!bg-gray-900',
+    'border',
+    'border-gray-300',
+    'dark:border-gray-700',
+    'text-gray-900',
+    'dark:text-gray-100',
+    'text-base',
+    'focus:ring-2',
+    'focus:ring-primary',
+    'focus:border-primary',
+    'px-4',
+    'py-3',
+    'min-h-[120px]',
+    'transition-all',
+    'placeholder:text-gray-400',
+    'dark:placeholder:text-gray-600',
+    'hover:border-gray-400',
+  ]|filter(c => c)
+%}
+<div{{ wrapper_attributes.addClass('form-textarea-wrapper') }}>
+  <textarea{{ attributes.addClass(classes) }}>{{ value }}</textarea>
+</div>

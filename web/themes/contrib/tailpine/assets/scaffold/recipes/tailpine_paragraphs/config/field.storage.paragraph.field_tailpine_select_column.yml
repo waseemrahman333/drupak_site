@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_tailpine_select_column
+field_name: field_tailpine_select_column
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: grid-cols-2
+      label: 'Two Column'
+    -
+      value: grid-cols-3
+      label: 'Three Column'
+    -
+      value: grid-cols-4
+      label: 'Four Column'
+    -
+      value: grid-cols-5
+      label: 'Five Column'
+    -
+      value: grid-cols-6
+      label: 'Six Column'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,13 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Sidebar Links
+description: Sidebar Links
+status: stable
+props:
+slots:
+  icons:
+    title: icons
+    description: description
+  list:
+    title: list
+    description: description
+

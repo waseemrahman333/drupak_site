@@ -1,0 +1,154 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tailpine_get_in_touch.field_tailpine_inner_content
+    - field.field.paragraph.tailpine_get_in_touch.field_tailpine_subtitle
+    - field.field.paragraph.tailpine_get_in_touch.field_tailpine_title
+    - paragraphs.paragraphs_type.tailpine_get_in_touch
+  module:
+    - entity_reference_revisions
+    - layout_builder
+    - nomarkup
+    - ui_patterns
+    - ui_patterns_layouts
+  theme:
+    - tailpine
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: 'ui_patterns:tailpine:contact_us'
+        layout_settings:
+          label: ''
+          context_mapping:
+            entity: layout_builder.entity
+          ui_patterns:
+            component_id: 'tailpine:contact_us'
+            variant_id: null
+            props:
+              attributes:
+                source_id: attributes
+                source:
+                  value: ''
+            slots:
+              title:
+                add_more_button: ''
+              subtitle:
+                add_more_button: ''
+              cta:
+                add_more_button: ''
+        components:
+          785bfe9d-edf5-4241-9f27-24b33fcd00b3:
+            uuid: 785bfe9d-edf5-4241-9f27-24b33fcd00b3
+            region: title
+            configuration:
+              id: 'field_block:paragraph:tailpine_get_in_touch:field_tailpine_title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings: {  }
+                third_party_settings:
+                  nomarkup:
+                    enabled: true
+                    separator: '|'
+                    referenced_entity: ''
+            weight: 0
+            additional: {  }
+          8752c13a-5cf0-4609-80d6-fde2f2138f98:
+            uuid: 8752c13a-5cf0-4609-80d6-fde2f2138f98
+            region: subtitle
+            configuration:
+              id: 'field_block:paragraph:tailpine_get_in_touch:field_tailpine_subtitle'
+              label: Subtitle
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings: {  }
+                third_party_settings:
+                  nomarkup:
+                    enabled: true
+                    separator: '|'
+                    referenced_entity: ''
+            weight: 0
+            additional: {  }
+          f63bad8b-1baa-49bf-bfaf-eab58aee95b4:
+            uuid: f63bad8b-1baa-49bf-bfaf-eab58aee95b4
+            region: cta
+            configuration:
+              id: 'field_block:paragraph:tailpine_get_in_touch:field_tailpine_inner_content'
+              label: 'Add CTA'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: hidden
+                settings:
+                  view_mode: default
+                third_party_settings:
+                  nomarkup:
+                    enabled: true
+                    separator: ''
+                    referenced_entity: ''
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+id: paragraph.tailpine_get_in_touch.default
+targetEntityType: paragraph
+bundle: tailpine_get_in_touch
+mode: default
+content:
+  field_tailpine_inner_content:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: ''
+        referenced_entity: ''
+    weight: 2
+    region: content
+  field_tailpine_subtitle:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 1
+    region: content
+  field_tailpine_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 0
+    region: content
+hidden: {  }

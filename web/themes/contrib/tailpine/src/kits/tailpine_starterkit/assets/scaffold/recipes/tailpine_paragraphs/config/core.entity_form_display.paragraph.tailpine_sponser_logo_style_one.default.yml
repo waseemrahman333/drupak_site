@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tailpine_sponser_logo_style_one.field_tailpine_link
+    - field.field.paragraph.tailpine_sponser_logo_style_one.field_tailpine_media_image
+    - paragraphs.paragraphs_type.tailpine_sponser_logo_style_one
+  module:
+    - link
+    - media_library
+id: paragraph.tailpine_sponser_logo_style_one.default
+targetEntityType: paragraph
+bundle: tailpine_sponser_logo_style_one
+mode: default
+content:
+  field_tailpine_link:
+    type: link_default
+    weight: 1
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_tailpine_media_image:
+    type: media_library_widget
+    weight: 2
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

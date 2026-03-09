@@ -1,0 +1,5 @@
+name: Default
+props:
+  title: ''
+  rows: ''
+  default_row_class: true

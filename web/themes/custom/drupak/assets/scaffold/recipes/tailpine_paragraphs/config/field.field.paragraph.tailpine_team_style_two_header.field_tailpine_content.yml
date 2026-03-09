@@ -1,0 +1,99 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tailpine_content
+    - paragraphs.paragraphs_type.tailpine_team_style_two
+    - paragraphs.paragraphs_type.tailpine_team_style_two_header
+  module:
+    - entity_reference_revisions
+id: paragraph.tailpine_team_style_two_header.field_tailpine_content
+field_name: field_tailpine_content
+entity_type: paragraph
+bundle: tailpine_team_style_two_header
+label: 'Add Team Member'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      tailpine_team_style_two: tailpine_team_style_two
+    negate: 0
+    target_bundles_drag_drop:
+      hero:
+        weight: 3
+        enabled: false
+      tailpine_accordion:
+        weight: 23
+        enabled: false
+      tailpine_accordion_header:
+        weight: 24
+        enabled: false
+      tailpine_card:
+        weight: 25
+        enabled: false
+      tailpine_card_two:
+        weight: 27
+        enabled: false
+      tailpine_cards_header:
+        weight: 26
+        enabled: false
+      tailpine_contact_us_form:
+        weight: 28
+        enabled: false
+      tailpine_cta:
+        weight: 4
+        enabled: false
+      tailpine_get_in_touch:
+        weight: 30
+        enabled: false
+      tailpine_hero_style_two:
+        weight: 31
+        enabled: false
+      tailpine_media_and_text:
+        weight: 32
+        enabled: false
+      tailpine_post_cards:
+        weight: 33
+        enabled: false
+      tailpine_post_wrapper:
+        weight: 34
+        enabled: false
+      tailpine_social_icons:
+        weight: 38
+        enabled: false
+      tailpine_sponser_company:
+        weight: 35
+        enabled: false
+      tailpine_sponser_header:
+        weight: 36
+        enabled: false
+      tailpine_sub_page_hero:
+        weight: 37
+        enabled: false
+      tailpine_team:
+        weight: 38
+        enabled: false
+      tailpine_team_style_two:
+        weight: 44
+        enabled: true
+      tailpine_team_style_two_header:
+        weight: 40
+        enabled: false
+      tailpine_teams_header:
+        weight: 39
+        enabled: false
+      tailpine_testimonial:
+        weight: 41
+        enabled: false
+      tailpine_testimonial_header:
+        weight: 42
+        enabled: false
+      tailpine_testimonial_style_two:
+        weight: 48
+        enabled: false
+field_type: entity_reference_revisions

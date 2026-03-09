@@ -1,0 +1,63 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tailpine_content
+    - paragraphs.paragraphs_type.tailpine_team
+    - paragraphs.paragraphs_type.tailpine_teams_header
+  module:
+    - entity_reference_revisions
+id: paragraph.tailpine_teams_header.field_tailpine_content
+field_name: field_tailpine_content
+entity_type: paragraph
+bundle: tailpine_teams_header
+label: 'Add Team Member'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      tailpine_team: tailpine_team
+    negate: 0
+    target_bundles_drag_drop:
+      hero:
+        weight: 3
+        enabled: false
+      tailpine_accordion:
+        weight: 12
+        enabled: false
+      tailpine_accordion_header:
+        weight: 13
+        enabled: false
+      tailpine_card:
+        weight: 14
+        enabled: false
+      tailpine_cards_header:
+        weight: 15
+        enabled: false
+      tailpine_cta:
+        weight: 4
+        enabled: false
+      tailpine_post_cards:
+        weight: 17
+        enabled: false
+      tailpine_post_wrapper:
+        weight: 18
+        enabled: false
+      tailpine_team:
+        weight: 19
+        enabled: true
+      tailpine_teams_header:
+        weight: 20
+        enabled: false
+      tailpine_testimonial:
+        weight: 23
+        enabled: false
+      tailpine_testimonial_header:
+        weight: 24
+        enabled: false
+field_type: entity_reference_revisions

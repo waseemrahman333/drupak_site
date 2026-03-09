@@ -1,0 +1,41 @@
+name: tailpine_starterkit
+type: theme
+base theme: tailpine
+# version: 1.0.0
+starterkit: true
+libraries:
+  - tailpine_starterkit/main
+  - tailpine_starterkit/alpine
+  - tailpine_starterkit/fixed-header
+  - tailpine_starterkit/swiper
+  - tailpine_starterkit/swiper-custom
+description: "A modern Drupal  Theme powered by Tailwind CSS and Alpine.js, designed for flexibility, speed, and clean UI development."
+core_version_requirement: ^10 || ^11
+generator: "starterkit_theme:11.1.1"
+logo: logo.svg
+favicon: favicon.svg
+# Define the regions available in the theme.
+regions:
+  branding: "Branding"
+  primary_menu: "Primary Menu"
+  search: "Search"
+  top_right_actions: "Top Right Actions"
+  header: "Header"
+  secondary_menu: "Secondary Menu"
+  breadcrumb: "Breadcrumb"
+  highlighted: "Highlighted"
+  help: "Help"
+  content: "Content"
+  sidebar_first: "Sidebar First"
+  sidebar_second: "Sidebar Second"
+  footer: "Footer"
+
+# Dependency on Tailpine theme.
+dependencies:
+  - drupal:search
+  - drupal:help
+
+# Information added by Drupal.org packaging script on 2025-11-17
+version: '1.0.0-rc7'
+project: 'tailpine'
+datestamp: 1763417260

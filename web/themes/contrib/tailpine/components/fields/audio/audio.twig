@@ -1,0 +1,40 @@
+{#
+/**
+ * Audio Component
+ * 
+ * Displays HTML5 audio player with multiple source support.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for audio element.
+ * - files: Array of audio file sources.
+ * - controls: Show audio controls (default: true).
+ * - autoplay: Autoplay audio (default: false).
+ * - loop: Loop audio (default: false).
+ * - audio_utility_classes: Additional Tailwind classes.
+ */
+#}
+{{ attach_library('tailpine/file') }}
+
+{% set audio_attributes = attributes ?: create_attribute() %}
+
+{% set audio_attributes = audio_attributes
+  .setAttribute('controls', controls|default(true) ? 'controls' : false)
+  .setAttribute('autoplay', autoplay|default(false) ? 'autoplay' : false)
+  .setAttribute('loop', loop|default(false) ? 'loop' : false)
+%}
+
+{%
+  set audio_classes = [
+    'w-full',
+    'h-12',
+  ]|merge(audio_utility_classes ?: [])
+%}
+
+<div class="audio-wrapper max-w-2xl p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm">
+  <audio{{ audio_attributes.addClass(audio_classes) }}>
+    {% for file in files %}
+      <source{{ file.source_attributes }} />
+    {% endfor %}
+    <p class="text-sm text-gray-700 dark:text-gray-300">Your browser does not support the audio element.</p>
+  </audio>
+</div>

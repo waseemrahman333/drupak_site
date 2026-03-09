@@ -1,0 +1,26 @@
+{
+    "name": "drupal/tailpine",
+    "description": "TailwindCSS, AlpineJS based Drupal theme for Drupal with SDC and Storybook support",
+    "type": "drupal-theme",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://www.drupal.org/project/tailpine",
+    "authors": [
+        {
+            "name": "S M Azmat Shah",
+            "email": "azmatnvm@gmail.com"
+        }
+    ],
+    "require": {
+        "drupal/storybook": "^1.0",
+        "drupal/paragraphs": "^1.19",
+        "drupal/nomarkup": "^1.0",
+        "drupal/ui_suite": "^2.0",
+        "drupal/inline_entity_form": "^3.0",
+        "drupal/webform": "^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Drush\\Commands\\tailpine\\": "Commands/tailpine"
+        }
+    }
+}

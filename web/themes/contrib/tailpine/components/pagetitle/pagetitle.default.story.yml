@@ -1,0 +1,4 @@
+name: Page Title
+description: drupal page title.
+props:
+  page_title: Homepage

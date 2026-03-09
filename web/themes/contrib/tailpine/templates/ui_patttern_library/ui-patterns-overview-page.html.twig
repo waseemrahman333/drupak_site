@@ -1,0 +1,62 @@
+{#
+/**
+ * @file
+ * UI Pattern library page template, override this in your theme.
+ */
+#}
+<div class="grid grid-cols-4 md:grid-cols-8  xl:grid-cols-12 gap-6 bg-gray-200 mx-auto px-4 py-8">
+
+  <!-- Sidebar (Quick Links) -->
+  <aside class="col-span-4 md:col-span-8  xl:col-span-3">
+    {% if groups is not empty %}
+      <div class="bg-gray-100  border-body-bg rounded-lg p-4   shadow-md">
+        {{ include('ui-patterns-overview-quicklinks.html.twig', {groups: groups}, with_context: false) }}
+      </div>
+    {% endif %}
+  </aside>
+
+  <!-- Main Content Area -->
+  <main class="col-span-4 md:col-span-8   xl:col-span-9 space-y-12">
+
+    {% for components in groups %}
+      {% for component in components %}
+        <section class="ui_patterns_component" id="{{ component.id }}">
+
+          <!-- Component Title -->
+          <h2 class="text-2xl font-extrabold text-body mb-2">
+            <a href="{{ url('ui_patterns_library.single', {
+              provider: component.provider,
+              machineName: component.machineName
+            }) }}"
+               class="text-body  hover:underline">
+              {{ component.name }}
+            </a>
+          </h2>
+
+          <!-- Metadata Panel -->
+          {{ include('ui-patterns-component-metadata.html.twig', {
+            component: component
+          }, with_context: false) }}
+
+          <!-- Props/Slots Table -->
+          <div class="mt-4">
+            {{ include('ui-patterns-component-table.html.twig', {
+              component: component
+            }, with_context: false) }}
+          </div>
+
+          <!-- Optional Stories View -->
+          {% if component.stories %}
+            <div class="mt-6">
+              {{ include('ui-patterns-stories-compact.html.twig', {
+                component: component
+              }, with_context: false) }}
+            </div>
+          {% endif %}
+
+        </section>
+      {% endfor %}
+    {% endfor %}
+
+  </main>
+</div>

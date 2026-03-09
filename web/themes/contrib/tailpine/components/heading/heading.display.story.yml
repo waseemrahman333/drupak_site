@@ -1,0 +1,8 @@
+name: Heading - Large Display
+description: Large display heading
+
+props:
+  content: 'Large Display Heading'
+  heading_html_tag: h1
+  display_size: '3xl'
+

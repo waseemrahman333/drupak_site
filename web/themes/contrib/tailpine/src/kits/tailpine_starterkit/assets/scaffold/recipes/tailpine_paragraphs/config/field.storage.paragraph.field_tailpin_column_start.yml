@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_tailpin_column_start
+field_name: field_tailpin_column_start
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'lg:col-start-1'
+      label: 'Column Start One'
+    -
+      value: 'lg:col-start-2'
+      label: 'Column Start Two'
+    -
+      value: 'lg:col-start-3'
+      label: 'Column Start Three'
+    -
+      value: 'lg:col-start-4'
+      label: 'Column  Start Four'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

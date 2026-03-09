@@ -1,0 +1,38 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: View List
+description: Renders a view as a list.
+group: "View"
+status: stable
+
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      label: Title
+      default: ''
+      description: The title of the view.
+
+    rows:
+      type: string
+      label: Rows
+      description: The number of rows to display.
+      properties:
+        attributes:
+          type: object
+          label: Attributes
+          default: {}
+          format: attribute
+        content:
+          type: string
+          label: Content
+          default: ''
+          description: The content of the row.
+
+    list_type:
+      type: string
+      label: List Type
+      default: 'ul'
+      options:
+        - ul
+        - ol

@@ -1,0 +1,13 @@
+name: Field - Hidden Label
+description: Field with hidden label for cleaner appearance
+
+props:
+  field_name: field_summary
+  field_type: text
+  label: Summary
+  label_hidden: true
+  label_display: hidden
+  multiple: false
+  items:
+    - content: "This field has a hidden label. The content is displayed without a visible label, useful for body text or when the context makes the label unnecessary."
+

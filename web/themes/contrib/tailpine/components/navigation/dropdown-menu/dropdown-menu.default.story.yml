@@ -1,0 +1,8 @@
+name: Dropdown Menu Item
+description: Single dropdown menu item
+
+props:
+  text: 'Account Settings'
+  url: '/account/settings'
+  divider: false
+

@@ -1,0 +1,9 @@
+name: Time - Relative Format
+description: Relative time display (e.g., "2 hours ago")
+
+props:
+  text: "2 hours ago"
+  datetime: "2025-11-05T08:30:00Z"
+  time_utility_classes:
+    - "italic"
+

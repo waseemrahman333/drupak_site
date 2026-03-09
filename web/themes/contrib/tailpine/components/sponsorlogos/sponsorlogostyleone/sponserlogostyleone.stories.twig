@@ -1,0 +1,16 @@
+{% stories sponserlogostyleone with { title: 'Components/Sponsorlogos/Sponser Logo Style One (Sponserlogostyleone)' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      website_url: 'Website URL',
+      sponser_logo: 'Sponser Logo'
+    }
+  } %}
+{% embed 'tailpine:sponserlogostyleone' with { 
+  website_url: website_url,
+  sponser_logo: sponser_logo
+} %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

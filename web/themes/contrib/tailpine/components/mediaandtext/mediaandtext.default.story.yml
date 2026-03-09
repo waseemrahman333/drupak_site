@@ -1,0 +1,18 @@
+name: Media and Text
+props:
+  image: 'https://cdn.pixabay.com/photo/2024/04/02/10/28/bangladesh-8670559_1280.jpg'
+slots:
+  title: 'Media and Text Component'
+  position: row
+  description: 'This is a Media and Text Description for Media and Text Component Demo Page to show how it works  and how it looks like. You can add any content here as per your requirement. This is a Media and Text Description for Media and Text Component Demo Page. You can add any content here as per your requirement. This is a Media and Text Description for Media and Text Component Demo Page to show how it works  and how it'
+  cta:
+  - type:  component
+    component: "tailpine:cta"
+    slots:
+      title: "Read More"
+      color_schema: primary
+  - type:  component
+    component: "tailpine:cta"
+    slots:
+      title: "Learn More"
+      color_schema: secondary

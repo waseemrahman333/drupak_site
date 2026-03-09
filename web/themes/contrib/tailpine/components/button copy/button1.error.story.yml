@@ -1,0 +1,9 @@
+name: Button - Error Color
+description: Error/danger colored button
+
+props:
+  content: 'Error Button'
+  color: error
+  size: md
+  outline: false
+

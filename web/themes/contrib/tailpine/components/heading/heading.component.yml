@@ -1,0 +1,61 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/metadata.schema.json
+name: Heading
+status: stable
+description: Flexible heading component with link support and display sizes.
+group: Content
+props:
+  type: object
+  properties:
+    heading_html_tag:
+      type: string
+      title: HTML Tag
+      description: Heading level (h1-h6) or div.
+      default: h2
+      enum:
+        - div
+        - h1
+        - h2
+        - h3
+        - h4
+        - h5
+        - h6
+    display_size:
+      type: string
+      title: Display Size
+      description: Extra large display heading sizes.
+      default: ''
+      enum:
+        - ''
+        - xl
+        - 2xl
+        - 3xl
+        - 4xl
+        - 5xl
+        - 6xl
+    content:
+      type: string
+      title: Content
+      description: Heading text content.
+    title_link:
+      type: string
+      title: Title Link
+      description: Optional link URL for the heading.
+    heading_utility_classes:
+      type: array
+      items:
+        type: string
+      title: Utility Classes
+      description: Additional Tailwind classes.
+      default: []
+    heading_link_utility_classes:
+      type: array
+      items:
+        type: string
+      title: Link Utility Classes
+      description: Classes for the heading link.
+      default: []
+slots:
+  heading_content:
+    title: Heading Content
+    description: Content slot for the heading.
+

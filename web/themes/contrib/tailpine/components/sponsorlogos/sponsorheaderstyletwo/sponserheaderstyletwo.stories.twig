@@ -1,0 +1,20 @@
+{% stories sponserheaderstyletwo with { title: 'Components/Sponsorlogos/Sponser Logo Header Style Two (Sponserheaderstyletwo)' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      title: 'Title',
+      content: 'Content'
+    }
+  } %}
+{% embed 'tailpine:sponserheaderstyletwo' %}
+  {% block title %}
+    {{ title }}
+  {% endblock %}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

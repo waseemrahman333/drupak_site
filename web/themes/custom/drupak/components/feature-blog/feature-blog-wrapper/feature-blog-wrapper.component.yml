@@ -1,0 +1,22 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Freature blog wrapper drupak component
+status: stable
+description: "Drupal services content component with title, description and image."
+group: drupak
+slots:
+  title:
+    type: string
+    title: Title 
+    description: "Title of the feature blog section. Plain text."
+  description:
+    type: string
+    title: Description
+    description: "Description of the feature blog section. Plain text."
+  link:
+    type: string
+    title: Link
+    description: "Link text for the feature blog section. Plain text."
+  content:
+    type: string
+    title: Content
+    description: "Content of the feature blog section. Plain text."

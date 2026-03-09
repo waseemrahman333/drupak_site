@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tailpine_404_page.field_tailpine_description
+    - field.field.paragraph.tailpine_404_page.field_tailpine_title
+    - paragraphs.paragraphs_type.tailpine_404_page
+  module:
+    - text
+id: paragraph.tailpine_404_page.default
+targetEntityType: paragraph
+bundle: tailpine_404_page
+mode: default
+content:
+  field_tailpine_description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_tailpine_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

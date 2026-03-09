@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: kEwsrU4R2-Un_l_HecWddA3YGifpAwlEdxaO_0nEvc0
+id: tailpine_teams_header
+label: 'Teams Header'
+revision: false
+description: null

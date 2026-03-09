@@ -1,0 +1,1107 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 8cd8fc7f-3332-43af-a662-2daf8ce7f558
+  bundle: page
+  default_langcode: en
+  depends:
+    b2a0c519-3606-44cc-9813-96e241ef43dd: media
+    4409bce3-e95e-4229-af28-d8126b60b991: media
+    83d6cc2c-21a6-468b-8b2f-02626805f268: media
+    354d8f3b-6ed8-4638-88cd-cf30489bb67c: media
+    13851b19-bf59-4d63-806f-ee69031827b7: media
+    af97f251-7050-466b-bf28-324fa31de6e3: media
+    2fcb4248-15bd-4d5c-bea7-e185f179c5ac: media
+    35591bbf-38dd-4b6e-aac0-c5593c934545: media
+    c5e8dd7c-0205-40e4-826f-663749ff934a: media
+    3a6ce356-55b2-44b0-ad1a-65f1dc195903: media
+    05a0fd0a-d92f-42dd-9244-46216c5dc124: media
+    18c5ef7c-610e-41c4-88b4-b07f2e3f0e85: media
+    62e69249-a3cd-4092-9356-036b03a37422: media
+    8db4913a-052d-4c03-8e7d-0e7d8c178ca3: media
+    05dc3045-c4a7-4aff-a2f9-a686f1c61b14: media
+    1166d764-4b18-4777-8f5d-6a97ed689cbe: media
+    aebae2c6-a886-4dda-bb6d-45ed8a9a932a: media
+    7c9520fc-a13a-4511-896b-d8a63f40aa47: media
+    ae7b14aa-ee88-4dc9-9abf-c06a1143ece6: media
+    89e252e2-bb0f-4056-af42-3e60695af279: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Home Page'
+  created:
+    -
+      value: 1756751607
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /home
+      langcode: en
+  field_tailpine_content:
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 037f8aaf-7f64-4349-b54a-37e6e762d3ea
+          bundle: tailpine_banner_style_two
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1759946219
+          behavior_settings:
+            -
+              value: {  }
+          field_tailpine_description:
+            -
+              value: '<p>Graduates secure roles aligned with their field of study or career goals.</p>'
+              format: basic_html
+          field_tailpine_inner_content:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 6e29b833-8c8b-48fe-8baf-1ed1be0f5471
+                  bundle: tailpine_cta
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1759946288
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_btn_type:
+                    -
+                      value: hover_arrow_move
+                  field_tailpine_button_style:
+                    -
+                      value: primary
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: "Let's Talk"
+                      options: {  }
+                  field_tailpine_title:
+                    -
+                      value: "Let's Talk"
+          field_tailpine_media_image:
+            -
+              entity: b2a0c519-3606-44cc-9813-96e241ef43dd
+          field_tailpine_title:
+            -
+              value: 'Redefining Learning for a New Era'
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 60c14374-2284-4487-b77a-370897bde90d
+          bundle: tailpine_media_and_text
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1757485336
+          behavior_settings:
+            -
+              value: {  }
+          revision_translation_affected:
+            -
+              value: true
+          field_tailpine_description:
+            -
+              value: '<p>At our university, you’ll become part of a vibrant community that encourages you to discover your passions and develop valuable skills. With exceptional academics, meaningful opportunities, and guidance from peers and mentors, you’ll graduate ready to achieve your ambitions and make an impact. Find the path that’s right for you.</p>'
+              format: basic_html
+          field_tailpine_inner_content:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: d5a8bb10-6831-4834-93cf-cb054740a234
+                  bundle: tailpine_cta
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1757485360
+                  behavior_settings:
+                    -
+                      value: {  }
+                  revision_translation_affected:
+                    -
+                      value: true
+                  field_tailpine_btn_type:
+                    -
+                      value: hover_arrow_move
+                  field_tailpine_button_style:
+                    -
+                      value: primary
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: 'Read More'
+                      options: {  }
+                  field_tailpine_title:
+                    -
+                      value: 'Learn More'
+          field_tailpine_media_image:
+            -
+              entity: 4409bce3-e95e-4229-af28-d8126b60b991
+          field_tailpine_media_position:
+            -
+              value: row
+          field_tailpine_title:
+            -
+              value: 'Inspire learning, growth, and lifelong success.'
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 725eb854-7dea-491a-9803-a35dd6e2461f
+          bundle: tailpine_cards_header
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1756752622
+          behavior_settings:
+            -
+              value: {  }
+          field_tailpine_comp_bg_color:
+            -
+              value: secondary
+          field_tailpine_content:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 67e10909-7b5a-48fc-8f94-7adb9d9c7d83
+                  bundle: tailpine_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1756752654
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: 83d6cc2c-21a6-468b-8b2f-02626805f268
+                  field_tailpine_subtitle:
+                    -
+                      value: First
+                  field_tailpine_title:
+                    -
+                      value: 'Card Style One'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 20231a37-5d83-4c8d-9597-5881bd04d04a
+                  bundle: tailpine_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1756752688
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: 354d8f3b-6ed8-4638-88cd-cf30489bb67c
+                  field_tailpine_subtitle:
+                    -
+                      value: Two
+                  field_tailpine_title:
+                    -
+                      value: 'Card Style Two'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: d491d4be-9904-453e-9a32-d1a7edfa7fe3
+                  bundle: tailpine_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1756752731
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: 13851b19-bf59-4d63-806f-ee69031827b7
+                  field_tailpine_subtitle:
+                    -
+                      value: Three
+                  field_tailpine_title:
+                    -
+                      value: 'Card Style Three'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 2b03877e-c981-49ba-aaac-029aea4eee7c
+                  bundle: tailpine_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1756752768
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: af97f251-7050-466b-bf28-324fa31de6e3
+                  field_tailpine_subtitle:
+                    -
+                      value: Four
+                  field_tailpine_title:
+                    -
+                      value: 'Card Style Four'
+          field_tailpine_description:
+            -
+              value: '<p>Fere totum democriti desiderare contumeliae accusamus prosperum.Fere totum democriti desiderare contumeliae accusamus prosperum.</p>'
+              format: basic_html
+          field_tailpine_select_column:
+            -
+              value: grid-cols-4
+          field_tailpine_title:
+            -
+              value: 'Title for this section'
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 6906841b-ce19-4ed7-b51c-30b85e44a4c5
+          bundle: tailpine_post_wrapper
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1756752230
+          behavior_settings:
+            -
+              value: {  }
+          field_tailpine_content:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 993876a2-58ac-46b1-8249-d4c60b98a954
+                  bundle: tailpine_post_cards
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1756752260
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_date:
+                    -
+                      value: '2025-09-04'
+                  field_tailpine_description:
+                    -
+                      value: '<p>Probaretur privamur officiis omnisque pecuniae aliena consulatu. Gloriae sensum epicuri pariter disciplinae fabulas inmensae scilicet militaris.</p>'
+                      format: basic_html
+                  field_tailpine_media_image:
+                    -
+                      entity: 2fcb4248-15bd-4d5c-bea7-e185f179c5ac
+                  field_tailpine_subtitle:
+                    -
+                      value: Categories
+                  field_tailpine_title:
+                    -
+                      value: 'The Future of Digital Agencies: Trends to Watch'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: ee80ad08-b75e-43af-a1a7-26a0fa08c987
+                  bundle: tailpine_post_cards
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1756752340
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_date:
+                    -
+                      value: '2025-09-12'
+                  field_tailpine_description:
+                    -
+                      value: '<p>Probaretur privamur officiis omnisque pecuniae aliena consulatu. Gloriae sensum epicuri pariter disciplinae fabulas inmensae scilicet militaris.</p>'
+                      format: basic_html
+                  field_tailpine_media_image:
+                    -
+                      entity: 35591bbf-38dd-4b6e-aac0-c5593c934545
+                  field_tailpine_subtitle:
+                    -
+                      value: Categories
+                  field_tailpine_title:
+                    -
+                      value: 'Probaretur privamur officiis omnisque.'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 74876fe7-1018-48d6-a60d-32a3f4443a9c
+                  bundle: tailpine_post_cards
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1756752404
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_date:
+                    -
+                      value: '2025-09-19'
+                  field_tailpine_description:
+                    -
+                      value: '<p>Probaretur privamur officiis omnisque pecuniae aliena consulatu. Gloriae sensum epicuri pariter disciplinae fabulas inmensae scilicet militaris.</p>'
+                      format: basic_html
+                  field_tailpine_media_image:
+                    -
+                      entity: c5e8dd7c-0205-40e4-826f-663749ff934a
+                  field_tailpine_subtitle:
+                    -
+                      value: Categories
+                  field_tailpine_title:
+                    -
+                      value: 'Probaretur privamur officiis omnisque.'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: e769356e-ac94-4c2f-aeeb-af1c0f055b66
+                  bundle: tailpine_post_cards
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1756752457
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_date:
+                    -
+                      value: '2025-09-30'
+                  field_tailpine_description:
+                    -
+                      value: '<p>Probaretur privamur officiis omnisque pecuniae aliena consulatu. Gloriae sensum epicuri pariter disciplinae fabulas inmensae scilicet militaris.</p>'
+                      format: basic_html
+                  field_tailpine_media_image:
+                    -
+                      entity: 3a6ce356-55b2-44b0-ad1a-65f1dc195903
+                  field_tailpine_subtitle:
+                    -
+                      value: Categories
+                  field_tailpine_title:
+                    -
+                      value: 'Probaretur privamur officiis omnisque.'
+          field_tailpine_inner_content:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: a38b8d82-cc13-458d-be6f-29b780a1b2f8
+                  bundle: tailpine_cta
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1756752241
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_btn_type:
+                    -
+                      value: hover_arrow_move
+                  field_tailpine_button_style:
+                    -
+                      value: primary
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: 'View All Posts'
+                      options: {  }
+                  field_tailpine_title:
+                    -
+                      value: 'View All Posts'
+          field_tailpine_title:
+            -
+              value: 'News & Insights'
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 95ea202d-3584-4957-a5d1-dfcdd4c89ef7
+          bundle: tailpine_sponser_header
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1756754693
+          behavior_settings:
+            -
+              value: {  }
+          field_tailpine_content:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 42da77f2-2410-4780-a4ab-6cbef13f9518
+                  bundle: tailpine_sponser_company
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1756754718
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: ''
+                      options: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: 05a0fd0a-d92f-42dd-9244-46216c5dc124
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 2874cd13-95e5-45d0-9761-34bce7b4a59e
+                  bundle: tailpine_sponser_company
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1756754744
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: ''
+                      options: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: 18c5ef7c-610e-41c4-88b4-b07f2e3f0e85
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 509c02a7-807d-44a3-8d58-39f996ef7ee7
+                  bundle: tailpine_sponser_company
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1756754770
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: ''
+                      options: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: 62e69249-a3cd-4092-9356-036b03a37422
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 5eee49bc-bafc-4e65-abcd-a911d3a4a2ec
+                  bundle: tailpine_sponser_company
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1756754797
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: ''
+                      options: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: 8db4913a-052d-4c03-8e7d-0e7d8c178ca3
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 8a332ab2-c561-48d5-89b0-5fbdb0dc424c
+                  bundle: tailpine_sponser_company
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1756754839
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: ''
+                      options: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: 05dc3045-c4a7-4aff-a2f9-a686f1c61b14
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 6901cb3f-19f3-4953-9787-f99484c5bbcf
+                  bundle: tailpine_sponser_company
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1756754862
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: ''
+                      options: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: 1166d764-4b18-4777-8f5d-6a97ed689cbe
+          field_tailpine_title:
+            -
+              value: 'Sponsor & Partner'
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 4a9748e6-8091-4977-b79d-858893a57672
+          bundle: tailpine_teams_header
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1756753887
+          behavior_settings:
+            -
+              value: {  }
+          field_tailpine_comp_bg_color:
+            -
+              value: secondary
+          field_tailpine_content:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: f05632b1-2975-401b-a371-1bc20d4460ca
+                  bundle: tailpine_team
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1756753950
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: aebae2c6-a886-4dda-bb6d-45ed8a9a932a
+                  field_tailpine_subtitle:
+                    -
+                      value: 'Developer One'
+                  field_tailpine_title:
+                    -
+                      value: 'Team Member One'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 9e421f5f-fa5e-44b9-be38-0daa574b3fc3
+                  bundle: tailpine_team
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1756754090
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: 7c9520fc-a13a-4511-896b-d8a63f40aa47
+                  field_tailpine_subtitle:
+                    -
+                      value: 'Developer Two'
+                  field_tailpine_title:
+                    -
+                      value: 'Team Member Two'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 59a5e270-97aa-4040-a096-9441ba0c3cb3
+                  bundle: tailpine_team
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1756754175
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: ae7b14aa-ee88-4dc9-9abf-c06a1143ece6
+                  field_tailpine_subtitle:
+                    -
+                      value: 'Developer Three'
+                  field_tailpine_title:
+                    -
+                      value: 'Team Member Three'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 99cff0d9-8f8e-436f-9b2c-a7121e3b0af5
+                  bundle: tailpine_team
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1756754216
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: 89e252e2-bb0f-4056-af42-3e60695af279
+                  field_tailpine_subtitle:
+                    -
+                      value: 'Developer Four'
+                  field_tailpine_title:
+                    -
+                      value: 'Team Member Four'
+          field_tailpine_inner_content:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 3c2c9edf-3168-44c3-a862-d29cfc4d610f
+                  bundle: tailpine_cta
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1756753903
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_btn_type:
+                    -
+                      value: hover_arrow_move
+                  field_tailpine_button_style:
+                    -
+                      value: primary
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: 'View All Team'
+                      options: {  }
+                  field_tailpine_title:
+                    -
+                      value: 'View All Members'
+          field_tailpine_title:
+            -
+              value: 'All Team Members'
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: ab025edc-7233-44c7-ba66-c48507b9ca49
+          bundle: tailpine_testimonial_header
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1756754382
+          behavior_settings:
+            -
+              value: {  }
+          field_tailpine_comp_bg_color:
+            -
+              value: secondary
+          field_tailpine_content:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 4549309b-7ad4-408a-867f-ec1a72a89b72
+                  bundle: tailpine_testimonial
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1756754409
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_description:
+                    -
+                      value: '<p>Irridente maluisti nemore contentiones facio illum angusti illius. Ancillae praeterita statim vide referuntur horreat malint existimo debilitatem.</p>'
+                      format: basic_html
+                  field_tailpine_media_image:
+                    -
+                      entity: aebae2c6-a886-4dda-bb6d-45ed8a9a932a
+                  field_tailpine_subtitle:
+                    -
+                      value: 'Testimonial One'
+                  field_tailpine_title:
+                    -
+                      value: 'Person One'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: a26ccbc7-2b51-432f-9213-9e51eaa4ec5c
+                  bundle: tailpine_testimonial
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1756754503
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_description:
+                    -
+                      value: '<p>Irridente maluisti nemore contentiones facio illum angusti illius. Ancillae praeterita statim vide referuntur horreat malint existimo debilitatem.</p>'
+                      format: basic_html
+                  field_tailpine_media_image:
+                    -
+                      entity: 7c9520fc-a13a-4511-896b-d8a63f40aa47
+                  field_tailpine_subtitle:
+                    -
+                      value: 'Testimonial Two'
+                  field_tailpine_title:
+                    -
+                      value: 'Person Two'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: f2ddc2e4-937b-456f-9dbf-88a0ef86c6ed
+                  bundle: tailpine_testimonial
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1756754538
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_description:
+                    -
+                      value: '<p>Irridente maluisti nemore contentiones facio illum angusti illius. Ancillae praeterita statim vide referuntur horreat malint existimo debilitatem.</p>'
+                      format: basic_html
+                  field_tailpine_media_image:
+                    -
+                      entity: ae7b14aa-ee88-4dc9-9abf-c06a1143ece6
+                  field_tailpine_subtitle:
+                    -
+                      value: 'Testimonial Three'
+                  field_tailpine_title:
+                    -
+                      value: 'Person Three'
+          field_tailpine_title:
+            -
+              value: 'Briefly And Concisely Explain What'
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 08fccd96-23d2-44a9-9785-f9edb73e3214
+          bundle: tailpine_accordion_header
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1756752049
+          behavior_settings:
+            -
+              value: {  }
+          field_tailpine_content:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 70138501-d7c0-4055-91be-8b361ee3cf40
+                  bundle: tailpine_accordion
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1756752065
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_description:
+                    -
+                      value: '<p>Briefly And Concisely Explain Briefly And Concisely Explain&nbsp;</p>'
+                      format: basic_html
+                  field_tailpine_title:
+                    -
+                      value: 'Briefly And Concisely Explain '
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: e70bb6fd-4b8b-4be8-b90e-03891d3aebca
+                  bundle: tailpine_accordion
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1756752106
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_description:
+                    -
+                      value: '<p>Briefly And Concisely Explain Briefly And Concisely Explain&nbsp;</p>'
+                      format: basic_html
+                  field_tailpine_title:
+                    -
+                      value: 'Briefly And Concisely Explain '
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: b9efbe66-1fe8-4e23-a1d8-8d2d8ac143ec
+                  bundle: tailpine_accordion
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1756752114
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_description:
+                    -
+                      value: '<p>Briefly And Concisely Explain Briefly And Concisely Explain&nbsp;</p>'
+                      format: basic_html
+                  field_tailpine_title:
+                    -
+                      value: 'Briefly And Concisely Explain '
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: fa40c102-2c3d-4468-bd7e-fdb5de5c537c
+                  bundle: tailpine_accordion
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1760210518
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_description:
+                    -
+                      value: '<p>Briefly And Concisely Explain Briefly And Concisely Explain Briefly And Concisely Explain&nbsp;</p>'
+                      format: basic_html
+                  field_tailpine_title:
+                    -
+                      value: 'Briefly And Concisely Explain '
+          field_tailpine_description:
+            -
+              value: '<p>Docet miser intemperantiam sedatio impediri debilitati accessio discordiae intellegerem. Libenter euripidis argumentandum disciplinis finis magnosque divina appellantur.</p>'
+              format: basic_html
+          field_tailpine_title:
+            -
+              value: 'Briefly And Concisely Explain What You Do For Your Audience'

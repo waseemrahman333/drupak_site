@@ -1,0 +1,46 @@
+{#
+/**
+ * File Link Component
+ * 
+ * Displays downloadable file link with icon and metadata.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for wrapper.
+ * - icon: File type icon markup.
+ * - link: File download link markup.
+ * - file_size: Human-readable file size.
+ * - file_name: File name.
+ * - mime_type: File MIME type.
+ * - file_link_utility_classes: Additional Tailwind classes.
+ */
+#}
+{{ attach_library('tailpine/file') }}
+
+{%
+  set file_link_classes = [
+    'file-link',
+    'inline-flex items-center gap-2',
+    'px-4 py-2',
+    'bg-white dark:bg-gray-800',
+    'border border-gray-300 dark:border-gray-700',
+    'hover:bg-gray-50 dark:hover:bg-gray-700',
+    'transition-colors duration-150',
+    'text-gray-900 dark:text-gray-100',
+    'text-sm',
+    'shadow-sm',
+  ]|merge(file_link_utility_classes ?: [])
+%}
+
+<span{{ attributes.addClass(file_link_classes) }}>
+  {% if icon %}
+    <span class="file-icon text-primary flex-shrink-0">{{ icon|raw }}</span>
+  {% else %}
+    <svg class="w-5 h-5 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+    </svg>
+  {% endif %}
+  <span class="file-link-text">{{ link|raw }}</span>
+  {% if file_size %}
+    <span class="file-size text-xs text-gray-500 dark:text-gray-400">({{ file_size }})</span>
+  {% endif %}
+</span>

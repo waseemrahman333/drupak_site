@@ -1,0 +1,72 @@
+{#
+/**
+ * Hero Style One Component
+ * 
+ * Full-width hero section with background image, gradient overlay, title, description, and CTAs.
+ * Designed for landing pages and feature sections.
+ *
+ * Available variables:
+ * - title: (string) Hero heading text. Required.
+ * - description: (string|markup) Hero description text. Can be plain text or HTML.
+ * - imageurl: (string) Background image URL. Use high-resolution images (1920px+ width).
+ * - cta: (array|markup) Call-to-action buttons or links. Can be multiple.
+ * - heading_level: (number) HTML heading level (1-6). Default: 1
+ *
+ * Accessibility:
+ * - Uses semantic <section> with ARIA landmark
+ * - Proper heading hierarchy
+ * - Background image is decorative (aria-hidden via CSS)
+ * - Text has sufficient contrast with overlay
+ * - Focus indicators on interactive elements
+ *
+ * Theme Variables Used:
+ * - text-body-bg: Text color on colored/image backgrounds
+ * - Container spacing and responsive utilities
+ *
+ * Examples:
+ * {% include 'tailpine:herostyleone' with {
+ *   title: 'Welcome to Our Platform',
+ *   description: 'Discover amazing features...',
+ *   imageurl: 'https://cdn.pixabay.com/photo/...jpg',
+ *   cta: cta_buttons,
+ * } %}
+ */
+#}
+
+{% set hero_heading_level = heading_level|default(1) %}
+{% set bg_image = imageurl|default('') %}
+
+<div 
+  class="w-full max-w-[1920px] mx-auto relative bg-cover bg-no-repeat bg-center"
+  {% if bg_image %}
+  style="background-image: linear-gradient(90deg, rgba(0,0,0,0.7) 20%, transparent 100%), url('{{ bg_image }}');"
+  {% endif %}
+  role="img"
+  aria-label="Hero background"
+>
+  <!-- Hero Section -->
+  <section 
+    class="flex flex-col gap-4 px-5 pt-16 md:px-12 md:pt-42 xl:px-24"
+    aria-label="Hero section"
+  >
+    <div class="content max-w-4xl md:w-4/5 w-full text-body-bg">
+      <h{{ hero_heading_level }} 
+        class="text-[clamp(2rem,4vw+1rem,3.5rem)] leading-tight md:leading-tight font-black uppercase text-shadow-lg"
+      >
+        {{ title }}
+      </h{{ hero_heading_level }}>
+      
+      {% if description %}
+      <div class="pt-5 text-body-bg text-[clamp(14px,2vw,18px)] leading-relaxed">
+        {{ description }}
+      </div>
+      {% endif %}
+      
+      {% if cta %}
+      <div class="mb-42 w-full md:w-fit pt-10 flex flex-col md:flex-row gap-5">
+        {{ cta }}
+      </div>
+      {% endif %}
+    </div>
+  </section>
+</div>

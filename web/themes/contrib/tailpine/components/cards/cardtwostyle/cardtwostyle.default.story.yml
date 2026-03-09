@@ -1,0 +1,17 @@
+name: Card Style Two - Vertical
+description: Vertical card with image, text, and CTA
+
+slots:
+  title: 'Build Modern Websites'
+  description: 'Discover how to create stunning, responsive websites with our comprehensive toolkit. Perfect for developers of all skill levels.'
+  cta:
+    type: component
+    component: 'tailpine:cta'
+    slots:
+      title: 'Learn More'
+    props:
+      color_schema: primary
+
+props:
+  imageurl: 'https://cdn.pixabay.com/photo/2024/04/02/10/28/bangladesh-8670559_1280.jpg'
+  heading_level: 2

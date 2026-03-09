@@ -1,0 +1,38 @@
+name: Tailpine Grid 4 Regions
+slots:
+  col_first:
+    type: component
+    component: "tailpine:teamstyleone"
+    slots:
+      name: MY Full Name
+      subtitle: Developer
+    props:
+        imageurl: https://cdn.pixabay.com/photo/2017/10/04/18/11/trees-2817102_1280.jpg
+        alt: Sneakers
+  col_second:
+    type: component
+    component: "tailpine:teamstyleone"
+    slots:
+      name: MY Full Name
+      subtitle: Developer
+    props:
+        imageurl: https://cdn.pixabay.com/photo/2017/10/04/18/11/trees-2817102_1280.jpg
+        alt: Sneakers
+  col_third:
+    type: component
+    component: "tailpine:teamstyleone"
+    slots:
+      name: MY Full Name
+      subtitle: Developer
+    props:
+        imageurl: https://cdn.pixabay.com/photo/2017/10/04/18/11/trees-2817102_1280.jpg
+        alt: Sneakers
+  col_fourth:
+    type: component
+    component: "tailpine:teamstyleone"
+    slots:
+      name: MY Full Name
+      subtitle: Developer
+    props:
+        imageurl: https://cdn.pixabay.com/photo/2017/10/04/18/11/trees-2817102_1280.jpg
+        alt: Sneakers

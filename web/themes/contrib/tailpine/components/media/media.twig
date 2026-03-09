@@ -1,0 +1,54 @@
+{#
+/**
+ * @file
+ * Theme override for a marker for new or updated content.
+ *
+ * Available variables:
+ * - status: Number representing the marker status to display. Use the constants
+ *   below for comparison:
+ *   - MARK_NEW
+ *   - MARK_UPDATED
+ *   - MARK_READ
+ */
+#}
+{# {%
+  set classes = [
+    'media',
+    'media--type-' ~ bundle,
+    not isPublished ? 'media--unpublished',
+    view_mode ? 'media--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+<article{{ attributes.addClass(classes) }}>
+  {{ title_suffix.contextual_links }}
+  {% if content %}
+    {{ content }}
+  {% endif %}
+</article> #}
+
+{%
+  set classes = [
+    'media',
+    'media--type-' ~ bundle,
+    not isPublished ? 'media--unpublished',
+    view_mode ? 'media--view-mode-' ~ view_mode|clean_class,
+    'border',
+    'border-secondary/40',
+    'rounded-2xl',
+    'shadow-sm',
+    'hover:shadow-md',
+    'transition-all',
+    'duration-300',
+    'overflow-hidden',
+    'p-5',
+    'mb-6',
+  ]
+%}
+<article{{ attributes.addClass(classes) }}>
+  {{ title_suffix.contextual_links }}
+  {% if content %}
+    <div class="media-content text-body leading-relaxed">
+      {{ content }}
+    </div>
+  {% endif %}
+</article>

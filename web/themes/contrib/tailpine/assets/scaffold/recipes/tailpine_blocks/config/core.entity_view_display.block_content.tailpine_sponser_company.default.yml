@@ -1,0 +1,105 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.tailpine_sponser_company
+    - field.field.block_content.tailpine_cta.field_tailpine_link
+    - field.field.block_content.tailpine_sponser_company.field_tailpine_column_start
+    - field.field.block_content.tailpine_sponser_company.field_tailpine_link
+    - field.field.block_content.tailpine_sponser_company.field_tailpine_media_image
+    - field.field.media.image.field_media_image
+  module:
+    - layout_builder
+    - link
+    - options
+    - ui_patterns
+    - ui_patterns_layouts
+  theme:
+    - tailpine
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: 'ui_patterns:tailpine:sponserlogostyletwo'
+        layout_settings:
+          label: ''
+          context_mapping:
+            entity: layout_builder.entity
+          ui_patterns:
+            component_id: 'tailpine:sponserlogostyletwo'
+            variant_id: null
+            props:
+              attributes:
+                source_id: attributes
+                source:
+                  value: ''
+              website_url:
+                source_id: entity_field
+                source:
+                  derivable_context: 'field:block_content:tailpine_sponser_company:field_tailpine_link'
+                  'field:block_content:tailpine_sponser_company:field_tailpine_link':
+                    value:
+                      source_id: 'field_property:block_content:field_tailpine_link:uri'
+              sponser_logo:
+                source_id: entity_reference
+                source:
+                  derivable_context: 'entity_reference:block_content:tailpine_sponser_company:field_tailpine_media_image:media:image'
+                  'entity_reference:block_content:tailpine_sponser_company:field_tailpine_media_image:media:image':
+                    value:
+                      source_id: entity_reference
+                      source:
+                        derivable_context: 'entity_reference:media:image:field_media_image:file:file'
+                        'entity_reference:media:image:field_media_image:file:file':
+                          value:
+                            source_id: entity_field
+                            source:
+                              derivable_context: 'field:file:file:uri'
+                              'field:file:file:uri':
+                                value:
+                                  source_id: 'field_property:file:uri:url'
+              col_start:
+                source_id: entity_field
+                source:
+                  derivable_context: 'field:block_content:tailpine_sponser_company:field_tailpine_column_start'
+                  'field:block_content:tailpine_sponser_company:field_tailpine_column_start':
+                    value:
+                      source_id: 'field_property:block_content:field_tailpine_column_start:value'
+            slots: {  }
+        components: {  }
+        third_party_settings: {  }
+id: block_content.tailpine_sponser_company.default
+targetEntityType: block_content
+bundle: tailpine_sponser_company
+mode: default
+content:
+  field_tailpine_column_start:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_tailpine_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_tailpine_media_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

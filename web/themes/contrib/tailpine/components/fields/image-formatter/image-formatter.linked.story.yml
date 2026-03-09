@@ -1,0 +1,6 @@
+name: Image Formatter - Linked
+description: Image wrapped in link (e.g., to full-size image or content)
+
+props:
+  url: "#full-size-image"
+  image: '<img src="https://images.unsplash.com/photo-1682687220063-4742bd7fd538?w=800&q=80" alt="Clickable image" class="max-w-full h-auto object-cover shadow-sm">'

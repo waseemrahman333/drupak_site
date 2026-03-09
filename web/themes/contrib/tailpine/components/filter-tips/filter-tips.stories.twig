@@ -1,0 +1,18 @@
+{% stories filter_tips with { title: 'Components/Filter Tips' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      tips: [],
+      long: false,
+      multiple: false
+    }
+  } %}
+{% embed 'tailpine:filter-tips' with { 
+  tips: tips,
+  long: long,
+  multiple: multiple
+} %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

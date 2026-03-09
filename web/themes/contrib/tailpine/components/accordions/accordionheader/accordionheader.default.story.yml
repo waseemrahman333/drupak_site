@@ -1,0 +1,20 @@
+name: Accordion Header
+description: "Accordion Header component for Tailpine theme."
+slots:
+  title: "Accordion Header"
+  content:
+  - type: component
+    component: "tailpine:accordionstyleone"
+    slots:
+      title: "Title Of the Accordion Component"
+      description: "This is the description of the accordion component. You can put any content here."
+  - type: component
+    component: "tailpine:accordionstyleone"
+    slots:
+      title: "Title Of the Accordion Component"
+      description: "This is the description of the accordion component. You can put any content here."
+  - type: component
+    component: "tailpine:accordionstyleone"
+    slots:
+      title: "Title Of the Accordion Component"
+      description: "This is the description of the accordion component. You can put any content here."

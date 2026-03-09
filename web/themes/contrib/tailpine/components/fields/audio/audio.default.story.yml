@@ -1,0 +1,12 @@
+name: Audio - Default
+description: Basic audio player with controls
+
+slots:
+  children: |
+    <div class="audio-wrapper max-w-2xl p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm">
+      <div class="mb-2 text-sm font-semibold text-gray-900 dark:text-gray-100">Sample Audio Track</div>
+      <audio class="w-full h-12" controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        <p class="text-sm text-gray-700 dark:text-gray-300">Your browser does not support the audio element.</p>
+      </audio>
+    </div>

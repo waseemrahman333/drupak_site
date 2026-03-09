@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 8292b101-4350-40f7-8247-ea5727cd9d27
+  bundle: tailpine_card
+  default_langcode: en
+  depends:
+    14bc22db-c0cb-41aa-ab50-e36f13ac21ac: media
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Card 4'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  field_tailpine_media_image:
+    -
+      entity: 14bc22db-c0cb-41aa-ab50-e36f13ac21ac
+  field_tailpine_subtitle:
+    -
+      value: 'Card Four'
+  field_tailpine_title:
+    -
+      value: 'Viam certamen stabilique divinum carere '

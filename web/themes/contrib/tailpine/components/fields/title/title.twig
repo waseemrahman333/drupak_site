@@ -1,0 +1,44 @@
+{#
+/**
+ * Title Field Component
+ * 
+ * Displays page/node title with semantic HTML.
+ *
+ * Available variables:
+ * - attributes: HTML attributes.
+ * - is_inline: Whether to display inline or as block.
+ * - field_name: Field machine name.
+ * - field_type: Field type.
+ * - label_display: Label display mode.
+ * - items: Array of title items.
+ * - heading_level: HTML heading level (h1, h2, h3, etc.).
+ */
+#}
+{% set heading_tag = heading_level|default('h1') %}
+
+{%
+  set title_classes = [
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display,
+    is_inline ? 'inline-block' : 'block',
+    'text-gray-900 dark:text-gray-100',
+    'font-bold',
+    'leading-tight',
+  ]|merge(title_utility_classes ?: [])
+%}
+
+{% if is_inline %}
+  <span{{ attributes.addClass(title_classes) }}>
+    {%- for item in items -%}
+      {{ item.content }}
+    {%- endfor -%}
+  </span>
+{% else %}
+  <{{ heading_tag }}{{ attributes.addClass(title_classes) }}>
+    {%- for item in items -%}
+      {{ item.content }}
+    {%- endfor -%}
+  </{{ heading_tag }}>
+{% endif %}

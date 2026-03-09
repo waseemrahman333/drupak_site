@@ -1,0 +1,75 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tailpine_teams_header.field_tailpine_comp_bg_color
+    - field.field.paragraph.tailpine_teams_header.field_tailpine_content
+    - field.field.paragraph.tailpine_teams_header.field_tailpine_inner_content
+    - field.field.paragraph.tailpine_teams_header.field_tailpine_title
+    - paragraphs.paragraphs_type.tailpine_teams_header
+  module:
+    - paragraphs
+_core:
+  default_config_hash: xKCJREw3fFAiPE7Gpu--z_VivC4t6Nrsal7uxJ4yMjQ
+id: paragraph.tailpine_teams_header.default
+targetEntityType: paragraph
+bundle: tailpine_teams_header
+mode: default
+content:
+  field_tailpine_comp_bg_color:
+    type: options_select
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_tailpine_content:
+    type: paragraphs
+    weight: 3
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed_expand_nested
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        convert: '0'
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_tailpine_inner_content:
+    type: paragraphs
+    weight: 1
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed_expand_nested
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        convert: '0'
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_tailpine_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

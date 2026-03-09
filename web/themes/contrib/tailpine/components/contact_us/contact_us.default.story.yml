@@ -1,0 +1,17 @@
+name: Contact Us - CTA Section
+description: Call-to-action section for contact
+
+slots:
+  title: 'Get in Touch'
+  subtitle: 'We would love to hear from you. Please reach out for any inquiries or collaborations.'
+  cta:
+    type: component
+    component: 'tailpine:cta'
+    slots:
+      title: 'Contact Us'
+    props:
+      link: '/contact'
+      color_schema: primary
+
+props:
+  heading_level: 2

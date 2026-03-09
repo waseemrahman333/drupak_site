@@ -1,0 +1,21 @@
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - drupak
+id: drupak_sitebranding
+theme: drupak
+region: branding
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: "Site branding"
+  label_display: ""
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {}

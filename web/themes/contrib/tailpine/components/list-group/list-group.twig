@@ -1,0 +1,24 @@
+{#
+/**
+ * List Group Component
+ * 
+ * Styled list for displaying series of content.
+ */
+#}
+
+{% set is_flush = flush|default(false) %}
+
+<ul class="{{is_flush ? '' : 'border border-gray-300'}} divide-y divide-gray-200">
+  {% for item in items %}
+    <li class="{{is_flush ? 'px-0' : 'px-4'}} py-3 hover:bg-gray-50 transition-colors">
+      {% if item.link %}
+        <a href="{{ item.link }}" class="block text-body hover:text-primary transition-colors">
+          {{ item.content }}
+        </a>
+      {% else %}
+        {{ item.content }}
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
+

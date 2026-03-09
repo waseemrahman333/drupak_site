@@ -1,0 +1,19 @@
+{% stories accordionheader with { title: 'Components/Accordions Header' } %}
+
+{% story default with {
+    name: '1. Accordion Header',
+    args: { 
+      title: 'Accordion Header'
+    }
+  } %}
+{% embed 'components:accordionheader' %}
+  {% block title %}
+    {{ title }}
+  {% endblock %}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

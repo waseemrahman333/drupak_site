@@ -1,0 +1,13 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: error404
+status: stable
+description: "Cards are used to group and display content in a way that is easily readable."
+slots:
+  title:
+    type: string
+    title: Title
+    description: "Name of the 404. Plain text."
+  subtitle:
+    type: string
+    title: Subtitle
+    description: "Subtitle of the 404. Plain text."

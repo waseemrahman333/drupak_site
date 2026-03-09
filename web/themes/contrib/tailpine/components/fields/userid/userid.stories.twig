@@ -1,0 +1,36 @@
+{% stories userid with { title: 'Components/User Id' } %}
+
+{% story default with {
+    name: '1. User ID - Author Info',
+    args: { 
+      children: '<div class="inline-flex items-center gap-2">
+  <div class="w-8 h-8 bg-primary text-white flex items-center justify-center font-semibold text-sm">
+    JD
+  </div>
+  <span class="text-sm text-gray-900 dark:text-gray-100 font-medium">John Doe</span>
+</div>
+'
+    }
+  } %}
+{% embed 'components:userid' %}{% endembed %}
+{% endstory %}
+
+{% story with_role with {
+    name: '2. User ID - With Role Badge',
+    args: { 
+      children: '<div class="inline-flex items-center gap-3">
+  <div class="w-10 h-10 bg-gradient-to-br from-primary to-secondary text-white flex items-center justify-center font-semibold">
+    AS
+  </div>
+  <div class="flex flex-col">
+    <span class="text-sm text-gray-900 dark:text-gray-100 font-semibold">Alice Smith</span>
+    <span class="text-xs text-gray-500 dark:text-gray-400">Administrator</span>
+  </div>
+</div>
+'
+    }
+  } %}
+{% embed 'components:userid' %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

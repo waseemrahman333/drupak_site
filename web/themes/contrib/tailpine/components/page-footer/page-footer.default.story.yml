@@ -1,0 +1,6 @@
+name: Page Footer
+description: Site footer
+
+slots:
+  content: '<p class="text-center">&copy; 2025 Tailpine Theme. All rights reserved.</p>'
+

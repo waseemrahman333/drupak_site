@@ -1,0 +1,16 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Post Syle One Wrapper
+status: stable
+description: "Post Syle One wrapper  are used to group and display content in a way that is easily readable."
+slots:
+  title:
+    title: Title
+    description: "Post  Title."
+  content:
+    title: Content
+    description: Add the Post View in the Content region 
+  cta:
+    title: CTA
+    description: "Call to Action."
+  
+   

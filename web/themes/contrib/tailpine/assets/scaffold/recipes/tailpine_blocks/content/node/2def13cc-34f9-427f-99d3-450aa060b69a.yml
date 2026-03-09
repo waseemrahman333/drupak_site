@@ -1,0 +1,35 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 2def13cc-34f9-427f-99d3-450aa060b69a
+  bundle: layout_page
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Layout Page'
+  created:
+    -
+      value: 1760686914
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en

@@ -1,0 +1,25 @@
+name: Image Formatter - Gallery Grid
+description: Multiple images in a grid layout - this story shows the grid wrapper
+
+slots:
+  children: |
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <a href="#image1" class="image-formatter block hover:opacity-90 transition-opacity duration-150">
+        <img src="https://images.unsplash.com/photo-1682687220063-4742bd7fd538?w=400&q=80" alt="Gallery image 1" class="w-full h-48 object-cover shadow-sm">
+      </a>
+      <a href="#image2" class="image-formatter block hover:opacity-90 transition-opacity duration-150">
+        <img src="https://images.unsplash.com/photo-1682687221038-404670f09ef1?w=400&q=80" alt="Gallery image 2" class="w-full h-48 object-cover shadow-sm">
+      </a>
+      <a href="#image3" class="image-formatter block hover:opacity-90 transition-opacity duration-150">
+        <img src="https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?w=400&q=80" alt="Gallery image 3" class="w-full h-48 object-cover shadow-sm">
+      </a>
+      <a href="#image4" class="image-formatter block hover:opacity-90 transition-opacity duration-150">
+        <img src="https://images.unsplash.com/photo-1682687220063-4742bd7fd538?w=400&h=300&q=80" alt="Gallery image 4" class="w-full h-48 object-cover shadow-sm">
+      </a>
+      <a href="#image5" class="image-formatter block hover:opacity-90 transition-opacity duration-150">
+        <img src="https://images.unsplash.com/photo-1682687221038-404670f09ef1?w=400&h=300&q=80" alt="Gallery image 5" class="w-full h-48 object-cover shadow-sm">
+      </a>
+      <a href="#image6" class="image-formatter block hover:opacity-90 transition-opacity duration-150">
+        <img src="https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?w=400&h=300&q=80" alt="Gallery image 6" class="w-full h-48 object-cover shadow-sm">
+      </a>
+    </div>

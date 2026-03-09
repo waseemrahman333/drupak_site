@@ -1,0 +1,7 @@
+name: 'Danger Button'
+props:
+  text: 'Danger Button'
+  url: ''
+  size: md
+  disabled: false
+  variant: danger

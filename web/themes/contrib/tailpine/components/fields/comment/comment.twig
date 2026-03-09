@@ -1,0 +1,61 @@
+{#
+/**
+ * Comment Field Component
+ * 
+ * Displays comments section with form.
+ *
+ * Available variables:
+ * - attributes: HTML attributes.
+ * - field_name: Field machine name.
+ * - field_type: Field type.
+ * - label_display: Label display mode.
+ * - label: Field label.
+ * - label_hidden: Whether label is hidden.
+ * - comments: Comment threads markup.
+ * - comment_form: Comment submission form.
+ * - comment_utility_classes: Additional Tailwind classes.
+ */
+#}
+{%
+  set wrapper_classes = [
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display,
+    'comment-wrapper',
+    'py-6',
+  ]|merge(comment_utility_classes ?: [])
+%}
+
+{%
+  set title_classes = [
+    'title',
+    'text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6',
+    label_display == 'visually_hidden' ? 'visually-hidden' : '',
+  ]
+%}
+
+<section{{ attributes.addClass(wrapper_classes) }}>
+  <div class="max-w-3xl mx-auto bg-white dark:bg-gray-800 p-6 border border-gray-200 dark:border-gray-700 shadow-sm">
+    {% if comments and not label_hidden %}
+      {{ title_prefix }}
+      <h2{{ title_attributes.addClass(title_classes) }}>{{ label }}</h2>
+      {{ title_suffix }}
+    {% endif %}
+
+    {% if comments %}
+      <div class="comments-list space-y-4 mb-8">
+        {{ comments }}
+      </div>
+    {% endif %}
+
+    {% if comment_form %}
+      <div class="comment-form-wrapper border-t border-gray-200 dark:border-gray-700 pt-6">
+        <h3 class="title comment-form__title text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
+          {{ 'Add new comment'|t }}
+        </h3>
+        {{ comment_form }}
+      </div>
+    {% endif %}
+  </div>
+</section>

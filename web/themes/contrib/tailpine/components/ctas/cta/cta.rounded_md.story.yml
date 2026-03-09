@@ -1,0 +1,11 @@
+name: Rounded md
+
+props:
+  attributes:
+    class:
+      - "!m-2"
+  title: "CTA Text"
+  color_schema: null
+  size: "rounded-md"
+  link: "https://example.com"
+  button_variant: "gradient"

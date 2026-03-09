@@ -1,0 +1,22 @@
+{% stories teamheader with { title: 'Components/Teams  Header' } %}
+
+{% story default with {
+    name: '1. Team Header Default',
+    args: { 
+      title: 'All Team  Members'
+    }
+  } %}
+{% embed 'components:teamheader' %}
+  {% block title %}
+    {{ title }}
+  {% endblock %}
+  {% block cta %}
+    {{ cta }}
+  {% endblock %}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

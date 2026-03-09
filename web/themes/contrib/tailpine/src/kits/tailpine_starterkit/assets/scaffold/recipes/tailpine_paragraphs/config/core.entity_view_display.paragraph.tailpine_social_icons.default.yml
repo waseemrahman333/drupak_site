@@ -1,0 +1,164 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tailpine_cta.field_tailpine_button_style
+    - field.field.paragraph.tailpine_cta.field_tailpine_link
+    - field.field.paragraph.tailpine_social_icons.field_icon_title
+    - field.field.paragraph.tailpine_social_icons.field_tailpine_button_style
+    - field.field.paragraph.tailpine_social_icons.field_tailpine_icon_size
+    - field.field.paragraph.tailpine_social_icons.field_tailpine_icon_stroke_color
+    - field.field.paragraph.tailpine_social_icons.field_tailpine_icon_style
+    - field.field.paragraph.tailpine_social_icons.field_tailpine_link
+    - field.field.paragraph.tailpine_social_icons.field_tailpine_show_link_text
+    - field.field.paragraph.tailpine_sponser_company.field_tailpine_link
+    - paragraphs.paragraphs_type.tailpine_social_icons
+  module:
+    - layout_builder
+    - link
+    - options
+    - ui_patterns
+    - ui_patterns_layouts
+  theme:
+    - tailpine
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: 'ui_patterns:tailpine:tailpine_icons'
+        layout_settings:
+          label: ''
+          context_mapping:
+            entity: layout_builder.entity
+          ui_patterns:
+            component_id: 'tailpine:tailpine_icons'
+            variant_id: null
+            props:
+              attributes:
+                source_id: attributes
+                source:
+                  value: ''
+              iconTitle:
+                source_id: entity_field
+                source:
+                  derivable_context: 'field:paragraph:tailpine_social_icons:field_icon_title'
+                  'field:paragraph:tailpine_social_icons:field_icon_title':
+                    value:
+                      source_id: 'field_property:paragraph:field_icon_title:value'
+              iconStyle:
+                source_id: entity_field
+                source:
+                  derivable_context: 'field:paragraph:tailpine_social_icons:field_tailpine_icon_style'
+                  'field:paragraph:tailpine_social_icons:field_tailpine_icon_style':
+                    value:
+                      source_id: 'field_property:paragraph:field_tailpine_icon_style:value'
+              iconFillColor:
+                source_id: entity_field
+                source:
+                  derivable_context: 'field:paragraph:tailpine_social_icons:field_tailpine_button_style'
+                  'field:paragraph:tailpine_social_icons:field_tailpine_button_style':
+                    value:
+                      source_id: 'field_property:paragraph:field_tailpine_button_style:value'
+              iconStrokeColor:
+                source_id: entity_field
+                source:
+                  derivable_context: 'field:paragraph:tailpine_social_icons:field_tailpine_icon_stroke_color'
+                  'field:paragraph:tailpine_social_icons:field_tailpine_icon_stroke_color':
+                    value:
+                      source_id: 'field_property:paragraph:field_tailpine_icon_stroke_color:value'
+              iconSize:
+                source_id: entity_field
+                source:
+                  derivable_context: 'field:paragraph:tailpine_social_icons:field_tailpine_icon_size'
+                  'field:paragraph:tailpine_social_icons:field_tailpine_icon_size':
+                    value:
+                      source_id: 'field_property:paragraph:field_tailpine_icon_size:value'
+              showLinkText:
+                source_id: entity_field
+                source:
+                  derivable_context: 'field:paragraph:tailpine_social_icons:field_tailpine_show_link_text'
+                  'field:paragraph:tailpine_social_icons:field_tailpine_show_link_text':
+                    value:
+                      source_id: 'field_property:paragraph:field_tailpine_show_link_text:value'
+              linkText:
+                source_id: entity_field
+                source:
+                  derivable_context: 'field:paragraph:tailpine_social_icons:field_tailpine_link'
+                  'field:paragraph:tailpine_social_icons:field_tailpine_link':
+                    value:
+                      source_id: 'field_property:paragraph:field_tailpine_link:title'
+              iconLink:
+                source_id: entity_field
+                source:
+                  derivable_context: 'field:paragraph:tailpine_social_icons:field_tailpine_link'
+                  'field:paragraph:tailpine_social_icons:field_tailpine_link':
+                    value:
+                      source_id: 'field_property:paragraph:field_tailpine_link:uri'
+            slots: {  }
+        components: {  }
+        third_party_settings: {  }
+id: paragraph.tailpine_social_icons.default
+targetEntityType: paragraph
+bundle: tailpine_social_icons
+mode: default
+content:
+  field_icon_title:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: null
+  field_tailpine_button_style:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_tailpine_icon_size:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_tailpine_icon_stroke_color:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_tailpine_icon_style:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_tailpine_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_tailpine_show_link_text:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+hidden: {  }

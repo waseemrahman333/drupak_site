@@ -1,0 +1,35 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: ae7b14aa-ee88-4dc9-9abf-c06a1143ece6
+  bundle: image
+  default_langcode: en
+  depends:
+    90b122d7-ed11-4deb-aac8-9b5758f07e95: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: team2.png
+  created:
+    -
+      value: 1756754185
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+  field_media_image:
+    -
+      entity: 90b122d7-ed11-4deb-aac8-9b5758f07e95
+      alt: 'team 3'
+      title: ''
+      width: 400
+      height: 600

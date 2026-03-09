@@ -1,0 +1,25 @@
+{% stories subpagehero with { title: 'Components/Sub Page Hero' } %}
+
+{% story default with {
+    name: '1. Sub Page Hero',
+    args: { 
+      bg_image: 'https://cdn.pixabay.com/photo/2024/04/02/10/28/bangladesh-8670559_1280.jpg',
+      heading_level: 1,
+      title: 'About Our Company',
+      description: 'Discover our mission, values, and the team behind our success. We are committed to excellence and innovation.'
+    }
+  } %}
+{% embed 'tailpine:subpagehero' with { 
+  bg_image: bg_image,
+  heading_level: heading_level
+} %}
+  {% block title %}  
+      {{ title }}
+  {% endblock %}
+  {% block description %}
+    {{ description }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

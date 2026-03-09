@@ -1,0 +1,18 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Sidebar
+description: Sidebar
+status: stable
+props:
+  type: object
+  properties:
+    logo_img:
+      title: Logo image
+      description: Logo Images description
+      type: string
+slots:
+  logo_title:
+    title: Logo title
+    description: description
+  inner_content:
+    title: Inner Content
+    description: description

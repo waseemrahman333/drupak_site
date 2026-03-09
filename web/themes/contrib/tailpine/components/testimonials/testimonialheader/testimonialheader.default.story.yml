@@ -1,0 +1,31 @@
+name: Testimonial Header Default
+label: Testimonial Header Default
+description: Default Testimonial Header component
+slots:
+  title: Testimonial Header
+  content:
+  - type: component
+    component: "tailpine:testimonialstyleone"
+    slots:
+      subtitle: "Subtitle"
+      name: Person Name
+      description: "Statu illo deorsus conectitur correcta declarant cuiquam"
+    props:
+      imageurl: https://cdn.pixabay.com/photo/2017/10/04/18/11/trees-2817102_1280.jpg
+  - type: component
+    component: "tailpine:testimonialstyleone"
+    slots:
+      subtitle: "Subtitle"
+      name: Person Name
+      description: "Statu illo deorsus conectitur correcta declarant ."
+    props:
+      imageurl: https://cdn.pixabay.com/photo/2019/12/30/20/34/road-4730553_960_720.jpg
+  - type: component
+    component: "tailpine:testimonialstyleone"
+    slots:
+      subtitle: "Subtitle"
+      name: Person Name
+      description: "Statu illo deorsus conectitur correcta declarant "
+    props:
+      imageurl: https://cdn.pixabay.com/photo/2017/10/04/18/11/trees-2817102_1280.jpg
+

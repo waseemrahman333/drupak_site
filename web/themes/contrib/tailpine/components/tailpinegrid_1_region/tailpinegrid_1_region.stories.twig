@@ -1,0 +1,18 @@
+{% stories tailpinegrid_1_region with { title: 'Components/Tailpine Grid – 1 Column' } %}
+
+{% story default with {
+    name: '1. Tailpine Grid 1 Region',
+    args: { 
+      container_type: 'container mx-auto'
+    }
+  } %}
+{% embed 'tailpine:tailpinegrid_1_region' with { 
+  container_type: container_type
+} %}
+  {% block col_first %}
+    {{ col_first }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

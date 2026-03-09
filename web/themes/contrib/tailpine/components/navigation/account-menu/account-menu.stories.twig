@@ -1,0 +1,18 @@
+{% stories account_menu with { title: 'Components/Account Menu' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      title: 'Title',
+      url: 'URL',
+      target: 'Target'
+    }
+  } %}
+{% embed 'components:account-menu' with { 
+  title: title,
+  url: url,
+  target: target
+} %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

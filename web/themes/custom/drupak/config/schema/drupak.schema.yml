@@ -1,0 +1,64 @@
+# Schema for the configuration files of the drupak Subtheme.
+
+drupak.settings:
+  type: theme_settings
+  label: "drupak settings"
+  mapping:
+    # Colors.
+    # ----------------------------
+    drupak_enable_color:
+      type: boolean
+      label: "Enable color Sheme"
+    drupak_color_scheme:
+      type: string
+      label: "drupak Color Scheme"
+    drupak_base_primary_color:
+      type: string
+      label: "Primary base color"
+    drupak_base_secondary_color:
+      type: string
+      label: "Secondary base color"
+    drupak_base_tertiary_color:
+      type: string
+      label: "Tertiary base color"
+    drupak_body_color:
+      type: string
+      label: "Body color"
+    drupak_body_bg_color:
+      type: string
+      label: "Body Background Color"
+    drupak_h1_color:
+      type: string
+      label: "H1 color"
+    drupak_h2_color:
+      type: string
+      label: "H2 color"
+    drupak_h3_color:
+      type: string
+      label: "H3 color"
+    drupak_h4_color:
+      type: string
+      label: "H4 color"
+    drupak_success_color:
+      type: string
+      label: "Success Color"
+    drupak_warning_color:
+      type: string
+      label: "Warning Color"
+    drupak_error_color:
+      type: string
+      label: "Error Color"
+    # header style
+    header_class:
+      type: string
+      label: "Header style"
+    footer_class:
+      type: string
+      label: "Footer style"
+    header_fixed:
+      type: string
+      label: "Fixed Header"
+    daisyui_enable:
+      type: boolean
+      label: "Enable DaisyUI"
+

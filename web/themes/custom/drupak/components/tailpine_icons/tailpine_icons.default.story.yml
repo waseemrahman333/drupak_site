@@ -1,0 +1,10 @@
+name: Default
+props:
+  iconTitle: Value
+  iconStyle: solid
+  iconFillColor: Value
+  iconStrokeColor: Value
+  iconSize: micro
+  showLinkText: false
+  linkText: Value
+  iconLink: Value

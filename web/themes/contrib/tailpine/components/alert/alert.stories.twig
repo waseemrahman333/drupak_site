@@ -1,0 +1,57 @@
+{% stories alert with { title: 'Components/Alert' } %}
+
+{% story default with {
+    name: '1. Alert - Success',
+    args: { 
+      messages: 'Your changes have been saved successfully!',
+      type: 'success'
+    }
+  } %}
+{% embed 'tailpine:alert' with { 
+  messages: messages,
+  type: type
+} %}{% endembed %}
+
+
+{% endstory %}
+
+{% story error with {
+    name: '2. Alert - Error',
+    args: { 
+      messages: 'An error occurred while processing your request. Please try again.',
+      type: 'error'
+    }
+  } %}
+{% embed 'tailpine:alert' with { 
+  messages: messages,
+  type: type
+} %}{% endembed %}
+{% endstory %}
+
+{% story info with {
+    name: '3. Alert - Info',
+    args: { 
+      messages: 'This feature is currently in beta. Your feedback is welcome!',
+      type: 'info'
+    }
+  } %}
+{% embed 'tailpine:alert' with { 
+  messages: messages,
+  type: type
+} %}{% endembed %}
+{% endstory %}
+
+{% story warning with {
+    name: '4. Alert - Warning',
+    args: { 
+      messages: 'Please review your information before submitting.',
+      type: 'warning'
+    }
+  } %}
+{% embed 'tailpine:alert' with { 
+  messages: messages,
+  type: type
+} %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

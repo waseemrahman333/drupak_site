@@ -1,0 +1,19 @@
+{% stories region with { title: 'Components/Region' } %}
+
+{% story default with {
+    name: '1. Region - Content',
+    args: { 
+      region_name: 'content',
+      content: '<div class="p-4"><p>This is content inside a Drupal region wrapper.</p></div>'
+    }
+  } %}
+{% embed 'tailpine:region' with { 
+  region_name: region_name
+} %}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

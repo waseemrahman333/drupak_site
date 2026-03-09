@@ -1,0 +1,64 @@
+# Schema for the configuration files of the tailpine_starterkit Subtheme.
+
+tailpine_starterkit.settings:
+  type: theme_settings
+  label: "tailpine_starterkit settings"
+  mapping:
+    # Colors.
+    # ----------------------------
+    tailpine_starterkit_enable_color:
+      type: boolean
+      label: "Enable color Sheme"
+    tailpine_starterkit_color_scheme:
+      type: string
+      label: "tailpine_starterkit Color Scheme"
+    tailpine_starterkit_base_primary_color:
+      type: string
+      label: "Primary base color"
+    tailpine_starterkit_base_secondary_color:
+      type: string
+      label: "Secondary base color"
+    tailpine_starterkit_base_tertiary_color:
+      type: string
+      label: "Tertiary base color"
+    tailpine_starterkit_body_color:
+      type: string
+      label: "Body color"
+    tailpine_starterkit_body_bg_color:
+      type: string
+      label: "Body Background Color"
+    tailpine_starterkit_h1_color:
+      type: string
+      label: "H1 color"
+    tailpine_starterkit_h2_color:
+      type: string
+      label: "H2 color"
+    tailpine_starterkit_h3_color:
+      type: string
+      label: "H3 color"
+    tailpine_starterkit_h4_color:
+      type: string
+      label: "H4 color"
+    tailpine_starterkit_success_color:
+      type: string
+      label: "Success Color"
+    tailpine_starterkit_warning_color:
+      type: string
+      label: "Warning Color"
+    tailpine_starterkit_error_color:
+      type: string
+      label: "Error Color"
+    # header style
+    header_class:
+      type: string
+      label: "Header style"
+    footer_class:
+      type: string
+      label: "Footer style"
+    header_fixed:
+      type: string
+      label: "Fixed Header"
+    daisyui_enable:
+      type: boolean
+      label: "Enable DaisyUI"
+

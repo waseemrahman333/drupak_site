@@ -1,0 +1,30 @@
+name: Button Group - Different Sizes
+description: Groups showing various button sizes
+
+slots:
+  buttons:
+    - type: component
+      component: "tailpine:button"
+      slots:
+        content: "Small"
+      props:
+        color: primary
+        size: sm
+        outline: false
+    - type: component
+      component: "tailpine:button"
+      slots:
+        content: "Medium"
+      props:
+        color: primary
+        size: md
+        outline: false
+    - type: component
+      component: "tailpine:button"
+      slots:
+        content: "Large"
+      props:
+        color: primary
+        size: lg
+        outline: false
+

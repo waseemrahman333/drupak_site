@@ -1,0 +1,39 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.accordion_sytle_one
+    - field.field.block_content.accordion_sytle_one.field_tailpine_description
+    - field.field.block_content.accordion_sytle_one.field_tailpine_title
+  module:
+    - text
+id: block_content.accordion_sytle_one.default
+targetEntityType: block_content
+bundle: accordion_sytle_one
+mode: default
+content:
+  field_tailpine_description:
+    type: text_textarea
+    weight: 27
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_tailpine_title:
+    type: string_textfield
+    weight: 26
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

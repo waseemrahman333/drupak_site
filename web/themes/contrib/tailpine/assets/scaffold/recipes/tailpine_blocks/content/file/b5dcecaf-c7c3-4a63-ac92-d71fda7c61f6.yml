@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: b5dcecaf-c7c3-4a63-ac92-d71fda7c61f6
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: logo8.png
+  uri:
+    -
+      value: 'public://2025-09/logo8.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 1646
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1756754907

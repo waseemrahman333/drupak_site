@@ -1,0 +1,22 @@
+{% stories viewtable with { title: 'Components/View Table' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      caption: 'Caption',
+      header: [],
+      rows: [],
+      responsive: false,
+      sticky: false
+    }
+  } %}
+{% embed 'components:viewtable' with { 
+  caption: caption,
+  header: header,
+  rows: rows,
+  responsive: responsive,
+  sticky: sticky
+} %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

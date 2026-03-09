@@ -1,0 +1,112 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.accordion_sytle_one
+    - field.field.block_content.accordion_sytle_one.field_tailpine_description
+    - field.field.block_content.accordion_sytle_one.field_tailpine_title
+  module:
+    - layout_builder
+    - nomarkup
+    - text
+    - ui_patterns
+    - ui_patterns_layouts
+  theme:
+    - tailpine
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: 'ui_patterns:tailpine:accordionstyletwo'
+        layout_settings:
+          label: ''
+          context_mapping:
+            entity: layout_builder.entity
+          ui_patterns:
+            component_id: 'tailpine:accordionstyletwo'
+            variant_id: null
+            props:
+              attributes:
+                source_id: attributes
+                source:
+                  value: ''
+            slots: {  }
+        components:
+          8158bf85-b8c9-46fe-a351-cd83f48c14ad:
+            uuid: 8158bf85-b8c9-46fe-a351-cd83f48c14ad
+            region: title
+            configuration:
+              id: 'field_block:block_content:accordion_sytle_one:field_tailpine_title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings:
+                  nomarkup:
+                    enabled: true
+                    separator: '|'
+                    referenced_entity: ''
+            weight: 0
+            additional: {  }
+          ffc2cfa7-2db2-4ee5-851d-4c60ab14c7bf:
+            uuid: ffc2cfa7-2db2-4ee5-851d-4c60ab14c7bf
+            region: description
+            configuration:
+              id: 'field_block:block_content:accordion_sytle_one:field_tailpine_description'
+              label: Description
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings:
+                  nomarkup:
+                    enabled: true
+                    separator: '|'
+                    referenced_entity: ''
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+id: block_content.accordion_sytle_one.default
+targetEntityType: block_content
+bundle: accordion_sytle_one
+mode: default
+content:
+  field_tailpine_description:
+    type: text_trimmed
+    label: hidden
+    settings:
+      trim_length: 500
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 1
+    region: content
+  field_tailpine_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 0
+    region: content
+hidden: {  }

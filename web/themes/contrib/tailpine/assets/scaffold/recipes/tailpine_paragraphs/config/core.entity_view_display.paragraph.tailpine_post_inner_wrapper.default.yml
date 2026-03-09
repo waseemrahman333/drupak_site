@@ -1,0 +1,96 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tailpine_cards_header.field_tailpine_select_column
+    - field.field.paragraph.tailpine_post_inner_wrapper.field_tailpine_content
+    - field.field.paragraph.tailpine_post_inner_wrapper.field_tailpine_select_column
+    - field.field.paragraph.tailpine_team_style_two_header.field_tailpine_select_column
+    - paragraphs.paragraphs_type.tailpine_post_inner_wrapper
+  module:
+    - entity_reference_revisions
+    - layout_builder
+    - nomarkup
+    - options
+    - ui_patterns
+    - ui_patterns_layouts
+  theme:
+    - tailpine
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: 'ui_patterns:tailpine:postinnerwrapper'
+        layout_settings:
+          label: ''
+          context_mapping:
+            entity: layout_builder.entity
+          ui_patterns:
+            component_id: 'tailpine:postinnerwrapper'
+            variant_id: null
+            props:
+              attributes:
+                source_id: attributes
+                source:
+                  value: ''
+              columns:
+                source_id: entity_field
+                source:
+                  derivable_context: 'field:paragraph:tailpine_post_inner_wrapper:field_tailpine_select_column'
+                  'field:paragraph:tailpine_post_inner_wrapper:field_tailpine_select_column':
+                    value:
+                      source_id: 'field_property:paragraph:field_tailpine_select_column:value'
+            slots: {  }
+        components:
+          82f1fabc-8bc1-4704-8dd3-30f95e46f58c:
+            uuid: 82f1fabc-8bc1-4704-8dd3-30f95e46f58c
+            region: content
+            configuration:
+              id: 'field_block:paragraph:tailpine_post_inner_wrapper:field_tailpine_content'
+              label: 'Add Post Card'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: hidden
+                settings:
+                  view_mode: default
+                third_party_settings:
+                  nomarkup:
+                    enabled: true
+                    separator: ''
+                    referenced_entity: ''
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+id: paragraph.tailpine_post_inner_wrapper.default
+targetEntityType: paragraph
+bundle: tailpine_post_inner_wrapper
+mode: default
+content:
+  field_tailpine_content:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: ''
+        referenced_entity: ''
+    weight: 0
+    region: content
+  field_tailpine_select_column:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

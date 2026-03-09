@@ -1,0 +1,19 @@
+{% stories localtasks with { title: 'Components/Local Tasks' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      configuration: {"label":"Local Tasks","provider":"system"},
+      content: 'Content Slot'
+    }
+  } %}
+{% embed 'components:localtasks' with { 
+  configuration: configuration
+} %}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

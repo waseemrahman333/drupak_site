@@ -1,0 +1,22 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/metadata.schema.json
+name: Dropdown
+status: stable
+description: Dropdown menu with Alpine.js toggle functionality.
+group: Navigation
+props:
+  type: object
+  properties:
+    button_text:
+      type: string
+      title: Button Text
+      description: Dropdown toggle button text.
+    button_color:
+      type: string
+      title: Button Color
+      description: Button color scheme.
+      default: primary
+slots:
+  items:
+    title: Menu Items
+    description: Dropdown menu items content.
+

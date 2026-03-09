@@ -1,0 +1,10 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/metadata.schema.json
+name: Page Content
+status: stable
+description: Main content wrapper for page.
+group: Layout
+slots:
+  content:
+    title: Content
+    description: Page content.
+

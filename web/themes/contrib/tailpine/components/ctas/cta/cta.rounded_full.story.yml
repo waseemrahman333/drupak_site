@@ -1,0 +1,11 @@
+name: Rounded full
+
+props:
+  attributes:
+    class:
+      - "!m-2"
+  title: "CTA Text"
+  color_schema: null
+  size: "rounded-full"
+  link: "https://example.com"
+  button_variant: "outline"

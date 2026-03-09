@@ -1,0 +1,30 @@
+name: Button Group - Outline Style
+description: Group of outline buttons
+
+slots:
+  buttons:
+    - type: component
+      component: "tailpine:button"
+      slots:
+        content: "Edit"
+      props:
+        color: primary
+        size: md
+        outline: true
+    - type: component
+      component: "tailpine:button"
+      slots:
+        content: "Preview"
+      props:
+        color: secondary
+        size: md
+        outline: true
+    - type: component
+      component: "tailpine:button"
+      slots:
+        content: "Publish"
+      props:
+        color: success
+        size: md
+        outline: true
+

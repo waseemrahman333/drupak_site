@@ -1,0 +1,16 @@
+{% stories username with { title: 'Components/User name' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      user_name: 'user name',
+      link_path: 'URL'
+    }
+  } %}
+{% embed 'tailpine:username' with { 
+  user_name: user_name,
+  link_path: link_path
+} %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

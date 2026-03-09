@@ -1,0 +1,62 @@
+{#
+/**
+ * 404 Error Page Component
+ * 
+ * Full-height centered error page for "Page Not Found" scenarios.
+ * Displays large error code and descriptive message.
+ *
+ * Available variables:
+ * - title: (string) Error code (typically "404!"). Required.
+ * - subtitle: (string) Error message describing the issue. Required.
+ * - cta: (markup) Optional call-to-action button to return home or search.
+ * - title_heading_level: (number) HTML heading level for error code (1-6). Default: 1
+ * - subtitle_heading_level: (number) HTML heading level for message (1-6). Default: 2
+ *
+ * Accessibility:
+ * - Uses semantic heading hierarchy
+ * - role="status" for screen reader announcement
+ * - aria-live="polite" for dynamic content
+ * - Sufficient color contrast
+ * - Clear, understandable error messaging
+ *
+ * Theme Variables Used:
+ * - text-secondary: Error text color
+ * - font-[Inter]: Typography family
+ *
+ * Examples:
+ * {% include 'tailpine:error404' with {
+ *   title: '404!',
+ *   subtitle: 'Page not found. Please check the URL.',
+ * } %}
+ */
+#}
+
+{% set error_title_heading = title_heading_level|default(1) %}
+{% set error_subtitle_heading = subtitle_heading_level|default(2) %}
+
+<div class="max-w-screen-lg w-full mx-auto px-4" role="status" aria-live="polite">
+  <div class="flex justify-center items-center min-h-screen flex-col gap-4 py-12">
+    <div class="flex flex-col items-center text-center">
+      <!-- Large Error Code -->
+      <h{{ error_title_heading }} 
+        class="text-[clamp(50px,10vw,150px)] font-black uppercase text-secondary leading-none mb-4"
+      >
+        {{ title }}
+      </h{{ error_title_heading }}>
+      
+      <!-- Error Message -->
+      <h{{ error_subtitle_heading }} 
+        class="text-xl md:text-3xl lg:text-4xl font-normal text-secondary max-w-3xl"
+      >
+        {{ subtitle }}
+      </h{{ error_subtitle_heading }}>
+      
+      <!-- Optional CTA -->
+      {% if cta %}
+      <div class="mt-8">
+        {{ cta }}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

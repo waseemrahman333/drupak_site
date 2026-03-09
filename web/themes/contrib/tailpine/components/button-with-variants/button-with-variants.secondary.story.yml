@@ -1,0 +1,7 @@
+name: 'Secondary Button'
+props:
+  text: 'Secondary Button'
+  url: ''
+  size: md
+  disabled: false
+  variant: secondary

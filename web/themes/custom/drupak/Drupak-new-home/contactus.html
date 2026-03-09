@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="./src/output.css">
+</head>
+<body class="bg-body-gray">
+    <!----------------------------- navbar start ----------------------------->
+    <nav class="fixed top-0 left-0 w-full nav-px z-20">
+                <div class="relative flex items-end justify-between bg-body-bg p-[clamp(16px,3vw,18.5px)]">
+                    <!-- Logo -->
+                    <div class="flex items-center gap-3">
+                    <a href="index.html"> <img class="w-[clamp(96px,12vw,151px)] h-[clamp(35px,7vw,55px)]" src="images/Logo.svg" alt=""></a>
+                    </div>
+
+                    <!-- Nav Options -->
+                    <div class="">
+                        <!-- Hamburger -->
+                        <div onclick="openMenu(this)" class="xl:hidden cursor-pointer px-[clamp(8px,2vw,12px)] py-[clamp(9px,2vw,14px)] bg-secondary ">
+                            <svg class="w-[clamp(19px,3.5vw,31px)] h-[clamp(19px,3.5vw,31px)]" viewBox="0 0 32 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="31.6667" height="3.8" fill="var(--color-tertiary)" />
+                                <rect y="11.8" width="31.6667" height="3.8" fill="var(--color-tertiary)" />
+                                <rect y="23.6" width="31.6667" height="3.8" fill="var(--color-tertiary)" />
+                            </svg>
+                        </div>
+
+                        <!-- Links -->
+                        <div
+                            class="nav__option--links text-tertiary font-semibold load hidden border-t-2 border-primary top-full absolute right-0 left-0 shadow-2xl flex flex-col gap-2.5 bg-body-bg px-4 py-2.5 xl:static xl:flex xl:flex-row xl:min-h-fit xl:border-0 xl:shadow-none xl:gap-[clamp(28px,2.2vw,40px)] xl:bg-transparent xl:p-0 xl:items-center">
+                            <a class=" py-1.5 px-5 xl:py-1 xl:px-0 lg:flex lg:items-center h-fit  rounded-sm"
+                                href="./index.html"><p class="relative after:content-[] after:h-0.5 xl:after:h-1 after:absolute after:left-0 after:top-full after:bg-primary after:w-0 hover:after:w-full after:transition-all after:duration-200 after:ease-in-out">HOME</p></a>
+                            <a class=" py-1.5 px-5 xl:py-1 xl:px-0 lg:flex lg:items-center h-fit  rounded-sm"
+                                href="./about-us.html"><p class="relative after:content-[] after:h-0.5 xl:after:h-1 after:absolute after:left-0 after:top-full after:bg-primary after:w-0 hover:after:w-full after:transition-all after:duration-200 after:ease-in-out">ABOUT US</p></a>
+                            <div class="relative flex flex-col xl:justify-center">
+                                <div id="services" onclick="dropDown()"
+                                    class="cursor-pointer flex justify-between items-center py-1.5 px-5 xl:py-1 h-fit xl:px-0 xl:gap-2 rounded-sm">
+                                    <p class="relative after:content-[] after:h-0.5 xl:after:h-1 after:absolute after:left-0 after:top-full after:bg-primary after:w-0 hover:after:w-full after:transition-all after:duration-200 after:ease-in-out">SERVICES</p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8"
+                                        fill="none">
+                                        <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <div style="max-height: 0px; opacity: 0;"
+                                    class="services bg-body-bg px-4 flex flex-col gap-3 transition-all duration-300 ease-in-out overflow-hidden xl:absolute xl:z-10 xl:top-full xl:border-t-2 border-primary xl:left-0 xl:shadow-2xl">
+                                    <a class=" py-1.5 hover:bg-secondary transition-all duration-300 px-5 xl:py-2.5 xl:flex xl:items-center text-nowrap"
+                                        href="services-detail.html">Drupal 10 development</a>
+                                    <a class=" py-1.5 hover:bg-secondary transition-all duration-300 px-5 xl:py-2.5 xl:flex xl:items-center text-nowrap"
+                                        href="services.html">Upgrade & Migration</a>
+                                    <a class=" py-1.5 hover:bg-secondary transition-all duration-300 px-5 xl:py-2.5 xl:flex xl:items-center text-nowrap"
+                                        href="#">Maintenance & Support</a>
+                                    <a class=" py-1.5 hover:bg-secondary transition-all duration-300 px-5 xl:py-2.5 xl:flex xl:items-center text-nowrap"
+                                        href="#">Drupal Consulting</a>
+                                    <a class=" py-1.5 hover:bg-secondary transition-all duration-300 px-5 xl:py-2.5 xl:flex xl:items-center text-nowrap"
+                                        href="#">Digital Marketing</a>
+                                    <a class=" py-1.5 hover:bg-secondary transition-all duration-300 px-5 xl:py-2.5 xl:flex xl:items-center text-nowrap"
+                                        href="#">Drupal Commerce</a>
+                                </div>
+                            </div>
+                            <a class=" py-1.5 px-5 xl:py-1 xl:px-0 lg:flex lg:items-center h-fit  rounded-sm"
+                                href="traning.html"><p class="relative after:content-[] after:h-0.5 xl:after:h-1 after:absolute after:left-0 after:top-full after:bg-primary after:w-0 hover:after:w-full after:transition-all after:duration-200 after:ease-in-out">TRAINING</p></a>
+                            <a class=" py-1.5 px-5 xl:py-1 xl:px-0 lg:flex lg:items-center h-fit  rounded-sm"
+                                href="blog.html"><p class="relative after:content-[] after:h-0.5 xl:after:h-1 after:absolute after:left-0 after:top-full after:bg-primary after:w-0 hover:after:w-full after:transition-all after:duration-200 after:ease-in-out">BLOG</p></a>
+
+                            <!-- Contact -->
+                            <a class="mt-5 group flex items-center justify-between gap-2.5 text-tertiary font-semibold py-1.5 px-5 rounded-lg xl:mt-0 xl:px-5 xl:py-3 bg-primary hover:bg-transparent border border-transparent hover:border-tertiary transition-all duration-300"
+                                href="contactus.html">Contact Us
+                                <svg class="group-hover:transform group-hover:translate-x-1 transition-all duration-300"
+                                    xmlns="http://www.w3.org/2000/svg" width="17" height="8" viewBox="0 0 17 8" fill="none">
+                                    <path d="M12.7393 8V4.8H0.0255641L0 3.192H12.7393V0L17 4L12.7393 8Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    </nav>
+    <!----------------section one-------------------->
+    <div class="relative w-full  overflow-hidden">
+
+
+        <picture class="absolute inset-0 -z-10 pointer-events-none w-full">
+            <!-- <source media="(min-width:1920px)" srcset="./images/1920.png">
+            <source media="(min-width:1280px)" srcset="./images/1280.png">
+            <source media="(min-width:768px)" srcset="./images/tablet1.png"> -->
+        
+            <img
+            src="./images/services 4.svg"
+            alt=""
+            class="w-full h-full object-cover"
+            aria-hidden="true"
+            />
+
+        </picture>
+
+
+            <!-- CONTENT WRAPPER -->
+            <div
+            class="herosection container-px pb-14 pt-24.5 flex flex-col text-tertiary gap-4
+                    md:pt-35 md:pb-12
+                    xl:flex-row xl:justify-between xl:pt-37.5 xl:pb-28.5
+                    2xl:pt-50 2xl:pb-29.5
+                    mx-auto max-w-480"
+            >
+
+            <!-- HERO CONTENT -->
+            <div class="flex flex-col gap-3 xl:basis-1/2 xl:gap-5 xl:gap-8">
+                <div class="text-p flex items-center gap-1.5">
+                <a class="text-tertiary/80" href="index.html">Home</a>
+                <svg width="9" height="28" viewBox="0 0 9 28">
+                    <path d="M2 19L7 14L2 9" stroke="black" />
+                </svg>
+                <a href="#">Contact Us</a>
+                </div>
+
+                <h1 class="text-h1">Contact Us</h1>
+            </div>
+
+            </div>
+    </div>
+    <!---------------------SECTION TWO------------------------------------>
+    <section class=" container-px">
+            <div class="  flex flex-col gap-12.5 py-12.5 md:py-17.5 xl:flex-row xl:gap-6 xl:py-20 2xl:py-30 mx-auto max-w-480 2xl:gap-30.5">
+            <div class="flex flex-col gap-12 xl:basis-1/2 xl:justify-between">
+            <div class="flex flex-col gap-5 md:gap-8">
+                <h2 class="text-title text-tertiary md:text-6xl">Have Questions? Get in touch!</h2>
+                <p class="font-normal text-base leading-7 text-tertiary/80 md:text-lg md:leading-7.5 2xl:text-xl 2xl:leading-8.5 2xl:max-w-173.5">We will be very pleased and appreciate reaching us out. Please fill the form and share your requirements or email us at <a href="mailto:info@drupak.com" class="text-blue-600">info@drupak.com</a></p>
+            </div>
+            <div class="flex flex-col gap-7.5">
+                <div class="">
+                <span class="font-normal text-sm leading-6 text-tertiary/80 block md:text-base md:leading-7">call Us</span>
+                <span class="font-semibold text-base leading-7 text-tertiary block mt-2 md:text-lg md:leading-7.5">+92-3139760741</span>
+                </div>
+                <address class="max-w-112.5">
+                <span class="font-normal text-sm leading-6 text-tertiary/80 block md:text-base md:leading-7">Address</span>
+                <p class="font-semibold text-base leading-7 text-tertiary block font-opensans mt-2 md:text-lg md:leading-7.5">City Trade Center (CTC),block M New City Phase 2 wah cantt Pakistan</p>
+                </address>
+            </div>
+            </div>
+            <!--------------form side------------------>
+            <div class="bg-body-bg py-10 px-5 md:py-12.5 md:px-12 xl:basis-1/2">
+            <div>
+                <h3 class=text-h3>Send a message</h3>
+                <form class="flex flex-col gap-5 mt-6 border-tertiary/40 text-sm font-normal leading-7 md:text-base">
+            
+                <input class="text-tertiary/80 py-4 border-b w-full focus:outline-none" type="text" placeholder="Name">
+                <div class="md:flex md:gap-6">
+                <input class=" py-4 border-b w-full focus:outline-none" type="text" placeholder="Your Email Address">
+                <input class=" py-4 border-b w-full  focus:outline-none" type="text" placeholder="Your Phone number">
+                </div>
+                <input class=" py-4 border-b w-full  focus:outline-none" type="text" placeholder="organization">
+                <textarea class=" min-h-42 py-4 border-tertiary/40 border-b focus:outline-none " placeholder="Message"></textarea>
+                    <a href="#" class="group  w-full flex items-center text-base gap-3 bg-primary hover:bg-transparent border border-transparent hover:border-tertiary transition-all duration-300 px-5 py-4 justify-center font-semibold uppercase rounded-lg mt-5 ">
+                            Send Message
+                            <svg class="group-hover:transform group-hover:translate-x-1 transition-all duration-300" width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.7393 8V4.8H0.0255641L0 3.192H12.7393V0L17 4L12.7393 8Z" fill="#111111"/>
+                            </svg>
+                        </a>
+                </form>
+                
+
+            </div>
+
+            </div>
+
+    </div>
+
+
+    </section>
+    <!-- Consultation -->
+    <section class="container-px py-[clamp(60px,10dvh,100px)] text-tertiary bg-body-bg">
+            <div class="relative mx-auto max-w-480 bg-grey-bg rounded-[clamp(10px,1dvw,20px)] overflow-hidden flex flex-col">
+                <!-- Text -->
+                <div class="relative z-10 w-full grid grid-cols-1 gap-[clamp(20px,3dvw,40px)] p-[clamp(20px,3dvw,80px)] text-left md:w-1/2">
+                    <h2
+                        class="uppercase text-h2 relative z-10 pb-5 font-montserrat text-tertiary basis-1/3 after:h-1 after:w-15 after:content-[] after:bg-tertiary after:absolute after:bottom-0 after:left-0">
+                        WHY CHOOSE US AS YOUR DRUPAL PARTNER?
+                    </h2>
+
+                    <p class="relative z-10 leading-7 xl:text-lg xl:leading-7.5 max-w-145">
+                        Choosing us as your Drupal development partner is a strategic decision rooted in our commitment
+                        to delivering unparalleled expertise and value.
+                    </p>
+
+                    <a href="#"
+                        class="group bg-primary hover:bg-transparent border border-transparent hover:border-tertiary transition-all duration-300 py-4 px-5 flex gap-2.5 items-center justify-center max-w-68 rounded-lg font-semibold text-sm font-open-sans uppercase">GET
+                        Free consultation<svg
+                            class="group-hover:transform group-hover:translate-x-1 transition-all duration-300"
+                            xmlns="http://www.w3.org/2000/svg" width="17" height="8" viewBox="0 0 17 8" fill="none">
+                            <path d="M12.7393 8V4.8H0.0255641L0 3.192H12.7393V0L17 4L12.7393 8Z" fill="#111111" />
+                        </svg></a>
+                </div>
+
+                <!-- Image -->
+                <div class="md:absolute md:top-0 md:right-0 z-0 overflow-hidden flex justify-end">
+                    <img src="images/consultation.svg" alt="consultation image"
+                        class="block md:w-full h-full object-contain w-87.5 opacity-90" />
+                </div>
+            </div>
+    </section>   
+    <!--------------------------footer section---------------------------------------->
+    <footer class="bg-grey-bg container-px">
+        <div class="py-[clamp(50px,4vw,60px)] flex flex-col gap-[clamp(40px,5vw,70px)] max-w-480 mx-auto">
+            <div class="flex items-center xl:items-start justify-between border-b border-tertiary/40 pb-[clamp(20px,2vw,30px)]">
+                <div>
+                    <img class="w-full h-full object-cover" src="images/Logo.svg" alt="">
+                </div>
+                <ul class="flex gap-2 ">
+                    <li>
+                        <a aria-label="Facebook" href="#"
+                            class="grid place-items-center w-7.5 h-7.5 bg-primary hover:bg-transparent border border-transparent hover:border-tertiary transition-all duration-300 rounded">
+                            <img src="images/facebook.svg" alt="facebook icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-label="Twitter" href="#"
+                            class="grid place-items-center w-7.5 h-7.5 bg-primary hover:bg-transparent border border-transparent hover:border-tertiary transition-all duration-300 rounded">
+                            <img src="images/twitter.svg" alt="twitter icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-label="LinkedIn" href="#"
+                            class="grid place-items-center w-7.5 h-7.5 bg-primary hover:bg-transparent border border-transparent hover:border-tertiary transition-all duration-300 ease rounded h-full min-w-7.5">
+                            <img src="images/linkedIn.svg" alt="linkedIn svg">
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-label="Drupal" href="#"
+                            class="grid place-items-center w-7.5 h-7.5 bg-primary hover:bg-transparent border border-transparent hover:border-tertiary transition-all duration-300 rounded h-full min-w-7.5">
+                            <img src="images/drupal.svg" alt="drupal icon">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- footer navigations -->
+            <div
+                class=" grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-y-[clamp(24px,4vw,40px)] gap-x-25 justify-between">
+                <div>
+                    <h1 class="text-tertiary text-h6">Location</h1>
+                    <p class="leading-7 text-tertiary mt-[clamp(8px,4vw,24px)]">
+                        Office 18,19 1st Floor, City Trade Center (CTC), Block M, New City Phase 2, Wah Cantt Pakistan.
+                    </p>
+                </div>
+                <div class="w-fit xl:justify-self-end">
+                    <h1 class="text-tertiary text-h6">Quick Links</h1>
+                    <div class="mt-[clamp(8px,4vw,24px)] text-sm leading-6 xl:text-base xl:leading-7 flex flex-col gap-2">
+                        <a class="w-fit relative after:content-[] after:h-1 after:absolute after:left-0 after:top-full after:bg-primary after:w-0 hover:after:w-full after:transition-all after:duration-200 after:ease-in-out"
+                            href="#">About Us</a>
+                        <a class="w-fit relative after:content-[] after:h-1 after:absolute after:left-0 after:top-full after:bg-primary after:w-0 hover:after:w-full after:transition-all after:duration-200 after:ease-in-out"
+                            href="#">Services</a>
+                        <a class="w-fit relative after:content-[] after:h-1 after:absolute after:left-0 after:top-full after:bg-primary after:w-0 hover:after:w-full after:transition-all after:duration-200 after:ease-in-out"
+                            href="#">Blog</a>
+                        <a class="w-fit relative after:content-[] after:h-1 after:absolute after:left-0 after:top-full after:bg-primary after:w-0 hover:after:w-full after:transition-all after:duration-200 after:ease-in-out"
+                            href="#">Training</a>
+                    </div>
+                </div>
+                <div class="w-fit xl:justify-self-end">
+                    <h1 class="text-tertiary text-h6">Phone</h1>
+                    <div class="mt-[clamp(8px,4vw,24px)] text-sm leading-6 xl:text-base xl:leading-7 flex flex-col gap-2">
+                        <a class="w-fit  relative after:content-[] after:h-1 after:absolute after:left-0 after:top-full after:bg-primary after:w-0 hover:after:w-full after:transition-all after:duration-200 after:ease-in-out"
+                            href="tel:+92-3139760741">+92-3139760741</a>
+                    </div>
+                </div>
+                <div class=" w-fit xl:justify-self-end">
+                    <h1 class="text-tertiary text-h6">Email</h1>
+                    <div class="mt-[clamp(8px,4vw,24px)] text-sm leading-6 xl:text-base xl:leading-7 flex flex-col gap-2">
+                        <a class="w-fit  relative after:content-[] after:h-1 after:absolute after:left-0 after:top-full after:bg-primary after:w-0 hover:after:w-full after:transition-all after:duration-200 after:ease-in-out"
+                            href="mailto:info@drupak.com">info@drupak.com</a>
+                    </div>
+                </div>
+            </div>
+            <!-- footer copyright section -->
+
+        </div>
+        <div class="container-px bg-primary w-full text-center py-4  ">
+            <p>&copy; Drupak 2024. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="./src/js/script.js"></script>
+
+    
+</body>
+</html>

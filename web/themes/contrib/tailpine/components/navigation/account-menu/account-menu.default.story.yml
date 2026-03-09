@@ -1,0 +1,5 @@
+name: Default
+props:
+  title: Title
+  url: URL
+  target: Target

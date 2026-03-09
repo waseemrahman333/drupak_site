@@ -1,0 +1,12 @@
+name: Post Style Three - Blog Card
+description: Blog post card with image, category, and date
+
+slots:
+  title: 'Mastering Web Development in 2025'
+  description: 'Discover the latest trends and best practices in modern web development. From responsive design to performance optimization, learn what it takes to build exceptional websites.'
+  subtitle: 'Web Development'
+  date: '2025-01-15'
+
+props:
+  imageurl: 'https://cdn.pixabay.com/photo/2024/04/02/10/28/bangladesh-8670559_1280.jpg'
+  heading_level: 2

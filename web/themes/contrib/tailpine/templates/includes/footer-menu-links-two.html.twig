@@ -1,0 +1,133 @@
+<!-- 1st -->
+<div class="grid grid-cols-4 col-start-1 col-span-4 md:grid md:grid-cols-8 xl:grid-cols-12 md:col-start-1 md:col-span-8 xl:col-span-12">
+<div class="col-start-1 col-span-3 md:col-start-1 md:col-span-5 xl:col-start-1 xl:col-span-4">
+  <h6 class="font-black text-xl leading-[1.375rem] mb-[7px] tracking-[3%]">
+    How
+  </h6>
+  <p class="font-normal leading-[1.375rem] text-sm mb-[7px] tracking-[3%] pt-[clamp(12px,2vw,5px)] mt-[5px]" style="max-width:100%; padding:0;">
+    Build Every Component Using SDC Architecture
+  </p>
+</div>
+
+	<div class="col-start-4 col-span-1 md:col-start-6 xl:col-start-5 md:col-span-3 xl:col-span-4 md:text-end xl:text-center">
+		{% if logo %}
+			<div class="col-span-4 md:col-span-2 xl:col-span-3 w-20 md:w-40 flex justify-center md:justify-end xl:justify-center">
+				<a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home" class="inline-block">
+					<img src="{{ logo }}" alt="{{ 'Site logo'|t }}" class="w-auto  h-auto"/>
+				</a>
+			</div>
+		{% endif %}
+	</div>
+	<div
+		class="when mt-4 col-span-3 md:col-span-4 xl:col-span-4 xl:text-end">
+		{{ page.footer.tailpine_when }}
+		<h6 class="font-black text-xl leading-5.5 mb=[7px] tracking-[3%]">WHEN</h6>
+		<p class="leading-5.5 text-sm mb=[7px] tracking-[3%] pt-[clamp(12px, 2vw, 5px)] mt=[5px]" style="max-width:100%;padding:0;text-align:end !important;">11 NOV 2025</p>
+	</div>
+</div>
+
+<!-- 2nd -->
+<div class="pt-[clamp(54px,3vw,35px)] grid grid-cols-4 col-start-1 col-span-4 gap-5 md:grid md:grid-cols-8 md:col-start-1 md:col-span-8 xl:grid xl:grid-cols-12 xl:col-start-1 xl:col-span-12 xl:gap-8 ">
+	<div class="col-start-1 col-span-2 md:col-start-1 md:col-span-4 xl:col-start-1 xl:col-span-4">
+		{# {{ page.footer.tailpine_footerone }} #}
+		<h2 id="block-tailpine-footerone-menu" class="font-bold text-xl tracking-[3%] leading-5.5 mb-[10px] border-body-bg border-b md:pb-[15px] pb-[15px]">QUICK LINKS</h2>
+		<ul data-component-id="tailpine:footerone" class="menuflexflex-colgap-2.5">
+			<li class="menu-item">
+				<a href="" target="" class="text-body-bg hover:text-primary  text-md tracking-wide font-normal  opacity-70">
+					Home Page
+				</a>
+			</li>
+			<li class="menu-item">
+				<a href="" target="" class="text-body-bg hover:text-primary text-md tracking-wide font-normal  opacity-70">
+					About Us
+				</a>
+			</li>
+			<li class="menu-item">
+				<a href="" target="" class="text-body-bg hover:text-primary text-md tracking-wide font-normal  opacity-70">
+					Services
+				</a>
+			</li>
+			<li class="menu-item">
+				<a href="" target="" class="text-body-bg hover:text-primary text-md tracking-wide font-normal  opacity-70">
+					Contact Us
+				</a>
+			</li>
+			<li class="menu-item">
+				<a href="" target="" class="text-body-bg hover:text-primary text-md tracking-wide font-normal  opacity-70">
+					Hire a drupal
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="col-start-3 col-span-2 md:col-start-5 md:col-span-4 xl:col-start-5 xl:col-span-4">
+		<h2 id="block-tailpine-footertwo-menu" class="font-bold text-xl tracking-[3%] leading-5.5 mb-[10px] border-body-bg border-b md:pb-[15px] pb-[15px]">INFO</h2>
+		<ul data-component-id="tailpine:footertwo" class="menuflexflex-colgap-2.5">
+			<li class="menu-item">
+				<a href="" target="" class="text-body-bg hover:text-primary text-sm md:text-lg font-normal  opacity-70">
+					Accessibility
+				</a>
+			</li>
+			<li class="menu-item">
+				<a href="" target="" class="text-body-bg hover:text-primary text-sm md:text-lg font-normal  opacity-70">
+					Privacy Policy
+				</a>
+			</li>
+			<li class="menu-item">
+				<a href="" target="" class="text-body-bg hover:text-primary text-sm md:text-lg font-normal  opacity-70">
+					Cookie Policy
+				</a>
+			</li>
+			<li class="menu-item">
+				<a href="" target="" class="text-body-bg hover:text-primary text-sm md:text-lg font-normal  opacity-70">
+					The Cyber Security
+				</a>
+			</li>
+			<li class="menu-item">
+				<a href="" target="" class="text-body-bg hover:text-primary text-sm md:text-lg font-normal  opacity-70">
+					Terms os use
+				</a>
+			</li>
+
+		</ul>
+	</div>
+	<div class="col-start-1 col-span-4 md:col-start-1 md:col-span-4 xl:col-start-9 xl:col-span-4">
+		<h2 id="block-tailpine-footerthree-menu" class="font-bold text-xl tracking-[3%] leading-5.5 mb-[10px] border-body-bg border-b md:pb-[15px] pb-[15px]">Explore</h2>
+		<ul data-component-id="tailpine:footerthree" class="menuflexflex-colgap-2.5">
+			<li class="menu-item">
+				<a href="" target="" class="text-body-bg hover:text-primary text-sm md:text-lg font-normal  opacity-70">
+					Features
+				</a>
+			</li>
+			<li class="menu-item">
+				<a href="" target="" class="text-body-bg hover:text-primary text-sm md:text-lg font-normal  opacity-70">
+					Enterprise
+				</a>
+			</li>
+			<li class="menu-item">
+				<a href="" target="" class="text-body-bg hover:text-primary text-sm md:text-lg font-normal  opacity-70">
+					Security
+				</a>
+			</li>
+			<li class="menu-item">
+				<a href="" target="" class="text-body-bg hover:text-primary text-sm md:text-lg font-normal  opacity-70">
+					Press kit
+				</a>
+			</li>
+			<li class="menu-item">
+				<a href="" target="" class="text-body-bg hover:text-primary text-sm md:text-lg font-normal  opacity-70">
+					Pricing
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<!-- 3rd -->
+<div class="grid grid-cols-4 col-start-1 col-span-4 gap-5 md:grid md:grid-cols-8 md:col-start-1 md:col-span-8 xl:grid xl:grid-cols-12 xl:col-start-1 xl:col-span-12 xl:gap-8 ">
+	<div class="col-start-1 col-span-4 mt-9 md:col-start-1 md:col-span-4 md:mt-11 xl:col-start-1 xl:col-span-3 xl:mt-3 items-center flex gap-x-3">
+		<h2 class="text-xs font-normal leading-5.5 tracking-[3%]">DEVELOPED BY</h2>
+		<a class=" hover:underline duration-200 text-lg hover:text-primary" href="https://drupak.com" >Drupak</a>
+	</div>
+	<div class="copyright col-start-1 col-span-4 mt-9 md:col-start-6 md:col-span-4 md:mt-11 xl:col-start-10 xl:col-span-3 xl-mt-3">
+		<p style="line-height: 0; max-width: 100%; padding: 0px; text-align: end !important;"> ©2025 <a class="text-primary" href="https://www.drupal.org/project/tailpine">Tailpine</a></p>
+	</div>
+</div>

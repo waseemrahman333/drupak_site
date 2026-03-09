@@ -1,0 +1,15 @@
+name: User ID - With Role Badge
+description: Display user with role badge
+
+slots:
+  children: |
+    <div class="inline-flex items-center gap-3">
+      <div class="w-10 h-10 bg-gradient-to-br from-primary to-secondary text-white flex items-center justify-center font-semibold">
+        AS
+      </div>
+      <div class="flex flex-col">
+        <span class="text-sm text-gray-900 dark:text-gray-100 font-semibold">Alice Smith</span>
+        <span class="text-xs text-gray-500 dark:text-gray-400">Administrator</span>
+      </div>
+    </div>
+

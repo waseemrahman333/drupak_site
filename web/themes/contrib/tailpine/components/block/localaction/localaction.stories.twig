@@ -1,0 +1,14 @@
+{% stories localaction with { title: 'Components/Local Action' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      content: '<li><a href="/admin">Admin Action</a></li>'
+    }
+  } %}
+{% embed 'components:localaction' with { 
+  content: content
+} %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

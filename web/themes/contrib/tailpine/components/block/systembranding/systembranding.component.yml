@@ -1,0 +1,52 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: System Branding
+label: 'System Branding'
+description: 'Component for rendering branding block with site name, slogan, and logo.'
+category: 'Branding'
+status: stable
+group: Blocks
+
+props:
+  type: object
+  properties:
+    configuration:
+      type: object
+      properties:
+        label:
+          type: string
+          description: 'The configured label of the branding block.'
+          default: 'Site Branding'
+        provider:
+          type: string
+          description: 'The module or provider of the block.'
+          default: 'system'
+    site_logo:
+      type: string
+      description: 'The URL of the site logo.'
+      default: '/themes/custom/mytheme/logo.svg'
+    site_name:
+      type: string
+      description: 'The name of the site.'
+      default: 'My Website'
+    site_slogan:
+      type: string
+      description: 'The site slogan.'
+      default: 'Just another Drupal site'
+    title_prefix:
+      type: string
+      description: 'Output before the block title.'
+      default: ''
+    title_suffix:
+      type: string
+      description: 'Output after the block title.'
+      default: ''
+slots:
+  block_label:
+    title: Label Slot
+    description: Slot for the block label.
+  block_content:
+    title: Content Slot
+    description: Slot for the block content.
+  content:
+    title: Default Content
+    description: Default content for Block.

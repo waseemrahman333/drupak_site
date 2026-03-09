@@ -1,0 +1,21 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Drupal services content child drupak component
+status: stable
+description: "Drupal services content component with title, description and image."
+group: Tailpine
+props:
+  type: object
+  properties:
+    image:
+      type: string
+      title: Tailpine Image URL
+      description: "URL of the tailpine logo image."
+slots:
+  title:
+    type: string
+    title: Title 
+    description: "Title of the tailpine section. Plain text."
+  description:
+    type: string
+    title: Description
+    description: "Description of the tailpine section. Plain text."

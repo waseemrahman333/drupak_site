@@ -1,0 +1,46 @@
+name: Select with Option Groups
+description: Grouped select options for better organization
+
+props:
+  options:
+    - type: option
+      value: ""
+      label: "Choose a country"
+      selected: true
+    - type: optgroup
+      label: "North America"
+      options:
+        - value: "us"
+          label: "United States"
+          selected: false
+        - value: "ca"
+          label: "Canada"
+          selected: false
+        - value: "mx"
+          label: "Mexico"
+          selected: false
+    - type: optgroup
+      label: "Europe"
+      options:
+        - value: "uk"
+          label: "United Kingdom"
+          selected: false
+        - value: "fr"
+          label: "France"
+          selected: false
+        - value: "de"
+          label: "Germany"
+          selected: false
+    - type: optgroup
+      label: "Asia"
+      options:
+        - value: "jp"
+          label: "Japan"
+          selected: false
+        - value: "cn"
+          label: "China"
+          selected: false
+        - value: "in"
+          label: "India"
+          selected: false
+

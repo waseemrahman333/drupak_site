@@ -1,0 +1,29 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: e2cba888-a98b-4e0b-95a5-e72d91a288ab
+  bundle: tailpine_sponser_company
+  default_langcode: en
+  depends:
+    8db4913a-052d-4c03-8e7d-0e7d8c178ca3: media
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Sponsor four'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  field_tailpine_link:
+    -
+      uri: 'internal:/'
+      title: ''
+      options: {  }
+  field_tailpine_media_image:
+    -
+      entity: 8db4913a-052d-4c03-8e7d-0e7d8c178ca3

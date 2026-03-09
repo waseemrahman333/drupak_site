@@ -1,0 +1,41 @@
+{#
+/**
+ * @file
+ * Template for rendering a responsive grid in a Drupal view.
+ *
+ * Available variables:
+ * - title: The title of the grid.
+ * - items: List of items to display in the grid.
+ * - options: Configuration options for the grid.
+ *   - alignment: Alignment of the grid ('horizontal' or 'vertical').
+ *   - columns: Maximum number of columns.
+ *   - cell_min_width: Minimum width of the grid cell in pixels.
+ *   - grid_gutter: Space between the grid cells in pixels.
+ */
+#}
+
+{%
+  set classes = [
+    'views-view-responsive-grid',
+    'views-view-responsive-grid--' ~ options.alignment,
+  ]
+%}
+
+{% set responsive_grid_styles = [
+  '--views-responsive-grid--column-count:' ~ options.columns ~ ';',
+  '--views-responsive-grid--cell-min-width:' ~ options.cell_min_width ~ 'px;',
+  '--views-responsive-grid--layout-gap:' ~ options.grid_gutter ~ 'px;',
+] %}
+
+{% if title %}
+  <h3>{{ title }}</h3>
+{% endif %}
+<div class="{{ classes|join(' ') }}" style="{{ responsive_grid_styles|join(' ') }}">
+  {% for item in items %}
+    <div class="views-view-responsive-grid__item">
+      <div class="views-view-responsive-grid__item-inner">
+        {{ item.content }}
+      </div>
+    </div>
+  {% endfor %}
+</div>

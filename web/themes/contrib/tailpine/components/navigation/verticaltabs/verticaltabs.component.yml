@@ -1,0 +1,22 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: verticaltabs
+description: Component for displaying vertical tabs with side navigation.
+status: stable
+group: Navigation
+props:
+  type: object
+  properties:
+    children:
+      type: string
+      title: Children
+      description: The HTML content to be displayed inside the vertical tab panes (details elements).
+      default: ''
+    layout:
+      type: string
+      title: Layout Direction
+      description: Position of the navigation (left or right).
+      enum:
+        - left
+        - right
+      default: left
+

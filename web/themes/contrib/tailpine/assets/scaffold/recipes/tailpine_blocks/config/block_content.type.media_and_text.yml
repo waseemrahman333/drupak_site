@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: giH-7ruXVtuaxtlCQZn14_QgV2ttWIYYRGXd85Ad4AM
+id: media_and_text
+label: 'Media and Text'
+revision: false
+description: null

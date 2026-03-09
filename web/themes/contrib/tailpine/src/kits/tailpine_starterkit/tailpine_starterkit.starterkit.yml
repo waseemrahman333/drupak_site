@@ -1,0 +1,12 @@
+name: Tailpine Starter Kit
+type: theme
+description: 'A starter kit for creating subthemes based on the Tailpine theme.'
+core_version_requirement: ^10.1 || ^11
+version: '6.0'
+base theme: tailpine
+hidden: true
+starterkit:
+  replace_patterns:
+    - 'tailpine_starterkit'
+  exclude_files:
+    - 'tailpine_starterkit.starterkit.yml'

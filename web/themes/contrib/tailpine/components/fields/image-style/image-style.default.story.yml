@@ -1,0 +1,4 @@
+name: Default
+props:
+  image: 'https://cdn.pixabay.com/photo/2024/04/02/10/28/bangladesh-8670559_1280.jpg'
+  style_name: 'Style name'

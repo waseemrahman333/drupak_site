@@ -1,0 +1,116 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.tailpine_cta
+    - field.field.block_content.tailpine_cta.field_tailpine_btn_border_radius
+    - field.field.block_content.tailpine_cta.field_tailpine_btn_type
+    - field.field.block_content.tailpine_cta.field_tailpine_button_style
+    - field.field.block_content.tailpine_cta.field_tailpine_link
+  module:
+    - layout_builder
+    - link
+    - options
+    - ui_patterns
+    - ui_patterns_layouts
+  theme:
+    - tailpine
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: 'ui_patterns:tailpine:cta'
+        layout_settings:
+          label: ''
+          context_mapping:
+            entity: layout_builder.entity
+          ui_patterns:
+            component_id: 'tailpine:cta'
+            variant_id:
+              source_id: select
+              source:
+                value: ''
+            props:
+              attributes:
+                source_id: attributes
+                source:
+                  value: ''
+              title:
+                source_id: entity_field
+                source:
+                  derivable_context: 'field:block_content:tailpine_cta:field_tailpine_link'
+                  'field:block_content:tailpine_cta:field_tailpine_link':
+                    value:
+                      source_id: 'field_property:block_content:field_tailpine_link:title'
+              link:
+                source_id: entity_field
+                source:
+                  derivable_context: 'field:block_content:tailpine_cta:field_tailpine_link'
+                  'field:block_content:tailpine_cta:field_tailpine_link':
+                    value:
+                      source_id: 'field_property:block_content:field_tailpine_link:uri'
+              color_schema:
+                source_id: entity_field
+                source:
+                  derivable_context: 'field:block_content:tailpine_cta:field_tailpine_button_style'
+                  'field:block_content:tailpine_cta:field_tailpine_button_style':
+                    value:
+                      source_id: 'field_property:block_content:field_tailpine_button_style:value'
+              size:
+                source_id: entity_field
+                source:
+                  derivable_context: 'field:block_content:tailpine_cta:field_tailpine_btn_border_radius'
+                  'field:block_content:tailpine_cta:field_tailpine_btn_border_radius':
+                    value:
+                      source_id: 'field_property:block_content:field_tailpine_btn_border_radius:value'
+              button_variant:
+                source_id: entity_field
+                source:
+                  derivable_context: 'field:block_content:tailpine_cta:field_tailpine_btn_type'
+                  'field:block_content:tailpine_cta:field_tailpine_btn_type':
+                    value:
+                      source_id: 'field_property:block_content:field_tailpine_btn_type:value'
+            slots: {  }
+        components: {  }
+        third_party_settings: {  }
+id: block_content.tailpine_cta.default
+targetEntityType: block_content
+bundle: tailpine_cta
+mode: default
+content:
+  field_tailpine_btn_border_radius:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_tailpine_btn_type:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_tailpine_button_style:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_tailpine_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

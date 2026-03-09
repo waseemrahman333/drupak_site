@@ -1,0 +1,211 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.tailpine_post_cards
+    - field.field.block_content.tailpine_post_cards.field_tailpine_date
+    - field.field.block_content.tailpine_post_cards.field_tailpine_description
+    - field.field.block_content.tailpine_post_cards.field_tailpine_media_image
+    - field.field.block_content.tailpine_post_cards.field_tailpine_subtitle
+    - field.field.block_content.tailpine_post_cards.field_tailpine_title
+    - field.field.media.image.field_media_image
+  module:
+    - datetime
+    - layout_builder
+    - nomarkup
+    - text
+    - ui_patterns
+    - ui_patterns_layouts
+  theme:
+    - tailpine
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: 'ui_patterns:tailpine:poststylethree'
+        layout_settings:
+          label: ''
+          context_mapping:
+            entity: layout_builder.entity
+          ui_patterns:
+            component_id: 'tailpine:poststylethree'
+            variant_id: null
+            props:
+              attributes:
+                source_id: attributes
+                source:
+                  value: ''
+              imageurl:
+                source_id: entity_reference
+                source:
+                  derivable_context: 'entity_reference:block_content:tailpine_post_cards:field_tailpine_media_image:media:image'
+                  'entity_reference:block_content:tailpine_post_cards:field_tailpine_media_image:media:image':
+                    value:
+                      source_id: entity_reference
+                      source:
+                        derivable_context: 'entity_reference:media:image:field_media_image:file:file'
+                        'entity_reference:media:image:field_media_image:file:file':
+                          value:
+                            source_id: entity_field
+                            source:
+                              derivable_context: 'field:file:file:uri'
+                              'field:file:file:uri':
+                                value:
+                                  source_id: 'field_property:file:uri:url'
+            slots: {  }
+        components:
+          fdbfc5fa-3da8-47e9-bc7a-7c9cfac30f65:
+            uuid: fdbfc5fa-3da8-47e9-bc7a-7c9cfac30f65
+            region: subtitle
+            configuration:
+              id: 'field_block:block_content:tailpine_post_cards:field_tailpine_subtitle'
+              label: Subtitle
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings:
+                  nomarkup:
+                    enabled: true
+                    separator: '|'
+                    referenced_entity: ''
+            weight: 0
+            additional: {  }
+          10dff02e-2633-4a53-b1d6-e3f37c65c18e:
+            uuid: 10dff02e-2633-4a53-b1d6-e3f37c65c18e
+            region: date
+            configuration:
+              id: 'field_block:block_content:tailpine_post_cards:field_tailpine_date'
+              label: Date
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: datetime_default
+                label: hidden
+                settings:
+                  timezone_override: ''
+                  format_type: html_date
+                third_party_settings:
+                  nomarkup:
+                    enabled: true
+                    separator: '|'
+                    referenced_entity: ''
+            weight: 0
+            additional: {  }
+          6058ce9d-a54d-467d-ab7b-6443e61e188f:
+            uuid: 6058ce9d-a54d-467d-ab7b-6443e61e188f
+            region: title
+            configuration:
+              id: 'field_block:block_content:tailpine_post_cards:field_tailpine_title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings:
+                  nomarkup:
+                    enabled: true
+                    separator: '|'
+                    referenced_entity: ''
+            weight: 0
+            additional: {  }
+          f2a75c50-bcbd-4ee6-ae87-7d13b82ef2de:
+            uuid: f2a75c50-bcbd-4ee6-ae87-7d13b82ef2de
+            region: description
+            configuration:
+              id: 'field_block:block_content:tailpine_post_cards:field_tailpine_description'
+              label: Description
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_trimmed
+                label: hidden
+                settings:
+                  trim_length: 400
+                third_party_settings:
+                  nomarkup:
+                    enabled: true
+                    separator: '|'
+                    referenced_entity: ''
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+id: block_content.tailpine_post_cards.default
+targetEntityType: block_content
+bundle: tailpine_post_cards
+mode: default
+content:
+  field_tailpine_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_tailpine_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 4
+    region: content
+  field_tailpine_media_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_tailpine_subtitle:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 5
+    region: content
+  field_tailpine_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 3
+    region: content
+hidden: {  }

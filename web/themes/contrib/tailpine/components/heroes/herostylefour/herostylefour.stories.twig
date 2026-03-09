@@ -1,0 +1,26 @@
+{% stories herostylefour with { title: 'Components/Hero Style Four' } %}
+
+{% story default with {
+    name: '1. Hero Style Four',
+    args: { 
+      imageurl: 'https://cdn.pixabay.com/photo/2025/08/06/12/41/hand-9758764_1280.jpg',
+      title: 'Empowering Business Growth with Technology',
+      description: 'Techesolve provides custom software, cloud services, and IT support to streamline operations and drive business success.'
+    }
+  } %}
+{% embed 'components:herostylefour' with { 
+  imageurl: imageurl
+} %}
+  {% block title %}
+    {{ title }}
+  {% endblock %}
+  {% block description %}
+    {{ description }}
+  {% endblock %}
+  {% block cta %}
+    {{ cta }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

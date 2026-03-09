@@ -1,0 +1,12 @@
+         <div  {{attributes.addClass(' postwrapper max-w-[1920px] w-full mx-auto flex flex-col gap-10 py-10  lg:py-20 px-5 md:px-12.5 lg:px-24  ')}} >
+                <div class="postTopContent flex items-center justify-between">
+                    <h2 class="font-medium text-[clamp(26px,5vw,46px)] text-body  ">{{title}}</h2>
+                    <div>{{cta}}</div>
+                </div>
+                <div
+                    class="blog-posts grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8
+                     [&>*:first-child]:md:col-span-2 lg:[&>*:first-child]:col-span-3 lg:[&>*:first-child]:mb-8 lg:[&>*:first-child]:grid lg:[&>*:first-child]:items-start lg:[&>*:first-child]:grid-cols-2 lg:[&>*:first-child]:gap-8">
+                    {{content}}
+                </div>
+            </div>
+

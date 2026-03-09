@@ -1,0 +1,27 @@
+name: Hero Style Two
+slots:
+  title: "Hero Syle Two Title"
+  imageurl: https://cdn.pixabay.com/photo/2024/12/18/01/27/lightning-9274136_1280.jpg
+  description:
+    type: html_tag
+    tag: p
+    value: "A Hero Style Two component  has a figure, a body part, and inside body there are title and actions parts"
+  cta:
+  - type:  component
+    component: "tailpine:cta"
+    slots:
+      title: "CTA Component"
+      color_schema: primary
+  - type:  component
+    component: "tailpine:cta"
+    slots:
+      title: "CTA Component"
+      color_schema: secondary
+props:
+  heading_level: 1
+  centered: true
+  link: "www.example.com"
+  imageurl: https://cdn.pixabay.com/photo/2024/12/18/01/27/lightning-9274136_1280.jpg
+  attributes:
+    class: ["rounded"]
+

@@ -1,0 +1,21 @@
+{% stories collapse with { title: 'Components/Collapse' } %}
+
+{% story default with {
+    name: '1. Collapse - Expandable Panel',
+    args: { 
+      title: 'Click to expand',
+      open: false,
+      content: 'This is the collapsible content that can be shown or hidden.'
+    }
+  } %}
+{% embed 'tailpine:collapse' with { 
+  title: title,
+  open: open
+} %}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

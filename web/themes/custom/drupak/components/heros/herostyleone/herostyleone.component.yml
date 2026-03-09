@@ -1,0 +1,57 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Hero style one drupak component
+status: stable
+description: "Hero style one component with title, description, image and clients logo."
+group: Heros
+props:
+  type: object
+  properties:
+    image:
+      type: string
+      title: Image URL
+      description: "URL of the hero image."
+    clientsimage:
+      type: string
+      title: Clients Image URL
+      description: "URL of the clients logo image."
+    background:
+      type: string
+      title: Background Color
+      description: "Background color of the hero. Plain text."
+slots:
+  title:
+    type: string
+    title: Title
+    description: "Title of the hero. Plain text."
+  description:
+    type: string
+    title: Description
+    description: "Description of the hero. Plain text."
+  subtitle:
+    type: string
+    title: Subtitle
+    description: "Subtitle of the hero. Plain text."
+  years:
+    type: string
+    title: Year
+    description: "Year of the hero. Plain text."
+  yearstext:
+    type: string
+    title: Years Text
+    description: "Years text of the hero. Plain text."
+  projects:
+    type: string
+    title: Projects
+    description: "Projects of the hero. Plain text."
+  projectstext:
+    type: string
+    title: Projects Text
+    description: "Projects text of the hero. Plain text."
+  row:
+    type: string
+    title: Row
+    description: "Row of the hero. Plain text."
+  cta:
+    type: string
+    title: CTA
+    description: "CTA of the hero. Plain text."    

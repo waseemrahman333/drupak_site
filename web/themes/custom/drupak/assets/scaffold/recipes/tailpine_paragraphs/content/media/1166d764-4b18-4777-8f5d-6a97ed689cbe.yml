@@ -1,0 +1,35 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 1166d764-4b18-4777-8f5d-6a97ed689cbe
+  bundle: image
+  default_langcode: en
+  depends:
+    9588f0f6-18f7-4332-80f5-57bff1d2cb3c: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: logo7.png
+  created:
+    -
+      value: 1756754872
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+  field_media_image:
+    -
+      entity: 9588f0f6-18f7-4332-80f5-57bff1d2cb3c
+      alt: 'logo five'
+      title: ''
+      width: 135
+      height: 34

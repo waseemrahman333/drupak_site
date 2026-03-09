@@ -1,0 +1,18 @@
+name: Fieldset
+description: Grouped form elements with legend
+
+slots:
+  children: |
+    <div class="space-y-4 p-4 bg-white">
+      <div class="form-item mb-4">
+        <label class="block text-sm font-semibold text-gray-900 mb-2">First Name</label>
+        <input type="text" name="firstname" placeholder="John" class="bg-white border-2 border-gray-300 text-gray-900 text-base focus:ring-2 focus:ring-primary focus:border-primary block w-full px-4 py-3 transition-all hover:border-gray-400" />
+      </div>
+      <div class="form-item mb-4">
+        <label class="block text-sm font-semibold text-gray-900 mb-2">Last Name</label>
+        <input type="text" name="lastname" placeholder="Doe" class="bg-white border-2 border-gray-300 text-gray-900 text-base focus:ring-2 focus:ring-primary focus:border-primary block w-full px-4 py-3 transition-all hover:border-gray-400" />
+      </div>
+    </div>
+
+props:
+  required: false

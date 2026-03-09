@@ -1,0 +1,33 @@
+{% stories form_element__label with { title: 'Components/Form Element Label' } %}
+
+{% story default with {
+    name: '1. Form Label',
+    args: { 
+      title: 'Full Name',
+      title_display: 'before',
+      required: false
+    }
+  } %}
+{% embed 'components:form-element--label' with { 
+  title: title,
+  title_display: title_display,
+  required: required
+} %}{% endembed %}
+{% endstory %}
+
+{% story required with {
+    name: '2. Form Label Required',
+    args: { 
+      title: 'Email Address',
+      title_display: 'before',
+      required: true
+    }
+  } %}
+{% embed 'components:form-element--label' with { 
+  title: title,
+  title_display: title_display,
+  required: required
+} %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

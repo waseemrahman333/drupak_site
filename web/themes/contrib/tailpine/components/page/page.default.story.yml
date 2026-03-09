@@ -1,0 +1,6 @@
+name: Page Layout
+description: Main page layout wrapper
+
+slots:
+  content: '<div class="p-8"><h1 class="text-3xl font-bold">Page Content</h1><p>This is the main content area.</p></div>'
+

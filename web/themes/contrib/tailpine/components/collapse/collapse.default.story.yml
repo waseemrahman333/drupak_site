@@ -1,0 +1,10 @@
+name: Collapse - Expandable Panel
+description: Collapsible content panel
+
+slots:
+  content: 'This is the collapsible content that can be shown or hidden.'
+
+props:
+  title: 'Click to expand'
+  open: false
+

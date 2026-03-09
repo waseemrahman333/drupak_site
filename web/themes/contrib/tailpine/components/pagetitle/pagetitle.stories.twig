@@ -1,0 +1,14 @@
+{% stories pagetitle with { title: 'Components/Page Title' } %}
+
+{% story default with {
+    name: '1. Page Title',
+    args: { 
+      page_title: 'Homepage'
+    }
+  } %}
+{% embed 'tailpine:pagetitle' with { 
+  page_title: page_title
+} %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

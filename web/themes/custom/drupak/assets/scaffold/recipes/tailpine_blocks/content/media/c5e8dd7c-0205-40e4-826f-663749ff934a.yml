@@ -1,0 +1,35 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: c5e8dd7c-0205-40e4-826f-663749ff934a
+  bundle: image
+  default_langcode: en
+  depends:
+    0a400af6-46cc-436b-8b66-53b8dd0e3c64: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: poststyleimage3.png
+  created:
+    -
+      value: 1756752440
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+  field_media_image:
+    -
+      entity: 0a400af6-46cc-436b-8b66-53b8dd0e3c64
+      alt: 'post image 3'
+      title: ''
+      width: 393
+      height: 220

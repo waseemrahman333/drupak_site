@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: tailpine_post_style_one_wrapper
+label: 'Post Style One Wrapper'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

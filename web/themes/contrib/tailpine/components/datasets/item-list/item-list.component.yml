@@ -1,0 +1,28 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+status: stable
+name: Item List
+description: 'A simple list of items, with optional title and empty message.'
+title: 'Item List'
+defaults:
+  items: []
+  title: ''
+  list_type: 'ul'
+  empty: ''
+props:
+  type: object
+  properties:
+    items:
+      type: array
+      description: 'An array of list items.'
+    title:
+      type: [string, 'null']
+      description: The title of the list.
+    list_type:
+      type: [string, 'null']
+      description: The tag for the list element ("ul" or "ol").
+    empty:
+      type: [string, 'null']
+      description: Message displayed when there are no items.
+    context:
+      type: object
+      description: Contextual data for the list.

@@ -1,0 +1,179 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.tailpine_sponser_header
+    - field.field.block_content.tailpine_sponser_header.field_block
+    - field.field.block_content.tailpine_sponser_header.field_tailpine_title
+  content:
+    - 'block_content:tailpine_sponser_company:1818e808-73a5-4d4c-adb7-df068f5bdc7f'
+    - 'block_content:tailpine_sponser_company:1c16de47-f360-4cbb-b7eb-8e60d5994c84'
+    - 'block_content:tailpine_sponser_company:2e68bb0c-b59c-426e-b342-7b73f2993c83'
+    - 'block_content:tailpine_sponser_company:5d555ed6-1fe3-4444-be3c-a4d923d83e7c'
+    - 'block_content:tailpine_sponser_company:7192cb02-9f77-454a-a2fc-c92d5b2446a8'
+    - 'block_content:tailpine_sponser_company:e2cba888-a98b-4e0b-95a5-e72d91a288ab'
+  module:
+    - block_content
+    - layout_builder
+    - nomarkup
+    - ui_patterns
+    - ui_patterns_layouts
+  theme:
+    - tailpine
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: 'ui_patterns:tailpine:sponserheaderstyletwo'
+        layout_settings:
+          label: ''
+          context_mapping:
+            entity: layout_builder.entity
+          ui_patterns:
+            component_id: 'tailpine:sponserheaderstyletwo'
+            variant_id: null
+            props:
+              attributes:
+                source_id: attributes
+                source:
+                  value: ''
+            slots: {  }
+        components:
+          d37e5510-772a-4dfd-a4c7-97fc6bffe76a:
+            uuid: d37e5510-772a-4dfd-a4c7-97fc6bffe76a
+            region: title
+            configuration:
+              id: 'field_block:block_content:tailpine_sponser_header:field_tailpine_title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings:
+                  nomarkup:
+                    enabled: true
+                    separator: '|'
+                    referenced_entity: ''
+            weight: 0
+            additional: {  }
+          cffcd281-349d-4047-ba74-c2d1c8895efb:
+            uuid: cffcd281-349d-4047-ba74-c2d1c8895efb
+            region: content
+            configuration:
+              id: 'block_content:5d555ed6-1fe3-4444-be3c-a4d923d83e7c'
+              label: 'Sponsor One'
+              label_display: '0'
+              provider: block_content
+              context_mapping: {  }
+              status: true
+              info: ''
+              view_mode: full
+            weight: 0
+            additional: {  }
+          4255ac06-e40c-4def-8ddb-d8eccd541ca8:
+            uuid: 4255ac06-e40c-4def-8ddb-d8eccd541ca8
+            region: content
+            configuration:
+              id: 'block_content:7192cb02-9f77-454a-a2fc-c92d5b2446a8'
+              label: 'Sponsor Two'
+              label_display: '0'
+              provider: block_content
+              context_mapping: {  }
+              status: true
+              info: ''
+              view_mode: full
+            weight: 1
+            additional: {  }
+          a740fcec-5027-4f30-a5e5-3e16e8a18c0a:
+            uuid: a740fcec-5027-4f30-a5e5-3e16e8a18c0a
+            region: content
+            configuration:
+              id: 'block_content:1c16de47-f360-4cbb-b7eb-8e60d5994c84'
+              label: 'Sponsor Three'
+              label_display: '0'
+              provider: block_content
+              context_mapping: {  }
+              status: true
+              info: ''
+              view_mode: full
+            weight: 2
+            additional: {  }
+          6e5408dd-9411-4133-8ec2-98cb80d3a939:
+            uuid: 6e5408dd-9411-4133-8ec2-98cb80d3a939
+            region: content
+            configuration:
+              id: 'block_content:e2cba888-a98b-4e0b-95a5-e72d91a288ab'
+              label: 'Sponsor four'
+              label_display: '0'
+              provider: block_content
+              context_mapping: {  }
+              status: true
+              info: ''
+              view_mode: full
+            weight: 3
+            additional: {  }
+          dfb0f386-cdc8-488e-b1dd-daa3fa07d131:
+            uuid: dfb0f386-cdc8-488e-b1dd-daa3fa07d131
+            region: content
+            configuration:
+              id: 'block_content:2e68bb0c-b59c-426e-b342-7b73f2993c83'
+              label: 'Sponsor Five'
+              label_display: '0'
+              provider: block_content
+              context_mapping: {  }
+              status: true
+              info: ''
+              view_mode: full
+            weight: 4
+            additional: {  }
+          99cc60a8-7bc3-4c9b-a362-055156721c10:
+            uuid: 99cc60a8-7bc3-4c9b-a362-055156721c10
+            region: content
+            configuration:
+              id: 'block_content:1818e808-73a5-4d4c-adb7-df068f5bdc7f'
+              label: 'Sponsor Six'
+              label_display: '0'
+              provider: block_content
+              context_mapping: {  }
+              status: true
+              info: ''
+              view_mode: full
+            weight: 5
+            additional: {  }
+        third_party_settings: {  }
+_core:
+  default_config_hash: _A0hMYpnBDNbO07maHNb1abteMRpTV-3vEbaAp0oblU
+id: block_content.tailpine_sponser_header.default
+targetEntityType: block_content
+bundle: tailpine_sponser_header
+mode: default
+content:
+  field_block:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: title
+  field_tailpine_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 0
+    region: content
+hidden: {  }

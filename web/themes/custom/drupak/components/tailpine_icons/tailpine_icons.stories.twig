@@ -1,0 +1,28 @@
+{% stories tailpine_icons with { title: 'Components/Tailpine_Icons' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      iconTitle: 'Value',
+      iconStyle: 'solid',
+      iconFillColor: 'Value',
+      iconStrokeColor: 'Value',
+      iconSize: 'micro',
+      showLinkText: false,
+      linkText: 'Value',
+      iconLink: 'Value'
+    }
+  } %}
+{% embed 'tailpine:tailpine_icons' with { 
+  iconTitle: iconTitle,
+  iconStyle: iconStyle,
+  iconFillColor: iconFillColor,
+  iconStrokeColor: iconStrokeColor,
+  iconSize: iconSize,
+  showLinkText: showLinkText,
+  linkText: linkText,
+  iconLink: iconLink
+} %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

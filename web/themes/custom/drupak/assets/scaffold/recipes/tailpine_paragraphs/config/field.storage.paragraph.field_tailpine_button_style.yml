@@ -1,0 +1,49 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: oZ7GXUYNcp-zPQ3O6oREVYcIioohzlt28paznvzPXNA
+id: paragraph.field_tailpine_button_style
+field_name: field_tailpine_button_style
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: primary
+      label: Primary
+    -
+      value: secondary
+      label: Secondary
+    -
+      value: tertiary
+      label: Tertiary
+    -
+      value: success
+      label: success
+    -
+      value: error
+      label: error
+    -
+      value: warning
+      label: warning
+    -
+      value: info
+      label: Info
+    -
+      value: body
+      label: Body
+    -
+      value: body-bg
+      label: 'Body Bg'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

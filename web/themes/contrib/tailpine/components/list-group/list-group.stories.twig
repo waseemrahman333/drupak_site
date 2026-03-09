@@ -1,0 +1,29 @@
+{% stories list_group with { title: 'Components/List Group' } %}
+
+{% story default with {
+    name: '1. List Group - Default',
+    args: { 
+      items: [{"content":"First item in the list"},{"content":"Second item with more text content"},{"content":"Third item here"},{"content":"Fourth item in this group"},{"content":"Fifth and final item"}],
+      flush: false
+    }
+  } %}
+{% embed 'tailpine:list-group' with { 
+  items: items,
+  flush: flush
+} %}{% endembed %}
+{% endstory %}
+
+{% story links with {
+    name: '2. List Group - With Links',
+    args: { 
+      items: [{"content":"Dashboard","link":"\/dashboard"},{"content":"Profile Settings","link":"\/profile"},{"content":"Messages","link":"\/messages"},{"content":"Notifications","link":"\/notifications"}],
+      flush: false
+    }
+  } %}
+{% embed 'tailpine:list-group' with { 
+  items: items,
+  flush: flush
+} %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

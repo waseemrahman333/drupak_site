@@ -1,0 +1,40 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 08edf462-2098-46b4-9a90-f3f6bd985157
+  bundle: tailpine_teams_header
+  default_langcode: en
+  depends:
+    54b12890-5671-476e-9ddb-73e1f0f15e80: block_content
+    a78c9ae2-3d84-4e89-aa68-fccb712299b3: block_content
+    b6460b73-4135-47ae-a2c1-ac10e8f3d803: block_content
+    db946c45-9aa6-4cae-a916-cbfd62b953b4: block_content
+    1328a592-f91a-4b5e-96f1-2573e8af5950: block_content
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Teams Header'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  field_block:
+    -
+      entity: 54b12890-5671-476e-9ddb-73e1f0f15e80
+  field_tailpine_add_post_card:
+    -
+      entity: a78c9ae2-3d84-4e89-aa68-fccb712299b3
+    -
+      entity: b6460b73-4135-47ae-a2c1-ac10e8f3d803
+    -
+      entity: db946c45-9aa6-4cae-a916-cbfd62b953b4
+    -
+      entity: 1328a592-f91a-4b5e-96f1-2573e8af5950
+  field_tailpine_title:
+    -
+      value: 'All Team Members'

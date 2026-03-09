@@ -1,0 +1,16 @@
+{% stories openclose with { title: 'Components/Open Close' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      text: 'Read More',
+      detail: 'Lorem Ipsum ds w asfweee fasdfasdf cdefid asde f alsdfladsf  dslwefdfcd'
+    }
+  } %}
+{% embed 'tailpine:openclose' with { 
+  text: text,
+  detail: detail
+} %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

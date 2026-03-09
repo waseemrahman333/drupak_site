@@ -1,0 +1,41 @@
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+{{ attach_library('tailpine/node') }}
+
+<article{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  
+  {% if label and url %}
+    <h2{{ title_attributes.addClass('text-xl font-semibold') }}>
+      <a href="{{ url }}" class="text-primary hover:underline" rel="bookmark">{{ label }}</a>
+    </h2>
+  {% endif %}
+  
+  {{ title_suffix }}
+
+  {% if display_submitted %}
+    <footer class="node__meta flex items-center space-x-3 text-sm text-gray-500 mt-2">
+      {% if author_picture %}
+        <div class="w-8 h-8 overflow-hidden">
+          {{ author_picture }}
+        </div>
+      {% endif %}
+      <div{{ author_attributes.addClass('node__submitted') }}>
+        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+        {{ metadata }}
+      </div>
+    </footer>
+  {% endif %}
+
+  <div{{ content_attributes.addClass('node__content mt-4') }}>
+    {{ content }}
+  </div>
+</article>

@@ -1,0 +1,119 @@
+{% set breadcrumbStyle = breadcrumb_style|striptags %}
+
+{% if breadcrumb %}
+  <nav class="breadcrumb m-4" role="navigation" aria-label="Breadcrumb">
+    <h2 id="system-breadcrumb" class="sr-only">{{ 'Breadcrumb'|t }}</h2>
+    
+ {% if breadcrumbStyle == "secondary" %}
+      <ul class="flex items-center gap-2.5 text-base text-gray-800" x-data="{active: 1}">      
+      {% for item in breadcrumb %}
+        {% set text = item.title|striptags %}
+          
+        <li class="flex ">
+
+          {% if item.url %}
+            <a href="{{ item.url }}" class="crumb flex flex-col items-center gap-2 group" @click.prevent="active = {{loop.index}}">
+            <span :class="active === {{loop.index}}
+                ? 'w-8 h-8 flex items-center justify-center bg-primary text-body-bg border-0'
+                : 'w-8 h-8 flex items-center justify-center bg-gray-300 text-gray-800 border border-gray-600'">
+                {{loop.index}}
+            </span>
+            <span :class="active === {{loop.index}} ? 'text-primary' : 'text-gray-800'">{{ text }}</span>
+        </a>
+            
+          {% else %}
+            <span class="text-gray-500 font-medium">{{ text }}</span>
+          {% endif %}
+          {% if not loop.last %}
+            <span class="border-b-1 border-gray-600 w-20 h-fit mt-4"></span>
+          {% endif %}
+        </li>
+      {% endfor %}
+       </ul>
+      {% else %}
+       {% if breadcrumbStyle == "tertiary"  %}
+        <ul class="flex px-8 py-5 items-center gap-2.5 text-base bg-gray-400 w-fit text-gray-800" x-data="{active: 1}">
+          {% else %}
+      <ul class="flex items-center gap-4 text-base text-gray-800" x-data="{active: 1}">
+          {% endif %}
+        {% for item in breadcrumb %}
+          {% set text = item.title|striptags %}
+          <li class="flex items-center gap-2">
+            {% if item.url %}
+            {% if breadcrumbStyle == "tertiary"  %}
+              <a
+                href="{{ item.url }}"
+                class="transition hover:text-body-bg px-3.5 py-2.5 hover:font-semibold  hover:bg-primary active:bg-primary  active:text-body-bg font-medium"
+                @click.prevent="active = {{ loop.index }}"
+                :class="active === {{ loop.index }} ? 'text-body-bg bg-primary px-3.5 py-2.5 font-semibold' : 'text-gray-800'"
+              >
+                {{ text }}
+              </a>
+              {% else %}
+              <a
+                href="{{ item.url }}"
+                class="transition hover:text-primary active:text-primary font-medium"
+                @click.prevent="active = {{ loop.index }}"
+                :class="active === {{ loop.index }} ? 'text-primary font-semibold' : 'text-gray-800'"
+              >
+                {{ text }}
+              </a>
+              {% endif %}
+            {% else %}
+              <span class=" font-medium">{{ text }}</span>
+            {% endif %}
+            {# Add separator unless it's the last item #}
+            {% if not loop.last %}
+            {# if breadcrumbStyle == 'default' #}
+           {% if breadcrumbStyle == 'primary' %}
+              <span class="mx-2 "> &#47; </span>
+            {% else %}
+              <span class="mx-2 "> &gt; </span>
+              {% endif %}
+            {% endif %}
+          </li>
+        
+        {% endfor %}
+     </ul>
+      {% endif %}
+    
+  </nav>
+{% endif %}
+
+
+{# <a href="#" class="crumb flex flex-col items-center gap-2.5 group" @click.prevent="active = 1">
+            <span :class="active === 1
+                ? 'w-8 h-8 flex items-center justify-center bg-primary text-gray-50 border-0'
+                : 'w-8 h-8 flex items-center justify-center bg-gray-100 text-gray-500 border border-gray-400'">
+                1
+            </span>
+            <span :class="active === 1 ? 'text-primary' : 'text-gray-500'">Cart</span>
+        </a>
+        <span class="border-b-1 border-gray-400 w-20 h-fit mt-4"></span>
+ #}
+
+
+
+
+        {# {% if breadcrumb %}
+  <nav class="breadcrumb m-4" role="navigation" aria-label="Breadcrumb">
+    <h2 id="system-breadcrumb" class="sr-only">{{ 'Breadcrumb'|t }}</h2>
+    <ul class="flex items-center gap-2 text-sm text-gray-700" x-data="{active: 1}">
+      {% for item in breadcrumb %}
+        {% set text = item.title|striptags %}
+        <li class="flex items-center">
+          {% if item.url %}
+            <a href="{{ item.url }}" class="transition hover:text-primary active:text-primary font-medium">
+              {{ text }} 
+            </a>
+          {% else %}
+            <span class="text-gray-500 font-medium">{{ text }}</span>
+          {% endif %}
+          {% if not loop.last %}
+            <span class="mx-2 text-gray-800">›</span>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+{% endif %} #}

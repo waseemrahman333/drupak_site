@@ -1,0 +1,48 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/metadata.schema.json
+name: Progress
+status: stable
+description: Progress bar component for showing task completion.
+group: UI
+props:
+  type: object
+  properties:
+    value:
+      type: number
+      title: Progress Value
+      description: Current progress value (0-100).
+      default: 0
+    max:
+      type: number
+      title: Maximum Value
+      description: Maximum progress value.
+      default: 100
+    label:
+      type: string
+      title: Progress Label
+      description: Accessible label for progress bar.
+    show_percentage:
+      type: boolean
+      title: Show Percentage
+      description: Display percentage text.
+      default: true
+    color:
+      type: string
+      title: Color
+      description: Progress bar color.
+      default: primary
+      enum:
+        - primary
+        - secondary
+        - success
+        - warning
+        - error
+    height:
+      type: string
+      title: Height
+      description: Progress bar height.
+      default: md
+      enum:
+        - sm
+        - md
+        - lg
+

@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: exmEbH4SizF-VWVmCfh_DXviLvNFGHCflF_G1n-VbSg
+id: tailpine_cards_header
+label: 'Cards Header'
+revision: false
+description: null

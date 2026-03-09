@@ -1,0 +1,117 @@
+name: Default Vertical Tabs
+description: Vertical tabs with side navigation and multiple content sections
+
+props:
+  layout: left
+
+slots:
+  children: |
+    <details class="vertical-tabs__pane" open>
+      <summary class="vertical-tabs__pane-title">
+        <span class="text-gray-900 dark:text-gray-100 font-semibold">Content Settings</span>
+      </summary>
+      <div class="vertical-tabs__pane-content space-y-4">
+        <div class="form-item">
+          <label class="block text-base font-semibold text-gray-900 dark:text-gray-100 mb-2">Title</label>
+          <input type="text" value="My Article Title" class="!bg-white dark:!bg-gray-900 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-base focus:ring-2 focus:ring-primary focus:border-primary block w-full px-4 py-3 transition-all" />
+        </div>
+        <div class="form-item">
+          <label class="block text-base font-semibold text-gray-900 dark:text-gray-100 mb-2">Status</label>
+          <select class="!bg-white dark:!bg-gray-900 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-base focus:ring-2 focus:ring-primary focus:border-primary block w-full px-4 py-3 transition-all">
+            <option>Published</option>
+            <option>Draft</option>
+            <option>Archived</option>
+          </select>
+        </div>
+        <div class="form-item">
+          <label class="flex items-center gap-2 cursor-pointer">
+            <input type="checkbox" checked class="w-4 h-4 text-primary border-gray-300 focus:ring-primary" />
+            <span class="text-sm text-gray-700 dark:text-gray-300">Promoted to front page</span>
+          </label>
+        </div>
+      </div>
+    </details>
+
+    <details class="vertical-tabs__pane">
+      <summary class="vertical-tabs__pane-title">
+        <span class="text-gray-900 dark:text-gray-100 font-semibold">Author Information</span>
+      </summary>
+      <div class="vertical-tabs__pane-content space-y-4">
+        <div class="form-item">
+          <label class="block text-base font-semibold text-gray-900 dark:text-gray-100 mb-2">Authored by</label>
+          <input type="text" value="admin" class="!bg-white dark:!bg-gray-900 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-base focus:ring-2 focus:ring-primary focus:border-primary block w-full px-4 py-3 transition-all" />
+          <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Leave blank for Anonymous.</p>
+        </div>
+        <div class="form-item">
+          <label class="block text-base font-semibold text-gray-900 dark:text-gray-100 mb-2">Authored on</label>
+          <input type="datetime-local" value="2025-11-05T10:30" class="!bg-white dark:!bg-gray-900 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-base focus:ring-2 focus:ring-primary focus:border-primary block w-full px-4 py-3 transition-all" />
+          <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Format: YYYY-MM-DD HH:MM:SS</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="vertical-tabs__pane">
+      <summary class="vertical-tabs__pane-title">
+        <span class="text-gray-900 dark:text-gray-100 font-semibold">URL Settings</span>
+      </summary>
+      <div class="vertical-tabs__pane-content space-y-4">
+        <div class="form-item">
+          <label class="block text-base font-semibold text-gray-900 dark:text-gray-100 mb-2">URL alias</label>
+          <input type="text" placeholder="/my-custom-url" class="!bg-white dark:!bg-gray-900 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-base focus:ring-2 focus:ring-primary focus:border-primary block w-full px-4 py-3 transition-all placeholder:text-gray-400 dark:placeholder:text-gray-600" />
+          <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Specify an alternative path by which this content can be accessed.</p>
+        </div>
+        <div class="form-item">
+          <label class="flex items-center gap-2 cursor-pointer">
+            <input type="checkbox" checked class="w-4 h-4 text-primary border-gray-300 focus:ring-primary" />
+            <span class="text-sm text-gray-700 dark:text-gray-300">Generate automatic URL alias</span>
+          </label>
+        </div>
+      </div>
+    </details>
+
+    <details class="vertical-tabs__pane">
+      <summary class="vertical-tabs__pane-title">
+        <span class="text-gray-900 dark:text-gray-100 font-semibold">Menu Settings</span>
+      </summary>
+      <div class="vertical-tabs__pane-content space-y-4">
+        <div class="form-item">
+          <label class="flex items-center gap-2 cursor-pointer">
+            <input type="checkbox" class="w-4 h-4 text-primary border-gray-300 focus:ring-primary" />
+            <span class="text-sm font-semibold text-gray-900 dark:text-gray-100">Provide a menu link</span>
+          </label>
+        </div>
+        <div class="form-item opacity-50">
+          <label class="block text-base font-semibold text-gray-900 dark:text-gray-100 mb-2">Menu link title</label>
+          <input type="text" disabled placeholder="Enter menu link title" class="!bg-white dark:!bg-gray-900 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-base focus:ring-2 focus:ring-primary focus:border-primary block w-full px-4 py-3 transition-all placeholder:text-gray-400 dark:placeholder:text-gray-600" />
+        </div>
+        <div class="form-item opacity-50">
+          <label class="block text-base font-semibold text-gray-900 dark:text-gray-100 mb-2">Parent menu</label>
+          <select disabled class="!bg-white dark:!bg-gray-900 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-base focus:ring-2 focus:ring-primary focus:border-primary block w-full px-4 py-3 transition-all">
+            <option>-- Main navigation</option>
+            <option>-- Footer</option>
+            <option>-- User account menu</option>
+          </select>
+        </div>
+      </div>
+    </details>
+
+    <details class="vertical-tabs__pane">
+      <summary class="vertical-tabs__pane-title">
+        <span class="text-gray-900 dark:text-gray-100 font-semibold">Meta Tags</span>
+      </summary>
+      <div class="vertical-tabs__pane-content space-y-4">
+        <div class="form-item">
+          <label class="block text-base font-semibold text-gray-900 dark:text-gray-100 mb-2">Page title</label>
+          <input type="text" placeholder="Custom page title for SEO" class="!bg-white dark:!bg-gray-900 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-base focus:ring-2 focus:ring-primary focus:border-primary block w-full px-4 py-3 transition-all placeholder:text-gray-400 dark:placeholder:text-gray-600" />
+        </div>
+        <div class="form-item">
+          <label class="block text-base font-semibold text-gray-900 dark:text-gray-100 mb-2">Description</label>
+          <textarea rows="3" placeholder="Meta description for search engines" class="!bg-white dark:!bg-gray-900 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-base focus:ring-2 focus:ring-primary focus:border-primary block w-full px-4 py-3 transition-all placeholder:text-gray-400 dark:placeholder:text-gray-600"></textarea>
+          <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Recommended: 150-160 characters</p>
+        </div>
+        <div class="form-item">
+          <label class="block text-base font-semibold text-gray-900 dark:text-gray-100 mb-2">Keywords</label>
+          <input type="text" placeholder="keyword1, keyword2, keyword3" class="!bg-white dark:!bg-gray-900 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-base focus:ring-2 focus:ring-primary focus:border-primary block w-full px-4 py-3 transition-all placeholder:text-gray-400 dark:placeholder:text-gray-600" />
+        </div>
+      </div>
+    </details>

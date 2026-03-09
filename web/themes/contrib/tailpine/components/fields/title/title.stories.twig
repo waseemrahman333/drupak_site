@@ -1,0 +1,70 @@
+{% stories title with { title: 'Components/Node Title' } %}
+
+{% story default with {
+    name: '1. Title - H1 Page Title',
+    args: { 
+      field_name: 'title',
+      field_type: 'string',
+      label_display: 'hidden',
+      is_inline: false,
+      heading_level: 'h1',
+      items: [{"content":"Welcome to Our Platform"}],
+      title_utility_classes: ["text-4xl","mb-6"]
+    }
+  } %}
+{% embed 'components:title' with { 
+  field_name: field_name,
+  field_type: field_type,
+  label_display: label_display,
+  is_inline: is_inline,
+  heading_level: heading_level,
+  items: items,
+  title_utility_classes: title_utility_classes
+} %}{% endembed %}
+{% endstory %}
+
+{% story h2 with {
+    name: '2. Title - H2 Section Title',
+    args: { 
+      field_name: 'title',
+      field_type: 'string',
+      label_display: 'hidden',
+      is_inline: false,
+      heading_level: 'h2',
+      items: [{"content":"Latest Articles"}],
+      title_utility_classes: ["text-3xl","mb-4"]
+    }
+  } %}
+{% embed 'components:title' with { 
+  field_name: field_name,
+  field_type: field_type,
+  label_display: label_display,
+  is_inline: is_inline,
+  heading_level: heading_level,
+  items: items,
+  title_utility_classes: title_utility_classes
+} %}{% endembed %}
+{% endstory %}
+
+{% story inline with {
+    name: '3. Title - Inline',
+    args: { 
+      field_name: 'title',
+      field_type: 'string',
+      label_display: 'hidden',
+      is_inline: true,
+      items: [{"content":"Product Name"}],
+      title_utility_classes: ["text-lg"]
+    }
+  } %}
+{% embed 'components:title' with { 
+  field_name: field_name,
+  field_type: field_type,
+  label_display: label_display,
+  is_inline: is_inline,
+  items: items,
+  title_utility_classes: title_utility_classes
+} %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

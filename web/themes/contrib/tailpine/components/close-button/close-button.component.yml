@@ -1,0 +1,23 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/metadata.schema.json
+name: Close Button
+status: stable
+description: Close/dismiss button with X icon.
+group: UI
+props:
+  type: object
+  properties:
+    label:
+      type: string
+      title: Accessible Label
+      description: Screen reader label.
+      default: 'Close'
+    size:
+      type: string
+      title: Size
+      description: Button size.
+      default: md
+      enum:
+        - sm
+        - md
+        - lg
+

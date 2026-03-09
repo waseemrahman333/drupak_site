@@ -1,0 +1,12 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name:  Quick Links
+status: stable
+description: "Quick Links of the footer"
+slots:
+    title:
+      type: string
+      title: Title
+      description: "Title of the Inspiration Item component" 
+    link:
+      type: string
+      description: "link of the cta"  

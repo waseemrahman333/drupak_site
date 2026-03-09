@@ -1,0 +1,28 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Post Style Three
+description: 'A post style with a three column layout.'
+status: stable
+group: Cards & Posts
+props:
+  type: object
+  properties:
+    imageurl:
+      type: string
+      name: Image URL
+      description: The URL of the image
+
+slots:
+  title:
+    title: Title
+    description: "Title of the Post. Plain text."
+  description:
+    title: Description
+    description: "Description of the Post. Plain text."
+  subtitle:
+    title: Subtitle
+    description: "Subtitle of the Post. Plain text."
+  date:
+    title: Date
+    description: "Date of the Post. Plain text."
+
+

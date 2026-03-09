@@ -1,0 +1,106 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a paragraph.
+ *
+ * Available variables:
+ * - paragraph: Full paragraph entity.
+ *   Only method names starting with "get", "has", or "is" and a few common
+ *   methods such as "id", "label", and "bundle" are available. For example:
+ *   - paragraph.getCreatedTime() will return the paragraph creation timestamp.
+ *   - paragraph.id(): The paragraph ID.
+ *   - paragraph.bundle(): The type of the paragraph, for example, "image" or "text".
+ *   - paragraph.getOwnerId(): The user ID of the paragraph author.
+ *   See Drupal\paragraphs\Entity\Paragraph for a full list of public properties
+ *   and methods for the paragraph object.
+ * - content: All paragraph items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - paragraphs: The current template type (also known as a "theming hook").
+ *   - paragraphs--type-[type]: The current paragraphs type. For example, if the paragraph is an
+ *     "Image" it would result in "paragraphs--type--image". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - paragraphs--view-mode--[view_mode]: The View Mode of the paragraph; for example, a
+ *     preview would result in: "paragraphs--view-mode--preview", and
+ *     default: "paragraphs--view-mode--default".
+ * - view_mode: View mode; for example, "preview" or "full".
+ * - logged_in: Flag for authenticated user status. Will be true when the
+ *   current user is a logged-in member.
+ * - is_admin: Flag for admin user status. Will be true when the current user
+ *   is an administrator.
+ *
+ * @see template_preprocess_paragraph()
+ *
+ * @ingroup themeable
+ */
+#}
+
+
+    <!-- Swiper Container -->
+{{attach_library('tailpine/swiper-init')}}
+<div class="SliderSection max-w-480 mx-auto w-full px-5 md:px-12 lg:px-24 ">
+<div class="swiper    overflow-hidden   relative z-10  my-20">
+                {# --- Title --- #}
+{# --- Title --- #}
+{% if content.field_tailpine_title %}
+  <h2 
+    class="text-2xl md:text-3xl xl:text-6xl font-medium leading-tight text-center text-body mb-6 tracking-tight"
+  >
+    {{ content.field_tailpine_title }}
+  </h2>
+{% endif %}
+
+{# --- Description --- #}
+{% if content.field_tailpine_description %}
+  <div 
+    class="max-w-5xl mx-auto text-center !font-normal text-gray-700 text-md leading-relaxed mb-12 px-4 md:px-0"
+  >
+    {{ content.field_tailpine_description }}
+  </div>
+
+{% endif %}
+
+ <div class="swiper-wrapper ">
+      {% if content.field_tailpine_content %}
+          {% for key, item in content.field_tailpine_content %}
+            {% if key|first != '#' %}
+            <div class="swiper-slide">
+              {# existing card rendering — these become direct children (slides) #}
+              {% set paragraph_item = item['#paragraph'] %}
+              {% set media_entity = paragraph_item.field_tailpine_media_image.entity %}
+              {% set image_entity = media_entity.field_media_image.entity ?? null %}
+              {% set image_url = image_entity ? file_url(image_entity.uri.value) : '/themes/custom/tailpine/images/placeholder.jpg' %}
+              {% set card_title = paragraph_item.field_tailpine_title[0].value|default('Card Title') %}
+              {% set card_subtitle = paragraph_item.field_tailpine_subtitle[0].value|default('Subtitle here') %}
+              {% include 'tailpine:cardonestyle' with {
+                imageurl: image_url,
+                title: card_title,
+                subtitle: card_subtitle
+              } %}
+              </div>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+
+  </div>
+            <!-- Navigation Buttons -->
+
+        {# --- Navigation Buttons --- #}
+          <div   class="swiper-button-prev rounded-lg after:hidden absolute !top-7/10 left-4 z-20 !w-8 !h-8 p-1 rounded-normal bg-primary  flex items-center justify-center shadow-lg transition-all duration-300 cursor-pointer">
+        <svg class="text-body-bg" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path></svg>
+          </div>
+
+
+          <div  class="swiper-button-next rounded-lg after:hidden absolute !top-7/10 right-4 z-20 p-1 !w-8 !h-8 rounded-normal bg-primary flex items-center justify-center shadow-lg transition-all duration-300 cursor-pointer">
+          <svg class="text-body-bg" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path></svg>
+          </div>
+  </div>
+
+  </div>
+
+</div>
+

@@ -1,0 +1,159 @@
+{% stories table with { title: 'Components/Table' } %}
+
+{% story compact with {
+    name: '1. Compact',
+    args: { 
+      caption: 'Compact Table - Small Size',
+      header: [{"content":"Product","tag":"th"},{"content":"Price","tag":"th"},{"content":"Stock","tag":"th"},{"content":"Status","tag":"th"}],
+      rows: [{"cells":[{"content":"Laptop Pro","tag":"td"},{"content":"$1,299","tag":"td"},{"content":"25","tag":"td"},{"content":"<span class=\"inline-flex px-2 py-1 text-xs font-semibold bg-green-100 text-green-800\">In Stock<\/span>","tag":"td"}]},{"cells":[{"content":"Wireless Mouse","tag":"td"},{"content":"$29","tag":"td"},{"content":"150","tag":"td"},{"content":"<span class=\"inline-flex px-2 py-1 text-xs font-semibold bg-green-100 text-green-800\">In Stock<\/span>","tag":"td"}]},{"cells":[{"content":"Mechanical Keyboard","tag":"td"},{"content":"$89","tag":"td"},{"content":"0","tag":"td"},{"content":"<span class=\"inline-flex px-2 py-1 text-xs font-semibold bg-red-100 text-red-800\">Out of Stock<\/span>","tag":"td"}]},{"cells":[{"content":"USB-C Hub","tag":"td"},{"content":"$49","tag":"td"},{"content":"8","tag":"td"},{"content":"<span class=\"inline-flex px-2 py-1 text-xs font-semibold bg-yellow-100 text-yellow-800\">Low Stock<\/span>","tag":"td"}]}],
+      responsive: true,
+      bordered: true,
+      hoverable: true,
+      size: 'sm',
+      no_striping: false
+    }
+  } %}
+{% embed 'components:table' with { 
+  caption: caption,
+  header: header,
+  rows: rows,
+  responsive: responsive,
+  bordered: bordered,
+  hoverable: hoverable,
+  size: size,
+  no_striping: no_striping
+} %}{% endembed %}
+{% endstory %}
+
+{% story default with {
+    name: '2. Default',
+    args: { 
+      caption: 'Employee Directory',
+      header: [{"content":"ID","tag":"th"},{"content":"Name","tag":"th"},{"content":"Department","tag":"th"},{"content":"Position","tag":"th"},{"content":"Email","tag":"th"}],
+      rows: [{"cells":[{"content":"1","tag":"td"},{"content":"John Doe","tag":"td"},{"content":"Engineering","tag":"td"},{"content":"Senior Developer","tag":"td"},{"content":"john.doe@example.com","tag":"td"}]},{"cells":[{"content":"2","tag":"td"},{"content":"Jane Smith","tag":"td"},{"content":"Design","tag":"td"},{"content":"Lead Designer","tag":"td"},{"content":"jane.smith@example.com","tag":"td"}]},{"cells":[{"content":"3","tag":"td"},{"content":"Bob Johnson","tag":"td"},{"content":"Marketing","tag":"td"},{"content":"Marketing Manager","tag":"td"},{"content":"bob.johnson@example.com","tag":"td"}]},{"cells":[{"content":"4","tag":"td"},{"content":"Alice Williams","tag":"td"},{"content":"Sales","tag":"td"},{"content":"Sales Representative","tag":"td"},{"content":"alice.williams@example.com","tag":"td"}]}],
+      responsive: true,
+      bordered: true,
+      hoverable: true,
+      size: 'default',
+      no_striping: false
+    }
+  } %}
+{% embed 'components:table' with { 
+  caption: caption,
+  header: header,
+  rows: rows,
+  responsive: responsive,
+  bordered: bordered,
+  hoverable: hoverable,
+  size: size,
+  no_striping: no_striping
+} %}{% endembed %}
+{% endstory %}
+
+{% story empty with {
+    name: '3. Empty State',
+    args: { 
+      caption: 'Recent Transactions',
+      header: [{"content":"Date","tag":"th"},{"content":"Transaction ID","tag":"th"},{"content":"Amount","tag":"th"},{"content":"Status","tag":"th"}],
+      rows: [],
+      empty: 'No transactions found. Start by making your first transaction.',
+      responsive: true,
+      bordered: true,
+      hoverable: true,
+      size: 'default',
+      header_columns: 4
+    }
+  } %}
+{% embed 'components:table' with { 
+  caption: caption,
+  header: header,
+  rows: rows,
+  empty: empty,
+  responsive: responsive,
+  bordered: bordered,
+  hoverable: hoverable,
+  size: size,
+  header_columns: header_columns
+} %}{% endembed %}
+{% endstory %}
+
+{% story no_borders with {
+    name: '4. No Borders',
+    args: { 
+      caption: 'Team Members',
+      header: [{"content":"Avatar","tag":"th"},{"content":"Name","tag":"th"},{"content":"Role","tag":"th"},{"content":"Location","tag":"th"}],
+      rows: [{"cells":[{"content":"<div class=\"w-10 h-10 bg-blue-500 flex items-center justify-center text-white font-semibold\">JD<\/div>","tag":"td"},{"content":"John Doe","tag":"td"},{"content":"Frontend Developer","tag":"td"},{"content":"New York, USA","tag":"td"}]},{"cells":[{"content":"<div class=\"w-10 h-10 bg-purple-500 flex items-center justify-center text-white font-semibold\">JS<\/div>","tag":"td"},{"content":"Jane Smith","tag":"td"},{"content":"UX Designer","tag":"td"},{"content":"London, UK","tag":"td"}]},{"cells":[{"content":"<div class=\"w-10 h-10 bg-green-500 flex items-center justify-center text-white font-semibold\">BJ<\/div>","tag":"td"},{"content":"Bob Johnson","tag":"td"},{"content":"Backend Developer","tag":"td"},{"content":"Toronto, Canada","tag":"td"}]}],
+      responsive: true,
+      bordered: false,
+      hoverable: true,
+      size: 'default',
+      no_striping: false
+    }
+  } %}
+{% embed 'components:table' with { 
+  caption: caption,
+  header: header,
+  rows: rows,
+  responsive: responsive,
+  bordered: bordered,
+  hoverable: hoverable,
+  size: size,
+  no_striping: no_striping
+} %}{% endembed %}
+{% endstory %}
+
+{% story sticky_header with {
+    name: '5. Sticky Header',
+    args: { 
+      caption: 'Long List with Sticky Header',
+      header: [{"content":"#","tag":"th"},{"content":"Title","tag":"th"},{"content":"Category","tag":"th"},{"content":"Date","tag":"th"}],
+      rows: [{"cells":[{"content":"1","tag":"td"},{"content":"Introduction to TailwindCSS","tag":"td"},{"content":"Tutorial","tag":"td"},{"content":"2024-01-15","tag":"td"}]},{"cells":[{"content":"2","tag":"td"},{"content":"Building Responsive Layouts","tag":"td"},{"content":"Guide","tag":"td"},{"content":"2024-01-20","tag":"td"}]},{"cells":[{"content":"3","tag":"td"},{"content":"Alpine.js Fundamentals","tag":"td"},{"content":"Tutorial","tag":"td"},{"content":"2024-01-25","tag":"td"}]},{"cells":[{"content":"4","tag":"td"},{"content":"Component Architecture","tag":"td"},{"content":"Article","tag":"td"},{"content":"2024-02-01","tag":"td"}]},{"cells":[{"content":"5","tag":"td"},{"content":"State Management Best Practices","tag":"td"},{"content":"Guide","tag":"td"},{"content":"2024-02-05","tag":"td"}]},{"cells":[{"content":"6","tag":"td"},{"content":"Performance Optimization","tag":"td"},{"content":"Tutorial","tag":"td"},{"content":"2024-02-10","tag":"td"}]},{"cells":[{"content":"7","tag":"td"},{"content":"Accessibility Guidelines","tag":"td"},{"content":"Article","tag":"td"},{"content":"2024-02-15","tag":"td"}]},{"cells":[{"content":"8","tag":"td"},{"content":"Dark Mode Implementation","tag":"td"},{"content":"Tutorial","tag":"td"},{"content":"2024-02-20","tag":"td"}]}],
+      sticky: true,
+      responsive: true,
+      bordered: true,
+      hoverable: true,
+      size: 'default',
+      no_striping: false
+    }
+  } %}
+{% embed 'components:table' with { 
+  caption: caption,
+  header: header,
+  rows: rows,
+  sticky: sticky,
+  responsive: responsive,
+  bordered: bordered,
+  hoverable: hoverable,
+  size: size,
+  no_striping: no_striping
+} %}{% endembed %}
+{% endstory %}
+
+{% story with_footer with {
+    name: '6. With Footer',
+    args: { 
+      caption: 'Quarterly Sales Report',
+      header: [{"content":"Quarter","tag":"th"},{"content":"Revenue","tag":"th"},{"content":"Expenses","tag":"th"},{"content":"Profit","tag":"th"}],
+      rows: [{"cells":[{"content":"Q1 2024","tag":"td"},{"content":"$150,000","tag":"td"},{"content":"$90,000","tag":"td"},{"content":"$60,000","tag":"td"}]},{"cells":[{"content":"Q2 2024","tag":"td"},{"content":"$175,000","tag":"td"},{"content":"$95,000","tag":"td"},{"content":"$80,000","tag":"td"}]},{"cells":[{"content":"Q3 2024","tag":"td"},{"content":"$200,000","tag":"td"},{"content":"$100,000","tag":"td"},{"content":"$100,000","tag":"td"}]},{"cells":[{"content":"Q4 2024","tag":"td"},{"content":"$225,000","tag":"td"},{"content":"$110,000","tag":"td"},{"content":"$115,000","tag":"td"}]}],
+      footer: [{"cells":[{"content":"<strong>Total<\/strong>","tag":"th"},{"content":"<strong>$750,000<\/strong>","tag":"td"},{"content":"<strong>$395,000<\/strong>","tag":"td"},{"content":"<strong>$355,000<\/strong>","tag":"td"}]}],
+      responsive: true,
+      bordered: true,
+      hoverable: true,
+      size: 'default',
+      no_striping: false
+    }
+  } %}
+{% embed 'components:table' with { 
+  caption: caption,
+  header: header,
+  rows: rows,
+  footer: footer,
+  responsive: responsive,
+  bordered: bordered,
+  hoverable: hoverable,
+  size: size,
+  no_striping: no_striping
+} %}{% endembed %}
+{% endstory %}
+
+{% endstories %}

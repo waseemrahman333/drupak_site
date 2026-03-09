@@ -1,0 +1,14 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Contact Us
+description: Contact Us
+status: stable
+slots:
+  title:
+    title: Title
+    description: Title
+  subtitle:
+    title: Subtitle
+    description: Subtitle
+  cta:
+    title: Add  CTA
+    description: Add CTA

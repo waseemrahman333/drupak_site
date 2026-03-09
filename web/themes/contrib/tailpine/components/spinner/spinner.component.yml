@@ -1,0 +1,34 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/metadata.schema.json
+name: Spinner
+status: stable
+description: Loading spinner for indicating processing state.
+group: UI
+props:
+  type: object
+  properties:
+    size:
+      type: string
+      title: Size
+      description: Spinner size.
+      default: md
+      enum:
+        - sm
+        - md
+        - lg
+        - xl
+    color:
+      type: string
+      title: Color
+      description: Spinner color.
+      default: primary
+      enum:
+        - primary
+        - secondary
+        - body
+        - white
+    label:
+      type: string
+      title: Label
+      description: Accessible label for spinner.
+      default: 'Loading...'
+

@@ -1,0 +1,18 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Sub Page Hero
+description: Sub Page Hero
+status: stable
+props:
+  type: object
+  properties:
+    bg_image:
+      title: Background Image
+      description: Background Image URL
+      type: string
+slots:
+  title:
+    title: Title
+    description: Title
+  description:
+    title: Description
+    description: description

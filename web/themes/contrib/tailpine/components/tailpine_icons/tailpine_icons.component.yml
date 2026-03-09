@@ -1,0 +1,45 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Tailpine_Icons
+description: icons components
+status: stable
+props:
+  type: object
+  properties:
+    iconTitle:
+      type: string
+      description: list of icons (icon title must match icon name in the images/icons without file extension i.e svg)
+    iconStyle:
+      type: string
+      description: "Icon style (visual treatment of the icon)."
+      enum:
+        - solid
+        - fill
+        - outline
+        - roundfill
+        - roundoutline
+      meta:
+        enum:
+          solid: "Solid"
+          fill: "Fill"
+          outline: "Outline"
+          roundfill: "Round Fill"
+          roundoutline: "Round Outline"
+    iconFillColor:
+      type: string
+      description: "icon fill color Fill Color Must be Like  (primary, secondary, tertiary, success, warning, danger, info, body, body-bg)"
+    iconStrokeColor:
+      type: string
+      description: "icon stroke color"
+    iconSize:
+      type: string
+      enum: [micro, mini, default, lg, xl, 2xl]
+      description: Icon size options
+    showLinkText:
+      type: boolean
+      description: "Whether to show link text or not"
+    linkText:
+      type: string
+      description: "The text of the link if showLinkText = true"
+    iconLink:
+      type: string
+      description: "link of the icon"

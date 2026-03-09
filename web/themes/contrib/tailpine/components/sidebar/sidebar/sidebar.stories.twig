@@ -1,0 +1,23 @@
+{% stories sidebar with { title: 'Components/Sidebar' } %}
+
+{% story default with {
+    name: '1. Default',
+    args: { 
+      logo_img: 'https://cdn.pixabay.com/photo/2024/04/02/10/28/bangladesh-8670559_1280.jpg',
+      logo_title: 'Logo title',
+      inner_content: 'Inner Content'
+    }
+  } %}
+{% embed 'components:sidebar' with { 
+  logo_img: logo_img
+} %}
+  {% block logo_title %}
+    {{ logo_title }}
+  {% endblock %}
+  {% block inner_content %}
+    {{ inner_content }}
+  {% endblock %}
+{% endembed %}
+{% endstory %}
+
+{% endstories %}

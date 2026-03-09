@@ -1,0 +1,7 @@
+name: Textarea
+description: Multi-line text input area
+
+props:
+  value: "This is a sample textarea with some content.\nYou can enter multiple lines of text here.\nPerfect for comments, descriptions, or any long-form content."
+  resizable: vertical
+  required: false

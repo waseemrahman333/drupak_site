@@ -1,0 +1,19 @@
+name: Tailpine Blocks
+description: >
+  Configures the Page content type with Paragraphs components
+  (Hero, CTA, Cards, Posts, Sponsors, Teams, Accordion, Testimonials, Contact form, etc.)
+  for the Tailpine theme homepage.
+
+install:
+  - media
+  - media_library
+  - paragraphs
+  - layout_builder
+  - layout_discovery
+  - ui_patterns
+  - ui_patterns_layouts
+  - inline_entity_form
+  - nomarkup
+  - ui_patterns_library
+
+

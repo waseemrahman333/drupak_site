@@ -1,0 +1,20 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Tailpine Tabs Wrapper
+status: stable
+description: A full tab wrapper
+
+props:
+  type: object
+  properties:
+    firstTabTitle:
+      type: string
+      title: tab one title
+      description: 'main title of the tab section'
+
+slots:
+  tabTitleContent:
+    title: tab title content
+    description: Render tab buttons
+  tabContents:
+    title: tab inner content
+    description: Render tab panels

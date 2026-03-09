@@ -1,0 +1,12 @@
+name: List Group - Default
+description: Basic list group with multiple items
+
+props:
+  items:
+    - content: 'First item in the list'
+    - content: 'Second item with more text content'
+    - content: 'Third item here'
+    - content: 'Fourth item in this group'
+    - content: 'Fifth and final item'
+  flush: false
+

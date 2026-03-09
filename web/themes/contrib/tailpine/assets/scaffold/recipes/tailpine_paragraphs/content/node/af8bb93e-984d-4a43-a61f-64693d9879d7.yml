@@ -1,0 +1,533 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: af8bb93e-984d-4a43-a61f-64693d9879d7
+  bundle: page
+  default_langcode: en
+  depends:
+    579a3099-dff1-4f88-9176-406c8f792e78: media
+    4409bce3-e95e-4229-af28-d8126b60b991: media
+    aebae2c6-a886-4dda-bb6d-45ed8a9a932a: media
+    ae7b14aa-ee88-4dc9-9abf-c06a1143ece6: media
+    7c9520fc-a13a-4511-896b-d8a63f40aa47: media
+    89e252e2-bb0f-4056-af42-3e60695af279: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'About Us'
+  created:
+    -
+      value: 1756908434
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /about
+      langcode: en
+  field_tailpine_content:
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 93a66202-e118-4506-b770-e4cbfc613b3a
+          bundle: tailpine_sub_page_hero
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1756908443
+          behavior_settings:
+            -
+              value: {  }
+          field_tailpine_description:
+            -
+              value: '<p>We are a passionate team dedicated to building digital solutions that make an impact.</p>'
+              format: basic_html
+          field_tailpine_media_image:
+            -
+              entity: 579a3099-dff1-4f88-9176-406c8f792e78
+          field_tailpine_title:
+            -
+              value: 'About Us'
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: b6a0f425-72df-4041-ae58-06714f510285
+          bundle: tailpine_media_and_text
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1756960314
+          behavior_settings:
+            -
+              value: {  }
+          field_tailpine_description:
+            -
+              value: '<p>Duxit nasci clamat aliquam eum nimis similique praetermittenda. Assumenda sapientium manum iudicari disputando adhaesiones politus credere respirare.Duxit nasci clamat aliquam eum nimis similique praetermittenda. Assumenda sapientium manum iudicari disputando adhaesiones politus credere respirare.Duxit nasci clamat aliquam eum nimis similique praetermittenda. Assumenda sapientium manum iudicari disputando adhaesiones politus credere respirare.Duxit nasci clamat aliquam eum nimis similique praetermittenda. Assumenda sapientium manum iudicari disputando adhaesiones politus credere respirare.Duxit nasci clamat aliquam eum nimis similique praetermittenda. Assumenda sapientium manum iudicari disputando adhaesiones politus credere respirare.</p>'
+              format: basic_html
+          field_tailpine_inner_content:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 536fba9f-590f-4c24-b128-670effe33886
+                  bundle: tailpine_cta
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1756960321
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_btn_type:
+                    -
+                      value: hover_arrow_move
+                  field_tailpine_button_style:
+                    -
+                      value: primary
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: 'Read More'
+                      options: {  }
+                  field_tailpine_title:
+                    -
+                      value: 'Read More'
+          field_tailpine_media_image:
+            -
+              entity: 4409bce3-e95e-4229-af28-d8126b60b991
+          field_tailpine_media_position:
+            -
+              value: row
+          field_tailpine_title:
+            -
+              value: 'Briefly And Concisely Explain What You Do For Your Audience'
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 79e4ed8b-cd19-484a-b9d6-a05985a4547b
+          bundle: tailpine_teams_header
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1756960588
+          behavior_settings:
+            -
+              value: {  }
+          revision_translation_affected:
+            -
+              value: true
+          field_tailpine_content:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: b519857d-02e7-49ac-a7d8-f545c86eb480
+                  bundle: tailpine_team
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1756960652
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: aebae2c6-a886-4dda-bb6d-45ed8a9a932a
+                  field_tailpine_subtitle:
+                    -
+                      value: 'Developer one'
+                  field_tailpine_title:
+                    -
+                      value: 'Person One'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: d0ae3d20-8f20-4070-b65c-67b1b577e31c
+                  bundle: tailpine_team
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1756960674
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: ae7b14aa-ee88-4dc9-9abf-c06a1143ece6
+                  field_tailpine_subtitle:
+                    -
+                      value: 'Developer Two'
+                  field_tailpine_title:
+                    -
+                      value: 'Person two'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 358d37d6-dc0a-4de9-94d6-648edea56deb
+                  bundle: tailpine_team
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1756960743
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: 7c9520fc-a13a-4511-896b-d8a63f40aa47
+                  field_tailpine_subtitle:
+                    -
+                      value: 'Developer Three'
+                  field_tailpine_title:
+                    -
+                      value: 'Person Three'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 6142160b-170e-4fa7-9140-83197830ebb8
+                  bundle: tailpine_team
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1756960772
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: 89e252e2-bb0f-4056-af42-3e60695af279
+                  field_tailpine_subtitle:
+                    -
+                      value: 'Developer Four'
+                  field_tailpine_title:
+                    -
+                      value: 'Person Four'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 42c37ad8-fda5-44af-8ff8-3f5f3590328a
+                  bundle: tailpine_team
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1756960793
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: aebae2c6-a886-4dda-bb6d-45ed8a9a932a
+                  field_tailpine_subtitle:
+                    -
+                      value: 'Developer Five'
+                  field_tailpine_title:
+                    -
+                      value: 'Person FIve '
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 3aaf18db-bde9-4900-8cf6-2635bb56474b
+                  bundle: tailpine_team
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1756960817
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: ae7b14aa-ee88-4dc9-9abf-c06a1143ece6
+                  field_tailpine_subtitle:
+                    -
+                      value: 'Developer Six'
+                  field_tailpine_title:
+                    -
+                      value: 'Developer Six'
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: f63240aa-df19-48d2-84e4-c1a5139bbeb8
+                  bundle: tailpine_team
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1756960864
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: 7c9520fc-a13a-4511-896b-d8a63f40aa47
+                  field_tailpine_subtitle:
+                    -
+                      value: 'Developer Seven'
+                  field_tailpine_title:
+                    -
+                      value: 'Person Seven '
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: c1499e85-9f72-4785-931b-4759fc201d42
+                  bundle: tailpine_team
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1756961397
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_media_image:
+                    -
+                      entity: aebae2c6-a886-4dda-bb6d-45ed8a9a932a
+                  field_tailpine_subtitle:
+                    -
+                      value: 'Developer Eight'
+                  field_tailpine_title:
+                    -
+                      value: 'Person eight'
+          field_tailpine_inner_content:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: c0927394-73cb-4d7b-9c5b-355f1d31474f
+                  bundle: tailpine_cta
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1756960630
+                  behavior_settings:
+                    -
+                      value: {  }
+                  revision_translation_affected:
+                    -
+                      value: true
+                  field_tailpine_btn_type:
+                    -
+                      value: hover_arrow_move
+                  field_tailpine_button_style:
+                    -
+                      value: primary
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: 'Read More'
+                      options: {  }
+                  field_tailpine_title:
+                    -
+                      value: 'View All Team Members'
+          field_tailpine_title:
+            -
+              value: 'All Team Members'
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: e858cf61-3f9e-4003-9d33-33779ef4c5d5
+          bundle: tailpine_media_and_text
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1756961546
+          behavior_settings:
+            -
+              value: {  }
+          field_tailpine_description:
+            -
+              value: '<p>Primus aliud excruciant parendum iudiciorumque homine perfruique. Quapropter debemus sermone probabis suam insatiabiles difficilius. Imitarentur video torquatus invidia pluribus discere placebit expleantur.Primus aliud excruciant parendum iudiciorumque homine perfruique. Quapropter debemus sermone probabis suam insatiabiles difficilius. Imitarentur video torquatus invidia pluribus discere placebit expleantur.</p>'
+              format: basic_html
+          field_tailpine_inner_content:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: ec93bedb-735d-488c-8847-39147e2c22a3
+                  bundle: tailpine_cta
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1756961576
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_btn_type:
+                    -
+                      value: hover_arrow_move
+                  field_tailpine_button_style:
+                    -
+                      value: primary
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/'
+                      title: 'Read More'
+                      options: {  }
+                  field_tailpine_title:
+                    -
+                      value: 'Learn More'
+          field_tailpine_media_image:
+            -
+              entity: 4409bce3-e95e-4229-af28-d8126b60b991
+          field_tailpine_media_position:
+            -
+              value: row-reverse
+          field_tailpine_title:
+            -
+              value: 'Briefly And Concisely Explain What You Do For Your Audience'
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 77137188-603d-4a83-8f68-334ecb99e920
+          bundle: tailpine_get_in_touch
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1756961462
+          behavior_settings:
+            -
+              value: {  }
+          field_tailpine_inner_content:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 5762bc48-87a7-4422-a355-28632b10abdb
+                  bundle: tailpine_cta
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1756961483
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_tailpine_btn_type:
+                    -
+                      value: hover_arrow_move
+                  field_tailpine_button_style:
+                    -
+                      value: primary
+                  field_tailpine_link:
+                    -
+                      uri: 'internal:/contact_us'
+                      title: 'Contact Us'
+                      options: {  }
+                  field_tailpine_title:
+                    -
+                      value: 'Contact Us'
+          field_tailpine_subtitle:
+            -
+              value: 'Let’s build something amazing together.'
+          field_tailpine_title:
+            -
+              value: 'Get In Touch'
